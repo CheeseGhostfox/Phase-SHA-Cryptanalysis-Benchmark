@@ -1,0 +1,32 @@
+model_type: v7a
+seed: 7101
+max_vram_gb: 11.0
+strict_fp32: true
+
+model:
+  vocab_size: 32
+  d_model: 512
+  n_layers: 8
+  n_heads: 8
+  d_ff: 1408
+  max_seq_len: 384
+  dropout: 0.0
+
+training:
+  lr: 3.0e-4
+  min_lr: 3.0e-5
+  weight_decay: 0.01
+  grad_clip: 1.0
+  warmup_steps: 150
+  batch_size: 48
+  eval_batch_size: 32
+  rounds_schedule: [2, 3, 4, 5, 6, 8]
+  steps_per_round: 3500
+  max_sec_per_round: 540.0
+  eval_every: 400
+  log_every: 25
+  n_eval: 256
+  pass_k: 64
+  advance_pass64: 0.50
+  sample_temperature: 0.75
+  sample_top_p: 0.95

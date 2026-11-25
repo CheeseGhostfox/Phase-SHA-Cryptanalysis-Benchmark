@@ -1,0 +1,1401 @@
+{
+  "meta": {
+    "stage": "Stage1_Positive_Calibration",
+    "reference_crosscheck": {
+      "sha256_ref_imported": true,
+      "tested_cases": 40,
+      "xor_diff": 0,
+      "status": "PASS"
+    },
+    "wall_time_seconds": 285.622
+  },
+  "mitm_reduced": [
+    {
+      "feasible": true,
+      "status": "OPTIMAL",
+      "rounds": 16,
+      "padding_mode": "standard",
+      "eval_mode": "ModeI_Wrap256",
+      "k_target": 256,
+      "s_w": 0,
+      "t_match": 1,
+      "biclique_range": null,
+      "is_independent_biclique": true,
+      "red_msg_basis": [
+        0
+      ],
+      "blue_msg_basis": [
+        15
+      ],
+      "w_colors": [
+        "RED",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "BLUE"
+      ],
+      "fwd_rounds": [
+        0
+      ],
+      "bwd_rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "matched_state_words": [
+        "A_-2",
+        "E_-2",
+        "A_-1",
+        "E_-1",
+        "A_0",
+        "E_0",
+        "A_1",
+        "E_1"
+      ],
+      "indirect_matches": [
+        "T1(1)"
+      ],
+      "d1_bits": 32,
+      "d2_bits": 32,
+      "m_match": 288,
+      "delta_carry": 0,
+      "m_eff": 288,
+      "complexity": {
+        "mode": "ModeI_Wrap256",
+        "k_target": 256,
+        "d1": 32,
+        "d2": 32,
+        "L_bic": 0,
+        "is_independent_biclique": true,
+        "R_fwd": 1,
+        "R_bwd": 15,
+        "R_total": 16,
+        "m_match": 288,
+        "delta_carry": 0,
+        "m_eff": 288,
+        "p_phi": 1.0,
+        "kappa_phi": -0.0,
+        "log2_N_groups": 192.0,
+        "log2_C_group": 32.087463,
+        "log2_T_attack": 224.087463,
+        "log2_T_brute": 256.0,
+        "delta_log2_T": 31.912537,
+        "log2_M_words": 35.0,
+        "is_speedup": true,
+        "mem_feasible": true,
+        "notes": ""
+      },
+      "extra": {
+        "t_anchor": 0,
+        "L_bic": 0
+      },
+      "z3_verified": true,
+      "z3_detail": {
+        "candidate_id": "p15_stage1a_mitm_16r",
+        "category": "Stage1A_Reduced_MitM",
+        "rounds_range": [
+          0,
+          15
+        ],
+        "fwd_range": [
+          0,
+          1
+        ],
+        "bwd_range": [
+          1,
+          0
+        ],
+        "basis_start": 0,
+        "use_msg_schedule": true,
+        "fixed_padding_mode": "standard",
+        "gray_vars": [
+          "W[1]",
+          "W[2]",
+          "W[3]",
+          "W[4]",
+          "W[5]",
+          "W[6]",
+          "W[7]",
+          "W[8]",
+          "W[9]",
+          "W[10]",
+          "W[11]",
+          "W[12]",
+          "W[13]",
+          "W[14]"
+        ],
+        "red_vars": [
+          "W[0]"
+        ],
+        "blue_vars": [
+          "W[15]"
+        ],
+        "fwd_target_slots": [
+          "d",
+          "h",
+          "c",
+          "g",
+          "b",
+          "f",
+          "a",
+          "e"
+        ],
+        "bwd_target_slots": [
+          "d",
+          "h",
+          "c",
+          "g",
+          "b",
+          "f",
+          "a",
+          "e"
+        ],
+        "target_expr": "Fwd['d', 'h', 'c', 'g', 'b', 'f', 'a', 'e']@r1 / Bwd['d', 'h', 'c', 'g', 'b', 'f', 'a', 'e']@r1",
+        "non_interference_side": "Both_Red_and_Blue",
+        "z3_v1_red_indep": "unsat",
+        "z3_v2_blue_indep": "unsat",
+        "z3_v3_red_nondeg": "sat",
+        "z3_v3_blue_nondeg": "sat",
+        "z3_status": "VERIFIED",
+        "z3_ms": 4360.18
+      }
+    },
+    {
+      "feasible": true,
+      "status": "OPTIMAL",
+      "rounds": 20,
+      "padding_mode": "standard",
+      "eval_mode": "ModeI_Wrap256",
+      "k_target": 256,
+      "s_w": 1,
+      "t_match": 15,
+      "biclique_range": null,
+      "is_independent_biclique": true,
+      "red_msg_basis": [
+        13
+      ],
+      "blue_msg_basis": [
+        15
+      ],
+      "w_colors": [
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "RED",
+        "GRAY",
+        "BLUE",
+        "GRAY",
+        "BLUE",
+        "BLUE",
+        "BLUE"
+      ],
+      "fwd_rounds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "bwd_rounds": [
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "matched_state_words": [
+        "A_12",
+        "E_12",
+        "A_13",
+        "E_13",
+        "A_14",
+        "E_14",
+        "A_15",
+        "E_15"
+      ],
+      "indirect_matches": [
+        "T1(15)"
+      ],
+      "d1_bits": 32,
+      "d2_bits": 32,
+      "m_match": 288,
+      "delta_carry": 0,
+      "m_eff": 288,
+      "complexity": {
+        "mode": "ModeI_Wrap256",
+        "k_target": 256,
+        "d1": 32,
+        "d2": 32,
+        "L_bic": 0,
+        "is_independent_biclique": true,
+        "R_fwd": 15,
+        "R_bwd": 5,
+        "R_total": 20,
+        "m_match": 288,
+        "delta_carry": 0,
+        "m_eff": 288,
+        "p_phi": 1.0,
+        "kappa_phi": -0.0,
+        "log2_N_groups": 192.0,
+        "log2_C_group": 32.070389,
+        "log2_T_attack": 224.070389,
+        "log2_T_brute": 256.0,
+        "delta_log2_T": 31.929611,
+        "log2_M_words": 35.0,
+        "is_speedup": true,
+        "mem_feasible": true,
+        "notes": ""
+      },
+      "extra": {
+        "t_anchor": 0,
+        "L_bic": 0
+      },
+      "z3_verified": true,
+      "z3_detail": {
+        "candidate_id": "p15_stage1a_mitm_20r",
+        "category": "Stage1A_Reduced_MitM",
+        "rounds_range": [
+          0,
+          19
+        ],
+        "fwd_range": [
+          0,
+          15
+        ],
+        "bwd_range": [
+          15,
+          0
+        ],
+        "basis_start": 1,
+        "use_msg_schedule": true,
+        "fixed_padding_mode": "standard",
+        "gray_vars": [
+          "W[1]",
+          "W[2]",
+          "W[3]",
+          "W[4]",
+          "W[5]",
+          "W[6]",
+          "W[7]",
+          "W[8]",
+          "W[9]",
+          "W[10]",
+          "W[11]",
+          "W[12]",
+          "W[14]",
+          "W[16]"
+        ],
+        "red_vars": [
+          "W[13]"
+        ],
+        "blue_vars": [
+          "W[15]"
+        ],
+        "fwd_target_slots": [
+          "d",
+          "h",
+          "c",
+          "g",
+          "b",
+          "f",
+          "a",
+          "e"
+        ],
+        "bwd_target_slots": [
+          "d",
+          "h",
+          "c",
+          "g",
+          "b",
+          "f",
+          "a",
+          "e"
+        ],
+        "target_expr": "Fwd['d', 'h', 'c', 'g', 'b', 'f', 'a', 'e']@r15 / Bwd['d', 'h', 'c', 'g', 'b', 'f', 'a', 'e']@r15",
+        "non_interference_side": "Both_Red_and_Blue",
+        "z3_v1_red_indep": "unsat",
+        "z3_v2_blue_indep": "unsat",
+        "z3_v3_red_nondeg": "sat",
+        "z3_v3_blue_nondeg": "sat",
+        "z3_status": "VERIFIED",
+        "z3_ms": 1215.53
+      }
+    },
+    {
+      "feasible": true,
+      "status": "OPTIMAL",
+      "rounds": 24,
+      "padding_mode": "standard",
+      "eval_mode": "ModeI_Wrap256",
+      "k_target": 256,
+      "s_w": 2,
+      "t_match": 11,
+      "biclique_range": null,
+      "is_independent_biclique": true,
+      "red_msg_basis": [
+        10
+      ],
+      "blue_msg_basis": [
+        11
+      ],
+      "w_colors": [
+        "RED",
+        "RED",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "RED",
+        "BLUE",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "BLUE",
+        "BLUE",
+        "BLUE",
+        "BLUE",
+        "BLUE",
+        "BLUE"
+      ],
+      "fwd_rounds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "bwd_rounds": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "matched_state_words": [
+        "A_8",
+        "E_8",
+        "A_9",
+        "E_9",
+        "A_10",
+        "E_10",
+        "A_11",
+        "E_11"
+      ],
+      "indirect_matches": [
+        "T1(11)"
+      ],
+      "d1_bits": 32,
+      "d2_bits": 32,
+      "m_match": 288,
+      "delta_carry": 0,
+      "m_eff": 288,
+      "complexity": {
+        "mode": "ModeI_Wrap256",
+        "k_target": 256,
+        "d1": 32,
+        "d2": 32,
+        "L_bic": 0,
+        "is_independent_biclique": true,
+        "R_fwd": 11,
+        "R_bwd": 13,
+        "R_total": 24,
+        "m_match": 288,
+        "delta_carry": 0,
+        "m_eff": 288,
+        "p_phi": 1.0,
+        "kappa_phi": -0.0,
+        "log2_N_groups": 192.0,
+        "log2_C_group": 32.058894,
+        "log2_T_attack": 224.058894,
+        "log2_T_brute": 256.0,
+        "delta_log2_T": 31.941106,
+        "log2_M_words": 35.0,
+        "is_speedup": true,
+        "mem_feasible": true,
+        "notes": ""
+      },
+      "extra": {
+        "t_anchor": 0,
+        "L_bic": 0
+      },
+      "z3_verified": true,
+      "z3_detail": {
+        "candidate_id": "p15_stage1a_mitm_24r",
+        "category": "Stage1A_Reduced_MitM",
+        "rounds_range": [
+          0,
+          23
+        ],
+        "fwd_range": [
+          0,
+          11
+        ],
+        "bwd_range": [
+          11,
+          0
+        ],
+        "basis_start": 2,
+        "use_msg_schedule": true,
+        "fixed_padding_mode": "standard",
+        "gray_vars": [
+          "W[2]",
+          "W[3]",
+          "W[4]",
+          "W[5]",
+          "W[6]",
+          "W[7]",
+          "W[8]",
+          "W[9]",
+          "W[12]",
+          "W[13]",
+          "W[14]",
+          "W[15]",
+          "W[16]",
+          "W[17]"
+        ],
+        "red_vars": [
+          "W[10]"
+        ],
+        "blue_vars": [
+          "W[11]"
+        ],
+        "fwd_target_slots": [
+          "d",
+          "h",
+          "c",
+          "g",
+          "b",
+          "f",
+          "a",
+          "e"
+        ],
+        "bwd_target_slots": [
+          "d",
+          "h",
+          "c",
+          "g",
+          "b",
+          "f",
+          "a",
+          "e"
+        ],
+        "target_expr": "Fwd['d', 'h', 'c', 'g', 'b', 'f', 'a', 'e']@r11 / Bwd['d', 'h', 'c', 'g', 'b', 'f', 'a', 'e']@r11",
+        "non_interference_side": "Both_Red_and_Blue",
+        "z3_v1_red_indep": "unsat",
+        "z3_v2_blue_indep": "unsat",
+        "z3_v3_red_nondeg": "sat",
+        "z3_v3_blue_nondeg": "sat",
+        "z3_status": "VERIFIED",
+        "z3_ms": 12800.08
+      }
+    },
+    {
+      "feasible": true,
+      "status": "OPTIMAL",
+      "rounds": 28,
+      "padding_mode": "standard",
+      "eval_mode": "ModeI_Wrap256",
+      "k_target": 256,
+      "s_w": 7,
+      "t_match": 8,
+      "biclique_range": null,
+      "is_independent_biclique": true,
+      "red_msg_basis": [
+        13
+      ],
+      "blue_msg_basis": [
+        8
+      ],
+      "w_colors": [
+        "RED",
+        "RED",
+        "RED",
+        "RED",
+        "RED",
+        "RED",
+        "GRAY",
+        "GRAY",
+        "BLUE",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "RED",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "BLUE",
+        "BLUE",
+        "BLUE",
+        "BLUE",
+        "BLUE"
+      ],
+      "fwd_rounds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "bwd_rounds": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "matched_state_words": [
+        "A_7",
+        "A_8"
+      ],
+      "indirect_matches": [
+        "T1(8)"
+      ],
+      "d1_bits": 32,
+      "d2_bits": 32,
+      "m_match": 96,
+      "delta_carry": 0,
+      "m_eff": 96,
+      "complexity": {
+        "mode": "ModeI_Wrap256",
+        "k_target": 256,
+        "d1": 32,
+        "d2": 32,
+        "L_bic": 0,
+        "is_independent_biclique": true,
+        "R_fwd": 8,
+        "R_bwd": 20,
+        "R_total": 28,
+        "m_match": 96,
+        "delta_carry": 0,
+        "m_eff": 96,
+        "p_phi": 1.0,
+        "kappa_phi": -0.0,
+        "log2_N_groups": 192.0,
+        "log2_C_group": 32.050626,
+        "log2_T_attack": 224.050626,
+        "log2_T_brute": 256.0,
+        "delta_log2_T": 31.949374,
+        "log2_M_words": 35.0,
+        "is_speedup": true,
+        "mem_feasible": true,
+        "notes": ""
+      },
+      "extra": {
+        "t_anchor": 0,
+        "L_bic": 0
+      },
+      "z3_verified": true,
+      "z3_detail": {
+        "candidate_id": "p15_stage1a_mitm_28r",
+        "category": "Stage1A_Reduced_MitM",
+        "rounds_range": [
+          0,
+          27
+        ],
+        "fwd_range": [
+          0,
+          8
+        ],
+        "bwd_range": [
+          8,
+          0
+        ],
+        "basis_start": 7,
+        "use_msg_schedule": true,
+        "fixed_padding_mode": "standard",
+        "gray_vars": [
+          "W[7]",
+          "W[9]",
+          "W[10]",
+          "W[11]",
+          "W[12]",
+          "W[14]",
+          "W[15]",
+          "W[16]",
+          "W[17]",
+          "W[18]",
+          "W[19]",
+          "W[20]",
+          "W[21]",
+          "W[22]"
+        ],
+        "red_vars": [
+          "W[13]"
+        ],
+        "blue_vars": [
+          "W[8]"
+        ],
+        "fwd_target_slots": [
+          "b",
+          "a"
+        ],
+        "bwd_target_slots": [
+          "b",
+          "a"
+        ],
+        "target_expr": "Fwd['b', 'a']@r8 / Bwd['b', 'a']@r8",
+        "non_interference_side": "Both_Red_and_Blue",
+        "z3_v1_red_indep": "unsat",
+        "z3_v2_blue_indep": "unsat",
+        "z3_v3_red_nondeg": "sat",
+        "z3_v3_blue_nondeg": "sat",
+        "z3_status": "VERIFIED",
+        "z3_ms": 13592.44
+      }
+    },
+    {
+      "feasible": true,
+      "status": "OPTIMAL",
+      "rounds": 32,
+      "padding_mode": "standard",
+      "eval_mode": "ModeI_Wrap256",
+      "k_target": 256,
+      "s_w": 7,
+      "t_match": 15,
+      "biclique_range": null,
+      "is_independent_biclique": true,
+      "red_msg_basis": [
+        16
+      ],
+      "blue_msg_basis": [
+        15
+      ],
+      "w_colors": [
+        "WHITE",
+        "WHITE",
+        "WHITE",
+        "BLUE",
+        "BLUE",
+        "BLUE",
+        "BLUE",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "BLUE",
+        "RED",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "GRAY",
+        "RED",
+        "GRAY",
+        "RED",
+        "GRAY",
+        "RED",
+        "GRAY",
+        "RED",
+        "WHITE",
+        "WHITE"
+      ],
+      "fwd_rounds": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "bwd_rounds": [
+        31,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "matched_state_words": [
+        "A_28",
+        "A_29",
+        "A_30"
+      ],
+      "indirect_matches": [],
+      "d1_bits": 32,
+      "d2_bits": 32,
+      "m_match": 96,
+      "delta_carry": 0,
+      "m_eff": 96,
+      "complexity": {
+        "mode": "ModeI_Wrap256",
+        "k_target": 256,
+        "d1": 32,
+        "d2": 32,
+        "L_bic": 0,
+        "is_independent_biclique": true,
+        "R_fwd": 15,
+        "R_bwd": 17,
+        "R_total": 32,
+        "m_match": 96,
+        "delta_carry": 0,
+        "m_eff": 96,
+        "p_phi": 1.0,
+        "kappa_phi": -0.0,
+        "log2_N_groups": 192.0,
+        "log2_C_group": 32.044394,
+        "log2_T_attack": 224.044394,
+        "log2_T_brute": 256.0,
+        "delta_log2_T": 31.955606,
+        "log2_M_words": 35.0,
+        "is_speedup": true,
+        "mem_feasible": true,
+        "notes": ""
+      },
+      "extra": {
+        "t_anchor": 16,
+        "L_bic": 0
+      },
+      "z3_verified": true,
+      "z3_detail": {
+        "candidate_id": "p15_stage1a_mitm_32r",
+        "category": "Stage1A_Reduced_MitM",
+        "rounds_range": [
+          0,
+          31
+        ],
+        "fwd_range": [
+          16,
+          31
+        ],
+        "bwd_range": [
+          31,
+          16
+        ],
+        "basis_start": 7,
+        "use_msg_schedule": true,
+        "fixed_padding_mode": "standard",
+        "gray_vars": [
+          "W[7]",
+          "W[8]",
+          "W[9]",
+          "W[10]",
+          "W[11]",
+          "W[12]",
+          "W[13]",
+          "W[14]",
+          "W[17]",
+          "W[18]",
+          "W[19]",
+          "W[20]",
+          "W[21]",
+          "W[22]"
+        ],
+        "red_vars": [
+          "W[16]"
+        ],
+        "blue_vars": [
+          "W[15]"
+        ],
+        "fwd_target_slots": [
+          "d",
+          "c",
+          "b"
+        ],
+        "bwd_target_slots": [
+          "d",
+          "c",
+          "b"
+        ],
+        "target_expr": "Fwd['d', 'c', 'b']@r31 / Bwd['d', 'c', 'b']@r31",
+        "non_interference_side": "Both_Red_and_Blue",
+        "z3_v1_red_indep": "unsat",
+        "z3_v2_blue_indep": "unsat",
+        "z3_v3_red_nondeg": "sat",
+        "z3_v3_blue_nondeg": "sat",
+        "z3_status": "VERIFIED",
+        "z3_ms": 8072.98
+      }
+    }
+  ],
+  "biclique_khovratovich": [
+    {
+      "feasible": false,
+      "status": "INFEASIBLE",
+      "rounds": 41,
+      "padding_mode": "standard",
+      "eval_mode": "ModeI_Wrap256",
+      "k_target": 256,
+      "s_w": -1,
+      "t_match": -1,
+      "biclique_range": null,
+      "is_independent_biclique": false,
+      "red_msg_basis": [],
+      "blue_msg_basis": [],
+      "w_colors": [],
+      "fwd_rounds": [],
+      "bwd_rounds": [],
+      "matched_state_words": [],
+      "indirect_matches": [],
+      "d1_bits": 0,
+      "d2_bits": 0,
+      "m_match": 0,
+      "delta_carry": 0,
+      "m_eff": 0,
+      "complexity": null,
+      "extra": {
+        "t_anchor": 0
+      },
+      "fixed_iv": true,
+      "attack_type": "Preimage_FixedIV",
+      "analytical_subword_calibration": {
+        "mode": "ModeI_Wrap256",
+        "k_target": 256,
+        "d1": 8,
+        "d2": 8,
+        "L_bic": 6,
+        "is_independent_biclique": true,
+        "R_fwd": 17,
+        "R_bwd": 17,
+        "R_total": 41,
+        "m_match": 16,
+        "delta_carry": 0,
+        "m_eff": 16,
+        "p_phi": 1.0,
+        "kappa_phi": -0.0,
+        "log2_N_groups": 240.0,
+        "log2_C_group": 8.201945,
+        "log2_T_attack": 248.201945,
+        "log2_T_brute": 256.0,
+        "delta_log2_T": 7.798055,
+        "log2_M_words": 11.0,
+        "is_speedup": true,
+        "mem_feasible": true,
+        "notes": "Analytical Khovratovich sub-word (8-bit) independent biclique baseline; word-level 32-bit CP-SAT infeasible due to full nonlinear msg-schedule coupling."
+      }
+    },
+    {
+      "feasible": false,
+      "status": "INFEASIBLE",
+      "rounds": 45,
+      "padding_mode": "standard",
+      "eval_mode": "ModeI_Wrap256",
+      "k_target": 256,
+      "s_w": -1,
+      "t_match": -1,
+      "biclique_range": null,
+      "is_independent_biclique": false,
+      "red_msg_basis": [],
+      "blue_msg_basis": [],
+      "w_colors": [],
+      "fwd_rounds": [],
+      "bwd_rounds": [],
+      "matched_state_words": [],
+      "indirect_matches": [],
+      "d1_bits": 0,
+      "d2_bits": 0,
+      "m_match": 0,
+      "delta_carry": 0,
+      "m_eff": 0,
+      "complexity": null,
+      "extra": {
+        "t_anchor": 0
+      },
+      "fixed_iv": true,
+      "attack_type": "Preimage_FixedIV",
+      "analytical_subword_calibration": {
+        "mode": "ModeI_Wrap256",
+        "k_target": 256,
+        "d1": 8,
+        "d2": 8,
+        "L_bic": 6,
+        "is_independent_biclique": true,
+        "R_fwd": 19,
+        "R_bwd": 19,
+        "R_total": 45,
+        "m_match": 16,
+        "delta_carry": 0,
+        "m_eff": 16,
+        "p_phi": 1.0,
+        "kappa_phi": -0.0,
+        "log2_N_groups": 240.0,
+        "log2_C_group": 8.185536,
+        "log2_T_attack": 248.185536,
+        "log2_T_brute": 256.0,
+        "delta_log2_T": 7.814464,
+        "log2_M_words": 11.0,
+        "is_speedup": true,
+        "mem_feasible": true,
+        "notes": "Analytical Khovratovich sub-word (8-bit) independent biclique baseline; word-level 32-bit CP-SAT infeasible due to full nonlinear msg-schedule coupling."
+      }
+    },
+    {
+      "feasible": false,
+      "status": "INFEASIBLE",
+      "rounds": 52,
+      "padding_mode": "standard",
+      "eval_mode": "ModeI_Wrap256",
+      "k_target": 256,
+      "s_w": -1,
+      "t_match": -1,
+      "biclique_range": null,
+      "is_independent_biclique": false,
+      "red_msg_basis": [],
+      "blue_msg_basis": [],
+      "w_colors": [],
+      "fwd_rounds": [],
+      "bwd_rounds": [],
+      "matched_state_words": [],
+      "indirect_matches": [],
+      "d1_bits": 0,
+      "d2_bits": 0,
+      "m_match": 0,
+      "delta_carry": 0,
+      "m_eff": 0,
+      "complexity": null,
+      "extra": {
+        "t_anchor": 0
+      },
+      "fixed_iv": false,
+      "attack_type": "PseudoPreimage_FreeIV",
+      "analytical_subword_calibration": {
+        "mode": "ModeI_Wrap256",
+        "k_target": 256,
+        "d1": 8,
+        "d2": 8,
+        "L_bic": 8,
+        "is_independent_biclique": true,
+        "R_fwd": 23,
+        "R_bwd": 23,
+        "R_total": 52,
+        "m_match": 16,
+        "delta_carry": 0,
+        "m_eff": 16,
+        "p_phi": 1.0,
+        "kappa_phi": -0.0,
+        "log2_N_groups": 240.0,
+        "log2_C_group": 8.281484,
+        "log2_T_attack": 248.281484,
+        "log2_T_brute": 256.0,
+        "delta_log2_T": 7.718516,
+        "log2_M_words": 11.0,
+        "is_speedup": true,
+        "mem_feasible": true,
+        "notes": "Analytical Khovratovich sub-word (8-bit) independent biclique baseline; word-level 32-bit CP-SAT infeasible due to full nonlinear msg-schedule coupling."
+      }
+    },
+    {
+      "feasible": false,
+      "status": "INFEASIBLE",
+      "rounds": 64,
+      "padding_mode": "standard",
+      "eval_mode": "ModeI_Wrap256",
+      "k_target": 256,
+      "s_w": -1,
+      "t_match": -1,
+      "biclique_range": null,
+      "is_independent_biclique": false,
+      "red_msg_basis": [],
+      "blue_msg_basis": [],
+      "w_colors": [],
+      "fwd_rounds": [],
+      "bwd_rounds": [],
+      "matched_state_words": [],
+      "indirect_matches": [],
+      "d1_bits": 0,
+      "d2_bits": 0,
+      "m_match": 0,
+      "delta_carry": 0,
+      "m_eff": 0,
+      "complexity": null,
+      "extra": {
+        "t_anchor": 0
+      },
+      "fixed_iv": true,
+      "attack_type": "Preimage_FixedIV"
+    },
+    {
+      "feasible": false,
+      "status": "INFEASIBLE",
+      "rounds": 64,
+      "padding_mode": "standard",
+      "eval_mode": "ModeI_Wrap256",
+      "k_target": 256,
+      "s_w": -1,
+      "t_match": -1,
+      "biclique_range": null,
+      "is_independent_biclique": false,
+      "red_msg_basis": [],
+      "blue_msg_basis": [],
+      "w_colors": [],
+      "fwd_rounds": [],
+      "bwd_rounds": [],
+      "matched_state_words": [],
+      "indirect_matches": [],
+      "d1_bits": 0,
+      "d2_bits": 0,
+      "m_match": 0,
+      "delta_carry": 0,
+      "m_eff": 0,
+      "complexity": null,
+      "extra": {
+        "t_anchor": 0
+      },
+      "fixed_iv": false,
+      "attack_type": "PseudoPreimage_FreeIV"
+    }
+  ],
+  "local_64r_bicliques": [
+    {
+      "feasible": true,
+      "t_start": 0,
+      "t_end": 5,
+      "bic_len": 6,
+      "padding_mode": "standard",
+      "red_w_indices": [
+        0,
+        1
+      ],
+      "blue_w_indices": [
+        4,
+        5
+      ],
+      "d1_bits": 64,
+      "d2_bits": 64,
+      "score": 2,
+      "z3_verified": true,
+      "z3_detail": {
+        "candidate_id": "p15_stage1b_local_bic_6r_t0",
+        "category": "Local_Independent_Biclique_64R",
+        "rounds_range": [
+          0,
+          5
+        ],
+        "use_msg_schedule": false,
+        "fixed_padding_mode": "standard",
+        "gray_vars": [
+          "W[2]",
+          "W[3]"
+        ],
+        "red_vars": [
+          "W[0]",
+          "W[1]"
+        ],
+        "blue_vars": [
+          "W[4]",
+          "W[5]"
+        ],
+        "fwd_mid_round": 3,
+        "fwd_invar_under_blue": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h"
+        ],
+        "fwd_sensitive_to_red": [
+          "a",
+          "b",
+          "c",
+          "e",
+          "f",
+          "g"
+        ],
+        "bwd_invar_under_red_at_start": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f"
+        ],
+        "bwd_sensitive_to_blue_at_start": [
+          "c",
+          "d",
+          "e",
+          "f"
+        ],
+        "target_expr": "Fwd['a', 'b', 'c', 'e', 'f', 'g']@r3 / Bwd['c', 'd', 'e', 'f']@r0",
+        "non_interference_side": "Both_Red_and_Blue",
+        "z3_status": "VERIFIED",
+        "z3_ms": 15949.32
+      }
+    },
+    {
+      "feasible": true,
+      "t_start": 0,
+      "t_end": 7,
+      "bic_len": 8,
+      "padding_mode": "standard",
+      "red_w_indices": [
+        0,
+        1
+      ],
+      "blue_w_indices": [
+        6,
+        7
+      ],
+      "d1_bits": 64,
+      "d2_bits": 64,
+      "score": 2,
+      "z3_verified": true,
+      "z3_detail": {
+        "candidate_id": "p15_stage1b_local_bic_8r_t0",
+        "category": "Local_Independent_Biclique_64R",
+        "rounds_range": [
+          0,
+          7
+        ],
+        "use_msg_schedule": false,
+        "fixed_padding_mode": "standard",
+        "gray_vars": [
+          "W[2]",
+          "W[3]",
+          "W[4]",
+          "W[5]"
+        ],
+        "red_vars": [
+          "W[0]",
+          "W[1]"
+        ],
+        "blue_vars": [
+          "W[6]",
+          "W[7]"
+        ],
+        "fwd_mid_round": 4,
+        "fwd_invar_under_blue": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h"
+        ],
+        "fwd_sensitive_to_red": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h"
+        ],
+        "bwd_invar_under_red_at_start": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f"
+        ],
+        "bwd_sensitive_to_blue_at_start": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f"
+        ],
+        "target_expr": "Fwd['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']@r4 / Bwd['a', 'b', 'c', 'd', 'e', 'f']@r0",
+        "non_interference_side": "Both_Red_and_Blue",
+        "z3_status": "VERIFIED",
+        "z3_ms": 13846.91
+      }
+    },
+    {
+      "feasible": true,
+      "t_start": 0,
+      "t_end": 8,
+      "bic_len": 9,
+      "padding_mode": "standard",
+      "red_w_indices": [
+        0,
+        1
+      ],
+      "blue_w_indices": [
+        7,
+        8
+      ],
+      "d1_bits": 64,
+      "d2_bits": 64,
+      "score": 2,
+      "z3_verified": false,
+      "z3_detail": {
+        "candidate_id": "p15_stage1b_local_bic_9r_t0",
+        "category": "Local_Independent_Biclique_64R",
+        "rounds_range": [
+          0,
+          8
+        ],
+        "use_msg_schedule": false,
+        "fixed_padding_mode": "standard",
+        "gray_vars": [
+          "W[2]",
+          "W[3]",
+          "W[4]",
+          "W[5]",
+          "W[6]"
+        ],
+        "red_vars": [
+          "W[0]",
+          "W[1]"
+        ],
+        "blue_vars": [
+          "W[7]",
+          "W[8]"
+        ],
+        "fwd_mid_round": 4,
+        "fwd_invar_under_blue": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h"
+        ],
+        "fwd_sensitive_to_red": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h"
+        ],
+        "bwd_invar_under_red_at_start": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f"
+        ],
+        "bwd_sensitive_to_blue_at_start": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f"
+        ],
+        "target_expr": "Fwd['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']@r4 / Bwd['a', 'b', 'c', 'd', 'e', 'f']@r0",
+        "non_interference_side": "Both_Red_and_Blue",
+        "z3_status": "PARTIAL",
+        "z3_ms": 22414.99
+      }
+    }
+  ],
+  "r_max_penetration_word": 32
+}

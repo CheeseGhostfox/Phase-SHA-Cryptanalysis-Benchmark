@@ -1,0 +1,27 @@
+[P5] Start on device=cuda:0 (NVIDIA L4), fp32={'default_dtype': 'torch.float32', 'matmul_allow_tf32': False, 'cudnn_allow_tf32': False}
+
+[P5] === Sweep R=8 (1/8) ===
+  [R=8] Main best z_out=3.930 (z_hw=1.81, z_clz=-1.74, z_btc=2.12, z_bit=3.93), carry_post4=0.25169 (base=0.38361, z_c=-2891.69), Ctrl z_out=5.465, z_vs_ctrl=-1.09 | 42.2s
+
+[P5] === Sweep R=12 (2/8) ===
+  [R=12] Main best z_out=3.668 (z_hw=2.94, z_clz=2.18, z_btc=2.46, z_bit=3.67), carry_post4=0.32236 (base=0.38836, z_c=-1993.56), Ctrl z_out=3.309, z_vs_ctrl=0.25 | 49.5s
+
+[P5] === Sweep R=16 (3/8) ===
+  [R=16] Main best z_out=3.555 (z_hw=-2.03, z_clz=-3.33, z_btc=-1.67, z_bit=3.55), carry_post4=0.35196 (base=0.39593, z_c=-1655.37), Ctrl z_out=4.242, z_vs_ctrl=-0.49 | 62.6s
+
+[P5] === Sweep R=20 (4/8) ===
+  [R=20] Main best z_out=3.652 (z_hw=3.41, z_clz=-1.75, z_btc=-1.31, z_bit=3.65), carry_post4=0.38010 (base=0.41403, z_c=-1480.82), Ctrl z_out=3.664, z_vs_ctrl=-0.01 | 80.7s
+
+[P5] === Sweep R=24 (5/8) ===
+  [R=24] Main best z_out=3.973 (z_hw=1.46, z_clz=2.46, z_btc=-1.78, z_bit=3.97), carry_post4=0.39837 (base=0.42550, z_c=-1318.94), Ctrl z_out=3.230, z_vs_ctrl=0.52 | 99.6s
+
+[P5] === Sweep R=32 (6/8) ===
+  [R=32] Main best z_out=3.656 (z_hw=2.22, z_clz=-2.43, z_btc=2.22, z_bit=3.66), carry_post4=0.41753 (base=0.43694, z_c=-1108.24), Ctrl z_out=4.262, z_vs_ctrl=-0.43 | 109.5s
+
+[P5] === Sweep R=64 (7/8) ===
+  [R=64] Main best z_out=3.766 (z_hw=-1.73, z_clz=2.65, z_btc=2.43, z_bit=3.77), carry_post4=0.44306 (base=0.45206, z_c=-743.57), Ctrl z_out=4.047, z_vs_ctrl=-0.20 | 149.7s
+
+[P5] === Sweep R=double64 (8/8) ===
+  [R=double64] Main best z_out=3.938 (z_hw=1.82, z_clz=-1.98, z_btc=-2.43, z_bit=3.94), carry_post4=0.44306 (base=0.45206, z_c=-743.57), Ctrl z_out=3.453, z_vs_ctrl=0.34 | 186.2s
+
+[P5] All sweeps finished in 780.9s -> /content/p5_work/results

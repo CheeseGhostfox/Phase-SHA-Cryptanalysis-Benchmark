@@ -1,0 +1,137 @@
+{
+  "all_passed": true,
+  "tests": {
+    "U0_fp32_determinism": {
+      "passed": true,
+      "cuda": true,
+      "dtypes": [
+        "torch.float32"
+      ],
+      "elapsed_sec": 0.0007
+    },
+    "U1_bool_const_guard": {
+      "passed": true,
+      "mapped_vars": 9488,
+      "const_s": 1280,
+      "elapsed_sec": 0.1009
+    },
+    "U2_full_crystal_alias_sync": {
+      "passed": true,
+      "s_checked": 5888,
+      "c_checked": 7680,
+      "elapsed_sec": 0.2657
+    },
+    "U3_calibrated_gate_and_chunk": {
+      "passed": true,
+      "r24_status": "SAT",
+      "max_abs_logit": 0.8154,
+      "r28_interrupt_sec": 0.1174,
+      "r64_elapsed_sec": 1.9891,
+      "cd195_r64_sec": 1.7664,
+      "ext_cases": 14,
+      "max_ratio_long": 1.1203,
+      "thread_errors": [],
+      "cd103_sec": 0.4919,
+      "elapsed_sec": 17.3785
+    },
+    "U4_zero_waste_probe_b0": {
+      "passed": true,
+      "conflicts_delta": 0,
+      "large_base_lits": 15271,
+      "sample_dp_dn": [
+        28,
+        24
+      ],
+      "elapsed_sec": 0.5939
+    },
+    "U5_synced_xor_state_sync": {
+      "passed": true,
+      "status": "TIMEOUT_OR_BUDGET",
+      "assigned_counts": [
+        2824,
+        2824,
+        2824
+      ],
+      "elapsed_sec": 2.1033
+    },
+    "U6_bridgeable_encoder_1to1": {
+      "passed": true,
+      "rounds_checked": [
+        16,
+        24,
+        26,
+        28
+      ],
+      "elapsed_sec": 1.5184
+    },
+    "U7_signed_uf_conflicts": {
+      "passed": true,
+      "elapsed_sec": 0.1768
+    },
+    "U8_safe_cms_fallback": {
+      "passed": true,
+      "crash_reason": "worker_exit_11",
+      "timeout_reason": "hard_timeout_killed",
+      "timeout_sec": 4.7134,
+      "ok_reason": "ok",
+      "elapsed_sec": 9.5858
+    },
+    "T_P4_1_fp32_and_result_type": {
+      "passed": true,
+      "elapsed_sec": 0.3014
+    },
+    "T_P4_2_splice_block_12": {
+      "passed": true,
+      "s32": 8,
+      "w32": 4,
+      "elapsed_sec": 0.0562
+    },
+    "T_P4_3_window_vars_and_11_rules": {
+      "passed": true,
+      "ac_units": 16,
+      "bc_units": 1,
+      "elapsed_sec": 0.049
+    },
+    "T_P4_4_local_gf2_soundness_and_conflict": {
+      "passed": true,
+      "units_applied": 34,
+      "elapsed_sec": 0.0423
+    },
+    "T_P4_5_single_forward_and_clean_eval": {
+      "passed": true,
+      "base_calls_20sims": 22,
+      "p4_calls_20sims": 3,
+      "elapsed_sec": 1.3751
+    },
+    "T_P4_6_r64_overconstrained_probe": {
+      "passed": true,
+      "probes": [
+        {
+          "fb": 4,
+          "solved": true,
+          "sims": 16,
+          "pruned_conflicts": 2,
+          "sec": 0.2885
+        },
+        {
+          "fb": 6,
+          "solved": true,
+          "sims": 87,
+          "pruned_conflicts": 24,
+          "sec": 0.7365
+        }
+      ],
+      "elapsed_sec": 1.0259
+    },
+    "T_P4_7_r64_blind_throughput_and_depth": {
+      "passed": true,
+      "simulations": 156,
+      "max_depth": 4,
+      "local_gf2_mean_ms": 6.103,
+      "pruned_conflicts": 0,
+      "local_gf2_units": 0,
+      "elapsed_sec": 3.0576
+    }
+  },
+  "total_elapsed_sec": 37.977
+}

@@ -1,0 +1,27 @@
+[W1124 21:13:44.491842089 Context.cpp:508] Warning: torch.backends.cuda.preferred_linalg_library is an experimental feature. If you see any error or unexpected behavior when this flag is set please file an issue on GitHub. (function operator())
+[P7] Starting mode=full device=cuda gpu=Tesla T4 fp32_default=torch.float32 allow_tf32=False
+[P7] Running Probe I (bit_slice_ensemble)...
+  [Probe I] R=2 completed
+  [Probe I] R=4 completed
+  [Probe I] R=6 completed
+  [Probe I] R=8 completed
+  [Probe I] R=10 completed
+  [Probe I] R=12 completed
+[P7] Probe I finished in 209.97s
+[P7] Running Probe II (io_dual_coupling)...
+  [Probe II] R=2 completed
+  [Probe II] R=4 completed
+  [Probe II] R=6 completed
+  [Probe II] R=8 completed
+  [Probe II] R=10 completed
+  [Probe II] R=12 completed
+[P7] Probe II finished in 80.17s
+[P7] Running Probe III (operator_transfer)...
+  [Probe III] R=2 completed
+  [Probe III] R=4 completed
+  [Probe III] R=6 completed
+  [Probe III] R=8 completed
+  [Probe III] R=10 completed
+  [Probe III] R=12 completed
+[P7] Probe III finished in 153.16s
+[P7] Completed in 443.30s | conservation=True (ortho=3.52e-06, det=5.25e-06, norm=3.05e-05)

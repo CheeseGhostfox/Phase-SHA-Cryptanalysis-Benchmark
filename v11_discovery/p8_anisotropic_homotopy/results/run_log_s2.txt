@@ -1,0 +1,41 @@
+[P8] Starting on GPU: NVIDIA L4, allow_tf32=False
+[P8 Sweep] R=64 variant=main: building engine & solving alpha=0 GF(2)...
+[P8 Sweep] R=64 variant=main: training P7_learned_aniso (100 steps)...
+  R=64 main    P0_uniform               | bif=True  s_c=0.04 a_bar_c=0.03999999910593033 dE=0.1667 E32_min=112.3715 hits=0
+  R=64 main    P1_bit_lsb_to_msb        | bif=True  s_c=0.04 a_bar_c=0.03999999910593033 dE=0.2030 E32_min=144.5204 hits=0
+  R=64 main    P2_bit_msb_to_lsb        | bif=True  s_c=0.04 a_bar_c=0.03999999910593033 dE=0.2070 E32_min=120.7950 hits=0
+  R=64 main    P3_round_forward         | bif=True  s_c=0.04 a_bar_c=0.03999999910593033 dE=0.2074 E32_min=121.4469 hits=0
+  R=64 main    P4_round_backward        | bif=True  s_c=0.04 a_bar_c=0.03999999910593033 dE=0.2085 E32_min=121.6581 hits=0
+  R=64 main    P5a_gate_bool_then_add   | bif=True  s_c=0.04 a_bar_c=0.0533333346247673 dE=0.1829 E32_min=118.5501 hits=0
+  R=64 main    P5b_gate_add_then_bool   | bif=True  s_c=0.04 a_bar_c=0.02666666731238365 dE=0.2006 E32_min=122.5770 hits=0
+  R=64 main    P6_cd_complex_detour     | bif=True  s_c=0.04 a_bar_c=0.03999999910593033 dE=0.5851 E32_min=149.5839 hits=0
+  R=64 main    P7_learned_aniso         | bif=True  s_c=0.76 a_bar_c=0.4041380286216736 dE=0.2087 E32_min=135.4377 hits=0
+  R=64 main    P6_gamma02               | bif=True  s_c=0.04 a_bar_c=0.03999999910593033 dE=0.6608 E32_min=156.4457 hits=0
+  R=64 main    P6_gamma07               | bif=True  s_c=0.04 a_bar_c=0.03999999910593033 dE=0.5330 E32_min=152.4030 hits=0
+  R=64 main    P6_pure_damping          | bif=True  s_c=0.04 a_bar_c=0.03999999910593033 dE=0.1654 E32_min=109.7513 hits=0
+  R=64 main    P6_pure_complex          | bif=True  s_c=0.04 a_bar_c=0.03999999910593033 dE=0.5708 E32_min=144.9439 hits=0
+[P8 Sweep] R=64 variant=control: building engine & solving alpha=0 GF(2)...
+[P8 Sweep] R=64 variant=control: training P7_learned_aniso (100 steps)...
+  R=64 control P0_uniform               | bif=True  s_c=0.04 a_bar_c=0.03999999910593033 dE=0.1665 E32_min=102.5044 hits=0
+  R=64 control P1_bit_lsb_to_msb        | bif=True  s_c=0.04 a_bar_c=0.03999999910593033 dE=0.2028 E32_min=140.5027 hits=0
+  R=64 control P2_bit_msb_to_lsb        | bif=True  s_c=0.04 a_bar_c=0.03999999910593033 dE=0.2085 E32_min=111.9386 hits=0
+  R=64 control P3_round_forward         | bif=True  s_c=0.04 a_bar_c=0.03999999910593033 dE=0.2078 E32_min=110.7538 hits=0
+  R=64 control P4_round_backward        | bif=True  s_c=0.04 a_bar_c=0.03999999910593033 dE=0.2082 E32_min=122.2800 hits=0
+  R=64 control P5a_gate_bool_then_add   | bif=True  s_c=0.04 a_bar_c=0.0533333346247673 dE=0.1847 E32_min=120.2371 hits=0
+  R=64 control P5b_gate_add_then_bool   | bif=True  s_c=0.04 a_bar_c=0.02666666731238365 dE=0.1999 E32_min=118.8233 hits=0
+  R=64 control P6_cd_complex_detour     | bif=True  s_c=0.04 a_bar_c=0.03999999910593033 dE=0.5862 E32_min=157.7369 hits=0
+  R=64 control P7_learned_aniso         | bif=True  s_c=0.76 a_bar_c=0.40414929389953613 dE=0.2102 E32_min=121.3275 hits=0
+  R=64 control P6_gamma02               | bif=True  s_c=0.04 a_bar_c=0.03999999910593033 dE=0.6608 E32_min=159.8789 hits=0
+  R=64 control P6_gamma07               | bif=True  s_c=0.04 a_bar_c=0.03999999910593033 dE=0.5323 E32_min=155.6031 hits=0
+  R=64 control P6_pure_damping          | bif=True  s_c=0.04 a_bar_c=0.03999999910593033 dE=0.1673 E32_min=103.2384 hits=0
+  R=64 control P6_pure_complex          | bif=True  s_c=0.04 a_bar_c=0.03999999910593033 dE=0.5716 E32_min=159.1790 hits=0
+[P8 Sweep] Finished R=64 in 1199.6s
+[P8] Saved homotopy_sweep.json (1199.58s)
+[P8] ALL EXPERIMENTS COMPLETE in 1199.6s
+[P8] Starting on GPU: NVIDIA L4, allow_tf32=False
+[P8 2D] Starting 2D boundary relaxation comparison...
+[P8 2D] Saved boundary_2d_compare.json (327.16s)
+[P8 CutSet] Starting singularity probe & minimal cut-set ablation...
+[P8 CutSet] Saved cutset_ablation.json (862.18s)
+[P8] ALL EXPERIMENTS COMPLETE in 1189.4s
+[P8 S2] ALL DONE

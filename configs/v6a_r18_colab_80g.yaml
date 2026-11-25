@@ -1,0 +1,59 @@
+# Phase-SHA V6A-v2.1 Battlefield B: R=18 Colab A100-80GB Tier (B=8 x M=256 = 2048)
+version: v6a_v2_1
+experiment_name: v6a_v2_r18_colab
+rounds: 18
+domain_mode: int_range
+num_bits: 32
+msg_bytes_len: 4
+allow_peel_back: true
+gpu_tier: 80g
+
+num_digests: 8
+trajs_per_digest: 256
+inner_steps_per_tick: 6
+
+start_alpha: 0.0
+start_mask_m: 64
+target_mask_m: 256
+step_alpha: 0.05
+min_step_alpha: 0.01
+max_ticks_per_alpha: 12
+step_m: 32
+eps_advance: 0.018
+spike_factor: 1.20
+spike_abs_margin: 0.003
+baseline_window: 3
+interleaved_2d: true
+sched_every: 2
+
+bp_iters: 7
+bp_damping: 0.72
+osd_every: 12
+osd_top_k: 16
+endgame_zoom_k: 12
+endgame_zoom_k_large: 14
+
+mps_sites: 64
+mps_bond_dim: 8
+mps_min_entropy: 0.55
+mps_ent_weight: 0.50
+mps_every: 10
+stag_mps_cycles_trigger: 3
+
+bm_manifold_dim: 16
+bm_window: 8
+bm_patience: 12
+bm_cayley_t: 0.42
+
+nav_hidden: 64
+nav_lr: 1.0e-3
+
+steps: 2000
+log_every: 25
+eval_every: 200
+checkpoint_every: 250
+holdout_size: 2048
+holdout_seed: 20261122
+seed: 6418
+best_ckpt_name: best.pt
+latest_ckpt_name: latest.pt

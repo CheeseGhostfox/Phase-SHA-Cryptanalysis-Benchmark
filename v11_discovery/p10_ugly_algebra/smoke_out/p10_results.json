@@ -1,0 +1,163 @@
+{
+  "experiment": "P10_Ugly_Algebra_And_Single_Round_Koopman",
+  "device": "cpu",
+  "gpu_name": "CPU",
+  "fp32_lock": {
+    "allow_tf32_matmul": false,
+    "allow_tf32_cudnn": false
+  },
+  "reference_verification": {
+    "sha256_ref_xor_diff": 0,
+    "coupling_roundtrip_max_err": 0.0,
+    "ortho_roundtrip_max_err": 1.9073486328125e-06
+  },
+  "status": "smoke_passed",
+  "part_a_scaling": [
+    {
+      "n_bits": 4,
+      "dim": 32,
+      "rank": 32,
+      "method": "ugly_bilinear",
+      "n_params": 151140,
+      "recon_acc": 0.91406,
+      "xor_acc": 0.44727,
+      "add_acc": 0.48047,
+      "add_low_half_acc": 0.46875,
+      "add_high_half_acc": 0.49219,
+      "rotr_acc": 0.63086,
+      "joint_mean_acc": 0.51953,
+      "comp2_acc": 0.49414,
+      "comp3_acc": 0.49414,
+      "latent_rel_err_add": 0.68668,
+      "latent_rel_err_xor": 0.56742,
+      "latent_rel_err_rotr": 0.69676,
+      "inv_roundtrip_max_err": 0.0,
+      "elapsed_sec": 1.37
+    }
+  ],
+  "part_a_d95_summary": {
+    "ugly_bilinear": {
+      "4": null
+    }
+  },
+  "part_b_32bit": [
+    {
+      "n_bits": 32,
+      "dim": 128,
+      "rank": 64,
+      "method": "ugly_invertible",
+      "n_params": 805920,
+      "recon_acc": 0.521,
+      "xor_acc": 0.5,
+      "add_acc": 0.49976,
+      "add_low_half_acc": 0.51123,
+      "add_high_half_acc": 0.48828,
+      "rotr_acc": 0.50049,
+      "joint_mean_acc": 0.50008,
+      "comp2_acc": 0.5,
+      "comp3_acc": 0.49902,
+      "latent_rel_err_add": 0.07845,
+      "latent_rel_err_xor": 0.07774,
+      "latent_rel_err_rotr": 0.06968,
+      "inv_roundtrip_max_err": 4e-07,
+      "elapsed_sec": 0.46
+    },
+    {
+      "n_bits": 32,
+      "dim": 128,
+      "rank": 64,
+      "method": "human_hybrid",
+      "n_params": 151968,
+      "recon_acc": 0.71606,
+      "xor_acc": 0.50122,
+      "add_acc": 0.4917,
+      "add_low_half_acc": 0.48584,
+      "add_high_half_acc": 0.49756,
+      "rotr_acc": 0.58325,
+      "joint_mean_acc": 0.52539,
+      "comp2_acc": 0.50024,
+      "comp3_acc": 0.49536,
+      "latent_rel_err_add": 1.22694,
+      "latent_rel_err_xor": 1.22234,
+      "latent_rel_err_rotr": 1.10133,
+      "inv_roundtrip_max_err": 0.0,
+      "elapsed_sec": 0.21
+    }
+  ],
+  "part_c_sha256_round": [
+    {
+      "tag": "smoke_auto_ortho",
+      "dim": 256,
+      "op_mode": "linear_ortho",
+      "controlled": false,
+      "ctrl_cipher": false,
+      "n_params": 856576,
+      "recon_acc": 0.50354,
+      "inv_roundtrip_max_err": 4.5e-06,
+      "per_k": {
+        "1": {
+          "fwd_bit_acc": 0.5025,
+          "inv_bit_acc": 0.50299,
+          "fwd_latent_rel_err": 0.40604,
+          "inv_latent_rel_err": 0.40605,
+          "z_fwd_vs_random": 0.64,
+          "z_inv_vs_random": 0.77
+        },
+        "2": {
+          "fwd_bit_acc": 0.50629,
+          "inv_bit_acc": 0.49786,
+          "fwd_latent_rel_err": 0.42534,
+          "inv_latent_rel_err": 0.42535,
+          "z_fwd_vs_random": 1.61,
+          "z_inv_vs_random": -0.55
+        },
+        "4": {
+          "fwd_bit_acc": 0.49921,
+          "inv_bit_acc": 0.49878,
+          "fwd_latent_rel_err": 0.4871,
+          "inv_latent_rel_err": 0.48711,
+          "z_fwd_vs_random": -0.2,
+          "z_inv_vs_random": -0.31
+        }
+      },
+      "elapsed_sec": 0.16
+    },
+    {
+      "tag": "smoke_ctrl_inv",
+      "dim": 256,
+      "op_mode": "invertible_coupling",
+      "controlled": true,
+      "ctrl_cipher": false,
+      "n_params": 1340416,
+      "recon_acc": 0.50397,
+      "inv_roundtrip_max_err": 5e-07,
+      "per_k": {
+        "1": {
+          "fwd_bit_acc": 0.50403,
+          "inv_bit_acc": 0.50519,
+          "fwd_latent_rel_err": 0.38843,
+          "inv_latent_rel_err": 0.38834,
+          "z_fwd_vs_random": 1.03,
+          "z_inv_vs_random": 1.33
+        },
+        "2": {
+          "fwd_bit_acc": 0.49365,
+          "inv_bit_acc": 0.49774,
+          "fwd_latent_rel_err": 0.39752,
+          "inv_latent_rel_err": 0.39716,
+          "z_fwd_vs_random": -1.62,
+          "z_inv_vs_random": -0.58
+        },
+        "4": {
+          "fwd_bit_acc": 0.50488,
+          "inv_bit_acc": 0.50317,
+          "fwd_latent_rel_err": 0.40094,
+          "inv_latent_rel_err": 0.40029,
+          "z_fwd_vs_random": 1.25,
+          "z_inv_vs_random": 0.81
+        }
+      },
+      "elapsed_sec": 0.31
+    }
+  ]
+}

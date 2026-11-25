@@ -1,0 +1,64 @@
+{
+  "experiment": "P5_BTC_320bit_Weak_Midstate",
+  "device": "cuda:0",
+  "hardware_name": "NVIDIA L4",
+  "fp32_lock": {
+    "default_dtype": "torch.float32",
+    "matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false
+  },
+  "seeds": {
+    "SEED_TRAIN": 20261105,
+    "SEED_HOLDOUT": 998244353,
+    "SEED_HOLDOUT2": 104729017,
+    "SEED_CTRL": 135792468,
+    "SEED_BASE": 777654321
+  },
+  "nonce_isolation": {
+    "train_range": "[0, 2^30)",
+    "holdout_range": "[2^30, 2^32)",
+    "n_train_pool": 16384,
+    "n_holdout": 262144,
+    "n_holdout2": 1048576,
+    "overlap": 0
+  },
+  "ctrl_variant": {
+    "S0_rot": [
+      3,
+      8,
+      18
+    ],
+    "S1_rot": [
+      6,
+      9,
+      18
+    ],
+    "s0_rot": [
+      10,
+      17
+    ],
+    "s0_shr": 19,
+    "s1_rot": [
+      7,
+      13
+    ],
+    "s1_shr": 28,
+    "k_first8_hex": [
+      "0xfc39c3e1",
+      "0xe9cef7ec",
+      "0x4f8e7058",
+      "0x82f858f7",
+      "0xe1424669",
+      "0x53bc4c8b",
+      "0xf53214ce",
+      "0x33955aea"
+    ]
+  },
+  "search_config": {
+    "pop_size": 64,
+    "generations": 80,
+    "grad_steps": 64,
+    "top_k": 16
+  },
+  "total_elapsed_sec": 780.8922536373138
+}

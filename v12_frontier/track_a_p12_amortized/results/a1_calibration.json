@@ -1,0 +1,532 @@
+{
+  "fp32_lock": {
+    "default_dtype": "torch.float32",
+    "matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false
+  },
+  "bit_exact_check": {
+    "btc_genesis_xor_diff": 0,
+    "btc_genesis_hash_matched": true,
+    "random_headers_tested": 256,
+    "max_xor_diff": 0
+  },
+  "ge_weights": {
+    "XOR2": 3,
+    "AND2": 2,
+    "OR2": 2,
+    "NOT": 1,
+    "FA": 11,
+    "HA": 5,
+    "ADD32": 346,
+    "CH32": 256,
+    "MAJ32": 384,
+    "SIGMA_UPPER": 192,
+    "SIGMA_LOWER": 192
+  },
+  "baselines_main": {
+    "variant": "SHA256_MAIN",
+    "n_nonces_eval": 64,
+    "BASE_NO_ASICBOOST": {
+      "inner_loop_2p32": {
+        "label": "BASE_NO_ASICBOOST_2p32",
+        "batch_size": 64,
+        "total_ge": 32805813.000064984,
+        "amortized_ge_per_hash": 512590.8281260154,
+        "naive_ge_per_hash": 512590.8281260154,
+        "saving_pct_vs_noab": 0.0,
+        "chunk1_ge_per_hash": 1.0154071787837893e-06,
+        "chunk2_exp_ge_per_hash": 52631.765625,
+        "chunk2_comp_ge_per_hash": 195134.640625,
+        "hash2_exp_ge_per_hash": 58212.0,
+        "hash2_comp_ge_per_hash": 206612.421875,
+        "p_valid": 1.0,
+        "setup_ge_per_hash": 0.0
+      },
+      "symmetric_nonce_batch": {
+        "label": "BASE_NO_ASICBOOST_SYM",
+        "batch_size": 64,
+        "total_ge": 32810174.140625,
+        "amortized_ge_per_hash": 512658.9709472656,
+        "naive_ge_per_hash": 512658.9709472656,
+        "saving_pct_vs_noab": 0.0,
+        "chunk1_ge_per_hash": 68.142822265625,
+        "chunk2_exp_ge_per_hash": 52631.765625,
+        "chunk2_comp_ge_per_hash": 195134.640625,
+        "hash2_exp_ge_per_hash": 58212.0,
+        "hash2_comp_ge_per_hash": 206612.421875,
+        "p_valid": 1.0,
+        "setup_ge_per_hash": 0.0
+      },
+      "unamortized_1nonce_full_chunk1": {
+        "label": "BASE_NO_ASICBOOST_1NONCE",
+        "batch_size": 64,
+        "total_ge": 33084926.0,
+        "amortized_ge_per_hash": 516951.96875,
+        "naive_ge_per_hash": 516951.96875,
+        "saving_pct_vs_noab": 0.0,
+        "chunk1_ge_per_hash": 4361.140625,
+        "chunk2_exp_ge_per_hash": 52631.765625,
+        "chunk2_comp_ge_per_hash": 195134.640625,
+        "hash2_exp_ge_per_hash": 58212.0,
+        "hash2_comp_ge_per_hash": 206612.421875,
+        "p_valid": 1.0,
+        "setup_ge_per_hash": 0.0
+      }
+    },
+    "BASE_ASICBOOST_OVERT": [
+      {
+        "k": 4,
+        "inner_loop_2p32": {
+          "label": "BASE_ASICBOOST_OVERT_k4_2p32",
+          "batch_size": 256,
+          "total_ge": 121233798.00025003,
+          "amortized_ge_per_hash": 473569.52343847667,
+          "naive_ge_per_hash": 512590.8281260154,
+          "saving_pct_vs_noab": 7.612563968457453,
+          "chunk1_ge_per_hash": 9.766517905518413e-07,
+          "chunk2_exp_ge_per_hash": 13157.94140625,
+          "chunk2_comp_ge_per_hash": 195612.9765625,
+          "hash2_exp_ge_per_hash": 58212.0,
+          "hash2_comp_ge_per_hash": 206586.60546875,
+          "p_valid": 1.0,
+          "setup_ge_per_hash": 0.0
+        },
+        "symmetric_nonce_batch": {
+          "label": "BASE_ASICBOOST_OVERT_k4_SYM",
+          "batch_size": 256,
+          "total_ge": 121250576.75,
+          "amortized_ge_per_hash": 473635.0654296875,
+          "naive_ge_per_hash": 512658.9709472656,
+          "saving_pct_vs_noab": 7.612059425288454,
+          "chunk1_ge_per_hash": 65.5419921875,
+          "chunk2_exp_ge_per_hash": 13157.94140625,
+          "chunk2_comp_ge_per_hash": 195612.9765625,
+          "hash2_exp_ge_per_hash": 58212.0,
+          "hash2_comp_ge_per_hash": 206586.60546875,
+          "p_valid": 1.0,
+          "setup_ge_per_hash": 0.0
+        },
+        "unamortized_1nonce_full_chunk1": {
+          "label": "BASE_ASICBOOST_OVERT_k4_1NONCE",
+          "batch_size": 256,
+          "total_ge": 122307638.0,
+          "amortized_ge_per_hash": 477764.2109375,
+          "naive_ge_per_hash": 516951.96875,
+          "saving_pct_vs_noab": 7.580541361948335,
+          "chunk1_ge_per_hash": 4194.6875,
+          "chunk2_exp_ge_per_hash": 13157.94140625,
+          "chunk2_comp_ge_per_hash": 195612.9765625,
+          "hash2_exp_ge_per_hash": 58212.0,
+          "hash2_comp_ge_per_hash": 206586.60546875,
+          "p_valid": 1.0,
+          "setup_ge_per_hash": 0.0
+        }
+      },
+      {
+        "k": 8,
+        "inner_loop_2p32": {
+          "label": "BASE_ASICBOOST_OVERT_k8_2p32",
+          "batch_size": 512,
+          "total_ge": 239096996.00049734,
+          "amortized_ge_per_hash": 466986.32031347137,
+          "naive_ge_per_hash": 512590.8281260154,
+          "saving_pct_vs_noab": 8.89686379666017,
+          "chunk1_ge_per_hash": 9.713512554299086e-07,
+          "chunk2_exp_ge_per_hash": 6578.970703125,
+          "chunk2_comp_ge_per_hash": 195613.046875,
+          "hash2_exp_ge_per_hash": 58212.0,
+          "hash2_comp_ge_per_hash": 206582.302734375,
+          "p_valid": 1.0,
+          "setup_ge_per_hash": 0.0
+        },
+        "symmetric_nonce_batch": {
+          "label": "BASE_ASICBOOST_OVERT_k8_SYM",
+          "batch_size": 512,
+          "total_ge": 239130371.375,
+          "amortized_ge_per_hash": 467051.5065917969,
+          "naive_ge_per_hash": 512658.9709472656,
+          "saving_pct_vs_noab": 8.896257929749584,
+          "chunk1_ge_per_hash": 65.186279296875,
+          "chunk2_exp_ge_per_hash": 6578.970703125,
+          "chunk2_comp_ge_per_hash": 195613.046875,
+          "hash2_exp_ge_per_hash": 58212.0,
+          "hash2_comp_ge_per_hash": 206582.302734375,
+          "p_valid": 1.0,
+          "setup_ge_per_hash": 0.0
+        },
+        "unamortized_1nonce_full_chunk1": {
+          "label": "BASE_ASICBOOST_OVERT_k8_1NONCE",
+          "batch_size": 512,
+          "total_ge": 241233020.0,
+          "amortized_ge_per_hash": 471158.2421875,
+          "naive_ge_per_hash": 516951.96875,
+          "saving_pct_vs_noab": 8.858410322574095,
+          "chunk1_ge_per_hash": 4171.921875,
+          "chunk2_exp_ge_per_hash": 6578.970703125,
+          "chunk2_comp_ge_per_hash": 195613.046875,
+          "hash2_exp_ge_per_hash": 58212.0,
+          "hash2_comp_ge_per_hash": 206582.302734375,
+          "p_valid": 1.0,
+          "setup_ge_per_hash": 0.0
+        }
+      },
+      {
+        "k": 16,
+        "inner_loop_2p32": {
+          "label": "BASE_ASICBOOST_OVERT_k16_2p32",
+          "batch_size": 1024,
+          "total_ge": 474823356.00099695,
+          "amortized_ge_per_hash": 463694.6835947236,
+          "naive_ge_per_hash": 512590.8281260154,
+          "saving_pct_vs_noab": 9.53902056930117,
+          "chunk1_ge_per_hash": 9.735761068441207e-07,
+          "chunk2_exp_ge_per_hash": 3289.4853515625,
+          "chunk2_comp_ge_per_hash": 195613.046875,
+          "hash2_exp_ge_per_hash": 58212.0,
+          "hash2_comp_ge_per_hash": 206580.1513671875,
+          "p_valid": 1.0,
+          "setup_ge_per_hash": 0.0
+        },
+        "symmetric_nonce_batch": {
+          "label": "BASE_ASICBOOST_OVERT_k16_SYM",
+          "batch_size": 1024,
+          "total_ge": 474890259.640625,
+          "amortized_ge_per_hash": 463760.01918029785,
+          "naive_ge_per_hash": 512658.9709472656,
+          "saving_pct_vs_noab": 9.538300222585539,
+          "chunk1_ge_per_hash": 65.33558654785156,
+          "chunk2_exp_ge_per_hash": 3289.4853515625,
+          "chunk2_comp_ge_per_hash": 195613.046875,
+          "hash2_exp_ge_per_hash": 58212.0,
+          "hash2_comp_ge_per_hash": 206580.1513671875,
+          "p_valid": 1.0,
+          "setup_ge_per_hash": 0.0
+        },
+        "unamortized_1nonce_full_chunk1": {
+          "label": "BASE_ASICBOOST_OVERT_k16_1NONCE",
+          "batch_size": 1024,
+          "total_ge": 479105189.0,
+          "amortized_ge_per_hash": 467876.1611328125,
+          "naive_ge_per_hash": 516951.96875,
+          "saving_pct_vs_noab": 9.493301231805685,
+          "chunk1_ge_per_hash": 4181.4775390625,
+          "chunk2_exp_ge_per_hash": 3289.4853515625,
+          "chunk2_comp_ge_per_hash": 195613.046875,
+          "hash2_exp_ge_per_hash": 58212.0,
+          "hash2_comp_ge_per_hash": 206580.1513671875,
+          "p_valid": 1.0,
+          "setup_ge_per_hash": 0.0
+        }
+      }
+    ],
+    "BASE_ASICBOOST_COVERT": [
+      {
+        "k": 4,
+        "covert_2p32": {
+          "label": "BASE_ASICBOOST_COVERT_k4_2p32",
+          "batch_size": 256,
+          "total_ge": 121233866.14307229,
+          "amortized_ge_per_hash": 473569.78962137614,
+          "naive_ge_per_hash": 512590.8281260154,
+          "saving_pct_vs_noab": 7.612512039533859,
+          "chunk1_ge_per_hash": 9.766517905518413e-07,
+          "chunk2_exp_ge_per_hash": 13157.94140625,
+          "chunk2_comp_ge_per_hash": 195612.9765625,
+          "hash2_exp_ge_per_hash": 58212.0,
+          "hash2_comp_ge_per_hash": 206586.60546875,
+          "p_valid": 1.0,
+          "setup_ge_per_hash": 0.26618289947509766
+        }
+      },
+      {
+        "k": 8,
+        "covert_2p32": {
+          "label": "BASE_ASICBOOST_COVERT_k8_2p32",
+          "batch_size": 512,
+          "total_ge": 239097132.28614187,
+          "amortized_ge_per_hash": 466986.58649637084,
+          "naive_ge_per_hash": 512590.8281260154,
+          "saving_pct_vs_noab": 8.896811867736576,
+          "chunk1_ge_per_hash": 9.713512554299086e-07,
+          "chunk2_exp_ge_per_hash": 6578.970703125,
+          "chunk2_comp_ge_per_hash": 195613.046875,
+          "hash2_exp_ge_per_hash": 58212.0,
+          "hash2_comp_ge_per_hash": 206582.302734375,
+          "p_valid": 1.0,
+          "setup_ge_per_hash": 0.26618289947509766
+        }
+      },
+      {
+        "k": 16,
+        "covert_2p32": {
+          "label": "BASE_ASICBOOST_COVERT_k16_2p32",
+          "batch_size": 1024,
+          "total_ge": 474823628.572286,
+          "amortized_ge_per_hash": 463694.94977762306,
+          "naive_ge_per_hash": 512590.8281260154,
+          "saving_pct_vs_noab": 9.538968640377576,
+          "chunk1_ge_per_hash": 9.735761068441207e-07,
+          "chunk2_exp_ge_per_hash": 3289.4853515625,
+          "chunk2_comp_ge_per_hash": 195613.046875,
+          "hash2_exp_ge_per_hash": 58212.0,
+          "hash2_comp_ge_per_hash": 206580.1513671875,
+          "p_valid": 1.0,
+          "setup_ge_per_hash": 0.26618289947509766
+        }
+      }
+    ]
+  },
+  "baselines_ctrl_s0": {
+    "variant": "CTRL_RAND_ROTR_K_S0",
+    "n_nonces_eval": 64,
+    "BASE_NO_ASICBOOST": {
+      "inner_loop_2p32": {
+        "label": "BASE_NO_ASICBOOST_2p32",
+        "batch_size": 64,
+        "total_ge": 32807727.000064988,
+        "amortized_ge_per_hash": 512620.73437601543,
+        "naive_ge_per_hash": 512620.73437601543,
+        "saving_pct_vs_noab": 0.0,
+        "chunk1_ge_per_hash": 1.0154435585718602e-06,
+        "chunk2_exp_ge_per_hash": 52587.421875,
+        "chunk2_comp_ge_per_hash": 195143.65625,
+        "hash2_exp_ge_per_hash": 58282.0,
+        "hash2_comp_ge_per_hash": 206607.65625,
+        "p_valid": 1.0,
+        "setup_ge_per_hash": 0.0
+      },
+      "symmetric_nonce_batch": {
+        "label": "BASE_NO_ASICBOOST_SYM",
+        "batch_size": 64,
+        "total_ge": 32812088.296875,
+        "amortized_ge_per_hash": 512688.8796386719,
+        "naive_ge_per_hash": 512688.8796386719,
+        "saving_pct_vs_noab": 0.0,
+        "chunk1_ge_per_hash": 68.145263671875,
+        "chunk2_exp_ge_per_hash": 52587.421875,
+        "chunk2_comp_ge_per_hash": 195143.65625,
+        "hash2_exp_ge_per_hash": 58282.0,
+        "hash2_comp_ge_per_hash": 206607.65625,
+        "p_valid": 1.0,
+        "setup_ge_per_hash": 0.0
+      },
+      "unamortized_1nonce_full_chunk1": {
+        "label": "BASE_NO_ASICBOOST_1NONCE",
+        "batch_size": 64,
+        "total_ge": 33086850.0,
+        "amortized_ge_per_hash": 516982.03125,
+        "naive_ge_per_hash": 516982.03125,
+        "saving_pct_vs_noab": 0.0,
+        "chunk1_ge_per_hash": 4361.296875,
+        "chunk2_exp_ge_per_hash": 52587.421875,
+        "chunk2_comp_ge_per_hash": 195143.65625,
+        "hash2_exp_ge_per_hash": 58282.0,
+        "hash2_comp_ge_per_hash": 206607.65625,
+        "p_valid": 1.0,
+        "setup_ge_per_hash": 0.0
+      }
+    },
+    "BASE_ASICBOOST_OVERT": [
+      {
+        "k": 4,
+        "inner_loop_2p32": {
+          "label": "BASE_ASICBOOST_OVERT_k4_2p32",
+          "batch_size": 256,
+          "total_ge": 121244301.00024997,
+          "amortized_ge_per_hash": 473610.55078222643,
+          "naive_ge_per_hash": 512620.73437601543,
+          "saving_pct_vs_noab": 7.609950393690945,
+          "chunk1_ge_per_hash": 9.764426067704335e-07,
+          "chunk2_exp_ge_per_hash": 13146.85546875,
+          "chunk2_comp_ge_per_hash": 195600.03125,
+          "hash2_exp_ge_per_hash": 58282.0,
+          "hash2_comp_ge_per_hash": 206581.6640625,
+          "p_valid": 1.0,
+          "setup_ge_per_hash": 0.0
+        },
+        "symmetric_nonce_batch": {
+          "label": "BASE_ASICBOOST_OVERT_k4_SYM",
+          "batch_size": 256,
+          "total_ge": 121261076.15625,
+          "amortized_ge_per_hash": 473676.07873535156,
+          "naive_ge_per_hash": 512688.8796386719,
+          "saving_pct_vs_noab": 7.609449405420188,
+          "chunk1_ge_per_hash": 65.5279541015625,
+          "chunk2_exp_ge_per_hash": 13146.85546875,
+          "chunk2_comp_ge_per_hash": 195600.03125,
+          "hash2_exp_ge_per_hash": 58282.0,
+          "hash2_comp_ge_per_hash": 206581.6640625,
+          "p_valid": 1.0,
+          "setup_ge_per_hash": 0.0
+        },
+        "unamortized_1nonce_full_chunk1": {
+          "label": "BASE_ASICBOOST_OVERT_k4_1NONCE",
+          "batch_size": 256,
+          "total_ge": 122317911.0,
+          "amortized_ge_per_hash": 477804.33984375,
+          "naive_ge_per_hash": 516982.03125,
+          "saving_pct_vs_noab": 7.578153405355903,
+          "chunk1_ge_per_hash": 4193.7890625,
+          "chunk2_exp_ge_per_hash": 13146.85546875,
+          "chunk2_comp_ge_per_hash": 195600.03125,
+          "hash2_exp_ge_per_hash": 58282.0,
+          "hash2_comp_ge_per_hash": 206581.6640625,
+          "p_valid": 1.0,
+          "setup_ge_per_hash": 0.0
+        }
+      },
+      {
+        "k": 8,
+        "inner_loop_2p32": {
+          "label": "BASE_ASICBOOST_OVERT_k8_2p32",
+          "batch_size": 512,
+          "total_ge": 239125013.000498,
+          "amortized_ge_per_hash": 467041.04101659765,
+          "naive_ge_per_hash": 512620.73437601543,
+          "saving_pct_vs_noab": 8.89150405024085,
+          "chunk1_ge_per_hash": 9.726545613375492e-07,
+          "chunk2_exp_ge_per_hash": 6573.427734375,
+          "chunk2_comp_ge_per_hash": 195608.28125,
+          "hash2_exp_ge_per_hash": 58282.0,
+          "hash2_comp_ge_per_hash": 206577.33203125,
+          "p_valid": 1.0,
+          "setup_ge_per_hash": 0.0
+        },
+        "symmetric_nonce_batch": {
+          "label": "BASE_ASICBOOST_OVERT_k8_SYM",
+          "batch_size": 512,
+          "total_ge": 239158433.15625,
+          "amortized_ge_per_hash": 467106.3147583008,
+          "naive_ge_per_hash": 512688.8796386719,
+          "saving_pct_vs_noab": 8.890882305170411,
+          "chunk1_ge_per_hash": 65.27374267578125,
+          "chunk2_exp_ge_per_hash": 6573.427734375,
+          "chunk2_comp_ge_per_hash": 195608.28125,
+          "hash2_exp_ge_per_hash": 58282.0,
+          "hash2_comp_ge_per_hash": 206577.33203125,
+          "p_valid": 1.0,
+          "setup_ge_per_hash": 0.0
+        },
+        "unamortized_1nonce_full_chunk1": {
+          "label": "BASE_ASICBOOST_OVERT_k8_1NONCE",
+          "batch_size": 512,
+          "total_ge": 241263903.0,
+          "amortized_ge_per_hash": 471218.560546875,
+          "naive_ge_per_hash": 516982.03125,
+          "saving_pct_vs_noab": 8.852042805525462,
+          "chunk1_ge_per_hash": 4177.51953125,
+          "chunk2_exp_ge_per_hash": 6573.427734375,
+          "chunk2_comp_ge_per_hash": 195608.28125,
+          "hash2_exp_ge_per_hash": 58282.0,
+          "hash2_comp_ge_per_hash": 206577.33203125,
+          "p_valid": 1.0,
+          "setup_ge_per_hash": 0.0
+        }
+      },
+      {
+        "k": 16,
+        "inner_loop_2p32": {
+          "label": "BASE_ASICBOOST_OVERT_k16_2p32",
+          "batch_size": 1024,
+          "total_ge": 474882213.00099695,
+          "amortized_ge_per_hash": 463752.1611337861,
+          "naive_ge_per_hash": 512620.73437601543,
+          "saving_pct_vs_noab": 9.533085566996103,
+          "chunk1_ge_per_hash": 9.735476851346903e-07,
+          "chunk2_exp_ge_per_hash": 3286.7138671875,
+          "chunk2_comp_ge_per_hash": 195608.28125,
+          "hash2_exp_ge_per_hash": 58282.0,
+          "hash2_comp_ge_per_hash": 206575.166015625,
+          "p_valid": 1.0,
+          "setup_ge_per_hash": 0.0
+        },
+        "symmetric_nonce_batch": {
+          "label": "BASE_ASICBOOST_OVERT_k16_SYM",
+          "batch_size": 1024,
+          "total_ge": 474949114.6875,
+          "amortized_ge_per_hash": 463817.4948120117,
+          "naive_ge_per_hash": 512688.8796386719,
+          "saving_pct_vs_noab": 9.532366853968687,
+          "chunk1_ge_per_hash": 65.33367919921875,
+          "chunk2_exp_ge_per_hash": 3286.7138671875,
+          "chunk2_comp_ge_per_hash": 195608.28125,
+          "hash2_exp_ge_per_hash": 58282.0,
+          "hash2_comp_ge_per_hash": 206575.166015625,
+          "p_valid": 1.0,
+          "setup_ge_per_hash": 0.0
+        },
+        "unamortized_1nonce_full_chunk1": {
+          "label": "BASE_ASICBOOST_OVERT_k16_1NONCE",
+          "batch_size": 1024,
+          "total_ge": 479163921.0,
+          "amortized_ge_per_hash": 467933.5166015625,
+          "naive_ge_per_hash": 516982.03125,
+          "saving_pct_vs_noab": 9.487469908740175,
+          "chunk1_ge_per_hash": 4181.35546875,
+          "chunk2_exp_ge_per_hash": 3286.7138671875,
+          "chunk2_comp_ge_per_hash": 195608.28125,
+          "hash2_exp_ge_per_hash": 58282.0,
+          "hash2_comp_ge_per_hash": 206575.166015625,
+          "p_valid": 1.0,
+          "setup_ge_per_hash": 0.0
+        }
+      }
+    ],
+    "BASE_ASICBOOST_COVERT": [
+      {
+        "k": 4,
+        "covert_2p32": {
+          "label": "BASE_ASICBOOST_COVERT_k4_2p32",
+          "batch_size": 256,
+          "total_ge": 121244369.14551364,
+          "amortized_ge_per_hash": 473610.81697466265,
+          "naive_ge_per_hash": 512620.73437601543,
+          "saving_pct_vs_noab": 7.609898465936493,
+          "chunk1_ge_per_hash": 9.764426067704335e-07,
+          "chunk2_exp_ge_per_hash": 13146.85546875,
+          "chunk2_comp_ge_per_hash": 195600.03125,
+          "hash2_exp_ge_per_hash": 58282.0,
+          "hash2_comp_ge_per_hash": 206581.6640625,
+          "p_valid": 1.0,
+          "setup_ge_per_hash": 0.2661924362182617
+        }
+      },
+      {
+        "k": 8,
+        "covert_2p32": {
+          "label": "BASE_ASICBOOST_COVERT_k8_2p32",
+          "batch_size": 512,
+          "total_ge": 239125149.29102534,
+          "amortized_ge_per_hash": 467041.30720903387,
+          "naive_ge_per_hash": 512620.73437601543,
+          "saving_pct_vs_noab": 8.891452122486399,
+          "chunk1_ge_per_hash": 9.726545613375492e-07,
+          "chunk2_exp_ge_per_hash": 6573.427734375,
+          "chunk2_comp_ge_per_hash": 195608.28125,
+          "hash2_exp_ge_per_hash": 58282.0,
+          "hash2_comp_ge_per_hash": 206577.33203125,
+          "p_valid": 1.0,
+          "setup_ge_per_hash": 0.2661924362182617
+        }
+      },
+      {
+        "k": 16,
+        "covert_2p32": {
+          "label": "BASE_ASICBOOST_COVERT_k16_2p32",
+          "batch_size": 1024,
+          "total_ge": 474882485.58205163,
+          "amortized_ge_per_hash": 463752.4273262223,
+          "naive_ge_per_hash": 512620.73437601543,
+          "saving_pct_vs_noab": 9.533033639241651,
+          "chunk1_ge_per_hash": 9.735476851346903e-07,
+          "chunk2_exp_ge_per_hash": 3286.7138671875,
+          "chunk2_comp_ge_per_hash": 195608.28125,
+          "hash2_exp_ge_per_hash": 58282.0,
+          "hash2_comp_ge_per_hash": 206575.166015625,
+          "p_valid": 1.0,
+          "setup_ge_per_hash": 0.2661924362182617
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+[P4-Init] device=cuda (NVIDIA L4), fp32_locked=True, tf32_disabled=True, rounds=[4, 6, 8, 10, 12, 16], families=['F1_xor2', 'F2_mod2', 'F3_rx2', 'F4_boom4', 'F5_cube8'], r4_steps=400, steps=1000, extend_steps=2000, batch_size=256, d_model=32, eval_n=65536
+[R= 4 F1_xor2 ] main_AUC=1.00000 (z_null=+221.70, ext=False) | ctrl_AUC=1.00000 (z=+221.70) | z_ctrl=+0.00 | zp_lin=1.00000 | wall=41.3s | W_R2=0.877 W_AUC=1.0000 2A_R2=0.922 2A_AUC=1.0000
+[R= 4 F2_mod2 ] main_AUC=1.00000 (z_null=+221.70, ext=False) | ctrl_AUC=1.00000 (z=+221.70) | z_ctrl=+0.00 | zp_lin=1.00000 | wall=38.9s | W_R2=0.750 W_AUC=0.9844 2A_R2=0.903 2A_AUC=0.9995
+[R= 4 F3_rx2  ] main_AUC=1.00000 (z_null=+221.70, ext=False) | ctrl_AUC=1.00000 (z=+221.70) | z_ctrl=+0.06 | zp_lin=0.99959 | wall=39.0s | W_R2=0.854 W_AUC=0.9947 2A_R2=0.871 2A_AUC=0.9999
+[R= 4 F4_boom4] main_AUC=1.00000 (z_null=+221.70, ext=False) | ctrl_AUC=1.00000 (z=+221.70) | z_ctrl=+0.00 | zp_lin=1.00000 | wall=39.1s | W_R2=0.888 W_AUC=1.0000 2A_R2=0.923 2A_AUC=1.0000
+[R= 4 F5_cube8] main_AUC=1.00000 (z_null=+221.70, ext=False) | ctrl_AUC=1.00000 (z=+221.70) | z_ctrl=+0.00 | zp_lin=1.00000 | wall=39.5s | W_R2=0.867 W_AUC=1.0000 2A_R2=0.923 2A_AUC=1.0000
+[R= 6 F1_xor2 ] main_AUC=0.99530 (z_null=+219.62, ext=True) | ctrl_AUC=0.99998 (z=+221.69) | z_ctrl=-30.89 | zp_lin=0.91232 | wall=254.8s | W_R2=0.707 W_AUC=0.9379 2A_R2=0.636 2A_AUC=0.9215
+[R= 6 F2_mod2 ] main_AUC=0.88687 (z_null=+171.54, ext=True) | ctrl_AUC=0.99951 (z=+221.48) | z_ctrl=-101.21 | zp_lin=0.56306 | wall=254.9s | W_R2=0.570 W_AUC=0.7954 2A_R2=0.666 2A_AUC=0.8170
+[R= 6 F3_rx2  ] main_AUC=0.49842 (z_null=-0.70, ext=False) | ctrl_AUC=0.50224 (z=+1.00) | z_ctrl=-1.22 | zp_lin=0.49961 | wall=87.4s
+[R= 6 F4_boom4] main_AUC=0.99793 (z_null=+220.78, ext=True) | ctrl_AUC=1.00000 (z=+221.70) | z_ctrl=-19.01 | zp_lin=0.91637 | wall=254.8s | W_R2=0.706 W_AUC=0.9518 2A_R2=0.677 2A_AUC=0.9450
+[R= 6 F5_cube8] main_AUC=0.99960 (z_null=+221.53, ext=True) | ctrl_AUC=1.00000 (z=+221.70) | z_ctrl=-9.81 | zp_lin=0.89039 | wall=254.9s | W_R2=0.562 W_AUC=0.9200 2A_R2=0.605 2A_AUC=0.9306
+[R= 8 F1_xor2 ] main_AUC=0.49596 (z_null=-1.79, ext=False) | ctrl_AUC=0.54051 (z=+17.96) | z_ctrl=-15.69 | zp_lin=0.49749 | wall=174.7s | W_R2=0.036 W_AUC=0.4984 2A_R2=0.023 2A_AUC=0.4964
+[R= 8 F2_mod2 ] main_AUC=0.49837 (z_null=-0.72, ext=False) | ctrl_AUC=0.50110 (z=+0.49) | z_ctrl=-0.70 | zp_lin=0.49970 | wall=89.7s
+[R= 8 F3_rx2  ] main_AUC=0.50112 (z_null=+0.50, ext=False) | ctrl_AUC=0.50097 (z=+0.43) | z_ctrl=+0.06 | zp_lin=0.49957 | wall=89.5s
+[R= 8 F4_boom4] main_AUC=0.49736 (z_null=-1.17, ext=False) | ctrl_AUC=0.53781 (z=+16.76) | z_ctrl=-10.39 | zp_lin=0.50428 | wall=174.8s | W_R2=0.030 W_AUC=0.4988 2A_R2=0.024 2A_AUC=0.5003
+[R= 8 F5_cube8] main_AUC=0.50118 (z_null=+0.52, ext=False) | ctrl_AUC=0.55792 (z=+25.68) | z_ctrl=-17.62 | zp_lin=0.50270 | wall=177.0s | W_R2=0.013 W_AUC=0.5001 2A_R2=0.003 2A_AUC=0.5031
+[R=10 F1_xor2 ] main_AUC=0.49894 (z_null=-0.47, ext=False) | ctrl_AUC=0.49906 (z=-0.42) | z_ctrl=-0.04 | zp_lin=0.50239 | wall=92.4s
+[R=10 F2_mod2 ] main_AUC=0.50015 (z_null=+0.06, ext=False) | ctrl_AUC=0.50018 (z=+0.08) | z_ctrl=-0.01 | zp_lin=0.50425 | wall=92.5s
+[R=10 F3_rx2  ] main_AUC=0.50426 (z_null=+1.89, ext=False) | ctrl_AUC=0.49894 (z=-0.47) | z_ctrl=+1.46 | zp_lin=0.50084 | wall=92.4s
+[R=10 F4_boom4] main_AUC=0.50276 (z_null=+1.22, ext=False) | ctrl_AUC=0.50091 (z=+0.40) | z_ctrl=+0.60 | zp_lin=0.49843 | wall=92.5s
+[R=10 F5_cube8] main_AUC=0.50111 (z_null=+0.49, ext=False) | ctrl_AUC=0.50193 (z=+0.85) | z_ctrl=-0.30 | zp_lin=0.49615 | wall=93.0s
+[R=12 F1_xor2 ] main_AUC=0.50062 (z_null=+0.28, ext=False) | ctrl_AUC=0.50110 (z=+0.49) | z_ctrl=-0.14 | zp_lin=0.50073 | wall=95.2s
+[R=12 F2_mod2 ] main_AUC=0.49708 (z_null=-1.30, ext=False) | ctrl_AUC=0.49937 (z=-0.28) | z_ctrl=-0.68 | zp_lin=0.50115 | wall=95.3s
+[R=12 F3_rx2  ] main_AUC=0.49851 (z_null=-0.66, ext=False) | ctrl_AUC=0.50109 (z=+0.48) | z_ctrl=-1.01 | zp_lin=0.50031 | wall=95.1s
+[R=12 F4_boom4] main_AUC=0.50356 (z_null=+1.58, ext=False) | ctrl_AUC=0.49534 (z=-2.06) | z_ctrl=+2.76 | zp_lin=0.49999 | wall=95.1s
+[R=12 F5_cube8] main_AUC=0.50081 (z_null=+0.36, ext=False) | ctrl_AUC=0.49836 (z=-0.73) | z_ctrl=+0.82 | zp_lin=0.49981 | wall=95.8s
+[R=16 F1_xor2 ] main_AUC=0.50191 (z_null=+0.85, ext=False) | ctrl_AUC=0.50077 (z=+0.34) | z_ctrl=+0.37 | zp_lin=0.50393 | wall=100.8s
+[R=16 F2_mod2 ] main_AUC=0.50093 (z_null=+0.41, ext=False) | ctrl_AUC=0.49673 (z=-1.45) | z_ctrl=+1.18 | zp_lin=0.50161 | wall=100.8s
+[R=16 F3_rx2  ] main_AUC=0.50109 (z_null=+0.48, ext=False) | ctrl_AUC=0.49545 (z=-2.02) | z_ctrl=+2.00 | zp_lin=0.50013 | wall=100.6s
+[R=16 F4_boom4] main_AUC=0.49803 (z_null=-0.87, ext=False) | ctrl_AUC=0.50125 (z=+0.55) | z_ctrl=-1.10 | zp_lin=0.49949 | wall=100.7s
+[R=16 F5_cube8] main_AUC=0.49689 (z_null=-1.38, ext=False) | ctrl_AUC=0.49848 (z=-0.68) | z_ctrl=-0.57 | zp_lin=0.50119 | wall=101.2s
+[P4-Done] Total wall_sec=3497.39s -> /content/p4_runs/results/p4_sweep_summary.json

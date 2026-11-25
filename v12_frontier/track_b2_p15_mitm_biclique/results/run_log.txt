@@ -1,0 +1,82 @@
+[Phase 0] Running SHA-256 & BTC Double-SHA256 reference cross-check...
+[Phase 0] PASS: tested=40, xor_diff=0
+[Stage 1A] Running reduced-round SHA-256 MitM calibration (R in {16,20,24,28,32})...
+  [Stage 1A] R=16: feasible=True, d1=32, d2=32, m_eff=288, log2_T=224.087463, z3=True
+  [Stage 1A] R=20: feasible=True, d1=32, d2=32, m_eff=288, log2_T=224.070389, z3=True
+  [Stage 1A] R=24: feasible=True, d1=32, d2=32, m_eff=288, log2_T=224.058894, z3=True
+  [Stage 1A] R=28: feasible=True, d1=32, d2=32, m_eff=96, log2_T=224.050626, z3=True
+  [Stage 1A] R=32: feasible=True, d1=32, d2=32, m_eff=96, log2_T=224.044394, z3=True
+[Stage 1B] Running Khovratovich-style Biclique calibration (R in {41,45,52,64})...
+  [Stage 1B] R=41 (fixed_iv=True): feasible=False, d1=0, d2=0, L_bic=0, m_eff=0, log2_T=None
+  [Stage 1B] R=45 (fixed_iv=True): feasible=False, d1=0, d2=0, L_bic=0, m_eff=0, log2_T=None
+  [Stage 1B] R=52 (fixed_iv=False): feasible=False, d1=0, d2=0, L_bic=0, m_eff=0, log2_T=None
+  [Stage 1B] R=64 (fixed_iv=True): feasible=False, d1=0, d2=0, L_bic=0, m_eff=0, log2_T=None
+  [Stage 1B] R=64 (fixed_iv=False): feasible=False, d1=0, d2=0, L_bic=0, m_eff=0, log2_T=None
+  [Stage 1B Local Biclique] L=6: feasible=True, range=[0,5], z3=True
+  [Stage 1B Local Biclique] L=8: feasible=True, range=[0,7], z3=True
+  [Stage 1B Local Biclique] L=9: feasible=True, range=[0,8], z3=False
+[Stage 1B] Full nonlinear msg-schedule penetration ceiling (word-level): R_max=32
+[Stage 2A] Scanning BTC Block 1b (320-bit fixed padding)...
+  [S2-A HIT] R=16 btc_block1b_hdr ModeI_Wrap256 k=256: delta=31.913
+  [S2-A HIT] R=16 btc_block1b_hdr ModeII_DirectTrunc k=256: delta=31.867
+  [Stage 2A] Done (86 configs evaluated).
+[Stage 2B] Scanning BTC Block 2 (256-bit fixed padding, S'_0=stdIV)...
+  [Stage 2B] Done (42 configs + local biclique).
+[Stage 2C] Scanning Cross-Block 128-round BTC Double-SHA256...
+  [S2-C] (4+8) k=32: feasible=True, d1=128, d2=0, m_eff=32, delta=0.0
+  [S2-C] (4+8) k=64: feasible=True, d1=128, d2=0, m_eff=64, delta=0.0
+  [S2-C] (4+8) k=80: feasible=True, d1=128, d2=0, m_eff=64, delta=0.0
+  [S2-C] (4+8) k=128: feasible=True, d1=128, d2=0, m_eff=128, delta=0.0
+  [S2-C] (4+8) k=256: feasible=True, d1=32, d2=96, m_eff=96, delta=32.716207
+  [S2-C] (8+8) k=32: feasible=True, d1=128, d2=0, m_eff=32, delta=0.0
+  [S2-C] (8+8) k=64: feasible=True, d1=128, d2=0, m_eff=64, delta=0.0
+  [S2-C] (8+8) k=80: feasible=True, d1=128, d2=0, m_eff=64, delta=0.0
+  [S2-C] (8+8) k=128: feasible=True, d1=128, d2=0, m_eff=128, delta=0.0
+  [S2-C] (8+8) k=256: feasible=True, d1=128, d2=0, m_eff=256, delta=0.0
+  [S2-C] (8+16) k=32: feasible=True, d1=128, d2=0, m_eff=32, delta=0.0
+  [S2-C] (8+16) k=64: feasible=True, d1=128, d2=0, m_eff=64, delta=0.0
+  [S2-C] (8+16) k=80: feasible=True, d1=128, d2=0, m_eff=64, delta=0.0
+  [S2-C] (8+16) k=128: feasible=True, d1=128, d2=0, m_eff=128, delta=0.0
+  [S2-C] (8+16) k=256: feasible=True, d1=128, d2=0, m_eff=256, delta=0.0
+  [S2-C] (16+16) k=32: feasible=True, d1=128, d2=0, m_eff=32, delta=0.0
+  [S2-C] (16+16) k=64: feasible=True, d1=128, d2=0, m_eff=64, delta=0.0
+  [S2-C] (16+16) k=80: feasible=True, d1=128, d2=0, m_eff=64, delta=0.0
+  [S2-C] (16+16) k=128: feasible=True, d1=128, d2=0, m_eff=128, delta=0.0
+  [S2-C] (16+16) k=256: feasible=True, d1=128, d2=0, m_eff=256, delta=0.0
+  [S2-C] (32+32) k=32: feasible=True, d1=128, d2=0, m_eff=32, delta=0.0
+  [S2-C] (32+32) k=64: feasible=True, d1=128, d2=0, m_eff=64, delta=0.0
+  [S2-C] (32+32) k=80: feasible=True, d1=128, d2=0, m_eff=64, delta=0.0
+  [S2-C] (32+32) k=128: feasible=True, d1=128, d2=0, m_eff=128, delta=0.0
+  [S2-C] (32+32) k=256: feasible=True, d1=128, d2=0, m_eff=256, delta=0.0
+  [S2-C] (64+16) k=32: feasible=True, d1=128, d2=0, m_eff=32, delta=0.0
+  [S2-C] (64+16) k=64: feasible=True, d1=128, d2=0, m_eff=64, delta=0.0
+  [S2-C] (64+16) k=80: feasible=True, d1=128, d2=0, m_eff=64, delta=0.0
+  [S2-C] (64+16) k=128: feasible=True, d1=128, d2=0, m_eff=128, delta=0.0
+  [S2-C] (64+16) k=256: feasible=True, d1=128, d2=0, m_eff=256, delta=0.0
+  [S2-C] (64+32) k=32: feasible=True, d1=128, d2=0, m_eff=32, delta=0.0
+  [S2-C] (64+32) k=64: feasible=True, d1=128, d2=0, m_eff=64, delta=0.0
+  [S2-C] (64+32) k=80: feasible=True, d1=128, d2=0, m_eff=64, delta=0.0
+  [S2-C] (64+32) k=128: feasible=True, d1=128, d2=0, m_eff=128, delta=0.0
+  [S2-C] (64+32) k=256: feasible=True, d1=128, d2=0, m_eff=256, delta=0.0
+  [S2-C] (64+64) k=32: feasible=True, d1=128, d2=0, m_eff=32, delta=0.0
+  [S2-C] (64+64) k=64: feasible=True, d1=128, d2=0, m_eff=64, delta=0.0
+  [S2-C] (64+64) k=80: feasible=True, d1=128, d2=0, m_eff=64, delta=0.0
+  [S2-C] (64+64) k=128: feasible=True, d1=128, d2=0, m_eff=128, delta=0.0
+  [S2-C] (64+64) k=256: feasible=True, d1=128, d2=0, m_eff=256, delta=0.0
+  [Stage 2C] Cross-block W'[4..7] decouple Z3=VERIFIED. Done (40 configs).
+[Stage 2D] Running Tier 2 bit-level carry-truncated search...
+  [Stage 2D] Done (48 bit-level configs).
+[DONE] All results written to results in 285.62s. Lean candidates=11 (verified=11).
+
+--- Local CPU test_step1_engine.py (CUDA_VISIBLE_DEVICES='') ---
+[PASS] Cross-check vs src/sha256_ref.py: xor_diff == 0 across R in {1,8,16,24,32,64}
+[PASS] Cross-check vs hashlib.sha256 & 80B BTC Double-SHA256: xor_diff == 0
+[PASS] step_backward exact round invertibility (t=0..63)
+[PASS] Dependency graphs built: btc_hdr2_64 consts=12, btc_double_128 nodes=128, consts=20
+[PASS] PySAT 4-color skeleton feasible=True; Z3 4-round non-interference=True, neg_ctrl=True
+ALL STEP 1 ENGINE & SKELETON TESTS PASSED.
+
+--- colab.exe sessions after stop -s v12-p15 ---
+[v12-p13] gpu-t4-s-ass1b0-2n5o2w0e7m3e8 | Hardware: T4 | Shape: Standard | Variant: GPU
+[v12-p12] gpu-t4-s-ass1c3-c08hdl170qxk | Hardware: T4 | Shape: Standard | Variant: GPU
+

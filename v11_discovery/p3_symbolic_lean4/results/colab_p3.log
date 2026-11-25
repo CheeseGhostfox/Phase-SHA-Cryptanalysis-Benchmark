@@ -1,0 +1,102 @@
+[P3 Search] Starting 8 workers (cpus=8), budget=1920.0s, z3_timeout=25000ms
+[MCTS t=45.6s] gen=686 fast_pass=4 verified=1 rejects={'v7_duplicate_fingerprint': 2, 'v1_failed': 1}
+[MCTS t=47.5s] gen=596 fast_pass=37 verified=2 rejects={'v7_duplicate_fingerprint': 14, 'form2_nonbase_elim': 21}
+[MCTS t=49.7s] gen=175 fast_pass=12 verified=2 rejects={'v7_duplicate_fingerprint': 10}
+[MCTS t=50.3s] gen=183 fast_pass=100 verified=4 rejects={'v7_duplicate_fingerprint': 72, 'v2_target_constant': 24}
+[MCTS t=79.5s] gen=138 fast_pass=34 verified=3 rejects={'form2_nonbase_elim': 2, 'v7_duplicate_fingerprint': 28, 'v7_semantic_duplicate': 1}
+[MCTS t=81.8s] gen=154 fast_pass=100 verified=4 rejects={'v7_duplicate_fingerprint': 71, 'v2_target_constant': 24, 'v2_elim_var_locked': 1}
+[MCTS t=85.5s] gen=69 fast_pass=52 verified=6 rejects={'v7_duplicate_fingerprint': 31, 'v2_target_constant': 2, 'v2_elim_var_locked': 13}
+[MCTS t=91.7s] gen=1366 fast_pass=27 verified=3 rejects={'v7_duplicate_fingerprint': 9, 'v1_failed': 15}
+[MCTS t=96.2s] gen=866 fast_pass=45 verified=3 rejects={'v7_duplicate_fingerprint': 17, 'form2_nonbase_elim': 21, 'v6_active_count_too_small': 3, 'v1_failed': 1}
+[MCTS t=106.8s] gen=211 fast_pass=128 verified=5 rejects={'v7_duplicate_fingerprint': 99, 'v2_target_constant': 24}
+[MCTS t=132.4s] gen=12 fast_pass=3 verified=0 rejects={'v6_active_span_too_small': 3}
+[MCTS t=136.4s] gen=182 fast_pass=127 verified=5 rejects={'v7_duplicate_fingerprint': 97, 'v2_target_constant': 24, 'v2_elim_var_locked': 1}
+[MCTS t=141.8s] gen=1818 fast_pass=27 verified=3 rejects={'v7_duplicate_fingerprint': 9, 'v1_failed': 15}
+[MCTS t=148.2s] gen=158 fast_pass=53 verified=4 rejects={'form2_nonbase_elim': 2, 'v7_duplicate_fingerprint': 46, 'v7_semantic_duplicate': 1}
+[MCTS t=179.7s] gen=71 fast_pass=53 verified=7 rejects={'v7_duplicate_fingerprint': 31, 'v2_target_constant': 2, 'v2_elim_var_locked': 13}
+[MCTS t=186.4s] gen=96 fast_pass=7 verified=1 rejects={'v6_active_span_too_small': 3, 'form2_nonbase_elim': 2, 'v7_duplicate_fingerprint': 1}
+[MCTS t=187.6s] gen=2061 fast_pass=32 verified=4 rejects={'v7_duplicate_fingerprint': 9, 'v1_failed': 19}
+[MCTS t=196.7s] gen=239 fast_pass=156 verified=6 rejects={'v7_duplicate_fingerprint': 126, 'v2_target_constant': 24}
+[MCTS t=199.1s] gen=1572 fast_pass=84 verified=4 rejects={'v7_duplicate_fingerprint': 34, 'form2_nonbase_elim': 39, 'v6_active_count_too_small': 3, 'v1_failed': 2, 'v6_active_span_too_small': 2}
+[MCTS t=218.3s] gen=205 fast_pass=149 verified=6 rejects={'v7_duplicate_fingerprint': 118, 'v2_target_constant': 24, 'v2_elim_var_locked': 1}
+[MCTS t=242.0s] gen=173 fast_pass=67 verified=5 rejects={'form2_nonbase_elim': 2, 'v7_duplicate_fingerprint': 59, 'v7_semantic_duplicate': 1}
+[MCTS t=246.1s] gen=1971 fast_pass=91 verified=5 rejects={'v7_duplicate_fingerprint': 37, 'form2_nonbase_elim': 39, 'v6_active_count_too_small': 3, 'v1_failed': 5, 'v6_active_span_too_small': 2}
+[MCTS t=262.0s] gen=82 fast_pass=63 verified=8 rejects={'v7_duplicate_fingerprint': 40, 'v2_target_constant': 2, 'v2_elim_var_locked': 13}
+[MCTS t=292.7s] gen=2358 fast_pass=158 verified=5 rejects={'v7_duplicate_fingerprint': 77, 'form2_nonbase_elim': 39, 'v6_active_count_too_small': 3, 'v1_failed': 32, 'v6_active_span_too_small': 2}
+[MCTS t=294.4s] gen=213 fast_pass=12 verified=1 rejects={'v6_active_span_too_small': 6, 'form2_nonbase_elim': 4, 'v7_duplicate_fingerprint': 1}
+[MCTS t=317.2s] gen=241 fast_pass=157 verified=7 rejects={'v7_duplicate_fingerprint': 126, 'v2_target_constant': 24}
+[MCTS t=324.1s] gen=207 fast_pass=150 verified=7 rejects={'v7_duplicate_fingerprint': 118, 'v2_target_constant': 24, 'v2_elim_var_locked': 1}
+[MCTS t=341.2s] gen=175 fast_pass=68 verified=6 rejects={'form2_nonbase_elim': 2, 'v7_duplicate_fingerprint': 59, 'v7_semantic_duplicate': 1}
+[MCTS t=352.4s] gen=389 fast_pass=28 verified=2 rejects={'v7_duplicate_fingerprint': 20, 'v2_target_constant': 2, 'v7_semantic_duplicate': 4}
+[MCTS t=372.5s] gen=84 fast_pass=64 verified=9 rejects={'v7_duplicate_fingerprint': 40, 'v2_target_constant': 2, 'v2_elim_var_locked': 13}
+[MCTS t=388.5s] gen=2154 fast_pass=33 verified=5 rejects={'v7_duplicate_fingerprint': 9, 'v1_failed': 19}
+[P3 Chunk 1] wall=904.7s gen=6390 fast=684 unique_verified=16
+[MCTS t=47.1s] gen=117 fast_pass=110 verified=4 rejects={'v7_duplicate_fingerprint': 79, 'v2_elim_var_locked': 1, 'v2_target_constant': 26}
+[MCTS t=53.6s] gen=206 fast_pass=108 verified=4 rejects={'v7_duplicate_fingerprint': 77, 'v2_elim_var_locked': 27}
+[MCTS t=56.9s] gen=224 fast_pass=108 verified=4 rejects={'v7_duplicate_fingerprint': 76, 'v2_target_constant': 1, 'v2_elim_var_locked': 27}
+[MCTS t=61.2s] gen=196 fast_pass=106 verified=4 rejects={'v7_duplicate_fingerprint': 76, 'v2_elim_var_locked': 2, 'v2_target_constant': 24}
+[MCTS t=63.6s] gen=27 fast_pass=27 verified=2 rejects={'v6_active_span_too_small': 1, 'v7_duplicate_fingerprint': 24}
+[MCTS t=96.1s] gen=145 fast_pass=137 verified=5 rejects={'v7_duplicate_fingerprint': 105, 'v2_elim_var_locked': 1, 'v2_target_constant': 26}
+[MCTS t=111.1s] gen=233 fast_pass=135 verified=5 rejects={'v7_duplicate_fingerprint': 103, 'v2_elim_var_locked': 27}
+[MCTS t=120.3s] gen=223 fast_pass=132 verified=5 rejects={'v7_duplicate_fingerprint': 101, 'v2_elim_var_locked': 2, 'v2_target_constant': 24}
+[MCTS t=131.2s] gen=429 fast_pass=111 verified=3 rejects={'v6_active_span_too_small': 2, 'v7_duplicate_fingerprint': 50, 'form2_nonbase_elim': 56}
+[MCTS t=138.4s] gen=280 fast_pass=164 verified=6 rejects={'v7_duplicate_fingerprint': 130, 'v2_target_constant': 1, 'v2_elim_var_locked': 27}
+[MCTS t=160.4s] gen=173 fast_pass=165 verified=6 rejects={'v7_duplicate_fingerprint': 132, 'v2_elim_var_locked': 1, 'v2_target_constant': 26}
+[MCTS t=177.0s] gen=999 fast_pass=152 verified=4 rejects={'v6_active_span_too_small': 8, 'v7_duplicate_fingerprint': 76, 'form2_nonbase_elim': 56, 'v6_active_count_too_small': 7, 'v7_semantic_duplicate': 1}
+[MCTS t=183.2s] gen=261 fast_pass=163 verified=6 rejects={'v7_duplicate_fingerprint': 130, 'v2_elim_var_locked': 27}
+[MCTS t=195.9s] gen=250 fast_pass=159 verified=6 rejects={'v7_duplicate_fingerprint': 127, 'v2_elim_var_locked': 2, 'v2_target_constant': 24}
+[MCTS t=245.2s] gen=308 fast_pass=192 verified=7 rejects={'v7_duplicate_fingerprint': 157, 'v2_target_constant': 1, 'v2_elim_var_locked': 27}
+[MCTS t=261.7s] gen=1390 fast_pass=232 verified=4 rejects={'v6_active_span_too_small': 10, 'v7_duplicate_fingerprint': 101, 'form2_nonbase_elim': 109, 'v6_active_count_too_small': 7, 'v7_semantic_duplicate': 1}
+[MCTS t=270.8s] gen=201 fast_pass=192 verified=7 rejects={'v7_duplicate_fingerprint': 158, 'v2_elim_var_locked': 1, 'v2_target_constant': 26}
+[MCTS t=282.0s] gen=288 fast_pass=189 verified=7 rejects={'v7_duplicate_fingerprint': 155, 'v2_elim_var_locked': 27}
+[MCTS t=302.7s] gen=507 fast_pass=391 verified=8 rejects={'v7_duplicate_fingerprint': 322, 'v2_target_constant': 4, 'v2_elim_var_locked': 54, 'v7_semantic_duplicate': 3}
+[MCTS t=308.8s] gen=251 fast_pass=160 verified=7 rejects={'v7_duplicate_fingerprint': 127, 'v2_elim_var_locked': 2, 'v2_target_constant': 24}
+[MCTS t=314.3s] gen=1490 fast_pass=234 verified=4 rejects={'v6_active_span_too_small': 10, 'v7_duplicate_fingerprint': 101, 'form2_nonbase_elim': 109, 'v6_active_count_too_small': 9, 'v7_semantic_duplicate': 1}
+[MCTS t=318.5s] gen=11 fast_pass=11 verified=3 rejects={'v6_active_span_too_small': 8}
+[MCTS t=318.4s] gen=400 fast_pass=387 verified=8 rejects={'v7_duplicate_fingerprint': 320, 'v2_elim_var_locked': 2, 'v2_target_constant': 55, 'v7_semantic_duplicate': 2}
+[MCTS t=319.1s] gen=73 fast_pass=65 verified=4 rejects={'v7_duplicate_fingerprint': 34, 'v2_elim_var_locked': 17, 'v7_semantic_duplicate': 10}
+[MCTS t=326.8s] gen=150 fast_pass=17 verified=4 rejects={'v7_duplicate_fingerprint': 10, 'v7_semantic_duplicate': 3}
+[P3 Chunk 2] wall=1370.1s gen=9754 fast=2331 unique_verified=18
+[MCTS t=45.1s] gen=48 fast_pass=8 verified=3 rejects={'v7_duplicate_fingerprint': 2, 'v1_failed': 3}
+[MCTS t=54.3s] gen=567 fast_pass=3 verified=2 rejects={'v6_active_count_too_small': 1}
+[MCTS t=61.9s] gen=2304 fast_pass=33 verified=2 rejects={'v7_semantic_duplicate': 31}
+[MCTS t=65.6s] gen=23 fast_pass=2 verified=1 rejects={'v6_active_span_too_small': 1}
+[MCTS t=80.0s] gen=612 fast_pass=4 verified=1 rejects={'v7_duplicate_fingerprint': 1, 'v5_pure_tautology': 2}
+[MCTS t=80.4s] gen=195 fast_pass=50 verified=4 rejects={'v7_duplicate_fingerprint': 20, 'form2_nonbase_elim': 24, 'v7_semantic_duplicate': 2}
+[MCTS t=90.4s] gen=49 fast_pass=8 verified=3 rejects={'v7_duplicate_fingerprint': 2, 'v1_failed': 3}
+[MCTS t=99.6s] gen=1469 fast_pass=14 verified=3 rejects={'v6_active_count_too_small': 10, 'v7_semantic_duplicate': 1}
+[MCTS t=126.7s] gen=4709 fast_pass=65 verified=2 rejects={'v7_semantic_duplicate': 63}
+[MCTS t=135.4s] gen=49 fast_pass=8 verified=3 rejects={'v7_duplicate_fingerprint': 2, 'v1_failed': 3}
+[MCTS t=150.7s] gen=1739 fast_pass=15 verified=3 rejects={'v6_active_count_too_small': 10, 'v7_semantic_duplicate': 1, 'v1_failed': 1}
+[MCTS t=155.8s] gen=1002 fast_pass=6 verified=3 rejects={'v7_duplicate_fingerprint': 1, 'v5_pure_tautology': 2}
+[MCTS t=172.3s] gen=5910 fast_pass=90 verified=2 rejects={'v7_semantic_duplicate': 88}
+[MCTS t=180.5s] gen=49 fast_pass=8 verified=3 rejects={'v7_duplicate_fingerprint': 2, 'v1_failed': 3}
+[MCTS t=191.1s] gen=274 fast_pass=46 verified=2 rejects={'v6_active_span_too_small': 1, 'form2_nonbase_elim': 24, 'v1_failed': 1, 'v7_duplicate_fingerprint': 18}
+[MCTS t=196.0s] gen=2014 fast_pass=44 verified=3 rejects={'v6_active_count_too_small': 38, 'v7_semantic_duplicate': 1, 'v1_failed': 2}
+[MCTS t=218.9s] gen=3197 fast_pass=73 verified=11 rejects={'v7_duplicate_fingerprint': 40, 'v5_pure_tautology': 2, 'v1_failed': 18, 'v6_active_count_too_small': 2}
+[MCTS t=226.4s] gen=50 fast_pass=8 verified=3 rejects={'v7_duplicate_fingerprint': 2, 'v1_failed': 3}
+[MCTS t=235.6s] gen=7112 fast_pass=116 verified=2 rejects={'v7_semantic_duplicate': 112, 'v7_duplicate_fingerprint': 2}
+[MCTS t=243.9s] gen=2371 fast_pass=60 verified=4 rejects={'v6_active_count_too_small': 38, 'v7_semantic_duplicate': 2, 'v1_failed': 3, 'v7_duplicate_fingerprint': 13}
+[MCTS t=264.5s] gen=345 fast_pass=68 verified=3 rejects={'v6_active_span_too_small': 1, 'form2_nonbase_elim': 26, 'v1_failed': 1, 'v7_duplicate_fingerprint': 37}
+[MCTS t=271.7s] gen=50 fast_pass=8 verified=3 rejects={'v7_duplicate_fingerprint': 2, 'v1_failed': 3}
+[MCTS t=284.7s] gen=8316 fast_pass=142 verified=2 rejects={'v7_semantic_duplicate': 138, 'v7_duplicate_fingerprint': 2}
+[MCTS t=289.1s] gen=2750 fast_pass=60 verified=4 rejects={'v6_active_count_too_small': 38, 'v7_semantic_duplicate': 2, 'v1_failed': 3, 'v7_duplicate_fingerprint': 13}
+[MCTS t=298.9s] gen=5424 fast_pass=248 verified=13 rejects={'v7_duplicate_fingerprint': 179, 'v5_pure_tautology': 2, 'v1_failed': 49, 'v6_active_count_too_small': 5}
+[MCTS t=311.7s] gen=9 fast_pass=9 verified=1 rejects={'v6_active_span_too_small': 8}
+[MCTS t=313.4s] gen=418 fast_pass=57 verified=4 rejects={'v7_duplicate_fingerprint': 21, 'form2_nonbase_elim': 25, 'v7_semantic_duplicate': 2, 'v6_active_span_too_small': 5}
+[MCTS t=315.0s] gen=373 fast_pass=92 verified=3 rejects={'v6_active_span_too_small': 2, 'form2_nonbase_elim': 26, 'v1_failed': 1, 'v7_duplicate_fingerprint': 60}
+[MCTS t=338.1s] gen=34 fast_pass=10 verified=1 rejects={'v5_pure_tautology': 6, 'v2_target_constant': 3}
+[P3 Chunk 3] wall=1832.9s gen=28391 fast=2967 unique_verified=28
+[MCTS t=45.0s] gen=1183 fast_pass=7 verified=2 rejects={'v7_duplicate_fingerprint': 3, 'v6_active_count_too_small': 2}
+[MCTS t=45.5s] gen=566 fast_pass=2 verified=1 rejects={'v1_failed': 1}
+[MCTS t=50.7s] gen=297 fast_pass=29 verified=3 rejects={'v7_duplicate_fingerprint': 25, 'v2_elim_var_locked': 1}
+[MCTS t=80.3s] gen=501 fast_pass=26 verified=3 rejects={'v7_duplicate_fingerprint': 21, 'v6_active_count_too_small': 2}
+[MCTS t=82.9s] gen=106 fast_pass=98 verified=4 rejects={'v7_duplicate_fingerprint': 71, 'v2_elim_var_locked': 1, 'v2_target_constant': 22}
+[MCTS t=95.2s] gen=203 fast_pass=85 verified=5 rejects={'v7_duplicate_fingerprint': 56, 'v2_target_constant': 23, 'v2_elim_var_locked': 1}
+[MCTS t=97.2s] gen=3 fast_pass=3 verified=0 rejects={'v6_active_span_too_small': 3}
+[MCTS t=108.7s] gen=5 fast_pass=5 verified=2 rejects={'v7_duplicate_fingerprint': 1, 'v6_active_span_too_small': 2}
+[MCTS t=113.5s] gen=1290 fast_pass=9 verified=4 rejects={'v7_duplicate_fingerprint': 3, 'v6_active_count_too_small': 2}
+[MCTS t=142.4s] gen=108 fast_pass=99 verified=5 rejects={'v7_duplicate_fingerprint': 71, 'v2_elim_var_locked': 1, 'v2_target_constant': 22}
+[MCTS t=156.1s] gen=339 fast_pass=30 verified=4 rejects={'v7_duplicate_fingerprint': 25, 'v2_elim_var_locked': 1}
+[P3 Chunk 4] wall=2043.4s gen=31847 fast=3227 unique_verified=28
+[P3 Search DONE] Saved 28 identities to /content/p3_work/results/discovered_identities.json

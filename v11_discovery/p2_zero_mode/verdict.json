@@ -1,0 +1,80 @@
+{
+  "line": "P2_crystal_zero_mode_wavepacket",
+  "status": "NULL",
+  "rounds_tested": [4, 6, 8, 10, 12, 16, 20],
+  "k_grid": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+  "carriers_tested": ["STD", "BTC320"],
+  "methods_tested": ["NEURAL", "RAND_WALK", "CTRL_RAND_SHA"],
+  "total_cells": 504,
+  "hit_light_cells": 0,
+  "z_score": 2.57,
+  "max_z_vs_ctrl": 3.66,
+  "main_metrics": {
+    "nontrivial_regime_std_r20": {
+      "cells": 12,
+      "peak_z": 1.50,
+      "peak_z_k": 10,
+      "peak_gain_G": 1.375,
+      "max_z_vs_ctrl": 1.52,
+      "hit_light_count": 0
+    },
+    "nontrivial_regime_btc320_r6_to_r20": {
+      "cells": 72,
+      "peak_z": 2.57,
+      "peak_z_R": 10,
+      "peak_z_k": 7,
+      "peak_gain_G": 1.227,
+      "min_z": -3.20,
+      "max_z_vs_ctrl": 2.19,
+      "hit_light_count": 0
+    },
+    "trivial_last_round_regime_std_r4_to_r16": {
+      "cells": 72,
+      "peak_z": 81.50,
+      "peak_z_R": 4,
+      "peak_z_k": 12,
+      "peak_gain_G": 21.375,
+      "max_z_vs_ctrl": 3.66,
+      "dominant_cluster_k12": "[[R-1, 19]] (single-bit linear injection into W[R-1] at bit 31-k)",
+      "hit_light_count": 0
+    },
+    "trivial_last_round_regime_btc320_r4": {
+      "cells": 12,
+      "peak_z": 75.00,
+      "peak_z_k": 12,
+      "peak_gain_G": 19.750,
+      "max_z_vs_ctrl": 0.38,
+      "dominant_cluster_k12": "[[3, 19]]",
+      "hit_light_count": 0
+    }
+  },
+  "control_metrics": {
+    "ctrl_cipher": "CTRL_RAND_SHA_seed20261902",
+    "std_r4_to_r16_peak_z": 93.76,
+    "std_r4_to_r16_peak_G": 24.438,
+    "std_r20_peak_z": 1.79,
+    "btc320_r4_peak_z": 83.80,
+    "btc320_r6_to_r20_peak_z": 3.00,
+    "rand_walk_std_r20_peak_z": 0.75,
+    "rand_walk_btc320_r6_to_r20_peak_z": 1.87
+  },
+  "distilled_findings": [
+    "全 504 格点（7 轮次 × 12 阶 × 2 载体 × 3 方法）中满足双门限（z >= 6 且相对随机 ROTR/K 对照组 z_vs_ctrl >= 4）的亮灯格点数为 0。",
+    "当末轮消息字 W[R-1] 处于自由微扰域内时（STD R<=16 与 BTC320 R=4），3D 晶体网络与随机对照组均仅利用了末轮模 2^32 加法线性通道 a_R = T1_{R-1} + T2_{R-1}，通过单比特注入 dW[R-1] = 2^{31-k} 实现最高 21.375x（SHA）与 24.438x（CTRL）的增益；因随机 ROTR/K 克隆对照组具备完全相同的末轮加性通道，净对照优势 z_vs_ctrl <= +3.66，无法通过对照检验。",
+    "一旦末轮直接加性通道被屏蔽——即 BTC320（锁定 W[4..15]）在 R >= 6 以及 STD 在 R = 20（W[19] 进入消息扩展）——全部 84 个非平凡格点瞬间坍缩至 2^{-(k+1)} 随机游走基线（z in [-3.20, +2.57]，z_vs_ctrl <= +2.19）。",
+    "3D 时空波包热力图显示：一旦微扰进入 R >= 6 轮前置扩散（BTC320 R>=6 与 STD R=20），状态翻转密度 rho_S(t) 在第 6~7 轮内迅速攀升并饱和至 0.500 热寂平衡态（R>=8 末端 rho_S[-1] in [0.4917, 0.5036]），KL 散度与非命中微扰无分离，未观测到超越 2^{-(k+1)} 的非平凡多比特零模波包。"
+  ],
+  "independent_cpu_verification": {
+    "verified_samples_total": 2092,
+    "verified_sha_samples": 1372,
+    "verified_ctrl_samples": 720,
+    "verified_btc320_samples": 814,
+    "pass_rate": 1.0,
+    "sweep_cells_rechecked": 504,
+    "gpu_used_during_sweep": "Tesla T4",
+    "fp32_locked": true,
+    "tf32_disabled": true,
+    "total_colab_elapsed_sec": 965.715
+  },
+  "colab_stopped": true
+}

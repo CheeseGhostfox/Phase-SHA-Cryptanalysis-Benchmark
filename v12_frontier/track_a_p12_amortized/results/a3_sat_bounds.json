@@ -1,0 +1,1256 @@
+{
+  "solver_info": {
+    "z3_version": "5.4.1",
+    "pysat_version": "1.9.dev25",
+    "sat_backend": "CaDiCaL195",
+    "is_smoke": false,
+    "total_elapsed_seconds": 2831.92
+  },
+  "bounds": {
+    "SHA256_MAIN": {
+      "Z3_B1_chunk2": {
+        "B1_Scenario1a_same_midstate_only_W3": [
+          {
+            "case": "B1_S1a_sameMS_onlyW3",
+            "rounds": 4,
+            "status": "UNSAT",
+            "solve_seconds": 0.017
+          },
+          {
+            "case": "B1_S1a_sameMS_onlyW3",
+            "rounds": 5,
+            "status": "UNSAT",
+            "solve_seconds": 0.008
+          },
+          {
+            "case": "B1_S1a_sameMS_onlyW3",
+            "rounds": 6,
+            "status": "UNSAT",
+            "solve_seconds": 0.011
+          }
+        ],
+        "B1_Scenario1b_same_midstate_W0123": [
+          {
+            "case": "B1_S1b_sameMS_W0123",
+            "rounds": 4,
+            "status": "UNSAT",
+            "solve_seconds": 0.007
+          },
+          {
+            "case": "B1_S1b_sameMS_W0123",
+            "rounds": 5,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.013
+          },
+          {
+            "case": "B1_S1b_sameMS_W0123",
+            "rounds": 6,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.131
+          },
+          {
+            "case": "B1_S1b_sameMS_W0123",
+            "rounds": 8,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.04
+          },
+          {
+            "case": "B1_S1b_sameMS_W0123",
+            "rounds": 10,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.037
+          },
+          {
+            "case": "B1_S1b_sameMS_W0123",
+            "rounds": 12,
+            "status": "UNKNOWN",
+            "solve_seconds": 9.472
+          }
+        ],
+        "B1_Scenario2_var_midstate_plus_W0123": [
+          {
+            "case": "B1_S2_varMS_W0123",
+            "rounds": 4,
+            "status": "SAT",
+            "solve_seconds": 0.161
+          },
+          {
+            "case": "B1_S2_varMS_W0123",
+            "rounds": 8,
+            "status": "SAT",
+            "solve_seconds": 0.062
+          },
+          {
+            "case": "B1_S2_varMS_W0123",
+            "rounds": 12,
+            "status": "UNKNOWN",
+            "solve_seconds": 9.234
+          },
+          {
+            "case": "B1_S2_varMS_W0123",
+            "rounds": 16,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.159
+          },
+          {
+            "case": "B1_S2_varMS_W0123",
+            "rounds": 18,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.413
+          },
+          {
+            "case": "B1_S2_varMS_W0123",
+            "rounds": 20,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.613
+          }
+        ]
+      },
+      "Z3_B2_hash2_interface": {
+        "hash2_expander_zero_diff_bounds": [
+          {
+            "hash2_zero_exp_steps": "W2[16..16]",
+            "status": "SAT",
+            "min_nonzero_input_words_in_W2_0_7": 1,
+            "solve_seconds": 0.203
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..17]",
+            "status": "SAT",
+            "min_nonzero_input_words_in_W2_0_7": 1,
+            "solve_seconds": 0.361
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..18]",
+            "status": "SAT",
+            "min_nonzero_input_words_in_W2_0_7": 1,
+            "solve_seconds": 0.736
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..19]",
+            "status": "SAT",
+            "min_nonzero_input_words_in_W2_0_7": 1,
+            "solve_seconds": 0.82
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..20]",
+            "status": "SAT",
+            "min_nonzero_input_words_in_W2_0_7": 1,
+            "solve_seconds": 0.923
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..21]",
+            "status": "SAT",
+            "min_nonzero_input_words_in_W2_0_7": 1,
+            "solve_seconds": 1.054
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..22]",
+            "status": "UNKNOWN",
+            "min_nonzero_input_words_in_W2_0_7": -1,
+            "solve_seconds": 8.013
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..23]",
+            "status": "UNSAT",
+            "min_nonzero_input_words_in_W2_0_7": -1,
+            "solve_seconds": 0.032
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..23]_with_DeltaW2_0_nz",
+            "status": "UNSAT",
+            "min_nonzero_input_words_in_W2_0_7": -1,
+            "solve_seconds": 0.022
+          }
+        ]
+      },
+      "PySAT_min_active_words": [
+        {
+          "stage": "Chunk2_onlyW3",
+          "rounds": 4,
+          "inj_round": 3,
+          "total_post_inj_state_words": 2,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "EXACT_MIN_PROVEN",
+          "solve_seconds": 0.927
+        },
+        {
+          "stage": "Chunk2_onlyW3",
+          "rounds": 6,
+          "inj_round": 3,
+          "total_post_inj_state_words": 6,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "EXACT_MIN_PROVEN",
+          "solve_seconds": 15.532
+        },
+        {
+          "stage": "Chunk2_onlyW3",
+          "rounds": 8,
+          "inj_round": 3,
+          "total_post_inj_state_words": 10,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 33.686
+        },
+        {
+          "stage": "Chunk2_onlyW3",
+          "rounds": 10,
+          "inj_round": 3,
+          "total_post_inj_state_words": 14,
+          "min_active_state_words": 3,
+          "unsat_below_bound": 2,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 38.53
+        },
+        {
+          "stage": "Chunk2_onlyW3",
+          "rounds": 12,
+          "inj_round": 3,
+          "total_post_inj_state_words": 18,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 30.915
+        },
+        {
+          "stage": "Hash2_W0_inj0",
+          "rounds": 4,
+          "inj_round": 0,
+          "total_post_inj_state_words": 8,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 57.212
+        },
+        {
+          "stage": "Hash2_W0_inj0",
+          "rounds": 6,
+          "inj_round": 0,
+          "total_post_inj_state_words": 12,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 57.898
+        },
+        {
+          "stage": "Hash2_W0_inj0",
+          "rounds": 8,
+          "inj_round": 0,
+          "total_post_inj_state_words": 16,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 53.437
+        },
+        {
+          "stage": "Hash2_W0_inj0",
+          "rounds": 10,
+          "inj_round": 0,
+          "total_post_inj_state_words": 20,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 56.186
+        },
+        {
+          "stage": "Hash2_W0_inj0",
+          "rounds": 12,
+          "inj_round": 0,
+          "total_post_inj_state_words": 24,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 54.022
+        },
+        {
+          "stage": "Hash2_W0to7",
+          "rounds": 4,
+          "inj_round": 0,
+          "total_post_inj_state_words": 8,
+          "min_active_state_words": 0,
+          "unsat_below_bound": -1,
+          "solver_status": "EXACT_MIN_PROVEN",
+          "solve_seconds": 0.228
+        },
+        {
+          "stage": "Hash2_W0to7",
+          "rounds": 6,
+          "inj_round": 0,
+          "total_post_inj_state_words": 12,
+          "min_active_state_words": 0,
+          "unsat_below_bound": -1,
+          "solver_status": "EXACT_MIN_PROVEN",
+          "solve_seconds": 0.094
+        },
+        {
+          "stage": "Hash2_W0to7",
+          "rounds": 8,
+          "inj_round": 0,
+          "total_post_inj_state_words": 16,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "EXACT_MIN_PROVEN",
+          "solve_seconds": 35.476
+        },
+        {
+          "stage": "Hash2_W0to7",
+          "rounds": 10,
+          "inj_round": 0,
+          "total_post_inj_state_words": 20,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 80.02
+        },
+        {
+          "stage": "Hash2_W0to7",
+          "rounds": 12,
+          "inj_round": 0,
+          "total_post_inj_state_words": 24,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 78.484
+        }
+      ],
+      "elapsed_seconds": 681.24
+    },
+    "CTRL_RAND_ROTR_K_S0": {
+      "Z3_B1_chunk2": {
+        "B1_Scenario1a_same_midstate_only_W3": [
+          {
+            "case": "B1_S1a_sameMS_onlyW3",
+            "rounds": 4,
+            "status": "UNSAT",
+            "solve_seconds": 0.018
+          },
+          {
+            "case": "B1_S1a_sameMS_onlyW3",
+            "rounds": 5,
+            "status": "UNSAT",
+            "solve_seconds": 0.017
+          },
+          {
+            "case": "B1_S1a_sameMS_onlyW3",
+            "rounds": 6,
+            "status": "UNSAT",
+            "solve_seconds": 0.019
+          }
+        ],
+        "B1_Scenario1b_same_midstate_W0123": [
+          {
+            "case": "B1_S1b_sameMS_W0123",
+            "rounds": 4,
+            "status": "UNSAT",
+            "solve_seconds": 0.016
+          },
+          {
+            "case": "B1_S1b_sameMS_W0123",
+            "rounds": 5,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.097
+          },
+          {
+            "case": "B1_S1b_sameMS_W0123",
+            "rounds": 6,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.144
+          },
+          {
+            "case": "B1_S1b_sameMS_W0123",
+            "rounds": 8,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.039
+          },
+          {
+            "case": "B1_S1b_sameMS_W0123",
+            "rounds": 10,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.036
+          },
+          {
+            "case": "B1_S1b_sameMS_W0123",
+            "rounds": 12,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.074
+          }
+        ],
+        "B1_Scenario2_var_midstate_plus_W0123": [
+          {
+            "case": "B1_S2_varMS_W0123",
+            "rounds": 4,
+            "status": "SAT",
+            "solve_seconds": 0.082
+          },
+          {
+            "case": "B1_S2_varMS_W0123",
+            "rounds": 8,
+            "status": "SAT",
+            "solve_seconds": 0.08
+          },
+          {
+            "case": "B1_S2_varMS_W0123",
+            "rounds": 12,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.113
+          },
+          {
+            "case": "B1_S2_varMS_W0123",
+            "rounds": 16,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.155
+          },
+          {
+            "case": "B1_S2_varMS_W0123",
+            "rounds": 18,
+            "status": "UNKNOWN",
+            "solve_seconds": 11.491
+          },
+          {
+            "case": "B1_S2_varMS_W0123",
+            "rounds": 20,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.3
+          }
+        ]
+      },
+      "Z3_B2_hash2_interface": {
+        "hash2_expander_zero_diff_bounds": [
+          {
+            "hash2_zero_exp_steps": "W2[16..16]",
+            "status": "SAT",
+            "min_nonzero_input_words_in_W2_0_7": 1,
+            "solve_seconds": 0.147
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..17]",
+            "status": "SAT",
+            "min_nonzero_input_words_in_W2_0_7": 1,
+            "solve_seconds": 0.236
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..18]",
+            "status": "SAT",
+            "min_nonzero_input_words_in_W2_0_7": 1,
+            "solve_seconds": 0.346
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..19]",
+            "status": "SAT",
+            "min_nonzero_input_words_in_W2_0_7": 1,
+            "solve_seconds": 0.501
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..20]",
+            "status": "SAT",
+            "min_nonzero_input_words_in_W2_0_7": 1,
+            "solve_seconds": 0.743
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..21]",
+            "status": "SAT",
+            "min_nonzero_input_words_in_W2_0_7": 1,
+            "solve_seconds": 1.148
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..22]",
+            "status": "UNKNOWN",
+            "min_nonzero_input_words_in_W2_0_7": -1,
+            "solve_seconds": 8.014
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..23]",
+            "status": "UNSAT",
+            "min_nonzero_input_words_in_W2_0_7": -1,
+            "solve_seconds": 0.035
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..23]_with_DeltaW2_0_nz",
+            "status": "UNSAT",
+            "min_nonzero_input_words_in_W2_0_7": -1,
+            "solve_seconds": 0.022
+          }
+        ]
+      },
+      "PySAT_min_active_words": [
+        {
+          "stage": "Chunk2_onlyW3",
+          "rounds": 4,
+          "inj_round": 3,
+          "total_post_inj_state_words": 2,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "EXACT_MIN_PROVEN",
+          "solve_seconds": 0.694
+        },
+        {
+          "stage": "Chunk2_onlyW3",
+          "rounds": 6,
+          "inj_round": 3,
+          "total_post_inj_state_words": 6,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "EXACT_MIN_PROVEN",
+          "solve_seconds": 6.905
+        },
+        {
+          "stage": "Chunk2_onlyW3",
+          "rounds": 8,
+          "inj_round": 3,
+          "total_post_inj_state_words": 10,
+          "min_active_state_words": 3,
+          "unsat_below_bound": 2,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 37.148
+        },
+        {
+          "stage": "Chunk2_onlyW3",
+          "rounds": 10,
+          "inj_round": 3,
+          "total_post_inj_state_words": 14,
+          "min_active_state_words": 3,
+          "unsat_below_bound": 2,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 35.777
+        },
+        {
+          "stage": "Chunk2_onlyW3",
+          "rounds": 12,
+          "inj_round": 3,
+          "total_post_inj_state_words": 18,
+          "min_active_state_words": 3,
+          "unsat_below_bound": 2,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 41.624
+        },
+        {
+          "stage": "Hash2_W0_inj0",
+          "rounds": 4,
+          "inj_round": 0,
+          "total_post_inj_state_words": 8,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 59.248
+        },
+        {
+          "stage": "Hash2_W0_inj0",
+          "rounds": 6,
+          "inj_round": 0,
+          "total_post_inj_state_words": 12,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 52.53
+        },
+        {
+          "stage": "Hash2_W0_inj0",
+          "rounds": 8,
+          "inj_round": 0,
+          "total_post_inj_state_words": 16,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 52.647
+        },
+        {
+          "stage": "Hash2_W0_inj0",
+          "rounds": 10,
+          "inj_round": 0,
+          "total_post_inj_state_words": 20,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 58.445
+        },
+        {
+          "stage": "Hash2_W0_inj0",
+          "rounds": 12,
+          "inj_round": 0,
+          "total_post_inj_state_words": 24,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 50.068
+        },
+        {
+          "stage": "Hash2_W0to7",
+          "rounds": 4,
+          "inj_round": 0,
+          "total_post_inj_state_words": 8,
+          "min_active_state_words": 0,
+          "unsat_below_bound": -1,
+          "solver_status": "EXACT_MIN_PROVEN",
+          "solve_seconds": 0.044
+        },
+        {
+          "stage": "Hash2_W0to7",
+          "rounds": 6,
+          "inj_round": 0,
+          "total_post_inj_state_words": 12,
+          "min_active_state_words": 0,
+          "unsat_below_bound": -1,
+          "solver_status": "EXACT_MIN_PROVEN",
+          "solve_seconds": 0.054
+        },
+        {
+          "stage": "Hash2_W0to7",
+          "rounds": 8,
+          "inj_round": 0,
+          "total_post_inj_state_words": 16,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "EXACT_MIN_PROVEN",
+          "solve_seconds": 29.462
+        },
+        {
+          "stage": "Hash2_W0to7",
+          "rounds": 10,
+          "inj_round": 0,
+          "total_post_inj_state_words": 20,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 73.665
+        },
+        {
+          "stage": "Hash2_W0to7",
+          "rounds": 12,
+          "inj_round": 0,
+          "total_post_inj_state_words": 24,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 75.213
+        }
+      ],
+      "elapsed_seconds": 661.43
+    },
+    "CTRL_RAND_ROTR_K_S1": {
+      "Z3_B1_chunk2": {
+        "B1_Scenario1a_same_midstate_only_W3": [
+          {
+            "case": "B1_S1a_sameMS_onlyW3",
+            "rounds": 4,
+            "status": "UNSAT",
+            "solve_seconds": 0.018
+          },
+          {
+            "case": "B1_S1a_sameMS_onlyW3",
+            "rounds": 5,
+            "status": "UNSAT",
+            "solve_seconds": 0.016
+          },
+          {
+            "case": "B1_S1a_sameMS_onlyW3",
+            "rounds": 6,
+            "status": "UNSAT",
+            "solve_seconds": 0.019
+          }
+        ],
+        "B1_Scenario1b_same_midstate_W0123": [
+          {
+            "case": "B1_S1b_sameMS_W0123",
+            "rounds": 4,
+            "status": "UNSAT",
+            "solve_seconds": 0.015
+          },
+          {
+            "case": "B1_S1b_sameMS_W0123",
+            "rounds": 5,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.025
+          },
+          {
+            "case": "B1_S1b_sameMS_W0123",
+            "rounds": 6,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.03
+          },
+          {
+            "case": "B1_S1b_sameMS_W0123",
+            "rounds": 8,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.479
+          },
+          {
+            "case": "B1_S1b_sameMS_W0123",
+            "rounds": 10,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.036
+          },
+          {
+            "case": "B1_S1b_sameMS_W0123",
+            "rounds": 12,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.086
+          }
+        ],
+        "B1_Scenario2_var_midstate_plus_W0123": [
+          {
+            "case": "B1_S2_varMS_W0123",
+            "rounds": 4,
+            "status": "SAT",
+            "solve_seconds": 0.088
+          },
+          {
+            "case": "B1_S2_varMS_W0123",
+            "rounds": 8,
+            "status": "SAT",
+            "solve_seconds": 0.092
+          },
+          {
+            "case": "B1_S2_varMS_W0123",
+            "rounds": 12,
+            "status": "UNKNOWN",
+            "solve_seconds": 9.273
+          },
+          {
+            "case": "B1_S2_varMS_W0123",
+            "rounds": 16,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.185
+          },
+          {
+            "case": "B1_S2_varMS_W0123",
+            "rounds": 18,
+            "status": "UNKNOWN",
+            "solve_seconds": 9.015
+          },
+          {
+            "case": "B1_S2_varMS_W0123",
+            "rounds": 20,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.414
+          }
+        ]
+      },
+      "Z3_B2_hash2_interface": {
+        "hash2_expander_zero_diff_bounds": [
+          {
+            "hash2_zero_exp_steps": "W2[16..16]",
+            "status": "SAT",
+            "min_nonzero_input_words_in_W2_0_7": 1,
+            "solve_seconds": 0.161
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..17]",
+            "status": "SAT",
+            "min_nonzero_input_words_in_W2_0_7": 1,
+            "solve_seconds": 0.271
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..18]",
+            "status": "SAT",
+            "min_nonzero_input_words_in_W2_0_7": 1,
+            "solve_seconds": 0.403
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..19]",
+            "status": "SAT",
+            "min_nonzero_input_words_in_W2_0_7": 1,
+            "solve_seconds": 0.574
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..20]",
+            "status": "SAT",
+            "min_nonzero_input_words_in_W2_0_7": 1,
+            "solve_seconds": 0.814
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..21]",
+            "status": "SAT",
+            "min_nonzero_input_words_in_W2_0_7": 1,
+            "solve_seconds": 1.106
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..22]",
+            "status": "UNKNOWN",
+            "min_nonzero_input_words_in_W2_0_7": -1,
+            "solve_seconds": 8.015
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..23]",
+            "status": "UNSAT",
+            "min_nonzero_input_words_in_W2_0_7": -1,
+            "solve_seconds": 0.044
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..23]_with_DeltaW2_0_nz",
+            "status": "UNSAT",
+            "min_nonzero_input_words_in_W2_0_7": -1,
+            "solve_seconds": 0.036
+          }
+        ]
+      },
+      "PySAT_min_active_words": [
+        {
+          "stage": "Chunk2_onlyW3",
+          "rounds": 4,
+          "inj_round": 3,
+          "total_post_inj_state_words": 2,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "EXACT_MIN_PROVEN",
+          "solve_seconds": 0.669
+        },
+        {
+          "stage": "Chunk2_onlyW3",
+          "rounds": 6,
+          "inj_round": 3,
+          "total_post_inj_state_words": 6,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "EXACT_MIN_PROVEN",
+          "solve_seconds": 8.052
+        },
+        {
+          "stage": "Chunk2_onlyW3",
+          "rounds": 8,
+          "inj_round": 3,
+          "total_post_inj_state_words": 10,
+          "min_active_state_words": 3,
+          "unsat_below_bound": 2,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 50.186
+        },
+        {
+          "stage": "Chunk2_onlyW3",
+          "rounds": 10,
+          "inj_round": 3,
+          "total_post_inj_state_words": 14,
+          "min_active_state_words": 3,
+          "unsat_below_bound": 2,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 53.534
+        },
+        {
+          "stage": "Chunk2_onlyW3",
+          "rounds": 12,
+          "inj_round": 3,
+          "total_post_inj_state_words": 18,
+          "min_active_state_words": 3,
+          "unsat_below_bound": 2,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 46.485
+        },
+        {
+          "stage": "Hash2_W0_inj0",
+          "rounds": 4,
+          "inj_round": 0,
+          "total_post_inj_state_words": 8,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 56.141
+        },
+        {
+          "stage": "Hash2_W0_inj0",
+          "rounds": 6,
+          "inj_round": 0,
+          "total_post_inj_state_words": 12,
+          "min_active_state_words": 3,
+          "unsat_below_bound": 2,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 54.95
+        },
+        {
+          "stage": "Hash2_W0_inj0",
+          "rounds": 8,
+          "inj_round": 0,
+          "total_post_inj_state_words": 16,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 52.024
+        },
+        {
+          "stage": "Hash2_W0_inj0",
+          "rounds": 10,
+          "inj_round": 0,
+          "total_post_inj_state_words": 20,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 54.866
+        },
+        {
+          "stage": "Hash2_W0_inj0",
+          "rounds": 12,
+          "inj_round": 0,
+          "total_post_inj_state_words": 24,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 52.297
+        },
+        {
+          "stage": "Hash2_W0to7",
+          "rounds": 4,
+          "inj_round": 0,
+          "total_post_inj_state_words": 8,
+          "min_active_state_words": 0,
+          "unsat_below_bound": -1,
+          "solver_status": "EXACT_MIN_PROVEN",
+          "solve_seconds": 0.077
+        },
+        {
+          "stage": "Hash2_W0to7",
+          "rounds": 6,
+          "inj_round": 0,
+          "total_post_inj_state_words": 12,
+          "min_active_state_words": 0,
+          "unsat_below_bound": -1,
+          "solver_status": "EXACT_MIN_PROVEN",
+          "solve_seconds": 0.096
+        },
+        {
+          "stage": "Hash2_W0to7",
+          "rounds": 8,
+          "inj_round": 0,
+          "total_post_inj_state_words": 16,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "EXACT_MIN_PROVEN",
+          "solve_seconds": 39.573
+        },
+        {
+          "stage": "Hash2_W0to7",
+          "rounds": 10,
+          "inj_round": 0,
+          "total_post_inj_state_words": 20,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 84.292
+        },
+        {
+          "stage": "Hash2_W0to7",
+          "rounds": 12,
+          "inj_round": 0,
+          "total_post_inj_state_words": 24,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 94.122
+        }
+      ],
+      "elapsed_seconds": 734.63
+    },
+    "CTRL_RAND_ROTR_K_S2": {
+      "Z3_B1_chunk2": {
+        "B1_Scenario1a_same_midstate_only_W3": [
+          {
+            "case": "B1_S1a_sameMS_onlyW3",
+            "rounds": 4,
+            "status": "UNSAT",
+            "solve_seconds": 0.043
+          },
+          {
+            "case": "B1_S1a_sameMS_onlyW3",
+            "rounds": 5,
+            "status": "UNSAT",
+            "solve_seconds": 0.04
+          },
+          {
+            "case": "B1_S1a_sameMS_onlyW3",
+            "rounds": 6,
+            "status": "UNSAT",
+            "solve_seconds": 0.052
+          }
+        ],
+        "B1_Scenario1b_same_midstate_W0123": [
+          {
+            "case": "B1_S1b_sameMS_W0123",
+            "rounds": 4,
+            "status": "UNSAT",
+            "solve_seconds": 0.047
+          },
+          {
+            "case": "B1_S1b_sameMS_W0123",
+            "rounds": 5,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.023
+          },
+          {
+            "case": "B1_S1b_sameMS_W0123",
+            "rounds": 6,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.025
+          },
+          {
+            "case": "B1_S1b_sameMS_W0123",
+            "rounds": 8,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.061
+          },
+          {
+            "case": "B1_S1b_sameMS_W0123",
+            "rounds": 10,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.056
+          },
+          {
+            "case": "B1_S1b_sameMS_W0123",
+            "rounds": 12,
+            "status": "UNKNOWN",
+            "solve_seconds": 9.15
+          }
+        ],
+        "B1_Scenario2_var_midstate_plus_W0123": [
+          {
+            "case": "B1_S2_varMS_W0123",
+            "rounds": 4,
+            "status": "SAT",
+            "solve_seconds": 0.226
+          },
+          {
+            "case": "B1_S2_varMS_W0123",
+            "rounds": 8,
+            "status": "SAT",
+            "solve_seconds": 0.111
+          },
+          {
+            "case": "B1_S2_varMS_W0123",
+            "rounds": 12,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.12
+          },
+          {
+            "case": "B1_S2_varMS_W0123",
+            "rounds": 16,
+            "status": "UNKNOWN",
+            "solve_seconds": 10.461
+          },
+          {
+            "case": "B1_S2_varMS_W0123",
+            "rounds": 18,
+            "status": "UNKNOWN",
+            "solve_seconds": 13.53
+          },
+          {
+            "case": "B1_S2_varMS_W0123",
+            "rounds": 20,
+            "status": "UNKNOWN",
+            "solve_seconds": 8.355
+          }
+        ]
+      },
+      "Z3_B2_hash2_interface": {
+        "hash2_expander_zero_diff_bounds": [
+          {
+            "hash2_zero_exp_steps": "W2[16..16]",
+            "status": "SAT",
+            "min_nonzero_input_words_in_W2_0_7": 1,
+            "solve_seconds": 0.184
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..17]",
+            "status": "SAT",
+            "min_nonzero_input_words_in_W2_0_7": 1,
+            "solve_seconds": 0.28
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..18]",
+            "status": "SAT",
+            "min_nonzero_input_words_in_W2_0_7": 1,
+            "solve_seconds": 0.374
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..19]",
+            "status": "SAT",
+            "min_nonzero_input_words_in_W2_0_7": 1,
+            "solve_seconds": 0.517
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..20]",
+            "status": "SAT",
+            "min_nonzero_input_words_in_W2_0_7": 1,
+            "solve_seconds": 0.847
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..21]",
+            "status": "SAT",
+            "min_nonzero_input_words_in_W2_0_7": 1,
+            "solve_seconds": 0.962
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..22]",
+            "status": "UNKNOWN",
+            "min_nonzero_input_words_in_W2_0_7": -1,
+            "solve_seconds": 8.017
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..23]",
+            "status": "UNSAT",
+            "min_nonzero_input_words_in_W2_0_7": -1,
+            "solve_seconds": 0.044
+          },
+          {
+            "hash2_zero_exp_steps": "W2[16..23]_with_DeltaW2_0_nz",
+            "status": "UNSAT",
+            "min_nonzero_input_words_in_W2_0_7": -1,
+            "solve_seconds": 0.035
+          }
+        ]
+      },
+      "PySAT_min_active_words": [
+        {
+          "stage": "Chunk2_onlyW3",
+          "rounds": 4,
+          "inj_round": 3,
+          "total_post_inj_state_words": 2,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "EXACT_MIN_PROVEN",
+          "solve_seconds": 0.684
+        },
+        {
+          "stage": "Chunk2_onlyW3",
+          "rounds": 6,
+          "inj_round": 3,
+          "total_post_inj_state_words": 6,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "EXACT_MIN_PROVEN",
+          "solve_seconds": 8.501
+        },
+        {
+          "stage": "Chunk2_onlyW3",
+          "rounds": 8,
+          "inj_round": 3,
+          "total_post_inj_state_words": 10,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 32.271
+        },
+        {
+          "stage": "Chunk2_onlyW3",
+          "rounds": 10,
+          "inj_round": 3,
+          "total_post_inj_state_words": 14,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 38.991
+        },
+        {
+          "stage": "Chunk2_onlyW3",
+          "rounds": 12,
+          "inj_round": 3,
+          "total_post_inj_state_words": 18,
+          "min_active_state_words": 3,
+          "unsat_below_bound": 2,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 44.765
+        },
+        {
+          "stage": "Hash2_W0_inj0",
+          "rounds": 4,
+          "inj_round": 0,
+          "total_post_inj_state_words": 8,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 65.042
+        },
+        {
+          "stage": "Hash2_W0_inj0",
+          "rounds": 6,
+          "inj_round": 0,
+          "total_post_inj_state_words": 12,
+          "min_active_state_words": 3,
+          "unsat_below_bound": 2,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 68.521
+        },
+        {
+          "stage": "Hash2_W0_inj0",
+          "rounds": 8,
+          "inj_round": 0,
+          "total_post_inj_state_words": 16,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 66.766
+        },
+        {
+          "stage": "Hash2_W0_inj0",
+          "rounds": 10,
+          "inj_round": 0,
+          "total_post_inj_state_words": 20,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 64.875
+        },
+        {
+          "stage": "Hash2_W0_inj0",
+          "rounds": 12,
+          "inj_round": 0,
+          "total_post_inj_state_words": 24,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 65.325
+        },
+        {
+          "stage": "Hash2_W0to7",
+          "rounds": 4,
+          "inj_round": 0,
+          "total_post_inj_state_words": 8,
+          "min_active_state_words": 0,
+          "unsat_below_bound": -1,
+          "solver_status": "EXACT_MIN_PROVEN",
+          "solve_seconds": 0.043
+        },
+        {
+          "stage": "Hash2_W0to7",
+          "rounds": 6,
+          "inj_round": 0,
+          "total_post_inj_state_words": 12,
+          "min_active_state_words": 0,
+          "unsat_below_bound": -1,
+          "solver_status": "EXACT_MIN_PROVEN",
+          "solve_seconds": 0.059
+        },
+        {
+          "stage": "Hash2_W0to7",
+          "rounds": 8,
+          "inj_round": 0,
+          "total_post_inj_state_words": 16,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "EXACT_MIN_PROVEN",
+          "solve_seconds": 30.503
+        },
+        {
+          "stage": "Hash2_W0to7",
+          "rounds": 10,
+          "inj_round": 0,
+          "total_post_inj_state_words": 20,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 84.623
+        },
+        {
+          "stage": "Hash2_W0to7",
+          "rounds": 12,
+          "inj_round": 0,
+          "total_post_inj_state_words": 24,
+          "min_active_state_words": 2,
+          "unsat_below_bound": 1,
+          "solver_status": "BUDGET_LOWER_BOUND",
+          "solve_seconds": 90.056
+        }
+      ],
+      "elapsed_seconds": 754.63
+    }
+  },
+  "new_identities": []
+}

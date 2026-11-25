@@ -1,0 +1,39 @@
+model_type: v7b
+seed: 7201
+max_vram_gb: 11.0
+strict_fp32: true
+
+model:
+  d_model: 640
+  n_loop_layers: 4
+  n_heads: 8
+  d_ff: 1792
+  action_hidden: 256
+  max_rounds: 12
+  train_loops_min: 8
+  train_loops_max: 16
+  eval_loops: 24
+  dropout: 0.0
+
+training:
+  lr: 2.0e-4
+  min_lr: 2.0e-5
+  weight_decay: 0.0
+  grad_clip: 1.0
+  warmup_steps: 100
+  batch_size: 16
+  group_size: 32
+  eval_batch_size: 16
+  rounds_schedule: [2, 3, 4, 5, 6, 8]
+  steps_per_round: 3500
+  max_sec_per_round: 540.0
+  eval_every: 400
+  log_every: 25
+  n_eval: 256
+  pass_k: 64
+  advance_pass64: 0.50
+  rl_temperature: 1.0
+  eval_temperature: 0.85
+  entropy_coef: 0.015
+  gfn_coef: 0.10
+  gfn_beta: 2.0

@@ -1,0 +1,65 @@
+# Phase-SHA V3 Stage 3A: R=16, full 32-bit W0 (BiGRU + Chunked BPTT + Dynamic Latch + SMC)
+version: v3
+experiment_name: r16_32b_v3
+rounds: 16
+domain_mode: int_range
+num_bits: 32
+msg_bytes_len: 4
+
+# 2D Bit-Grid + Bit-Axis BiGRU Carry Architecture
+d_bit: 48
+n_heads: 3
+n_blocks: 2
+d_ff_mult: 2
+share_blocks: false
+grad_checkpointing: false
+use_carry_gru: true
+grad_scale: 2.0
+
+# Chunked-BPTT Unrolled Neural-Physics Training
+K_unroll: 14
+bptt_chunk_len: 4
+damp: 0.30
+zero_init_prob: 0.85
+logit_reg_weight: 0.0015
+wavefront_weight: 3.0
+ema_decay: 0.995
+alpha_phys: 0.25
+
+# V3 Inference: Dynamic Digital Latch + Local Flip Check + Parallel SMC Resampling
+K_infer: 32
+infer_damp: 0.20
+sde_noise_min: 0.10
+sde_noise_max: 0.45
+anneal_K: 256
+anneal_chunk_size: 1024
+anneal_eval_samples: 32
+anneal_eta_max: 0.02
+anneal_beta_max: 0.25
+use_dynamic_latch: true
+latch_every: 2
+latch_conf_thresh: 0.985
+latch_res_thresh: 8.0
+latch_exact_tol: 1.0e-6
+use_smc_resampling: true
+smc_resample_every: 8
+smc_elite_k: 64
+
+batch_size: 128
+steps: 5000
+lr_total_steps: 15000
+warmup_steps: 300
+lr: 6.0e-4
+min_lr_ratio: 0.1
+weight_decay: 0.02
+grad_clip: 1.0
+
+holdout_size: 2048
+eval_batch_size: 256
+eval_every: 500
+checkpoint_every: 500
+log_every: 100
+
+cuda_memory_fraction: 0.80
+seed: 404
+holdout_seed: 20261122

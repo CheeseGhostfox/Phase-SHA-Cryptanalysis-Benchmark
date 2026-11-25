@@ -1,0 +1,7 @@
+name = "P3Verify"
+version = "0.1.0"
+defaultTargets = ["P3Verify"]
+moreLeanArgs = ["-j", "2", "-M", "2048"]
+
+[[lean_lib]]
+name = "P3Verify"

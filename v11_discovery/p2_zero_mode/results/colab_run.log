@@ -1,0 +1,104 @@
+[P2 Init] mode=full device=cuda gpu=Tesla T4 tf32_matmul=False tf32_cudnn=False seed=20261125
+[Bank] R= 4 STD    SHA  collected in 0.69s
+  [Train] R= 4 STD    SHA  steps=160 train_hit_rate=3605/64000 (5.633%) time=31.5s
+  [Eval] R= 4 STD    NEURAL        time=7.3s | peak_z=+81.50 at k=12 (hits=342/131072, G=21.375)
+  [Eval] R= 4 STD    RAND_WALK     time=2.2s | peak_z=+46.25 at k=12 (hits=201/131072, G=12.562)
+[Bank] R= 4 BTC320 SHA  collected in 0.64s
+  [Train] R= 4 BTC320 SHA  steps=160 train_hit_rate=2574/64000 (4.022%) time=19.4s
+  [Eval] R= 4 BTC320 NEURAL        time=7.2s | peak_z=+75.00 at k=12 (hits=316/131072, G=19.750)
+  [Eval] R= 4 BTC320 RAND_WALK     time=2.9s | peak_z=+43.00 at k=12 (hits=188/131072, G=11.750)
+[Bank] R= 4 STD    CTRL collected in 0.55s
+  [Train] R= 4 STD    CTRL steps=160 train_hit_rate=2398/64000 (3.747%) time=18.5s
+  [Eval] R= 4 STD    CTRL_RAND_SHA time=7.4s | peak_z=+93.76 at k=12 (hits=391/131072, G=24.438)
+[Bank] R= 4 BTC320 CTRL collected in 0.56s
+  [Train] R= 4 BTC320 CTRL steps=160 train_hit_rate=2024/64000 (3.163%) time=18.4s
+  [Eval] R= 4 BTC320 CTRL_RAND_SHA time=7.6s | peak_z=+83.80 at k=11 (hits=506/131072, G=15.812)
+[Bank] R= 6 STD    SHA  collected in 0.52s
+  [Train] R= 6 STD    SHA  steps=160 train_hit_rate=4501/64000 (7.033%) time=19.4s
+  [Eval] R= 6 STD    NEURAL        time=9.5s | peak_z=+67.75 at k=12 (hits=287/131072, G=17.938)
+  [Eval] R= 6 STD    RAND_WALK     time=4.4s | peak_z=+28.50 at k=12 (hits=130/131072, G=8.125)
+[Bank] R= 6 BTC320 SHA  collected in 0.51s
+  [Train] R= 6 BTC320 SHA  steps=160 train_hit_rate=3881/64000 (6.064%) time=21.2s
+  [Eval] R= 6 BTC320 NEURAL        time=4.7s | peak_z=+1.02 at k=5 (hits=535/32768, G=1.045)
+  [Eval] R= 6 BTC320 RAND_WALK     time=2.1s | peak_z=+1.50 at k=10 (hits=22/32768, G=1.375)
+[Bank] R= 6 STD    CTRL collected in 0.50s
+  [Train] R= 6 STD    CTRL steps=160 train_hit_rate=3684/64000 (5.756%) time=19.2s
+  [Eval] R= 6 STD    CTRL_RAND_SHA time=10.2s | peak_z=+83.01 at k=12 (hits=348/131072, G=21.750)
+[Bank] R= 6 BTC320 CTRL collected in 0.57s
+  [Train] R= 6 BTC320 CTRL steps=160 train_hit_rate=3870/64000 (6.047%) time=21.5s
+  [Eval] R= 6 BTC320 CTRL_RAND_SHA time=3.8s | peak_z=+3.00 at k=12 (hits=28/131072, G=1.750)
+[Bank] R= 8 STD    SHA  collected in 0.56s
+  [Train] R= 8 STD    SHA  steps=160 train_hit_rate=4459/64000 (6.967%) time=19.9s
+  [Eval] R= 8 STD    NEURAL        time=11.3s | peak_z=+60.50 at k=12 (hits=258/131072, G=16.125)
+  [Eval] R= 8 STD    RAND_WALK     time=3.9s | peak_z=+19.00 at k=12 (hits=92/131072, G=5.750)
+[Bank] R= 8 BTC320 SHA  collected in 0.54s
+  [Train] R= 8 BTC320 SHA  steps=160 train_hit_rate=3868/64000 (6.044%) time=22.0s
+  [Eval] R= 8 BTC320 NEURAL        time=4.1s | peak_z=+1.65 at k=5 (hits=549/32768, G=1.072)
+  [Eval] R= 8 BTC320 RAND_WALK     time=2.8s | peak_z=+1.44 at k=2 (hits=4182/32768, G=1.021)
+[Bank] R= 8 STD    CTRL collected in 0.65s
+  [Train] R= 8 STD    CTRL steps=160 train_hit_rate=1731/64000 (2.705%) time=19.2s
+  [Eval] R= 8 STD    CTRL_RAND_SHA time=10.8s | peak_z=+66.50 at k=12 (hits=282/131072, G=17.625)
+[Bank] R= 8 BTC320 CTRL collected in 0.59s
+  [Train] R= 8 BTC320 CTRL steps=160 train_hit_rate=3866/64000 (6.041%) time=22.4s
+  [Eval] R= 8 BTC320 CTRL_RAND_SHA time=4.1s | peak_z=+1.59 at k=11 (hits=41/131072, G=1.281)
+[Bank] R=10 STD    SHA  collected in 0.54s
+  [Train] R=10 STD    SHA  steps=160 train_hit_rate=2256/64000 (3.525%) time=21.1s
+  [Eval] R=10 STD    NEURAL        time=12.5s | peak_z=+65.00 at k=12 (hits=276/131072, G=17.250)
+  [Eval] R=10 STD    RAND_WALK     time=4.4s | peak_z=+17.75 at k=12 (hits=87/131072, G=5.438)
+[Bank] R=10 BTC320 SHA  collected in 0.68s
+  [Train] R=10 BTC320 SHA  steps=160 train_hit_rate=3908/64000 (6.106%) time=23.6s
+  [Eval] R=10 BTC320 NEURAL        time=4.9s | peak_z=+2.57 at k=7 (hits=157/32768, G=1.227)
+  [Eval] R=10 BTC320 RAND_WALK     time=2.3s | peak_z=+1.10 at k=3 (hits=2096/32768, G=1.023)
+[Bank] R=10 STD    CTRL collected in 0.56s
+  [Train] R=10 STD    CTRL steps=160 train_hit_rate=3587/64000 (5.605%) time=20.6s
+  [Eval] R=10 STD    CTRL_RAND_SHA time=12.8s | peak_z=+64.75 at k=12 (hits=275/131072, G=17.188)
+[Bank] R=10 BTC320 CTRL collected in 0.80s
+  [Train] R=10 BTC320 CTRL steps=160 train_hit_rate=3668/64000 (5.731%) time=23.2s
+  [Eval] R=10 BTC320 CTRL_RAND_SHA time=5.1s | peak_z=+0.50 at k=12 (hits=18/131072, G=1.125)
+[Bank] R=12 STD    SHA  collected in 0.60s
+  [Train] R=12 STD    SHA  steps=160 train_hit_rate=2776/64000 (4.338%) time=22.1s
+  [Eval] R=12 STD    NEURAL        time=14.6s | peak_z=+63.25 at k=12 (hits=269/131072, G=16.812)
+  [Eval] R=12 STD    RAND_WALK     time=4.8s | peak_z=+11.14 at k=11 (hits=95/131072, G=2.969)
+[Bank] R=12 BTC320 SHA  collected in 0.67s
+  [Train] R=12 BTC320 SHA  steps=160 train_hit_rate=3715/64000 (5.805%) time=24.0s
+  [Eval] R=12 BTC320 NEURAL        time=5.2s | peak_z=+1.68 at k=4 (hits=1077/32768, G=1.052)
+  [Eval] R=12 BTC320 RAND_WALK     time=2.3s | peak_z=+1.87 at k=5 (hits=554/32768, G=1.082)
+[Bank] R=12 STD    CTRL collected in 0.57s
+  [Train] R=12 STD    CTRL steps=160 train_hit_rate=4714/64000 (7.366%) time=21.0s
+  [Eval] R=12 STD    CTRL_RAND_SHA time=14.3s | peak_z=+66.00 at k=12 (hits=280/131072, G=17.500)
+[Bank] R=12 BTC320 CTRL collected in 0.67s
+  [Train] R=12 BTC320 CTRL steps=160 train_hit_rate=3878/64000 (6.059%) time=23.0s
+  [Eval] R=12 BTC320 CTRL_RAND_SHA time=5.0s | peak_z=+2.02 at k=2 (hits=4217/32768, G=1.030)
+[Bank] R=16 STD    SHA  collected in 0.62s
+  [Train] R=16 STD    SHA  steps=160 train_hit_rate=4613/64000 (7.208%) time=23.2s
+  [Eval] R=16 STD    NEURAL        time=18.1s | peak_z=+64.00 at k=12 (hits=272/131072, G=17.000)
+  [Eval] R=16 STD    RAND_WALK     time=7.6s | peak_z=+10.00 at k=12 (hits=56/131072, G=3.500)
+[Bank] R=16 BTC320 SHA  collected in 0.70s
+  [Train] R=16 BTC320 SHA  steps=160 train_hit_rate=3805/64000 (5.945%) time=26.1s
+  [Eval] R=16 BTC320 NEURAL        time=6.0s | peak_z=+2.48 at k=11 (hits=46/131072, G=1.438)
+  [Eval] R=16 BTC320 RAND_WALK     time=2.7s | peak_z=+1.50 at k=8 (hits=76/32768, G=1.188)
+[Bank] R=16 STD    CTRL collected in 0.67s
+  [Train] R=16 STD    CTRL steps=160 train_hit_rate=3637/64000 (5.683%) time=25.3s
+  [Eval] R=16 STD    CTRL_RAND_SHA time=18.1s | peak_z=+60.25 at k=12 (hits=257/131072, G=16.062)
+[Bank] R=16 BTC320 CTRL collected in 0.73s
+  [Train] R=16 BTC320 CTRL steps=160 train_hit_rate=3769/64000 (5.889%) time=26.7s
+  [Eval] R=16 BTC320 CTRL_RAND_SHA time=6.2s | peak_z=+1.06 at k=11 (hits=38/131072, G=1.188)
+[Bank] R=20 STD    SHA  collected in 0.73s
+  [Train] R=20 STD    SHA  steps=160 train_hit_rate=3793/64000 (5.927%) time=29.0s
+  [Eval] R=20 STD    NEURAL        time=10.2s | peak_z=+1.50 at k=10 (hits=22/32768, G=1.375)
+  [Eval] R=20 STD    RAND_WALK     time=7.1s | peak_z=+0.75 at k=8 (hits=70/32768, G=1.094)
+[Bank] R=20 BTC320 SHA  collected in 0.80s
+  [Train] R=20 BTC320 SHA  steps=160 train_hit_rate=3712/64000 (5.800%) time=29.1s
+  [Eval] R=20 BTC320 NEURAL        time=7.4s | peak_z=+1.60 at k=5 (hits=548/32768, G=1.070)
+  [Eval] R=20 BTC320 RAND_WALK     time=2.6s | peak_z=+0.50 at k=10 (hits=18/32768, G=1.125)
+[Bank] R=20 STD    CTRL collected in 0.71s
+  [Train] R=20 STD    CTRL steps=160 train_hit_rate=3607/64000 (5.636%) time=29.9s
+  [Eval] R=20 STD    CTRL_RAND_SHA time=10.4s | peak_z=+1.79 at k=2 (hits=4203/32768, G=1.026)
+[Bank] R=20 BTC320 CTRL collected in 0.72s
+  [Train] R=20 BTC320 CTRL steps=160 train_hit_rate=3890/64000 (6.078%) time=28.9s
+  [Eval] R=20 BTC320 CTRL_RAND_SHA time=7.1s | peak_z=+1.54 at k=2 (hits=4188/32768, G=1.022)
+[P2 Done] cells=504 wavepackets=262 total_elapsed=965.7s -> /content/p2_results
+
+=== LOCAL COLAB STOP VERIFICATION ===
+[v11-p1] gpu-t4-s-usw1b0-2tzae3xlfp0jd | Hardware: T4 | Shape: Standard | Variant: GPU
+[v11-p3] m-hm-euw4c0-d911klth9cet | Hardware: CPU | Shape: High-RAM | Variant: DEFAULT

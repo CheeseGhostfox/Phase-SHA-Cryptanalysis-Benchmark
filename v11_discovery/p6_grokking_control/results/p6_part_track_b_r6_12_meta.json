@@ -1,0 +1,26 @@
+{
+  "command": "/content/p6/run_p6_experiment.py --mode full --track track_b --rounds 6,8,10,12 --steps-base 10000 --summary-name p6_part_track_b_r6_12.json --out-dir /content/p6/results",
+  "mode": "full",
+  "track": "track_b",
+  "rounds": [
+    6,
+    8,
+    10,
+    12
+  ],
+  "python_version": "3.13.16",
+  "torch_version": "2.14.1+cu130",
+  "gpu_name": "NVIDIA L4",
+  "fp32_locked": true,
+  "tf32_disabled": true,
+  "seeds": {
+    "SEED_SPLIT_A": 20261106,
+    "SEED_B_TRAIN": 20261116,
+    "SEED_B_HOLD": 998244353,
+    "SEED_B_RETEST": 777666555,
+    "SEED_CTRL_1": 1000003,
+    "SEED_CTRL_2": 2000003
+  },
+  "total_wall_sec": 2227.6528717419997,
+  "colab_stopped": null
+}

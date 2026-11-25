@@ -1,0 +1,85 @@
+# Phase-SHA V4B (S^2 in su(2) Bloch Hermitian Unitary Mat2C) — Local 4060 Safe R&D / Smoke Config
+version: v4
+variant: v4b
+experiment_name: v4b_r18
+rounds: 18
+domain_mode: int_range
+num_bits: 32
+msg_bytes_len: 4
+
+d_bit: 48
+n_heads: 3
+n_blocks: 2
+d_ff_mult: 2
+share_blocks: false
+grad_checkpointing: false
+use_carry_gru: true
+grad_scale: 2.0
+use_torch_compile: auto
+
+batch_size: 16
+num_particles: 2
+K_unroll: 8
+bptt_chunk_len: 4
+damp: 0.28
+damp_jitter_min: 0.20
+damp_jitter_max: 0.35
+sync_h_damp: true
+closed_loop_schedule: true
+zero_init_prob: 0.85
+
+alpha_phys: 1.0
+wta_winner_weight: 0.85
+bce_weight: 0.25
+closed_loop_wall_rounds: [0, 13, 16]
+closed_loop_bce_scale: 0.0
+anti_collapse_weight: 0.05
+logit_reg_weight: 0.001
+wavefront_weight: 3.0
+ema_decay: 0.995
+
+w_xor: 1.0
+lam_comm_start: 0.02
+lam_comm_end: 0.60
+lam_align_start: 0.02
+lam_align_end: 0.60
+anneal_mode: cosine
+
+K_infer: 24
+infer_damp: 0.25
+sde_noise_min: 0.10
+sde_noise_max: 0.45
+anneal_K: 64
+anneal_chunk_size: 256
+anneal_eval_samples: 8
+anneal_eta_max: 0.025
+anneal_beta_max: 0.25
+use_dynamic_latch: true
+latch_every: 2
+latch_conf_thresh: 0.985
+latch_res_thresh: 8.0
+latch_exact_tol: 1.0e-6
+use_smc_resampling: true
+smc_resample_every: 8
+smc_elite_k: 16
+smc_backtrack_ratio: 0.25
+
+steps: 2000
+lr_total_steps: 20000
+warmup_steps: 300
+lr: 4.0e-4
+min_lr_ratio: 0.1
+weight_decay: 0.02
+grad_clip: 1.0
+
+holdout_size: 128
+eval_batch_size: 64
+eval_every: 500
+checkpoint_every: 500
+log_every: 100
+best_ckpt_name: best.pt
+latest_ckpt_name: latest.pt
+
+cuda_memory_fraction: 0.80
+seed: 4042
+holdout_seed: 20261122

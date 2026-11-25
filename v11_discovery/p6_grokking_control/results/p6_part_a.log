@@ -1,0 +1,38 @@
+[verify] REAL_SHA256 parity with src/sha256_ref.py PASSED.
+[verify] Tie-aware batched AUC PASSED (tie_val=0.6667).
+[calibration] gpu=Tesla T4, n_runs=60, dt_400=3.019s, est_10k=75.5m, est_12k=90.6m, est_15k=113.2m -> steps_base=10000
+
+=== Round R=4 (track=track_a) ===
+[R=4 wd=0.1 REAL_SHA256] | A: d12_auc=0.5030 (best=Em1_b15:0.6138, mse=1.4589, ext=False, t=49.8s)
+[R=4 wd=0.1 CTRL_RAND_1] | A: d12_auc=0.5153 (best=Em1_b15:0.9908, mse=1.5095, ext=False, t=48.9s)
+[R=4 wd=0.1 CTRL_RAND_2] | A: d12_auc=0.5002 (best=Em1_b15:0.9751, mse=1.4883, ext=False, t=48.8s)
+[R=4 wd=0.5 REAL_SHA256] | A: d12_auc=0.4996 (best=Em1_b15:0.6197, mse=1.5180, ext=False, t=50.3s)
+[R=4 wd=0.5 CTRL_RAND_1] | A: d12_auc=0.5162 (best=Em1_b15:0.9931, mse=1.5521, ext=False, t=50.7s)
+[R=4 wd=0.5 CTRL_RAND_2] | A: d12_auc=0.5006 (best=Em1_b15:0.9774, mse=1.5363, ext=False, t=50.3s)
+[R=4 wd=1.0 REAL_SHA256] | A: d12_auc=0.5008 (best=Em1_b15:0.6249, mse=1.5789, ext=False, t=49.7s)
+[R=4 wd=1.0 CTRL_RAND_1] | A: d12_auc=0.5177 (best=Em1_b15:0.9934, mse=1.6219, ext=False, t=49.4s)
+[R=4 wd=1.0 CTRL_RAND_2] | A: d12_auc=0.4985 (best=Em1_b15:0.9757, mse=1.5814, ext=False, t=50.0s)
+[R=4 wd=2.0 REAL_SHA256] | A: d12_auc=0.4994 (best=Em1_b7:0.5488, mse=1.1271, ext=False, t=49.8s)
+[R=4 wd=2.0 CTRL_RAND_1] | A: d12_auc=0.5015 (best=Em1_b15:0.9966, mse=1.1322, ext=False, t=48.9s)
+[R=4 wd=2.0 CTRL_RAND_2] | A: d12_auc=0.5002 (best=Em1_b15:0.9813, mse=1.1029, ext=False, t=49.1s)
+[dissection] Running mandatory R=4 positive calibration dissections...
+[progress] Saved p6_part_track_a.json through R=4, elapsed=623.7s
+
+=== Round R=6 (track=track_a) ===
+[R=6 wd=0.1 REAL_SHA256] | A: d12_auc=0.4976 (best=HR0_b15:0.5080, mse=1.4581, ext=True, t=116.6s)
+[R=6 wd=0.1 CTRL_RAND_1] | A: d12_auc=0.4963 (best=HR4_b0:0.5157, mse=1.4569, ext=True, t=118.2s)
+[R=6 wd=0.1 CTRL_RAND_2] | A: d12_auc=0.5001 (best=HR0_b1:0.5141, mse=1.4612, ext=True, t=116.6s)
+[R=6 wd=0.5 REAL_SHA256] | A: d12_auc=0.5002 (best=HR4_b15:0.5102, mse=1.5329, ext=True, t=116.6s)
+[R=6 wd=0.5 CTRL_RAND_1] | A: d12_auc=0.4970 (best=Em1_b7:0.5084, mse=1.4888, ext=True, t=117.2s)
+[R=6 wd=0.5 CTRL_RAND_2] | A: d12_auc=0.4982 (best=HR0_b7:0.5082, mse=1.4882, ext=True, t=117.5s)
+[R=6 wd=1.0 REAL_SHA256] | A: d12_auc=0.4963 (best=HR0_b23:0.5091, mse=1.6034, ext=True, t=117.3s)
+[R=6 wd=1.0 CTRL_RAND_1] | A: d12_auc=0.4982 (best=HR0_b1:0.5125, mse=1.5574, ext=True, t=116.1s)
+[R=6 wd=1.0 CTRL_RAND_2] | A: d12_auc=0.4990 (best=HR4_parity:0.5108, mse=1.5429, ext=True, t=115.6s)
+[R=6 wd=2.0 REAL_SHA256] | A: d12_auc=0.5006 (best=Em1_b15:0.5195, mse=1.1073, ext=False, t=49.0s)
+[R=6 wd=2.0 CTRL_RAND_1] | A: d12_auc=0.4981 (best=HR4_b1:0.5105, mse=1.1455, ext=False, t=49.1s)
+[R=6 wd=2.0 CTRL_RAND_2] | A: d12_auc=0.4997 (best=HR4_parity:0.5281, mse=1.1001, ext=False, t=49.5s)
+[progress] Saved p6_part_track_a.json through R=6, elapsed=1854.9s
+
+=== Round R=8 (track=track_a) ===
+[R=8 wd=0.1 REAL_SHA256] | A: d12_auc=0.5014 (best=HR0_parity:0.5099, mse=1.4440, ext=True, t=117.3s)
+[R=8 wd=0.1 CTRL_RAND_1] | A: d12_auc=0.5002 (best=HR0_b23:0.5123, mse=1.4345, ext=True, t=118.9s)

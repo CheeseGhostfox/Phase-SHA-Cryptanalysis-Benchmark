@@ -1,0 +1,90 @@
+{
+  "tool": "z3",
+  "backend": "z3",
+  "z3_version": "5.4.1",
+  "all_passed": true,
+  "elapsed_sec": 0.1424,
+  "Z1_bool_gates_linearization": {
+    "passed": true,
+    "checks": {
+      "maj_or_eq_xor": "unsat",
+      "ch_e_true": "unsat",
+      "ch_e_false": "unsat",
+      "ch_fg_eq": "unsat",
+      "ch_fg_10": "unsat",
+      "ch_fg_01": "unsat",
+      "maj_ab_eq": "unsat",
+      "maj_ac_eq": "unsat",
+      "maj_bc_eq": "unsat",
+      "maj_ab_ne": "unsat",
+      "maj_ac_ne": "unsat",
+      "maj_bc_ne": "unsat",
+      "bv32_maj_or_eq_xor": "unsat",
+      "bv32_ch_e1": "unsat",
+      "bv32_ch_e0": "unsat"
+    },
+    "num_checks": 15
+  },
+  "Z2_ripple_carry_adders": {
+    "passed": true,
+    "widths": {
+      "4bit": {
+        "sum_eq_mod_add": "unsat",
+        "carry_eq_x_xor_y_xor_sum": "unsat",
+        "eval_add_carry_dc0_iff_exact": "unsat",
+        "eval_add_carry_dc0_implies_sum": "unsat"
+      },
+      "8bit": {
+        "sum_eq_mod_add": "unsat",
+        "carry_eq_x_xor_y_xor_sum": "unsat",
+        "eval_add_carry_dc0_iff_exact": "unsat",
+        "eval_add_carry_dc0_implies_sum": "unsat"
+      },
+      "32bit": {
+        "sum_eq_mod_add": "unsat",
+        "carry_eq_x_xor_y_xor_sum": "unsat",
+        "eval_add_carry_dc0_iff_exact": "unsat",
+        "eval_add_carry_dc0_implies_sum": "unsat"
+      }
+    }
+  },
+  "Z3_cnf_bridge_equisatisfiability": {
+    "passed": true,
+    "entail_unit_y0": "unsat",
+    "equisat_unit_inject": "unsat",
+    "entail_2lit_x0_eq_y0": "unsat",
+    "equisat_2lit_inject": "unsat",
+    "subst_fwd": "unsat",
+    "subst_bwd": "unsat"
+  },
+  "Z4_splice_truncation_witness": {
+    "passed": true,
+    "status": "sat",
+    "shared_splice_block_8bits": {
+      "a32_01": 0,
+      "e32_01": 0,
+      "d32_01": 0,
+      "h32_01": 0
+    },
+    "witness_1_W32_low4": 15,
+    "witness_2_W32_low4": 0,
+    "witness_1_T1_lsb": 0,
+    "witness_2_T1_lsb": 1
+  },
+  "Z5_nonlinear_guard_blocks_gf2": {
+    "passed": true,
+    "status": "sat",
+    "witness_a": {
+      "x0": true,
+      "y0": true,
+      "x1": true,
+      "c1_guard": true
+    },
+    "witness_b": {
+      "x0": false,
+      "y0": false,
+      "x1": false,
+      "c1_guard": false
+    }
+  }
+}

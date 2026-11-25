@@ -1,0 +1,105 @@
+{
+  "line": "B2_P15_MitM_Biclique_Truncated_CLZ",
+  "title": "截断前导零专用 Meet-in-the-Middle / Biclique / Splice-and-Cut 自动搜索与 Lean 4 证真",
+  "status": "NULL",
+  "calibration_and_formal_status": "PASS",
+  "colab_session": "v12-p15",
+  "colab_hardware": "Colab 8 vCPU --high-mem",
+  "colab_stopped": true,
+  "wall_time_seconds": 285.622,
+  "reference_crosscheck": {
+    "sha256_ref_imported": true,
+    "tested_cases": 40,
+    "xor_diff": 0,
+    "local_unit_test": "test_step1_engine.py PASS",
+    "status": "PASS"
+  },
+  "stage1_calibration": {
+    "mitm_reduced_rounds_passed": [16, 20, 24, 28, 32],
+    "mitm_reduced_details": [
+      { "rounds": 16, "d1": 32, "d2": 32, "m_eff": 288, "log2_T_attack": 224.087463, "delta_log2_T": 31.912537, "log2_M_words": 35.0, "z3_verified": true },
+      { "rounds": 20, "d1": 32, "d2": 32, "m_eff": 288, "log2_T_attack": 224.070389, "delta_log2_T": 31.929611, "log2_M_words": 35.0, "z3_verified": true },
+      { "rounds": 24, "d1": 32, "d2": 32, "m_eff": 288, "log2_T_attack": 224.058894, "delta_log2_T": 31.941106, "log2_M_words": 35.0, "z3_verified": true },
+      { "rounds": 28, "d1": 32, "d2": 32, "m_eff": 96,  "log2_T_attack": 224.050626, "delta_log2_T": 31.949374, "log2_M_words": 35.0, "z3_verified": true },
+      { "rounds": 32, "d1": 32, "d2": 32, "m_eff": 96,  "log2_T_attack": 224.044394, "delta_log2_T": 31.955606, "log2_M_words": 35.0, "z3_verified": true }
+    ],
+    "biclique_word_cpsat_feasible_rounds": [],
+    "biclique_word_cpsat_infeasible_rounds": [41, 45, 52, 64],
+    "r_max_penetration_word": 32,
+    "analytical_subword_8bit_calibration": {
+      "41": { "log2_T_attack": 248.201945, "delta_log2_T": 7.798055, "L_bic": 6 },
+      "45": { "log2_T_attack": 248.185536, "delta_log2_T": 7.814464, "L_bic": 6 },
+      "52": { "log2_T_attack": 248.281484, "delta_log2_T": 7.718516, "L_bic": 8 }
+    },
+    "local_64r_bicliques": [
+      { "bic_len": 6, "range": [0, 5], "red_w": [0, 1], "blue_w": [4, 5], "d1": 64, "d2": 64, "z3_verified": true },
+      { "bic_len": 8, "range": [0, 7], "red_w": [0, 1], "blue_w": [6, 7], "d1": 64, "d2": 64, "z3_verified": true },
+      { "bic_len": 9, "range": [0, 8], "red_w": [0, 1], "blue_w": [7, 8], "d1": 64, "d2": 64, "z3_verified": false }
+    ]
+  },
+  "stage2_btc_search": {
+    "track_s2a_block1b": {
+      "total_configs": 86,
+      "speedup_hits": 2,
+      "max_hit_rounds": 16,
+      "max_hit_k_only": 256,
+      "truncated_k_le_240_hits": 0,
+      "nonce_32_hits": 0,
+      "full_64r_hits": 0
+    },
+    "track_s2b_block2": {
+      "total_configs": 42,
+      "speedup_hits": 4,
+      "max_hit_rounds": 20,
+      "max_hit_k_only": 256,
+      "truncated_k_le_224_hits": 0,
+      "full_64r_hits": 0
+    },
+    "track_s2c_double128": {
+      "total_configs": 40,
+      "speedup_hits": 1,
+      "max_hit_config": "R1=4, R2=8 (R_total=12), k=256, ModeII_DirectTrunc, log2_T=223.222392, delta=32.716207",
+      "ge_16r_double_block_hits": 0,
+      "full_128r_hits": 0,
+      "cross_block_wp4_7_decouple_z3_verified": true
+    },
+    "track_s2d_bitlevel": {
+      "total_configs": 48,
+      "speedup_hits": 0
+    }
+  },
+  "lean4_verification": {
+    "toolchain": "leanprover/lean4:v4.36.0",
+    "lake_args": ["-j", "2", "-M", "2048"],
+    "mathlib": false,
+    "sorry_count": 0,
+    "verify_dir": "g:/SHA-LM/v12_frontier/track_b2_p15_mitm_biclique/lean_verify",
+    "build_passed": true,
+    "axioms_audit_passed": true,
+    "candidates_exported": 11,
+    "candidates_z3_verified": 11,
+    "candidates_lean4_proved": 11,
+    "total_audited_theorems": 32,
+    "lean4_verified_candidates": [
+      { "id": "p15_stage1a_mitm_20r", "theorems": ["P15Verify.Stage1Calib.p15_stage1a_mitm_20r_fwd", "P15Verify.Stage1Calib.p15_stage1a_mitm_20r_bwd"], "sorry": false },
+      { "id": "p15_stage1a_mitm_24r", "theorems": ["P15Verify.Stage1Calib.p15_stage1a_mitm_24r_fwd", "P15Verify.Stage1Calib.p15_stage1a_mitm_24r_bwd"], "sorry": false },
+      { "id": "p15_stage1a_mitm_28r", "theorems": ["P15Verify.Stage1Calib.p15_stage1a_mitm_28r_fwd", "P15Verify.Stage1Calib.p15_stage1a_mitm_28r_bwd"], "sorry": false },
+      { "id": "p15_stage1a_mitm_32r", "theorems": ["P15Verify.Stage1Calib.p15_stage1a_mitm_32r_fwd", "P15Verify.Stage1Calib.p15_stage1a_mitm_32r_bwd"], "sorry": false },
+      { "id": "p15_stage1b_local_bic_6r_t0", "theorems": ["P15Verify.Stage1Calib.p15_stage1b_local_bic_6r_t0_fwd", "P15Verify.Stage1Calib.p15_stage1b_local_bic_6r_t0_bwd"], "sorry": false },
+      { "id": "p15_stage1b_local_bic_8r_t0", "theorems": ["P15Verify.Stage1Calib.p15_stage1b_local_bic_8r_t0_fwd", "P15Verify.Stage1Calib.p15_stage1b_local_bic_8r_t0_bwd"], "sorry": false },
+      { "id": "p15_s2b_block2_16r_mitm", "theorems": ["P15Verify.Stage2BTC.p15_s2b_block2_16r_mitm_fwd", "P15Verify.Stage2BTC.p15_s2b_block2_16r_mitm_bwd"], "sorry": false },
+      { "id": "p15_btc_crossblock_wp4_7_decouple", "theorems": ["P15Verify.Stage2BTC.p15_btc_crossblock_wp4_7_msg", "P15Verify.Stage2BTC.p15_btc_crossblock_wp4_7_bwd"], "sorry": false },
+      { "id": "p15_backsolve_4r_chunk", "theorems": ["P15Verify.Stage2BTC.p15_backsolve_4r_chunk_fwd", "P15Verify.Stage2BTC.p15_backsolve_4r_chunk_bwd"], "sorry": false },
+      { "id": "p15_btc_b2_r0_16_chunk", "theorems": ["P15Verify.Stage2BTC.p15_btc_b2_r0_16_chunk_fwd", "P15Verify.Stage2BTC.p15_btc_b2_r0_16_chunk_bwd"], "sorry": false },
+      { "id": "p15_btc_b1b_r0_16_chunk", "theorems": ["P15Verify.Stage2BTC.p15_btc_b1b_r0_16_chunk_fwd", "P15Verify.Stage2BTC.p15_btc_b1b_r0_16_chunk_bwd"], "sorry": false }
+    ]
+  },
+  "artifacts": {
+    "spec": "v12_frontier/track_b2_p15_mitm_biclique/SPEC.md",
+    "report": "v12_frontier/track_b2_p15_mitm_biclique/REPORT.md",
+    "stage1_calibration": "v12_frontier/track_b2_p15_mitm_biclique/results/stage1_calibration.json",
+    "stage2_btc_search": "v12_frontier/track_b2_p15_mitm_biclique/results/stage2_btc_search.json",
+    "lean_candidates": "v12_frontier/track_b2_p15_mitm_biclique/results/lean_candidates.json",
+    "run_log": "v12_frontier/track_b2_p15_mitm_biclique/results/run_log.txt"
+  }
+}

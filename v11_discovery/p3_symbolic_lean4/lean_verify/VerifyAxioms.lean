@@ -1,0 +1,30 @@
+import P3Verify
+
+#print axioms P3Verify.TrackA1.p3_id_001
+#print axioms P3Verify.TrackA1.p3_id_002
+#print axioms P3Verify.TrackA1.p3_id_003
+#print axioms P3Verify.TrackA1.p3_id_004
+#print axioms P3Verify.TrackA1.p3_id_005
+#print axioms P3Verify.TrackA2.p3_id_006
+#print axioms P3Verify.TrackA2.p3_id_007
+#print axioms P3Verify.TrackA2.p3_id_008
+#print axioms P3Verify.TrackA2.p3_id_009
+#print axioms P3Verify.TrackA2.p3_id_010
+#print axioms P3Verify.TrackA2.p3_id_011
+#print axioms P3Verify.TrackA2.p3_id_012
+#print axioms P3Verify.TrackA2.p3_id_013
+#print axioms P3Verify.TrackB1.p3_id_014
+#print axioms P3Verify.TrackB1.p3_id_015
+#print axioms P3Verify.TrackB1.p3_id_016
+#print axioms P3Verify.TrackB1.p3_id_017
+#print axioms P3Verify.TrackB1.p3_id_018
+#print axioms P3Verify.TrackB1.p3_id_019
+#print axioms P3Verify.TrackB1.p3_id_020
+#print axioms P3Verify.TrackB2.p3_id_021
+#print axioms P3Verify.TrackB2.p3_id_022
+#print axioms P3Verify.TrackB2.p3_id_023
+#print axioms P3Verify.TrackB2.p3_id_024
+#print axioms P3Verify.TrackB2.p3_id_025
+#print axioms P3Verify.TrackB2.p3_id_026
+#print axioms P3Verify.TrackB2.p3_id_027
+#print axioms P3Verify.TrackB2.p3_id_028

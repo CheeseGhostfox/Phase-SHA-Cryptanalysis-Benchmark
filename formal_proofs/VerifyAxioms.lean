@@ -1,0 +1,54 @@
+import PhaseSHA
+
+-- 内核公理审计：核验所有核心定理与关键推论仅依赖 Lean 4 内核标准底层项，无任何占位符与自定义扩展声明
+
+#print axioms PhaseSHA.Core.BitVecIdentities.four_round_clamp_w_invariant
+#print axioms PhaseSHA.Core.BitVecIdentities.four_round_clamp_independent_of_w
+#print axioms PhaseSHA.Core.BitVecIdentities.r18_a10_algebraic_tunneling
+#print axioms PhaseSHA.Core.BitVecIdentities.r18_ch_masking_shield
+#print axioms PhaseSHA.Core.BitVecIdentities.r18_ch_masking_word_bv
+#print axioms PhaseSHA.Core.BitVecIdentities.r18_ch_masking_half_space_bijection
+
+#print axioms PhaseSHA.Algebraic.TwoAdicTowerSoundness.two_adic_zero_iff_mod_add
+#print axioms PhaseSHA.Algebraic.TwoAdicTowerSoundness.two_adic_zero_iff_all_scales_mod
+#print axioms PhaseSHA.Algebraic.TwoAdicTowerSoundness.two_adic_zero_iff_mod_add_cayley
+#print axioms PhaseSHA.Algebraic.TwoAdicTowerSoundness.lsb_carry_decoupling_and_flip_lower_bound
+#print axioms PhaseSHA.Algebraic.TwoAdicTowerSoundness.lsb_flip_b_c_lower_bound
+
+#print axioms PhaseSHA.Core.LatchingSoundness.exact_latch_preserves_solution_set
+#print axioms PhaseSHA.Core.LatchingSoundness.exact_latch_interior_preserves_solution_set
+#print axioms PhaseSHA.Core.LatchingSoundness.unbounded_open_loop_propagation
+
+#print axioms PhaseSHA.Core.PartialPreimagePoW.btc_h7_tail_round_decoupling
+#print axioms PhaseSHA.Core.PartialPreimagePoW.btc_h0_h4_sensitive_to_last_w
+#print axioms PhaseSHA.Core.PartialPreimagePoW.btc_r20_w16_reaches_h7
+#print axioms PhaseSHA.Core.PartialPreimagePoW.partial_preimage_exponential_gain
+#print axioms PhaseSHA.Core.PartialPreimagePoW.partial_preimage_bias_sandwich
+
+#print axioms PhaseSHA.Algebraic.NonAbelianLiftAndOGP.quaternion_involutive_lift_exactness
+#print axioms PhaseSHA.Algebraic.NonAbelianLiftAndOGP.latching_violates_lipschitz_ogp_premise
+
+-- Module 6A: 八元数非结合流形升维
+#print axioms PhaseSHA.V5.OctonionLift.oct_normSq_mul
+#print axioms PhaseSHA.V5.OctonionLift.oct_s7_closed
+#print axioms PhaseSHA.V5.OctonionLift.oct_real_axis_xor_and_assoc
+#print axioms PhaseSHA.V5.OctonionLift.oct_nonassociative_and_alternative
+#print axioms PhaseSHA.V5.OctonionLift.oct_seven_imag_paths_unit_lipschitz
+
+-- Module 6B: Burer-Monteiro 超高维升维与假坑逃逸证书
+#print axioms PhaseSHA.V5.BurerMonteiroEscape.energy_rank1_eq_ising
+#print axioms PhaseSHA.V5.BurerMonteiroEscape.burer_monteiro_weak_duality_global_opt
+#print axioms PhaseSHA.V5.BurerMonteiroEscape.burer_monteiro_plus_one_dim_escape
+#print axioms PhaseSHA.V5.BurerMonteiroEscape.burer_monteiro_frustrated_triangle_gap
+
+-- Module 6C: 张量网络纠缠态消除平均场势垒
+#print axioms PhaseSHA.V5.TensorEntanglementBarrier.independent_spin_mean_field_barrier
+#print axioms PhaseSHA.V5.TensorEntanglementBarrier.rank2_entangled_zero_barrier
+#print axioms PhaseSHA.V5.TensorEntanglementBarrier.mps_rank2_cycle_zero_residual
+#print axioms PhaseSHA.V5.TensorEntanglementBarrier.rank1_product_zero_marginals_positive_energy
+
+-- Module 6D: 双频域分裂与差分映射无假坑不动点定理
+#print axioms PhaseSHA.V5.DualDomainRRR.rrr_fixed_point_iff_intersection
+#print axioms PhaseSHA.V5.DualDomainRRR.rrr_boundary_caveats
+#print axioms PhaseSHA.V5.DualDomainRRR.walshChar_eq_boolSign_dotMod2
+#print axioms PhaseSHA.V5.DualDomainRRR.walsh_hadamard_involutive_and_xor_conv

@@ -1,0 +1,179 @@
+{
+  "line": "P1_InfoNCE",
+  "title": "跨轮 InfoNCE 变分互信息望远镜 (Cross-Round InfoNCE Variational Mutual Information Telescope)",
+  "status": "NULL",
+  "rounds_tested": [4, 6, 8, 10, 12, 16, 20],
+  "target_rounds_ge_8_triggered": [],
+  "borderline_rounds_ge_6_triggered": [],
+  "positive_calibration_round": 4,
+  "execution_env": {
+    "gpu_name": "Tesla T4",
+    "fp32_locked": true,
+    "tf32_disabled": true,
+    "train_steps": 4000,
+    "batch_size": 1024,
+    "eval_n": 16384,
+    "eval_pool_k": 1024,
+    "eval_num_pools": 16,
+    "fit_n": 32768,
+    "perm_n": 64,
+    "total_wall_sec": 1762.58,
+    "source_summary": "v11_discovery/p1_infonce/results/p1_sweep_summary.json"
+  },
+  "main_metrics": {
+    "4": {
+      "mi_bits_mean": 9.996732449278275,
+      "mi_bits_se": 4.462147803896026e-05,
+      "top1_mean": 1.0,
+      "top5_mean": 1.0,
+      "linear_infonce_mi_bits": 9.987070711114882,
+      "ridge_cca_mi_bits": 113.17851257324219
+    },
+    "6": {
+      "mi_bits_mean": 1.8202682638079892e-05,
+      "mi_bits_se": 4.001067118296376e-05,
+      "top1_mean": 0.001251220703125,
+      "top5_mean": 0.00494384765625,
+      "linear_infonce_mi_bits": -0.017018871664121638,
+      "ridge_cca_mi_bits": 0.006507338024675846
+    },
+    "8": {
+      "mi_bits_mean": -4.474296757772667e-05,
+      "mi_bits_se": 2.999080259755365e-05,
+      "top1_mean": 0.00103759765625,
+      "top5_mean": 0.005096435546875,
+      "linear_infonce_mi_bits": -0.015585267282191895,
+      "ridge_cca_mi_bits": 0.006179713178426027
+    },
+    "10": {
+      "mi_bits_mean": -2.7802676467847398e-05,
+      "mi_bits_se": 3.1061664956233556e-05,
+      "top1_mean": 0.0008544921875,
+      "top5_mean": 0.00372314453125,
+      "linear_infonce_mi_bits": -0.015350081007136862,
+      "ridge_cca_mi_bits": 0.005718828644603491
+    },
+    "12": {
+      "mi_bits_mean": 1.5192986248080409e-05,
+      "mi_bits_se": 3.4484522900496114e-05,
+      "top1_mean": 0.000885009765625,
+      "top5_mean": 0.00537109375,
+      "linear_infonce_mi_bits": -0.018543626851008965,
+      "ridge_cca_mi_bits": 0.004526679404079914
+    },
+    "16": {
+      "mi_bits_mean": -5.996343217928857e-05,
+      "mi_bits_se": 2.7757230853836053e-05,
+      "top1_mean": 0.000946044921875,
+      "top5_mean": 0.005126953125,
+      "linear_infonce_mi_bits": -0.0172961506929753,
+      "ridge_cca_mi_bits": 0.0043913633562624454
+    },
+    "20": {
+      "mi_bits_mean": -6.820793062578545e-06,
+      "mi_bits_se": 3.546513426178197e-05,
+      "top1_mean": 0.00091552734375,
+      "top5_mean": 0.00469970703125,
+      "linear_infonce_mi_bits": -0.016904847166599568,
+      "ridge_cca_mi_bits": 0.006012444384396076
+    }
+  },
+  "control_metrics": {
+    "4": {
+      "mi_bits_mean": 9.996491347656585,
+      "mi_bits_se": 3.816398264576899e-05,
+      "top1_mean": 1.0,
+      "top5_mean": 1.0
+    },
+    "6": {
+      "mi_bits_mean": -2.9952459603688197e-05,
+      "mi_bits_se": 3.418993183117672e-05,
+      "top1_mean": 0.001068115234375,
+      "top5_mean": 0.00445556640625
+    },
+    "8": {
+      "mi_bits_mean": -8.110662944038616e-06,
+      "mi_bits_se": 3.554059381534773e-05,
+      "top1_mean": 0.001251220703125,
+      "top5_mean": 0.004974365234375
+    },
+    "10": {
+      "mi_bits_mean": 3.3380151576722916e-05,
+      "mi_bits_se": 3.9024879304420045e-05,
+      "top1_mean": 0.00091552734375,
+      "top5_mean": 0.004913330078125
+    },
+    "12": {
+      "mi_bits_mean": 6.0725393063787436e-05,
+      "mi_bits_se": 4.839502232885256e-05,
+      "top1_mean": 0.00115966796875,
+      "top5_mean": 0.005615234375
+    },
+    "16": {
+      "mi_bits_mean": -4.826861192031018e-05,
+      "mi_bits_se": 3.822953573843313e-05,
+      "top1_mean": 0.000762939453125,
+      "top5_mean": 0.004180908203125
+    },
+    "20": {
+      "mi_bits_mean": -2.376108417234679e-05,
+      "mi_bits_se": 4.046655902896945e-05,
+      "top1_mean": 0.0008544921875,
+      "top5_mean": 0.0052490234375
+    }
+  },
+  "z_score": {
+    "by_round": {
+      "4": {
+        "z_null": 5495.132148590604,
+        "z_top1_null": 5789.789633386873,
+        "z_ctrl": 4.105640023707055
+      },
+      "6": {
+        "z_null": 0.5960778699898615,
+        "z_top1_null": 1.5917676778006433,
+        "z_ctrl": 0.9148284651201293
+      },
+      "8": {
+        "z_null": -1.2565409042084472,
+        "z_top1_null": 0.3537261506223652,
+        "z_ctrl": -0.7875489509782623
+      },
+      "10": {
+        "z_null": -0.32276962605722764,
+        "z_top1_null": -0.7074523012447304,
+        "z_ctrl": -1.2264146224385435
+      },
+      "12": {
+        "z_null": 0.7179162960371402,
+        "z_top1_null": -0.5305892259335477,
+        "z_ctrl": -0.7661154923416694
+      },
+      "16": {
+        "z_null": -1.7371420259712156,
+        "z_top1_null": -0.1768630753111826,
+        "z_ctrl": -0.24748732207760454
+      },
+      "20": {
+        "z_null": 0.23640851060202725,
+        "z_top1_null": -0.3537261506223652,
+        "z_ctrl": 0.3147731907884014
+      }
+    },
+    "max_z_null_ge_6": 0.7179162960371402,
+    "max_z_ctrl_ge_6": 0.9148284651201293,
+    "max_z_null_ge_8": 0.7179162960371402,
+    "max_z_ctrl_ge_8": 0.3147731907884014,
+    "threshold_required": 6.0
+  },
+  "distilled_findings": {
+    "calibration_round_4": {
+      "effective_rank": 47.5541,
+      "num_sig_modes": 82,
+      "cca_top10_corrs": [0.996433, 0.996186, 0.996088, 0.995916, 0.995695, 0.995637, 0.995344, 0.995036, 0.994728, 0.994298],
+      "physical_mechanism": "R=4 时 S_4 中的最浅寄存器 (A_1, E_1) 即 A_Rm3, E_Rm3 仅历经 1 轮压缩，代数上直接等于 W_0 + c_A/c_E (mod 2^32)。CCA 前 3 模态精确还原该 2-adic 低位直通通道：Mode 0 (r=0.996433) 对应 W0_b0 与 A_Rm3_b0/E_Rm3_b0 (r=±0.974, R^2_in=0.9873, R^2_out=0.9895)；Mode 1 (r=0.996186) 对应 W0_b1 与 E_Rm3_b1 (r=0.9488, R^2_out=0.9873)；Mode 2 (r=0.996088) 对应 W0_2adic_p4_sin/W0_b3 与 A_Rm3_2adic_p4_cos/E_Rm3_2adic_p4_cos (R^2_in=0.9855, R^2_out=0.9786) 及进位 2-阶 Walsh 项 E_Rm3_b3 ^ E_Rm3_b1 (walsh2_r=0.37663)。"
+    },
+    "rounds_ge_6_summary": "自 R=6（最浅存活寄存器 A_3, E_3 已历经 3 轮非线性 ARX 压缩）起直至 R=20，真实 SHA-256 与随机 ROTR/K 同构对照组的 InfoNCE 互信息下界、Top-1/Top-5 检索率、Linear InfoNCE 及 Ridge-CCA 全部坍缩至零互信息随机基线（MI ∈ [-0.00006, +0.00002] bits, z_null ∈ [-1.74, +0.72], z_ctrl ∈ [-1.23, +0.91]），未探测到任何可计算的高阶非线性慢变量或宏观序参量。"
+  },
+  "colab_stopped": true
+}

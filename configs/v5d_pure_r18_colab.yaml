@@ -1,0 +1,39 @@
+# Phase-SHA V5D-Pure: Zero-Param GPU Parallel Dual-Domain RRR Reflection Solver (Colab A100 80GB)
+version: v5
+variant: v5d_pure
+experiment_name: v5d_pure_r18_colab
+rounds: 18
+domain_mode: int_range
+num_bits: 32
+msg_bytes_len: 4
+
+batch_size: 64
+num_particles: 128
+K_unroll: 16
+pure_num_digests: 64
+pure_trajs_per_digest: 128
+pure_steps_per_tick: 16
+
+rrr_beta_min: 0.38
+rrr_beta_max: 1.08
+rrr_init_scale: 0.85
+
+K_infer: 48
+anneal_K: 128
+anneal_chunk_size: 1024
+anneal_eval_samples: 64
+
+steps: 2000
+holdout_size: 2048
+eval_batch_size: 256
+eval_every: 250
+checkpoint_every: 250
+log_every: 50
+best_ckpt_name: best.pt
+latest_ckpt_name: latest.pt
+
+cuda_memory_fraction: 0.92
+seed: 5051
+holdout_seed: 20261122
+use_torch_compile: "false"
+use_async_prefetch: false

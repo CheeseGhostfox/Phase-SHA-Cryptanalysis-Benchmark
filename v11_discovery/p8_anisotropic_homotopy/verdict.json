@@ -1,0 +1,114 @@
+{
+  "line": "P8_anisotropic_homotopy",
+  "title": "各向异性 / 复平面反绝热同伦分岔测绘与最小割集定位",
+  "status": "NULL",
+  "colab_stopped": true,
+  "colab_session": "v11-p8",
+  "hardware": "NVIDIA L4 (Colab, 2 sessions each <= 45 min, pure FP32 allow_tf32=False, zero complex64)",
+  "elapsed_seconds": {
+    "cpu_invariants_smoke": 1.672,
+    "homotopy_sweep_full": 3281.08,
+    "boundary_2d_compare": 327.16,
+    "cutset_ablation": 862.18
+  },
+  "invariants_verification": {
+    "all_passed": true,
+    "rounds_checked": [4, 8],
+    "variants_checked": ["main", "control"],
+    "paths_checked_per_variant": 13,
+    "max_fixed_point_err": 0.0,
+    "s1_v6a_pb_max_diff": 1.1920928955078125e-07,
+    "gf2_lin_violations": 0,
+    "alpha0_e_hom_max": 0.0,
+    "all_sweep_s0_lin_viol_max_le_1e_6": true
+  },
+  "coverage": {
+    "rounds_swept": [4, 6, 8, 12, 18, 24, 64],
+    "variants": ["main", "control_random_rotr_k"],
+    "primary_paths": [
+      "P0_uniform",
+      "P1_bit_lsb_to_msb",
+      "P2_bit_msb_to_lsb",
+      "P3_round_forward",
+      "P4_round_backward",
+      "P5a_gate_bool_then_add",
+      "P5b_gate_add_then_bool",
+      "P6_cd_complex_detour",
+      "P7_learned_aniso"
+    ],
+    "p6_ablation_paths_on_R_4_8_18_64": [
+      "P6_gamma02",
+      "P6_gamma07",
+      "P6_pure_damping",
+      "P6_pure_complex"
+    ],
+    "n_digests_per_config": {"R_4_to_24": 8, "R_64": 4},
+    "k_trajs_per_digest": 16,
+    "s_grid_count": 26,
+    "t_relax_per_s": 8,
+    "beta": 0.85
+  },
+  "key_metrics": {
+    "total_exact_preimage_hits_all_paths": 0,
+    "r4_positive_calibration": {
+      "P0_uniform_E32_min": {"main": 0.0042, "control": 0.0003},
+      "P2_bit_msb_to_lsb_E32_min": {"main": 0.0, "control": 0.0},
+      "P3_round_forward_E32_min": {"main": 0.0011, "control": 0.0001},
+      "P4_round_backward_E32_min": {"main": 0.0007, "control": 0.0001}
+    },
+    "deep_rounds_bifurcation_instability_alpha_bar_c": {
+      "P0_uniform_R8_to_R64": {"main": 0.2400, "control": 0.2400},
+      "P1_bit_lsb_to_msb_R8_to_R64": {"main": [0.1600, 0.1450, 0.1200, 0.1200, 0.1200], "control": [0.1600, 0.1450, 0.1200, 0.1200, 0.1200]},
+      "P2_bit_msb_to_lsb_R8_to_R64": {"main": [0.1550, 0.1350, 0.1200, 0.1200, 0.1200], "control": [0.1600, 0.1550, 0.1200, 0.1200, 0.1200]},
+      "P3_round_forward_R8_to_R64": {"main": [0.1600, 0.1550, 0.1200, 0.1450, 0.1200], "control": [0.1600, 0.1550, 0.1200, 0.1300, 0.1200]},
+      "P4_round_backward_R8_to_R64": {"main": [0.1600, 0.1550, 0.1200, 0.1200, 0.0800], "control": [0.1600, 0.1550, 0.1200, 0.1200, 0.0800]},
+      "P5a_gate_bool_then_add_R8_to_R64": {"main": [0.3733, 0.3733, 0.3733, 0.3733, 0.4267], "control": [0.3733, 0.3733, 0.3733, 0.3733, 0.4267]},
+      "P5b_gate_add_then_bool_R8_to_R64": {"main": [0.1067, 0.1067, 0.1067, 0.0967, 0.0800], "control": [0.1067, 0.1067, 0.1067, 0.1000, 0.0800]},
+      "P6_cd_complex_detour_R8_to_R64": {"main": 0.2400, "control": 0.2400},
+      "P7_learned_aniso_R8_to_R64": {"main": [0.3483, 0.3641, 0.3786, 0.3906, 0.4041], "control": [0.3484, 0.3629, 0.3780, 0.3902, 0.4041]}
+    },
+    "terminal_s1_metrics_R18_and_R64_main": {
+      "R18_P0_uniform": {"delta_E_hom": 0.1482, "lin_viol_rate": 0.0754, "gl_gap": 0.3761, "drift_slope": 0.0023, "inst_E32_min": 17.7088},
+      "R18_P5a_bool_then_add": {"delta_E_hom": 0.1618, "lin_viol_rate": 0.0814, "gl_gap": 0.3925, "drift_slope": 0.0022, "inst_E32_min": 15.5999},
+      "R18_P6_cd_complex_detour": {"delta_E_hom": 0.5128, "lin_viol_rate": 0.2301, "gl_gap": 0.6287, "drift_slope": 71.0249, "inst_E32_min": 26.6054},
+      "R18_P6_pure_damping": {"delta_E_hom": 0.1499, "lin_viol_rate": 0.0760, "gl_gap": 0.3766, "drift_slope": 0.0023, "inst_E32_min": 17.5230},
+      "R18_P7_learned_aniso": {"delta_E_hom": 0.1969, "lin_viol_rate": 0.0980, "gl_gap": 0.4266, "drift_slope": 0.0014, "inst_E32_min": 24.0600},
+      "R64_P0_uniform": {"delta_E_hom": 0.1667, "lin_viol_rate": 0.0882, "gl_gap": 0.4117, "drift_slope": 0.0023, "inst_E32_min": 112.3715},
+      "R64_P5a_bool_then_add": {"delta_E_hom": 0.1829, "lin_viol_rate": 0.0959, "gl_gap": 0.4322, "drift_slope": 0.0021, "inst_E32_min": 118.5501},
+      "R64_P6_cd_complex_detour": {"delta_E_hom": 0.5851, "lin_viol_rate": 0.2962, "gl_gap": 0.6750, "drift_slope": 67.4203, "inst_E32_min": 149.5839},
+      "R64_P6_pure_damping": {"delta_E_hom": 0.1654, "lin_viol_rate": 0.0872, "gl_gap": 0.4099, "drift_slope": 0.0022, "inst_E32_min": 109.7513},
+      "R64_P7_learned_aniso": {"delta_E_hom": 0.2087, "lin_viol_rate": 0.1092, "gl_gap": 0.4566, "drift_slope": 0.0016, "inst_E32_min": 135.4377}
+    },
+    "p7_learned_schedule_s05_by_gate_Ch_Maj_Add": {
+      "R8_main": [0.1527, 0.1561, 0.0528],
+      "R8_control": [0.1516, 0.1556, 0.0526],
+      "R18_main": [0.1765, 0.1796, 0.0550],
+      "R18_control": [0.1764, 0.1797, 0.0552],
+      "R64_main": [0.1977, 0.1979, 0.0576],
+      "R64_control": [0.1980, 0.1982, 0.0577]
+    },
+    "cutset_and_singularity_summary": {
+      "single_gate_injection_R64_main_lin_viol": {
+        "only_Ch": 0.0095,
+        "only_Maj": 0.0074,
+        "only_Add": 0.1134
+      },
+      "single_gate_injection_R64_main_gl_gap": {
+        "only_Ch": 0.1026,
+        "only_Maj": 0.0849,
+        "only_Add": 0.4210
+      },
+      "greedy_minimal_cutset_rho_tgb_main_vs_control": {
+        "R4": {"main": "0.3828+/-0.0283", "control": "0.4134+/-0.0439", "z": -1.17},
+        "R6": {"main": "0.8247+/-0.0091", "control": "0.8125+/-0.0099", "z": 1.81},
+        "R8": {"main": "0.8613+/-0.0038", "control": "0.8571+/-0.0141", "z": 0.58},
+        "R12": {"main": "0.8796+/-0.0038", "control": "0.8774+/-0.0035", "z": 0.84},
+        "R18": {"main": "0.8876+/-0.0034", "control": "0.8838+/-0.0049", "z": 1.26},
+        "R24": {"main": "0.8829+/-0.0031", "control": "0.8908+/-0.0025", "z": -4.00},
+        "R64": {"main": "0.8629+/-0.0009", "control": "0.8626+/-0.0006", "z": 0.58}
+      },
+      "bit_cut_min_bits_to_restore_linear_R6_to_R64": "28_to_32_of_32"
+    }
+  },
+  "conclusion": "严格验证了全部 9 条主路径（含 4 项 P6 消融）在端点 s=1 精确还原 SHA-256（diff <= 1.19e-7）及真迹 x* 全程严格不动点守恒（err = 0.0）。全轮次 R ∈ {4, 6, 8, 12, 18, 24, 64} 上没有任何各向异性或复平面反绝热调度能绕开分岔临界线或改善 s=1 终局残差（全路径 exact_hits = 0）：位级波前（P1/P2）与轮次波前（P3/P4）在 R >= 6 均更早触发湍流（a_bar_c = 0.08~0.16 < P0 0.24）；P6 复平面绕行因双伴随通道在差异子空间内出现放大（kappa_im + lambda_cd * alpha_re > 1）引发范数漂移爆炸（drift_slope = +67~+98）；P5a 与神经学习场 P7_learned_aniso 虽然独立收敛到一致物理策略——压制 ADD32 进位门控、先激活局部布尔门 Ch/Maj（使得 Ch+Maj 在 alpha_Add=0 时一度在 P5a s=0.48 处将 gl_gap 压低至 0.0176~0.0211），将全局平均开启密度 a_bar_c 抬升至 0.348~0.427——但一旦 ADD32 进位激活超过约 0.20~0.28，系统仍不可避免地爆发完全同等的进位回灌湍流，且 s=1 终态能量（R=64 E32_min = 118.55 / 135.44）反而劣于 P0_uniform（112.37）。最小割集与奇点扫描精确证明：分岔的唯一主触发奇点是与 F_2 线性骨架耦合的 ADD32 进位链（仅开 Ch 或 Maj 即使到 R=64 也不破坏线性流形，lin_viol <= 0.0095；仅开 Add 在全轮次即爆裂，R=64 lin_viol = 0.1134），具体集中在 u1/u3/E_next/A_next（以及 R>16 的 sched 消息扩展加法），且在 R >= 6 上须切断 82.5%~88.8% 的 (t,g,b) 门（或 28~32/32 比特）才能恢复线性流形，不存在低维稀疏割集；同时真实 SHA-256 与同构随机 ROTR/K 克隆对照组在所有分岔阈值、能量跃迁与最小割集占比上完全重合。因此 P8 正式结案为 NULL。"
+}

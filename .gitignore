@@ -1,0 +1,31 @@
+# Python & local environments
+.venv/
+.colab_venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Lean 4 build caches (source files remain tracked)
+**/.lake/
+
+# Heavy model checkpoints, local runs, legacy archives & Colab zip bundles
+runs/
+checkpoints/
+v9/
+archive_v9_final/
+v10_ouroboros64/runs/
+colab_bundle_v*/
+*.zip
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+*.onnx
+*.tar
+*.tar.gz
+
+# Local-only internal publication strategy & roadmaps (never publish)
+docs/ACADEMIC_PUBLICATION_STRATEGY.md
+v11_discovery/final_synthesis/03_value_and_v12_roadmap.md

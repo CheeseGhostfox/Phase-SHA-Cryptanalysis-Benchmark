@@ -1,0 +1,111 @@
+=== P1 InfoNCE Telescope Sweep ===
+device=cuda (Tesla T4) | fp32_locked=True | rounds=[4, 6, 8, 10, 12, 16, 20]
+steps=4000 | batch_size=1024 | eval_n=16384 (K=1024) | fit_n=32768 | perm_n=64
+
+--- Round R=4 ---
+  [R=4 MAIN] step 1000/4000 | loss=0.0086 | tau=0.0608 | 17.3s
+  [R=4 MAIN] step 2000/4000 | loss=0.0037 | tau=0.0577 | 34.5s
+  [R=4 MAIN] step 3000/4000 | loss=0.0025 | tau=0.0561 | 51.6s
+  [R=4 MAIN] step 4000/4000 | loss=0.0023 | tau=0.0556 | 69.3s
+  [R=4 CTRL] step 1000/4000 | loss=0.0101 | tau=0.0607 | 17.6s
+  [R=4 CTRL] step 2000/4000 | loss=0.0040 | tau=0.0575 | 35.7s
+  [R=4 CTRL] step 3000/4000 | loss=0.0025 | tau=0.0560 | 53.6s
+  [R=4 CTRL] step 4000/4000 | loss=0.0023 | tau=0.0555 | 71.1s
+  [R=4 LIN] step 1000/4000 | loss=0.0292 | tau=0.0585 | 8.7s
+  [R=4 LIN] step 2000/4000 | loss=0.0160 | tau=0.0539 | 17.5s
+  [R=4 LIN] step 3000/4000 | loss=0.0097 | tau=0.0517 | 26.3s
+  [R=4 LIN] step 4000/4000 | loss=0.0088 | tau=0.0509 | 34.7s
+  [R=4 DISTILL] Triggered (z_null=5495.13, z_ctrl=4.11)
+  [R=4 SUMMARY] main_MI=9.9967b (Top1=1.00000, z_null=5495.13) | ctrl_MI=9.9965b (Top1=1.00000) | lin_MI=9.9871b | cca_MI=113.1785b | z_ctrl=4.11 | round_wall=179.6s
+
+--- Round R=6 ---
+  [R=6 MAIN] step 1000/4000 | loss=6.9316 | tau=0.0706 | 19.7s
+  [R=6 MAIN] step 2000/4000 | loss=6.9313 | tau=0.0706 | 39.4s
+  [R=6 MAIN] step 3000/4000 | loss=6.9313 | tau=0.0706 | 58.7s
+  [R=6 MAIN] step 4000/4000 | loss=6.9316 | tau=0.0706 | 78.1s
+  [R=6 CTRL] step 1000/4000 | loss=6.9318 | tau=0.0706 | 19.1s
+  [R=6 CTRL] step 2000/4000 | loss=6.9314 | tau=0.0706 | 38.7s
+  [R=6 CTRL] step 3000/4000 | loss=6.9314 | tau=0.0706 | 57.8s
+  [R=6 CTRL] step 4000/4000 | loss=6.9316 | tau=0.0706 | 77.1s
+  [R=6 LIN] step 1000/4000 | loss=7.0056 | tau=0.0825 | 10.5s
+  [R=6 LIN] step 2000/4000 | loss=6.9651 | tau=0.0887 | 21.0s
+  [R=6 LIN] step 3000/4000 | loss=6.9447 | tau=0.0920 | 31.1s
+  [R=6 LIN] step 4000/4000 | loss=6.9405 | tau=0.0929 | 41.2s
+  [R=6 SUMMARY] main_MI=0.0000b (Top1=0.00125, z_null=0.60) | ctrl_MI=-0.0000b (Top1=0.00107) | lin_MI=-0.0170b | cca_MI=0.0065b | z_ctrl=0.91 | round_wall=198.8s
+
+--- Round R=8 ---
+  [R=8 MAIN] step 1000/4000 | loss=6.9313 | tau=0.0706 | 21.0s
+  [R=8 MAIN] step 2000/4000 | loss=6.9316 | tau=0.0706 | 42.1s
+  [R=8 MAIN] step 3000/4000 | loss=6.9314 | tau=0.0706 | 62.8s
+  [R=8 MAIN] step 4000/4000 | loss=6.9315 | tau=0.0706 | 83.7s
+  [R=8 CTRL] step 1000/4000 | loss=6.9313 | tau=0.0706 | 21.0s
+  [R=8 CTRL] step 2000/4000 | loss=6.9316 | tau=0.0706 | 41.9s
+  [R=8 CTRL] step 3000/4000 | loss=6.9314 | tau=0.0706 | 62.6s
+  [R=8 CTRL] step 4000/4000 | loss=6.9314 | tau=0.0706 | 83.5s
+  [R=8 LIN] step 1000/4000 | loss=6.9953 | tau=0.0825 | 12.1s
+  [R=8 LIN] step 2000/4000 | loss=6.9524 | tau=0.0887 | 24.4s
+  [R=8 LIN] step 3000/4000 | loss=6.9338 | tau=0.0920 | 36.5s
+  [R=8 LIN] step 4000/4000 | loss=6.9404 | tau=0.0929 | 48.7s
+  [R=8 SUMMARY] main_MI=-0.0000b (Top1=0.00104, z_null=-1.26) | ctrl_MI=-0.0000b (Top1=0.00125) | lin_MI=-0.0156b | cca_MI=0.0062b | z_ctrl=-0.79 | round_wall=218.3s
+
+--- Round R=10 ---
+  [R=10 MAIN] step 1000/4000 | loss=6.9317 | tau=0.0706 | 22.1s
+  [R=10 MAIN] step 2000/4000 | loss=6.9315 | tau=0.0706 | 44.1s
+  [R=10 MAIN] step 3000/4000 | loss=6.9314 | tau=0.0706 | 66.0s
+  [R=10 MAIN] step 4000/4000 | loss=6.9315 | tau=0.0706 | 88.1s
+  [R=10 CTRL] step 1000/4000 | loss=6.9316 | tau=0.0706 | 22.0s
+  [R=10 CTRL] step 2000/4000 | loss=6.9313 | tau=0.0706 | 44.0s
+  [R=10 CTRL] step 3000/4000 | loss=6.9316 | tau=0.0706 | 65.6s
+  [R=10 CTRL] step 4000/4000 | loss=6.9314 | tau=0.0706 | 87.6s
+  [R=10 LIN] step 1000/4000 | loss=6.9889 | tau=0.0825 | 13.9s
+  [R=10 LIN] step 2000/4000 | loss=6.9561 | tau=0.0888 | 28.0s
+  [R=10 LIN] step 3000/4000 | loss=6.9432 | tau=0.0921 | 42.3s
+  [R=10 LIN] step 4000/4000 | loss=6.9401 | tau=0.0930 | 56.2s
+  [R=10 SUMMARY] main_MI=-0.0000b (Top1=0.00085, z_null=-0.32) | ctrl_MI=0.0000b (Top1=0.00092) | lin_MI=-0.0154b | cca_MI=0.0057b | z_ctrl=-1.23 | round_wall=234.3s
+
+--- Round R=12 ---
+  [R=12 MAIN] step 1000/4000 | loss=6.9314 | tau=0.0706 | 24.1s
+  [R=12 MAIN] step 2000/4000 | loss=6.9314 | tau=0.0706 | 48.2s
+  [R=12 MAIN] step 3000/4000 | loss=6.9314 | tau=0.0706 | 72.2s
+  [R=12 MAIN] step 4000/4000 | loss=6.9315 | tau=0.0706 | 96.3s
+  [R=12 CTRL] step 1000/4000 | loss=6.9312 | tau=0.0706 | 23.9s
+  [R=12 CTRL] step 2000/4000 | loss=6.9316 | tau=0.0706 | 47.9s
+  [R=12 CTRL] step 3000/4000 | loss=6.9312 | tau=0.0706 | 71.6s
+  [R=12 CTRL] step 4000/4000 | loss=6.9316 | tau=0.0706 | 95.6s
+  [R=12 LIN] step 1000/4000 | loss=6.9877 | tau=0.0825 | 16.2s
+  [R=12 LIN] step 2000/4000 | loss=6.9443 | tau=0.0887 | 31.8s
+  [R=12 LIN] step 3000/4000 | loss=6.9395 | tau=0.0920 | 47.4s
+  [R=12 LIN] step 4000/4000 | loss=6.9480 | tau=0.0929 | 63.3s
+  [R=12 SUMMARY] main_MI=0.0000b (Top1=0.00089, z_null=0.72) | ctrl_MI=0.0001b (Top1=0.00116) | lin_MI=-0.0185b | cca_MI=0.0045b | z_ctrl=-0.77 | round_wall=257.5s
+
+--- Round R=16 ---
+  [R=16 MAIN] step 1000/4000 | loss=6.9313 | tau=0.0706 | 27.4s
+  [R=16 MAIN] step 2000/4000 | loss=6.9313 | tau=0.0706 | 54.8s
+  [R=16 MAIN] step 3000/4000 | loss=6.9315 | tau=0.0706 | 82.0s
+  [R=16 MAIN] step 4000/4000 | loss=6.9313 | tau=0.0706 | 109.6s
+  [R=16 CTRL] step 1000/4000 | loss=6.9314 | tau=0.0706 | 27.7s
+  [R=16 CTRL] step 2000/4000 | loss=6.9316 | tau=0.0706 | 55.4s
+  [R=16 CTRL] step 3000/4000 | loss=6.9314 | tau=0.0706 | 84.1s
+  [R=16 CTRL] step 4000/4000 | loss=6.9316 | tau=0.0706 | 112.1s
+  [R=16 LIN] step 1000/4000 | loss=6.9957 | tau=0.0825 | 20.0s
+  [R=16 LIN] step 2000/4000 | loss=6.9706 | tau=0.0888 | 40.9s
+  [R=16 LIN] step 3000/4000 | loss=6.9439 | tau=0.0920 | 60.4s
+  [R=16 LIN] step 4000/4000 | loss=6.9398 | tau=0.0930 | 80.8s
+  [R=16 SUMMARY] main_MI=-0.0001b (Top1=0.00095, z_null=-1.74) | ctrl_MI=-0.0000b (Top1=0.00076) | lin_MI=-0.0173b | cca_MI=0.0044b | z_ctrl=-0.25 | round_wall=305.2s
+
+--- Round R=20 ---
+  [R=20 MAIN] step 1000/4000 | loss=6.9314 | tau=0.0706 | 33.5s
+  [R=20 MAIN] step 2000/4000 | loss=6.9315 | tau=0.0706 | 66.3s
+  [R=20 MAIN] step 3000/4000 | loss=6.9313 | tau=0.0706 | 100.2s
+  [R=20 MAIN] step 4000/4000 | loss=6.9315 | tau=0.0706 | 133.5s
+  [R=20 CTRL] step 1000/4000 | loss=6.9315 | tau=0.0706 | 32.7s
+  [R=20 CTRL] step 2000/4000 | loss=6.9310 | tau=0.0706 | 65.8s
+  [R=20 CTRL] step 3000/4000 | loss=6.9314 | tau=0.0706 | 98.8s
+  [R=20 CTRL] step 4000/4000 | loss=6.9315 | tau=0.0706 | 131.3s
+  [R=20 LIN] step 1000/4000 | loss=6.9796 | tau=0.0825 | 25.2s
+  [R=20 LIN] step 2000/4000 | loss=6.9621 | tau=0.0888 | 51.0s
+  [R=20 LIN] step 3000/4000 | loss=6.9407 | tau=0.0920 | 76.2s
+  [R=20 LIN] step 4000/4000 | loss=6.9428 | tau=0.0929 | 101.3s
+  [R=20 SUMMARY] main_MI=-0.0000b (Top1=0.00092, z_null=0.24) | ctrl_MI=-0.0000b (Top1=0.00085) | lin_MI=-0.0169b | cca_MI=0.0060b | z_ctrl=0.31 | round_wall=368.6s
+
+=== P1 Sweep Finished in 1762.6s ===

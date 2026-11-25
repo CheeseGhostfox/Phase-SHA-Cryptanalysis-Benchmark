@@ -1,0 +1,105 @@
+[P13] Starting experiments on device=cuda (Tesla T4), allow_tf32=False
+
+=== [Track 1] Standard Ladder & Positive Calibration ===
+[Track 1] running calibration calib_R12_sfs (R=12, iv=semi_free)...
+  -> calib_R12_sfs: sat=True, time=0.2262s
+[Track 1] running calibration calib_R12_fs (R=12, iv=free)...
+  -> calib_R12_fs: sat=True, time=0.1164s
+[Track 1] running calibration calib_R16_sfs (R=16, iv=semi_free)...
+  -> calib_R16_sfs: sat=True, time=0.148s
+[Track 1] running calibration calib_R16_fs (R=16, iv=free)...
+  -> calib_R16_fs: sat=True, time=0.1534s
+
+[Track 1] Training AlphaZero Crystal Net for R=16 on cuda...
+  [G3 R=16] train_acc=0.9922, 1bit_recover=0.03125 (ratio=1.0x, pass_1.5x=False)
+  -> ladder_R16_free: sat=True, sat_calls=1, contradictions=0, rand_min_hw=-
+  -> ladder_R16_semi_free: sat=True, sat_calls=1, contradictions=0, rand_min_hw=-
+  -> ladder_R16_standard: sat=True, sat_calls=1, contradictions=0, rand_min_hw=96
+
+[Track 1] Training AlphaZero Crystal Net for R=20 on cuda...
+  [G3 R=20] train_acc=1.0, 1bit_recover=0.11719 (ratio=3.75x, pass_1.5x=True)
+  -> ladder_R20_free: sat=False, sat_calls=5, contradictions=0, rand_min_hw=-
+  -> ladder_R20_semi_free: sat=False, sat_calls=5, contradictions=0, rand_min_hw=-
+  -> ladder_R20_standard: sat=False, sat_calls=5, contradictions=0, rand_min_hw=99
+
+[Track 1] Training AlphaZero Crystal Net for R=24 on cuda...
+  [G3 R=24] train_acc=1.0, 1bit_recover=0.04688 (ratio=1.5x, pass_1.5x=True)
+  -> ladder_R24_free: sat=False, sat_calls=5, contradictions=0, rand_min_hw=-
+  -> ladder_R24_semi_free: sat=False, sat_calls=5, contradictions=0, rand_min_hw=-
+  -> ladder_R24_standard: sat=False, sat_calls=5, contradictions=0, rand_min_hw=95
+
+[Track 1] Training AlphaZero Crystal Net for R=28 on cuda...
+  [G3 R=28] train_acc=1.0, 1bit_recover=0.07031 (ratio=2.25x, pass_1.5x=True)
+  -> ladder_R28_free: sat=False, sat_calls=1, contradictions=1, rand_min_hw=-
+  -> ladder_R28_semi_free: sat=False, sat_calls=1, contradictions=1, rand_min_hw=-
+  -> ladder_R28_standard: sat=False, sat_calls=1, contradictions=1, rand_min_hw=99
+
+[Track 1] Training AlphaZero Crystal Net for R=32 on cuda...
+  [G3 R=32] train_acc=1.0, 1bit_recover=0.00781 (ratio=0.25x, pass_1.5x=False)
+  -> ladder_R32_free: sat=False, sat_calls=1, contradictions=1, rand_min_hw=-
+  -> ladder_R32_semi_free: sat=False, sat_calls=1, contradictions=1, rand_min_hw=-
+  -> ladder_R32_standard: sat=False, sat_calls=1, contradictions=1, rand_min_hw=95
+
+=== [Track 2] BTC Truncated Leading-Zero Oriented Differential ===
+[Track 2] Calibrated SHA-256 reference throughput: 223,264 evals/sec
+  -> S1_trivial_last_round_R8_k4: sat=True, p_hit=0.175781, z=7.488, speedup=0.023814
+  -> S1_trivial_last_round_R8_k8: sat=True, p_hit=0.09375, z=23.045, speedup=0.309352
+  -> S1_trivial_last_round_R8_k12: sat=True, p_hit=0.0625, z=63.758, speedup=2.396761
+  -> S1_g2_nontrivial_R12_k4: sat=True, p_hit=0.0625, z=0.0, speedup=0.004807
+  -> S1_g2_nontrivial_R12_k8: sat=True, p_hit=0.039062, z=9.018, speedup=0.015698
+  -> S1_g2_nontrivial_R12_k12: sat=False, p_hit=-, z=-, speedup=-
+  -> S1_g2_nontrivial_R16_k4: sat=True, p_hit=0.0625, z=0.0, speedup=0.000194
+  -> S1_g2_nontrivial_R16_k8: sat=True, p_hit=0.027344, z=6.012, speedup=0.003556
+  -> S1_g2_nontrivial_R16_k12: sat=False, p_hit=-, z=-, speedup=-
+  -> S1_g2_nontrivial_R20_k4: sat=True, p_hit=0.0625, z=0.0, speedup=0.000307
+  -> S1_g2_nontrivial_R20_k8: sat=False, p_hit=-, z=-, speedup=-
+  -> S1_g2_nontrivial_R20_k12: sat=False, p_hit=-, z=-, speedup=-
+  -> S1_g2_nontrivial_R24_k4: sat=True, p_hit=0.117188, z=3.615, speedup=0.004492
+  -> S1_g2_nontrivial_R24_k8: sat=True, p_hit=0.0, z=-1.002, speedup=0.0
+  -> S1_g2_nontrivial_R24_k12: sat=False, p_hit=-, z=-, speedup=-
+  -> S2a_btc_w0_3_R12_k4: sat=True, p_hit=0.105469, z=2.84, speedup=0.015935
+  -> S2a_btc_w0_3_R12_k8: sat=True, p_hit=0.007812, z=1.002, speedup=0.000711
+  -> S2a_btc_w0_3_R12_k12: sat=True, p_hit=0.0, z=-0.25, speedup=0.0
+  -> S2a_btc_w0_3_R12_k16: sat=False, p_hit=-, z=-, speedup=-
+  -> S2a_btc_w0_3_R16_k4: sat=True, p_hit=0.125, z=4.131, speedup=0.002199
+  -> S2a_btc_w0_3_R16_k8: sat=True, p_hit=0.0, z=-1.002, speedup=0.0
+  -> S2a_btc_w0_3_R16_k12: sat=True, p_hit=0.0, z=-0.25, speedup=0.0
+  -> S2a_btc_w0_3_R16_k16: sat=False, p_hit=-, z=-, speedup=-
+  -> S2a_btc_w0_3_R20_k4: sat=True, p_hit=0.03125, z=-2.066, speedup=0.001386
+  -> S2a_btc_w0_3_R20_k8: sat=True, p_hit=0.0, z=-1.002, speedup=0.0
+  -> S2a_btc_w0_3_R20_k12: sat=True, p_hit=0.0, z=-0.25, speedup=0.0
+  -> S2a_btc_w0_3_R20_k16: sat=False, p_hit=-, z=-, speedup=-
+  -> S2a_btc_w0_3_R24_k4: sat=True, p_hit=0.019531, z=-2.84, speedup=0.000598
+  -> S2a_btc_w0_3_R24_k8: sat=True, p_hit=0.011719, z=2.004, speedup=0.000695
+  -> S2a_btc_w0_3_R24_k12: sat=True, p_hit=0.0, z=-0.25, speedup=0.0
+  -> S2a_btc_w0_3_R24_k16: sat=False, p_hit=-, z=-, speedup=-
+  -> S2b_btc_nonce_only_R8_k4: sat=True, p_hit=0.050781, z=-0.775, speedup=0.004834
+  -> S2b_btc_nonce_only_R8_k8: sat=True, p_hit=0.0, z=-1.002, speedup=0.0
+  -> S2b_btc_nonce_only_R8_k12: sat=True, p_hit=0.0, z=-0.25, speedup=0.0
+  -> S2b_btc_nonce_only_R8_k16: sat=False, p_hit=-, z=-, speedup=-
+  -> S2b_btc_nonce_only_R12_k4: sat=True, p_hit=0.0625, z=0.0, speedup=0.009492
+  -> S2b_btc_nonce_only_R12_k8: sat=True, p_hit=0.003906, z=0.0, speedup=0.001869
+  -> S2b_btc_nonce_only_R12_k12: sat=True, p_hit=0.003906, z=3.75, speedup=0.000366
+  -> S2b_btc_nonce_only_R12_k16: sat=False, p_hit=-, z=-, speedup=-
+  -> S2b_btc_nonce_only_R16_k4: sat=True, p_hit=0.0625, z=0.0, speedup=0.003151
+  -> S2b_btc_nonce_only_R16_k8: sat=True, p_hit=0.007812, z=1.002, speedup=0.001112
+  -> S2b_btc_nonce_only_R16_k12: sat=False, p_hit=-, z=-, speedup=-
+  -> S2b_btc_nonce_only_R16_k16: sat=False, p_hit=-, z=-, speedup=-
+  -> S2b_btc_nonce_only_R20_k4: sat=True, p_hit=0.074219, z=0.775, speedup=0.001395
+  -> S2b_btc_nonce_only_R20_k8: sat=True, p_hit=0.003906, z=0.0, speedup=0.000192
+  -> S2b_btc_nonce_only_R20_k12: sat=True, p_hit=0.0, z=-0.25, speedup=0.0
+  -> S2b_btc_nonce_only_R20_k16: sat=False, p_hit=-, z=-, speedup=-
+  -> S3_double_R8x8_k4: sat=True, p_hit=0.015625, z=-3.098
+  -> S3_double_R8x8_k8: sat=True, p_hit=0.0, z=-1.002
+  -> S3_double_R12x12_k4: sat=True, p_hit=0.0625, z=0.0
+  -> S3_double_R12x12_k8: sat=True, p_hit=0.0, z=-1.002
+  -> S3_double_R16x16_k4: sat=True, p_hit=0.035156, z=-1.807
+  -> S3_double_R16x16_k8: sat=True, p_hit=0.003906, z=0.0
+  -> S3_double_R20x20_k4: sat=True, p_hit=0.066406, z=0.258
+  -> S3_double_R20x20_k8: sat=True, p_hit=0.0, z=-1.002
+
+[Track 2] Running G4 CTRL_ROTR_K comparison at R=16, k=4,8...
+  -> G4_CTRL_S2a_R16_k4: sat=True
+  -> G4_CTRL_S2a_R16_k8: sat=True
+
+[P13 COMPLETE] elapsed=1884.04s, verified_witnesses=50

@@ -1,0 +1,24 @@
+{
+  "command": "merged from partial Colab runs: p6_part_track_a.json, p6_part_track_a_r8_12.json, p6_part_track_b_r4.json, p6_part_track_b_r6_12.json",
+  "mode": "full",
+  "gpu_name": "NVIDIA L4, Tesla T4",
+  "fp32_locked": true,
+  "tf32_disabled": true,
+  "steps_base": 10000,
+  "seeds": {
+    "SEED_SPLIT_A": 20261106,
+    "SEED_B_TRAIN": 20261116,
+    "SEED_B_HOLD": 998244353,
+    "SEED_B_RETEST": 777666555,
+    "SEED_CTRL_1": 1000003,
+    "SEED_CTRL_2": 2000003
+  },
+  "part_wall_secs": [
+    1854.942461089,
+    1751.0979309530003,
+    557.6582685589997,
+    2227.6528717419997
+  ],
+  "total_wall_sec": 6391.351532342999,
+  "colab_stopped": true
+}

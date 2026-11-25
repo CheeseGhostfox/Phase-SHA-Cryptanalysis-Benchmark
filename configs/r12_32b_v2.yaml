@@ -1,0 +1,49 @@
+# Phase-SHA V2 Stage 2A: R=12, full 32-bit W0 (no 16-bit zero padding)
+version: v2
+experiment_name: r12_32b_v2
+rounds: 12
+domain_mode: int_range
+num_bits: 32
+msg_bytes_len: 4
+
+# 2D Bit-Grid Architecture (aligned for curriculum weight transfer)
+d_bit: 48
+n_heads: 3
+n_blocks: 2
+d_ff_mult: 2
+share_blocks: false
+grad_checkpointing: false
+grad_scale: 2.0
+
+# Unrolled Neural-Physics Loop
+K_unroll: 8
+K_infer: 48
+damp: 0.36
+infer_damp: 0.07
+sde_noise_min: 0.10
+sde_noise_max: 0.45
+anneal_K: 256
+anneal_chunk_size: 1024
+anneal_eval_samples: 64
+anneal_eta_max: 0.02
+anneal_beta_max: 0.25
+
+batch_size: 128
+steps: 3000
+lr_total_steps: 10000
+warmup_steps: 200
+lr: 6.0e-4
+min_lr_ratio: 0.1
+weight_decay: 0.02
+grad_clip: 1.0
+alpha_phys: 0.25
+
+holdout_size: 2048
+eval_batch_size: 256
+eval_every: 500
+checkpoint_every: 500
+log_every: 100
+
+cuda_memory_fraction: 0.80
+seed: 101
+holdout_seed: 20261122

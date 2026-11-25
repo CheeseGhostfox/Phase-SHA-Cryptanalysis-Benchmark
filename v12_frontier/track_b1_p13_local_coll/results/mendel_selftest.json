@@ -1,0 +1,9 @@
+{
+  "n_soundness": 1000000,
+  "n_exactness": 100000,
+  "soundness_violations": 0,
+  "exactness_mismatches": 0,
+  "fp32_allow_tf32": false,
+  "elapsed_seconds": 61.115,
+  "passed": true
+}

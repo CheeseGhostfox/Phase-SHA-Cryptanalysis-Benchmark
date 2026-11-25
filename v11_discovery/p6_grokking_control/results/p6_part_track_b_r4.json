@@ -1,0 +1,4275 @@
+{
+  "meta": {
+    "mode": "full",
+    "track_filter": "track_b",
+    "gpu_name": "Tesla T4",
+    "fp32_locked": true,
+    "tf32_disabled": true,
+    "rounds": [
+      4
+    ],
+    "weight_decays": [
+      0.1,
+      0.5,
+      1.0,
+      2.0
+    ],
+    "variants": [
+      "REAL_SHA256",
+      "CTRL_RAND_1",
+      "CTRL_RAND_2"
+    ],
+    "ctrl_configs": {
+      "CTRL_RAND_1": {
+        "name": "CTRL_RAND_1",
+        "k_seed": 1000003,
+        "k_head4_hex": [
+          "0x2c03007c",
+          "0x90c30c45",
+          "0x6ed7d7a8",
+          "0xa16d6f21"
+        ],
+        "rotr_offsets": {
+          "Sigma0": [
+            15,
+            7,
+            30
+          ],
+          "Sigma1": [
+            3,
+            9,
+            8
+          ],
+          "sigma0": [
+            18,
+            8
+          ],
+          "sigma1": [
+            30,
+            18
+          ]
+        },
+        "shr_offsets": {
+          "sigma0": 8,
+          "sigma1": 5
+        }
+      },
+      "CTRL_RAND_2": {
+        "name": "CTRL_RAND_2",
+        "k_seed": 2000003,
+        "k_head4_hex": [
+          "0x0a2a5315",
+          "0x99009a7e",
+          "0xc79a47f0",
+          "0xd8c79cfb"
+        ],
+        "rotr_offsets": {
+          "Sigma0": [
+            28,
+            25,
+            31
+          ],
+          "Sigma1": [
+            6,
+            2,
+            10
+          ],
+          "sigma0": [
+            18,
+            28
+          ],
+          "sigma1": [
+            11,
+            3
+          ]
+        },
+        "shr_offsets": {
+          "sigma0": 2,
+          "sigma1": 11
+        }
+      }
+    },
+    "steps_base": 10000,
+    "max_steps_auto_extend": 24000,
+    "eval_every": 250,
+    "batch_size": 2048,
+    "sae_steps": 2000,
+    "total_wall_sec": 557.6582685589997
+  },
+  "track_a": {},
+  "track_b": {
+    "4": {
+      "0.1": {
+        "REAL_SHA256": {
+          "variant": "REAL_SHA256",
+          "rounds": 4,
+          "wd": 0.1,
+          "train_final": {
+            "acc": 1.0,
+            "auc": 1.0,
+            "loss": 1.3244935814782366e-08
+          },
+          "holdout": {
+            "acc": 0.8265380859375,
+            "auc": 0.9017958045005798,
+            "auc_pool_mean": 0.9017318487167358,
+            "auc_pool_se": 0.0024405631702393293,
+            "acc_pool_se": 0.0025942933280020952,
+            "z_null_auc": 89.07641734581878,
+            "z_null_acc": 83.59375
+          },
+          "dynamics": {
+            "t_mem": 250,
+            "t_grok": 250,
+            "min_weight_norm": 18.591669730631995,
+            "final_weight_norm": 18.591669730631995,
+            "extended": false,
+            "total_steps": 10000,
+            "wall_sec": 44.275862942,
+            "trajectory": [
+              {
+                "step": 250,
+                "train_acc": 0.998046875,
+                "holdout_acc": 0.79705810546875,
+                "holdout_auc": 0.8787665367126465,
+                "weight_norm": 44.80836452107864
+              },
+              {
+                "step": 500,
+                "train_acc": 0.99951171875,
+                "holdout_acc": 0.80792236328125,
+                "holdout_auc": 0.8861246705055237,
+                "weight_norm": 44.75041992869358
+              },
+              {
+                "step": 750,
+                "train_acc": 0.9974365234375,
+                "holdout_acc": 0.804443359375,
+                "holdout_auc": 0.8805069327354431,
+                "weight_norm": 44.70146606686208
+              },
+              {
+                "step": 1000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.81085205078125,
+                "holdout_auc": 0.8880146741867065,
+                "weight_norm": 43.926693048491195
+              },
+              {
+                "step": 1250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.81048583984375,
+                "holdout_auc": 0.8879978656768799,
+                "weight_norm": 42.944475228546004
+              },
+              {
+                "step": 1500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.8101806640625,
+                "holdout_auc": 0.8882681131362915,
+                "weight_norm": 41.9820792080048
+              },
+              {
+                "step": 1750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.81036376953125,
+                "holdout_auc": 0.8886051774024963,
+                "weight_norm": 40.99891830180375
+              },
+              {
+                "step": 2000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.81060791015625,
+                "holdout_auc": 0.8890762329101562,
+                "weight_norm": 40.00957295873111
+              },
+              {
+                "step": 2250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.810791015625,
+                "holdout_auc": 0.8895024061203003,
+                "weight_norm": 39.033181367163145
+              },
+              {
+                "step": 2500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.81097412109375,
+                "holdout_auc": 0.8898335099220276,
+                "weight_norm": 38.07852909490088
+              },
+              {
+                "step": 2750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.81097412109375,
+                "holdout_auc": 0.8900896906852722,
+                "weight_norm": 37.147352994517654
+              },
+              {
+                "step": 3000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.81170654296875,
+                "holdout_auc": 0.8904095888137817,
+                "weight_norm": 36.23961736064006
+              },
+              {
+                "step": 3250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.81195068359375,
+                "holdout_auc": 0.8907172679901123,
+                "weight_norm": 35.355167097468936
+              },
+              {
+                "step": 3500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.81268310546875,
+                "holdout_auc": 0.8908510208129883,
+                "weight_norm": 34.49328412387589
+              },
+              {
+                "step": 3750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.8134765625,
+                "holdout_auc": 0.8912427425384521,
+                "weight_norm": 33.65360323471895
+              },
+              {
+                "step": 4000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.81402587890625,
+                "holdout_auc": 0.8914267420768738,
+                "weight_norm": 32.835655371043636
+              },
+              {
+                "step": 4250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.81463623046875,
+                "holdout_auc": 0.8916342258453369,
+                "weight_norm": 32.03889001904184
+              },
+              {
+                "step": 4500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.81512451171875,
+                "holdout_auc": 0.8918850421905518,
+                "weight_norm": 31.263154802608966
+              },
+              {
+                "step": 4750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.81585693359375,
+                "holdout_auc": 0.8922471404075623,
+                "weight_norm": 30.507844531977195
+              },
+              {
+                "step": 5000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.81719970703125,
+                "holdout_auc": 0.8927147388458252,
+                "weight_norm": 29.772537042307064
+              },
+              {
+                "step": 5250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.81732177734375,
+                "holdout_auc": 0.8932402729988098,
+                "weight_norm": 29.056809968405855
+              },
+              {
+                "step": 5500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.8184814453125,
+                "holdout_auc": 0.8937876224517822,
+                "weight_norm": 28.360131313195065
+              },
+              {
+                "step": 5750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.81976318359375,
+                "holdout_auc": 0.894378662109375,
+                "weight_norm": 27.682290035443184
+              },
+              {
+                "step": 6000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.81982421875,
+                "holdout_auc": 0.895102858543396,
+                "weight_norm": 27.022557669123493
+              },
+              {
+                "step": 6250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.82012939453125,
+                "holdout_auc": 0.8956247568130493,
+                "weight_norm": 26.38055406166798
+              },
+              {
+                "step": 6500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.82080078125,
+                "holdout_auc": 0.8962398171424866,
+                "weight_norm": 25.755828560406247
+              },
+              {
+                "step": 6750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.82232666015625,
+                "holdout_auc": 0.896859884262085,
+                "weight_norm": 25.14792059494061
+              },
+              {
+                "step": 7000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.82342529296875,
+                "holdout_auc": 0.8976373076438904,
+                "weight_norm": 24.55637934562328
+              },
+              {
+                "step": 7250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.82366943359375,
+                "holdout_auc": 0.8979408740997314,
+                "weight_norm": 23.980746132508905
+              },
+              {
+                "step": 7500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.82391357421875,
+                "holdout_auc": 0.8985556364059448,
+                "weight_norm": 23.42063398697632
+              },
+              {
+                "step": 7750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.82489013671875,
+                "holdout_auc": 0.8990866541862488,
+                "weight_norm": 22.875660640648025
+              },
+              {
+                "step": 8000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.82470703125,
+                "holdout_auc": 0.8993996977806091,
+                "weight_norm": 22.345538522986665
+              },
+              {
+                "step": 8250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.82647705078125,
+                "holdout_auc": 0.9000188112258911,
+                "weight_norm": 21.829667234666495
+              },
+              {
+                "step": 8500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.826171875,
+                "holdout_auc": 0.9001445174217224,
+                "weight_norm": 21.32785192206075
+              },
+              {
+                "step": 8750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.82586669921875,
+                "holdout_auc": 0.9004877209663391,
+                "weight_norm": 20.839657894632374
+              },
+              {
+                "step": 9000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.82562255859375,
+                "holdout_auc": 0.900850236415863,
+                "weight_norm": 20.364752722507987
+              },
+              {
+                "step": 9250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.82550048828125,
+                "holdout_auc": 0.9010935425758362,
+                "weight_norm": 19.90302060852057
+              },
+              {
+                "step": 9500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.825927734375,
+                "holdout_auc": 0.9013788104057312,
+                "weight_norm": 19.45355900025162
+              },
+              {
+                "step": 9750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.82647705078125,
+                "holdout_auc": 0.9016722440719604,
+                "weight_norm": 19.016585681003658
+              },
+              {
+                "step": 10000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.8265380859375,
+                "holdout_auc": 0.9017958045005798,
+                "weight_norm": 18.591669730631995
+              }
+            ]
+          },
+          "retest": null
+        },
+        "CTRL_RAND_1": {
+          "variant": "CTRL_RAND_1",
+          "rounds": 4,
+          "wd": 0.1,
+          "train_final": {
+            "acc": 1.0,
+            "auc": 1.0,
+            "loss": 1.497904378311432e-08
+          },
+          "holdout": {
+            "acc": 0.9990234375,
+            "auc": 0.9999967813491821,
+            "auc_pool_mean": 0.999997615814209,
+            "auc_pool_se": 2.384185791015625e-06,
+            "acc_pool_se": 0.00023586225870531052,
+            "z_null_auc": 110.84715536635618,
+            "z_null_acc": 127.75
+          },
+          "dynamics": {
+            "t_mem": 250,
+            "t_grok": 250,
+            "min_weight_norm": 17.235898615264826,
+            "final_weight_norm": 17.235898615264826,
+            "extended": false,
+            "total_steps": 10000,
+            "wall_sec": 44.514272319000156,
+            "trajectory": [
+              {
+                "step": 250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.993408203125,
+                "holdout_auc": 0.9999746084213257,
+                "weight_norm": 44.13321372365598
+              },
+              {
+                "step": 500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99072265625,
+                "holdout_auc": 0.9999772310256958,
+                "weight_norm": 43.202671947812384
+              },
+              {
+                "step": 750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98919677734375,
+                "holdout_auc": 0.9999783635139465,
+                "weight_norm": 42.30301583625022
+              },
+              {
+                "step": 1000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9884033203125,
+                "holdout_auc": 0.9999775886535645,
+                "weight_norm": 41.38564414330016
+              },
+              {
+                "step": 1250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98919677734375,
+                "holdout_auc": 0.999961256980896,
+                "weight_norm": 40.416988071909024
+              },
+              {
+                "step": 1500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9886474609375,
+                "holdout_auc": 0.9999261498451233,
+                "weight_norm": 39.44100453542007
+              },
+              {
+                "step": 1750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.988037109375,
+                "holdout_auc": 0.9999105930328369,
+                "weight_norm": 38.47716836408141
+              },
+              {
+                "step": 2000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98681640625,
+                "holdout_auc": 0.9999057650566101,
+                "weight_norm": 37.53454700649152
+              },
+              {
+                "step": 2250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.986083984375,
+                "holdout_auc": 0.9999052286148071,
+                "weight_norm": 36.614997617896
+              },
+              {
+                "step": 2500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98583984375,
+                "holdout_auc": 0.9999087452888489,
+                "weight_norm": 35.718628155943435
+              },
+              {
+                "step": 2750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98614501953125,
+                "holdout_auc": 0.9999148845672607,
+                "weight_norm": 34.84507185031431
+              },
+              {
+                "step": 3000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98736572265625,
+                "holdout_auc": 0.9999220967292786,
+                "weight_norm": 33.99380641082297
+              },
+              {
+                "step": 3250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98858642578125,
+                "holdout_auc": 0.9999266862869263,
+                "weight_norm": 33.164236921855974
+              },
+              {
+                "step": 3500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9903564453125,
+                "holdout_auc": 0.999930739402771,
+                "weight_norm": 32.35586756719271
+              },
+              {
+                "step": 3750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99212646484375,
+                "holdout_auc": 0.9999324679374695,
+                "weight_norm": 31.568095583764407
+              },
+              {
+                "step": 4000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99346923828125,
+                "holdout_auc": 0.9999311566352844,
+                "weight_norm": 30.800508474519102
+              },
+              {
+                "step": 4250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99432373046875,
+                "holdout_auc": 0.9999324083328247,
+                "weight_norm": 30.052631923532577
+              },
+              {
+                "step": 4500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99530029296875,
+                "holdout_auc": 0.999938428401947,
+                "weight_norm": 29.32401995370285
+              },
+              {
+                "step": 4750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99609375,
+                "holdout_auc": 0.9999465942382812,
+                "weight_norm": 28.614249790516393
+              },
+              {
+                "step": 5000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99658203125,
+                "holdout_auc": 0.9999560713768005,
+                "weight_norm": 27.922645506883843
+              },
+              {
+                "step": 5250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9967041015625,
+                "holdout_auc": 0.9999655485153198,
+                "weight_norm": 27.24884599807093
+              },
+              {
+                "step": 5500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9970703125,
+                "holdout_auc": 0.9999737739562988,
+                "weight_norm": 26.592258385027186
+              },
+              {
+                "step": 5750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99749755859375,
+                "holdout_auc": 0.9999788403511047,
+                "weight_norm": 25.952376266324578
+              },
+              {
+                "step": 6000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99786376953125,
+                "holdout_auc": 0.9999828338623047,
+                "weight_norm": 25.328816054049508
+              },
+              {
+                "step": 6250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99798583984375,
+                "holdout_auc": 0.9999876618385315,
+                "weight_norm": 24.721118398124695
+              },
+              {
+                "step": 6500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.998291015625,
+                "holdout_auc": 0.9999903440475464,
+                "weight_norm": 24.128791902603727
+              },
+              {
+                "step": 6750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9984130859375,
+                "holdout_auc": 0.9999919533729553,
+                "weight_norm": 23.551472858905015
+              },
+              {
+                "step": 7000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9984130859375,
+                "holdout_auc": 0.9999932050704956,
+                "weight_norm": 22.988701567579053
+              },
+              {
+                "step": 7250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99847412109375,
+                "holdout_auc": 0.9999940395355225,
+                "weight_norm": 22.44004107035899
+              },
+              {
+                "step": 7500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99859619140625,
+                "holdout_auc": 0.9999949932098389,
+                "weight_norm": 21.90524139797777
+              },
+              {
+                "step": 7750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99859619140625,
+                "holdout_auc": 0.9999955892562866,
+                "weight_norm": 21.383771213622126
+              },
+              {
+                "step": 8000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99859619140625,
+                "holdout_auc": 0.9999959468841553,
+                "weight_norm": 20.87532395618122
+              },
+              {
+                "step": 8250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99871826171875,
+                "holdout_auc": 0.9999964833259583,
+                "weight_norm": 20.37957507827036
+              },
+              {
+                "step": 8500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.998779296875,
+                "holdout_auc": 0.9999969601631165,
+                "weight_norm": 19.896159609453328
+              },
+              {
+                "step": 8750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99884033203125,
+                "holdout_auc": 0.9999967813491821,
+                "weight_norm": 19.424674732338715
+              },
+              {
+                "step": 9000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9989013671875,
+                "holdout_auc": 0.9999967813491821,
+                "weight_norm": 18.96484258071766
+              },
+              {
+                "step": 9250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99884033203125,
+                "holdout_auc": 0.9999966025352478,
+                "weight_norm": 18.51635282010004
+              },
+              {
+                "step": 9500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9989013671875,
+                "holdout_auc": 0.999997079372406,
+                "weight_norm": 18.078931996809278
+              },
+              {
+                "step": 9750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9990234375,
+                "holdout_auc": 0.9999970197677612,
+                "weight_norm": 17.65219133228547
+              },
+              {
+                "step": 10000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9990234375,
+                "holdout_auc": 0.9999967813491821,
+                "weight_norm": 17.235898615264826
+              }
+            ]
+          },
+          "retest": null
+        },
+        "CTRL_RAND_2": {
+          "variant": "CTRL_RAND_2",
+          "rounds": 4,
+          "wd": 0.1,
+          "train_final": {
+            "acc": 1.0,
+            "auc": 1.0,
+            "loss": 1.1961994061948644e-08
+          },
+          "holdout": {
+            "acc": 0.99798583984375,
+            "auc": 0.9999589323997498,
+            "auc_pool_mean": 0.9999628067016602,
+            "auc_pool_se": 3.317087248433381e-05,
+            "acc_pool_se": 0.0003725978313013911,
+            "z_null_auc": 110.83876441558473,
+            "z_null_acc": 127.484375
+          },
+          "dynamics": {
+            "t_mem": 250,
+            "t_grok": 250,
+            "min_weight_norm": 17.180199221781645,
+            "final_weight_norm": 17.180199221781645,
+            "extended": false,
+            "total_steps": 10000,
+            "wall_sec": 43.832082999999784,
+            "trajectory": [
+              {
+                "step": 250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99029541015625,
+                "holdout_auc": 0.9996667504310608,
+                "weight_norm": 44.12428730369459
+              },
+              {
+                "step": 500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9888916015625,
+                "holdout_auc": 0.9997170567512512,
+                "weight_norm": 43.18592215220932
+              },
+              {
+                "step": 750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98822021484375,
+                "holdout_auc": 0.9997374415397644,
+                "weight_norm": 42.282862771692386
+              },
+              {
+                "step": 1000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9876708984375,
+                "holdout_auc": 0.9997426867485046,
+                "weight_norm": 41.36854721240446
+              },
+              {
+                "step": 1250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98858642578125,
+                "holdout_auc": 0.9997062683105469,
+                "weight_norm": 40.403025164701326
+              },
+              {
+                "step": 1500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.988037109375,
+                "holdout_auc": 0.999663233757019,
+                "weight_norm": 39.428120698612055
+              },
+              {
+                "step": 1750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.987060546875,
+                "holdout_auc": 0.9996522068977356,
+                "weight_norm": 38.46479075674353
+              },
+              {
+                "step": 2000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.986328125,
+                "holdout_auc": 0.9996503591537476,
+                "weight_norm": 37.52255162109348
+              },
+              {
+                "step": 2250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9854736328125,
+                "holdout_auc": 0.9996486902236938,
+                "weight_norm": 36.603344878228135
+              },
+              {
+                "step": 2500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9854736328125,
+                "holdout_auc": 0.9996451139450073,
+                "weight_norm": 35.70724042977057
+              },
+              {
+                "step": 2750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98590087890625,
+                "holdout_auc": 0.9996371865272522,
+                "weight_norm": 34.83388554904704
+              },
+              {
+                "step": 3000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9862060546875,
+                "holdout_auc": 0.9996212124824524,
+                "weight_norm": 33.98274507042042
+              },
+              {
+                "step": 3250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98724365234375,
+                "holdout_auc": 0.9995958209037781,
+                "weight_norm": 33.15324143003315
+              },
+              {
+                "step": 3500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98858642578125,
+                "holdout_auc": 0.9995604753494263,
+                "weight_norm": 32.34488947274325
+              },
+              {
+                "step": 3750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98907470703125,
+                "holdout_auc": 0.9995386600494385,
+                "weight_norm": 31.557150847805083
+              },
+              {
+                "step": 4000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98980712890625,
+                "holdout_auc": 0.999547004699707,
+                "weight_norm": 30.78969325599451
+              },
+              {
+                "step": 4250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99078369140625,
+                "holdout_auc": 0.999580979347229,
+                "weight_norm": 30.041932464225958
+              },
+              {
+                "step": 4500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99127197265625,
+                "holdout_auc": 0.9996257424354553,
+                "weight_norm": 29.313357053206126
+              },
+              {
+                "step": 4750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99169921875,
+                "holdout_auc": 0.9996734857559204,
+                "weight_norm": 28.603417293381845
+              },
+              {
+                "step": 5000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9923095703125,
+                "holdout_auc": 0.9997206330299377,
+                "weight_norm": 27.91157715565253
+              },
+              {
+                "step": 5250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99346923828125,
+                "holdout_auc": 0.9997583627700806,
+                "weight_norm": 27.237310428300102
+              },
+              {
+                "step": 5500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9940185546875,
+                "holdout_auc": 0.9997925162315369,
+                "weight_norm": 26.580081507087073
+              },
+              {
+                "step": 5750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99462890625,
+                "holdout_auc": 0.9998182654380798,
+                "weight_norm": 25.939437182366046
+              },
+              {
+                "step": 6000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99481201171875,
+                "holdout_auc": 0.9998472332954407,
+                "weight_norm": 25.314911401057444
+              },
+              {
+                "step": 6250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.995361328125,
+                "holdout_auc": 0.9998677968978882,
+                "weight_norm": 24.70593510121421
+              },
+              {
+                "step": 6500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99578857421875,
+                "holdout_auc": 0.9998822212219238,
+                "weight_norm": 24.112185490285285
+              },
+              {
+                "step": 6750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99627685546875,
+                "holdout_auc": 0.9998941421508789,
+                "weight_norm": 23.533141166609962
+              },
+              {
+                "step": 7000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.996337890625,
+                "holdout_auc": 0.9999050498008728,
+                "weight_norm": 22.968529992931302
+              },
+              {
+                "step": 7250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9967041015625,
+                "holdout_auc": 0.9999116659164429,
+                "weight_norm": 22.417683157432748
+              },
+              {
+                "step": 7500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99700927734375,
+                "holdout_auc": 0.9999213814735413,
+                "weight_norm": 21.880523625200762
+              },
+              {
+                "step": 7750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99725341796875,
+                "holdout_auc": 0.9999244809150696,
+                "weight_norm": 21.35645179666889
+              },
+              {
+                "step": 8000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9974365234375,
+                "holdout_auc": 0.9999315738677979,
+                "weight_norm": 20.84533382767921
+              },
+              {
+                "step": 8250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99755859375,
+                "holdout_auc": 0.9999349117279053,
+                "weight_norm": 20.346679832713907
+              },
+              {
+                "step": 8500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99761962890625,
+                "holdout_auc": 0.9999415874481201,
+                "weight_norm": 19.860187886386576
+              },
+              {
+                "step": 8750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9976806640625,
+                "holdout_auc": 0.9999439716339111,
+                "weight_norm": 19.385507901835386
+              },
+              {
+                "step": 9000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.997802734375,
+                "holdout_auc": 0.9999467730522156,
+                "weight_norm": 18.92241675168257
+              },
+              {
+                "step": 9250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.997802734375,
+                "holdout_auc": 0.999951183795929,
+                "weight_norm": 18.470683689930087
+              },
+              {
+                "step": 9500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.997802734375,
+                "holdout_auc": 0.9999539256095886,
+                "weight_norm": 18.029839714551443
+              },
+              {
+                "step": 9750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.998046875,
+                "holdout_auc": 0.9999573230743408,
+                "weight_norm": 17.599751381372087
+              },
+              {
+                "step": 10000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99798583984375,
+                "holdout_auc": 0.9999589323997498,
+                "weight_norm": 17.180199221781645
+              }
+            ]
+          },
+          "retest": null
+        }
+      },
+      "0.5": {
+        "REAL_SHA256": {
+          "variant": "REAL_SHA256",
+          "rounds": 4,
+          "wd": 0.5,
+          "train_final": {
+            "acc": 1.0,
+            "auc": 1.0,
+            "loss": 5.710087134502828e-05
+          },
+          "holdout": {
+            "acc": 0.83099365234375,
+            "auc": 0.9064000248908997,
+            "auc_pool_mean": 0.9064627885818481,
+            "auc_pool_se": 0.0019215046195313334,
+            "acc_pool_se": 0.0019682615529745817,
+            "z_null_auc": 90.09715338249799,
+            "z_null_acc": 84.734375
+          },
+          "dynamics": {
+            "t_mem": 250,
+            "t_grok": 250,
+            "min_weight_norm": 7.318271127246179,
+            "final_weight_norm": 13.904798113390992,
+            "extended": false,
+            "total_steps": 10000,
+            "wall_sec": 45.01871496300009,
+            "trajectory": [
+              {
+                "step": 250,
+                "train_acc": 0.997314453125,
+                "holdout_acc": 0.79833984375,
+                "holdout_auc": 0.8741667866706848,
+                "weight_norm": 42.29674561037238
+              },
+              {
+                "step": 500,
+                "train_acc": 0.9981689453125,
+                "holdout_acc": 0.80645751953125,
+                "holdout_auc": 0.8826506733894348,
+                "weight_norm": 38.57357807398767
+              },
+              {
+                "step": 750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.8154296875,
+                "holdout_auc": 0.8938940167427063,
+                "weight_norm": 35.4908113399356
+              },
+              {
+                "step": 1000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.8172607421875,
+                "holdout_auc": 0.8937761783599854,
+                "weight_norm": 32.96245619732679
+              },
+              {
+                "step": 1250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.817626953125,
+                "holdout_auc": 0.8924737572669983,
+                "weight_norm": 30.654511364102582
+              },
+              {
+                "step": 1500,
+                "train_acc": 0.999267578125,
+                "holdout_acc": 0.820556640625,
+                "holdout_auc": 0.8943281173706055,
+                "weight_norm": 28.687951433541198
+              },
+              {
+                "step": 1750,
+                "train_acc": 0.9996337890625,
+                "holdout_acc": 0.817626953125,
+                "holdout_auc": 0.892657995223999,
+                "weight_norm": 27.01883533337379
+              },
+              {
+                "step": 2000,
+                "train_acc": 0.9993896484375,
+                "holdout_acc": 0.8140869140625,
+                "holdout_auc": 0.86538165807724,
+                "weight_norm": 25.467316390113222
+              },
+              {
+                "step": 2250,
+                "train_acc": 0.9996337890625,
+                "holdout_acc": 0.81842041015625,
+                "holdout_auc": 0.872178852558136,
+                "weight_norm": 24.05876895390561
+              },
+              {
+                "step": 2500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.8199462890625,
+                "holdout_auc": 0.8890811800956726,
+                "weight_norm": 23.23724139629377
+              },
+              {
+                "step": 2750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.81817626953125,
+                "holdout_auc": 0.8863579034805298,
+                "weight_norm": 20.776768201371432
+              },
+              {
+                "step": 3000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.8172607421875,
+                "holdout_auc": 0.8859924077987671,
+                "weight_norm": 18.741783531401556
+              },
+              {
+                "step": 3250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.8179931640625,
+                "holdout_auc": 0.8917141556739807,
+                "weight_norm": 16.938232755922265
+              },
+              {
+                "step": 3500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.81939697265625,
+                "holdout_auc": 0.8957210183143616,
+                "weight_norm": 15.277937926148441
+              },
+              {
+                "step": 3750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.8228759765625,
+                "holdout_auc": 0.9013453722000122,
+                "weight_norm": 13.77694316512169
+              },
+              {
+                "step": 4000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.8277587890625,
+                "holdout_auc": 0.9063693881034851,
+                "weight_norm": 12.465370781717532
+              },
+              {
+                "step": 4250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.8282470703125,
+                "holdout_auc": 0.9088038206100464,
+                "weight_norm": 11.328916128841403
+              },
+              {
+                "step": 4500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.82940673828125,
+                "holdout_auc": 0.9095047116279602,
+                "weight_norm": 10.340787363378139
+              },
+              {
+                "step": 4750,
+                "train_acc": 0.9951171875,
+                "holdout_acc": 0.81927490234375,
+                "holdout_auc": 0.8954868316650391,
+                "weight_norm": 11.843183606628774
+              },
+              {
+                "step": 5000,
+                "train_acc": 0.999267578125,
+                "holdout_acc": 0.821044921875,
+                "holdout_auc": 0.8991005420684814,
+                "weight_norm": 11.729490073849929
+              },
+              {
+                "step": 5250,
+                "train_acc": 0.9986572265625,
+                "holdout_acc": 0.81939697265625,
+                "holdout_auc": 0.9025678038597107,
+                "weight_norm": 12.065549383260572
+              },
+              {
+                "step": 5500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.82501220703125,
+                "holdout_auc": 0.9030375480651855,
+                "weight_norm": 12.508785656598278
+              },
+              {
+                "step": 5750,
+                "train_acc": 0.999267578125,
+                "holdout_acc": 0.82635498046875,
+                "holdout_auc": 0.9033876657485962,
+                "weight_norm": 12.835070672887094
+              },
+              {
+                "step": 6000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.8238525390625,
+                "holdout_auc": 0.9016635417938232,
+                "weight_norm": 13.13576042903666
+              },
+              {
+                "step": 6250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.8248291015625,
+                "holdout_auc": 0.8942092061042786,
+                "weight_norm": 12.270937757297236
+              },
+              {
+                "step": 6500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.82391357421875,
+                "holdout_auc": 0.8916043639183044,
+                "weight_norm": 11.445151598743221
+              },
+              {
+                "step": 6750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.82745361328125,
+                "holdout_auc": 0.8923025131225586,
+                "weight_norm": 10.51210664682151
+              },
+              {
+                "step": 7000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.82830810546875,
+                "holdout_auc": 0.8947030901908875,
+                "weight_norm": 9.595350900216044
+              },
+              {
+                "step": 7250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.83172607421875,
+                "holdout_auc": 0.8978501558303833,
+                "weight_norm": 8.749973425175552
+              },
+              {
+                "step": 7500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.83270263671875,
+                "holdout_auc": 0.8983131647109985,
+                "weight_norm": 7.989927944413549
+              },
+              {
+                "step": 7750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.8330078125,
+                "holdout_auc": 0.8993122577667236,
+                "weight_norm": 7.318271127246179
+              },
+              {
+                "step": 8000,
+                "train_acc": 0.9993896484375,
+                "holdout_acc": 0.8258056640625,
+                "holdout_auc": 0.8979136943817139,
+                "weight_norm": 11.846613427075058
+              },
+              {
+                "step": 8250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.8232421875,
+                "holdout_auc": 0.8910627961158752,
+                "weight_norm": 11.830313644805166
+              },
+              {
+                "step": 8500,
+                "train_acc": 0.9998779296875,
+                "holdout_acc": 0.81927490234375,
+                "holdout_auc": 0.8775197267532349,
+                "weight_norm": 12.241762436027617
+              },
+              {
+                "step": 8750,
+                "train_acc": 0.9998779296875,
+                "holdout_acc": 0.8209228515625,
+                "holdout_auc": 0.904805600643158,
+                "weight_norm": 12.797066493307868
+              },
+              {
+                "step": 9000,
+                "train_acc": 0.998291015625,
+                "holdout_acc": 0.82470703125,
+                "holdout_auc": 0.901816725730896,
+                "weight_norm": 13.28059577061135
+              },
+              {
+                "step": 9250,
+                "train_acc": 0.9998779296875,
+                "holdout_acc": 0.8271484375,
+                "holdout_auc": 0.9036176800727844,
+                "weight_norm": 13.600467124706265
+              },
+              {
+                "step": 9500,
+                "train_acc": 0.9998779296875,
+                "holdout_acc": 0.826904296875,
+                "holdout_auc": 0.9073069095611572,
+                "weight_norm": 13.666522136114752
+              },
+              {
+                "step": 9750,
+                "train_acc": 0.999267578125,
+                "holdout_acc": 0.814208984375,
+                "holdout_auc": 0.9027838706970215,
+                "weight_norm": 14.024338731605932
+              },
+              {
+                "step": 10000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.83099365234375,
+                "holdout_auc": 0.9064000248908997,
+                "weight_norm": 13.904798113390992
+              }
+            ]
+          },
+          "retest": null
+        },
+        "CTRL_RAND_1": {
+          "variant": "CTRL_RAND_1",
+          "rounds": 4,
+          "wd": 0.5,
+          "train_final": {
+            "acc": 1.0,
+            "auc": 1.0,
+            "loss": 9.571461845325757e-09
+          },
+          "holdout": {
+            "acc": 0.99737548828125,
+            "auc": 0.9999003410339355,
+            "auc_pool_mean": 0.9999082088470459,
+            "auc_pool_se": 2.78073493973352e-05,
+            "acc_pool_se": 0.00045209983363747597,
+            "z_null_auc": 110.82577495950862,
+            "z_null_acc": 127.328125
+          },
+          "dynamics": {
+            "t_mem": 250,
+            "t_grok": 250,
+            "min_weight_norm": 2.652497031215504,
+            "final_weight_norm": 2.652497031215504,
+            "extended": false,
+            "total_steps": 10000,
+            "wall_sec": 43.82178599000008,
+            "trajectory": [
+              {
+                "step": 250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.989990234375,
+                "holdout_auc": 0.9998783469200134,
+                "weight_norm": 41.6235960089224
+              },
+              {
+                "step": 500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98565673828125,
+                "holdout_auc": 0.9998894929885864,
+                "weight_norm": 37.039923946315994
+              },
+              {
+                "step": 750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98150634765625,
+                "holdout_auc": 0.9998958110809326,
+                "weight_norm": 33.04033166586339
+              },
+              {
+                "step": 1000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9815673828125,
+                "holdout_auc": 0.999900758266449,
+                "weight_norm": 29.467986832330393
+              },
+              {
+                "step": 1250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98797607421875,
+                "holdout_auc": 0.9999065399169922,
+                "weight_norm": 26.186990918817894
+              },
+              {
+                "step": 1500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99395751953125,
+                "holdout_auc": 0.9999146461486816,
+                "weight_norm": 23.211501436025767
+              },
+              {
+                "step": 1750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99609375,
+                "holdout_auc": 0.9999472498893738,
+                "weight_norm": 20.566477131676137
+              },
+              {
+                "step": 2000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99725341796875,
+                "holdout_auc": 0.9999749064445496,
+                "weight_norm": 18.246209509892104
+              },
+              {
+                "step": 2250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99774169921875,
+                "holdout_auc": 0.9999914765357971,
+                "weight_norm": 16.213568563232336
+              },
+              {
+                "step": 2500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9981689453125,
+                "holdout_auc": 0.9999985694885254,
+                "weight_norm": 14.430078159527806
+              },
+              {
+                "step": 2750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99859619140625,
+                "holdout_auc": 0.9999998211860657,
+                "weight_norm": 12.862844907638888
+              },
+              {
+                "step": 3000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99908447265625,
+                "holdout_auc": 0.9999998807907104,
+                "weight_norm": 11.484557126062423
+              },
+              {
+                "step": 3250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9993896484375,
+                "holdout_auc": 0.9999999403953552,
+                "weight_norm": 10.270930559408523
+              },
+              {
+                "step": 3500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99951171875,
+                "holdout_auc": 1.0,
+                "weight_norm": 9.201796404836154
+              },
+              {
+                "step": 3750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99945068359375,
+                "holdout_auc": 1.0,
+                "weight_norm": 8.258975132107665
+              },
+              {
+                "step": 4000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99951171875,
+                "holdout_auc": 1.0,
+                "weight_norm": 7.4271949313699235
+              },
+              {
+                "step": 4250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99969482421875,
+                "holdout_auc": 0.9999999403953552,
+                "weight_norm": 6.694038682058608
+              },
+              {
+                "step": 4500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99969482421875,
+                "holdout_auc": 1.0,
+                "weight_norm": 6.049232081096423
+              },
+              {
+                "step": 4750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99969482421875,
+                "holdout_auc": 1.0,
+                "weight_norm": 5.483651264044189
+              },
+              {
+                "step": 5000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.999755859375,
+                "holdout_auc": 1.0,
+                "weight_norm": 4.989566127347881
+              },
+              {
+                "step": 5250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99981689453125,
+                "holdout_auc": 1.0,
+                "weight_norm": 4.559075273072855
+              },
+              {
+                "step": 5500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.999755859375,
+                "holdout_auc": 0.9999999403953552,
+                "weight_norm": 4.18493099861547
+              },
+              {
+                "step": 5750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99981689453125,
+                "holdout_auc": 1.0,
+                "weight_norm": 3.860655856509712
+              },
+              {
+                "step": 6000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99981689453125,
+                "holdout_auc": 1.0,
+                "weight_norm": 3.580023325580632
+              },
+              {
+                "step": 6250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99951171875,
+                "holdout_auc": 0.9999999403953552,
+                "weight_norm": 3.3385335472853677
+              },
+              {
+                "step": 6500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99945068359375,
+                "holdout_auc": 0.9999998807907104,
+                "weight_norm": 3.1305996318732667
+              },
+              {
+                "step": 6750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99932861328125,
+                "holdout_auc": 0.9999993443489075,
+                "weight_norm": 2.952672453144692
+              },
+              {
+                "step": 7000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99871826171875,
+                "holdout_auc": 0.9999972581863403,
+                "weight_norm": 2.801648194017073
+              },
+              {
+                "step": 7250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99493408203125,
+                "holdout_auc": 0.9996594190597534,
+                "weight_norm": 5.537994826326554
+              },
+              {
+                "step": 7500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.993896484375,
+                "holdout_auc": 0.999671220779419,
+                "weight_norm": 5.064236145239101
+              },
+              {
+                "step": 7750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9932861328125,
+                "holdout_auc": 0.999681830406189,
+                "weight_norm": 4.701344748221947
+              },
+              {
+                "step": 8000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9932861328125,
+                "holdout_auc": 0.9996944069862366,
+                "weight_norm": 4.403321088827627
+              },
+              {
+                "step": 8250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.994384765625,
+                "holdout_auc": 0.9995808601379395,
+                "weight_norm": 4.056642579799428
+              },
+              {
+                "step": 8500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99560546875,
+                "holdout_auc": 0.9997240304946899,
+                "weight_norm": 3.776662414550994
+              },
+              {
+                "step": 8750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99639892578125,
+                "holdout_auc": 0.999751091003418,
+                "weight_norm": 3.5165137054140825
+              },
+              {
+                "step": 9000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9969482421875,
+                "holdout_auc": 0.9997668862342834,
+                "weight_norm": 3.2830070293741627
+              },
+              {
+                "step": 9250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99700927734375,
+                "holdout_auc": 0.9997919201850891,
+                "weight_norm": 3.0828694356069053
+              },
+              {
+                "step": 9500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9971923828125,
+                "holdout_auc": 0.9998238682746887,
+                "weight_norm": 2.9138468626811247
+              },
+              {
+                "step": 9750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99737548828125,
+                "holdout_auc": 0.9998495578765869,
+                "weight_norm": 2.7719551326127845
+              },
+              {
+                "step": 10000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99737548828125,
+                "holdout_auc": 0.9999003410339355,
+                "weight_norm": 2.652497031215504
+              }
+            ]
+          },
+          "retest": null
+        },
+        "CTRL_RAND_2": {
+          "variant": "CTRL_RAND_2",
+          "rounds": 4,
+          "wd": 0.5,
+          "train_final": {
+            "acc": 1.0,
+            "auc": 1.0,
+            "loss": 1.773096869328583e-08
+          },
+          "holdout": {
+            "acc": 0.9969482421875,
+            "auc": 0.9999462962150574,
+            "auc_pool_mean": 0.9999487400054932,
+            "auc_pool_se": 2.064866384898778e-05,
+            "acc_pool_se": 0.0005904973950237036,
+            "z_null_auc": 110.83596302729569,
+            "z_null_acc": 127.21875
+          },
+          "dynamics": {
+            "t_mem": 250,
+            "t_grok": 250,
+            "min_weight_norm": 2.5933664319242435,
+            "final_weight_norm": 2.5933664319242435,
+            "extended": false,
+            "total_steps": 10000,
+            "wall_sec": 44.340922498000054,
+            "trajectory": [
+              {
+                "step": 250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98858642578125,
+                "holdout_auc": 0.9997467994689941,
+                "weight_norm": 41.61643324704929
+              },
+              {
+                "step": 500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98468017578125,
+                "holdout_auc": 0.9997866153717041,
+                "weight_norm": 37.02968893693962
+              },
+              {
+                "step": 750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98199462890625,
+                "holdout_auc": 0.9998087286949158,
+                "weight_norm": 33.028639562246276
+              },
+              {
+                "step": 1000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98236083984375,
+                "holdout_auc": 0.9998258948326111,
+                "weight_norm": 29.45387195069268
+              },
+              {
+                "step": 1250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98834228515625,
+                "holdout_auc": 0.9998224973678589,
+                "weight_norm": 26.171772081787633
+              },
+              {
+                "step": 1500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9937744140625,
+                "holdout_auc": 0.9998376965522766,
+                "weight_norm": 23.198560154498317
+              },
+              {
+                "step": 1750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99493408203125,
+                "holdout_auc": 0.9999164938926697,
+                "weight_norm": 20.558491745061204
+              },
+              {
+                "step": 2000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99639892578125,
+                "holdout_auc": 0.9999642372131348,
+                "weight_norm": 18.2460419962765
+              },
+              {
+                "step": 2250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99700927734375,
+                "holdout_auc": 0.9999799728393555,
+                "weight_norm": 16.222843582140428
+              },
+              {
+                "step": 2500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.997314453125,
+                "holdout_auc": 0.9999878406524658,
+                "weight_norm": 14.451267424433954
+              },
+              {
+                "step": 2750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99737548828125,
+                "holdout_auc": 0.9999915361404419,
+                "weight_norm": 12.897938037757713
+              },
+              {
+                "step": 3000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99755859375,
+                "holdout_auc": 0.9999934434890747,
+                "weight_norm": 11.534680217239375
+              },
+              {
+                "step": 3250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.997802734375,
+                "holdout_auc": 0.999994158744812,
+                "weight_norm": 10.336920935822672
+              },
+              {
+                "step": 3500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99810791015625,
+                "holdout_auc": 0.9999951124191284,
+                "weight_norm": 9.283156179646085
+              },
+              {
+                "step": 3750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99853515625,
+                "holdout_auc": 0.9999953508377075,
+                "weight_norm": 8.35533681475985
+              },
+              {
+                "step": 4000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9989013671875,
+                "holdout_auc": 0.9999951720237732,
+                "weight_norm": 7.537778576883077
+              },
+              {
+                "step": 4250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9990234375,
+                "holdout_auc": 0.9999948740005493,
+                "weight_norm": 6.816190655326525
+              },
+              {
+                "step": 4500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99908447265625,
+                "holdout_auc": 0.9999942183494568,
+                "weight_norm": 6.178452887146175
+              },
+              {
+                "step": 4750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9991455078125,
+                "holdout_auc": 0.9999936819076538,
+                "weight_norm": 5.6143582139623325
+              },
+              {
+                "step": 5000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99908447265625,
+                "holdout_auc": 0.9999927282333374,
+                "weight_norm": 5.114999803405138
+              },
+              {
+                "step": 5250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99932861328125,
+                "holdout_auc": 0.9999942779541016,
+                "weight_norm": 4.675143121068456
+              },
+              {
+                "step": 5500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.999267578125,
+                "holdout_auc": 0.9999924898147583,
+                "weight_norm": 4.289778469699589
+              },
+              {
+                "step": 5750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9991455078125,
+                "holdout_auc": 0.9999936819076538,
+                "weight_norm": 3.9543068017048237
+              },
+              {
+                "step": 6000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99908447265625,
+                "holdout_auc": 0.9999960660934448,
+                "weight_norm": 3.6638850091536175
+              },
+              {
+                "step": 6250,
+                "train_acc": 0.9998779296875,
+                "holdout_acc": 0.9925537109375,
+                "holdout_auc": 0.9992005825042725,
+                "weight_norm": 6.648927847132573
+              },
+              {
+                "step": 6500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99298095703125,
+                "holdout_auc": 0.9993723630905151,
+                "weight_norm": 5.8745426324286685
+              },
+              {
+                "step": 6750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99114990234375,
+                "holdout_auc": 0.9994382262229919,
+                "weight_norm": 5.4033220845663745
+              },
+              {
+                "step": 7000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99005126953125,
+                "holdout_auc": 0.9994268417358398,
+                "weight_norm": 5.08930901959851
+              },
+              {
+                "step": 7250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9903564453125,
+                "holdout_auc": 0.9994566440582275,
+                "weight_norm": 4.789915776561864
+              },
+              {
+                "step": 7500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9935302734375,
+                "holdout_auc": 0.9995228052139282,
+                "weight_norm": 4.47376150696554
+              },
+              {
+                "step": 7750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99456787109375,
+                "holdout_auc": 0.9995774030685425,
+                "weight_norm": 4.1700706661142455
+              },
+              {
+                "step": 8000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99560546875,
+                "holdout_auc": 0.9996289014816284,
+                "weight_norm": 3.8789396140141137
+              },
+              {
+                "step": 8250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.995361328125,
+                "holdout_auc": 0.9996381998062134,
+                "weight_norm": 3.62022380197375
+              },
+              {
+                "step": 8500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99664306640625,
+                "holdout_auc": 0.9996700882911682,
+                "weight_norm": 3.3970680600949694
+              },
+              {
+                "step": 8750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9962158203125,
+                "holdout_auc": 0.9997115731239319,
+                "weight_norm": 3.205075742829203
+              },
+              {
+                "step": 9000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99658203125,
+                "holdout_auc": 0.9998049139976501,
+                "weight_norm": 3.040811280779179
+              },
+              {
+                "step": 9250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9969482421875,
+                "holdout_auc": 0.9998143911361694,
+                "weight_norm": 2.9002603698511256
+              },
+              {
+                "step": 9500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99639892578125,
+                "holdout_auc": 0.9998787045478821,
+                "weight_norm": 2.7806503127841147
+              },
+              {
+                "step": 9750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99676513671875,
+                "holdout_auc": 0.9998428821563721,
+                "weight_norm": 2.678866001215181
+              },
+              {
+                "step": 10000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9969482421875,
+                "holdout_auc": 0.9999462962150574,
+                "weight_norm": 2.5933664319242435
+              }
+            ]
+          },
+          "retest": null
+        }
+      },
+      "1.0": {
+        "REAL_SHA256": {
+          "variant": "REAL_SHA256",
+          "rounds": 4,
+          "wd": 1.0,
+          "train_final": {
+            "acc": 0.9984130859375,
+            "auc": 1.0,
+            "loss": 0.001759376609697938
+          },
+          "holdout": {
+            "acc": 0.81341552734375,
+            "auc": 0.908785879611969,
+            "auc_pool_mean": 0.9088094234466553,
+            "auc_pool_se": 0.002227072836831212,
+            "acc_pool_se": 0.003036869689822197,
+            "z_null_auc": 90.62608720530041,
+            "z_null_acc": 80.234375
+          },
+          "dynamics": {
+            "t_mem": 250,
+            "t_grok": 250,
+            "min_weight_norm": 6.826105251446744,
+            "final_weight_norm": 10.531074172608623,
+            "extended": false,
+            "total_steps": 10000,
+            "wall_sec": 44.52368210199984,
+            "trajectory": [
+              {
+                "step": 250,
+                "train_acc": 0.9976806640625,
+                "holdout_acc": 0.79736328125,
+                "holdout_auc": 0.8787001371383667,
+                "weight_norm": 39.355820096906115
+              },
+              {
+                "step": 500,
+                "train_acc": 0.998046875,
+                "holdout_acc": 0.811767578125,
+                "holdout_auc": 0.8897413015365601,
+                "weight_norm": 32.15524110958283
+              },
+              {
+                "step": 750,
+                "train_acc": 0.998046875,
+                "holdout_acc": 0.8157958984375,
+                "holdout_auc": 0.8943597674369812,
+                "weight_norm": 26.72589430651413
+              },
+              {
+                "step": 1000,
+                "train_acc": 0.998779296875,
+                "holdout_acc": 0.81561279296875,
+                "holdout_auc": 0.8971051573753357,
+                "weight_norm": 22.71001411922276
+              },
+              {
+                "step": 1250,
+                "train_acc": 0.9990234375,
+                "holdout_acc": 0.8201904296875,
+                "holdout_auc": 0.900397777557373,
+                "weight_norm": 19.608273929347483
+              },
+              {
+                "step": 1500,
+                "train_acc": 0.99951171875,
+                "holdout_acc": 0.8216552734375,
+                "holdout_auc": 0.9003002643585205,
+                "weight_norm": 17.295247586963036
+              },
+              {
+                "step": 1750,
+                "train_acc": 0.9969482421875,
+                "holdout_acc": 0.83074951171875,
+                "holdout_auc": 0.9059920907020569,
+                "weight_norm": 15.782409855694342
+              },
+              {
+                "step": 2000,
+                "train_acc": 0.9989013671875,
+                "holdout_acc": 0.828125,
+                "holdout_auc": 0.9032728672027588,
+                "weight_norm": 14.55799133322377
+              },
+              {
+                "step": 2250,
+                "train_acc": 0.9984130859375,
+                "holdout_acc": 0.8306884765625,
+                "holdout_auc": 0.905961275100708,
+                "weight_norm": 13.733023200033951
+              },
+              {
+                "step": 2500,
+                "train_acc": 0.998779296875,
+                "holdout_acc": 0.8291015625,
+                "holdout_auc": 0.9059221744537354,
+                "weight_norm": 12.932561896038647
+              },
+              {
+                "step": 2750,
+                "train_acc": 0.998779296875,
+                "holdout_acc": 0.82733154296875,
+                "holdout_auc": 0.9045795202255249,
+                "weight_norm": 12.578377581966137
+              },
+              {
+                "step": 3000,
+                "train_acc": 0.998779296875,
+                "holdout_acc": 0.82861328125,
+                "holdout_auc": 0.9055560827255249,
+                "weight_norm": 12.604270874672446
+              },
+              {
+                "step": 3250,
+                "train_acc": 0.9996337890625,
+                "holdout_acc": 0.8270263671875,
+                "holdout_auc": 0.9053328633308411,
+                "weight_norm": 12.701133266463454
+              },
+              {
+                "step": 3500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.8377685546875,
+                "holdout_auc": 0.9087164402008057,
+                "weight_norm": 11.671161613210003
+              },
+              {
+                "step": 3750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.83807373046875,
+                "holdout_auc": 0.9071908593177795,
+                "weight_norm": 10.677533148572865
+              },
+              {
+                "step": 4000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.836669921875,
+                "holdout_auc": 0.9074516296386719,
+                "weight_norm": 9.215191462910434
+              },
+              {
+                "step": 4250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.8389892578125,
+                "holdout_auc": 0.9092023372650146,
+                "weight_norm": 7.895596730653484
+              },
+              {
+                "step": 4500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.84210205078125,
+                "holdout_auc": 0.9120572805404663,
+                "weight_norm": 6.826105251446744
+              },
+              {
+                "step": 4750,
+                "train_acc": 0.989501953125,
+                "holdout_acc": 0.8125,
+                "holdout_auc": 0.8956642150878906,
+                "weight_norm": 8.650485591917294
+              },
+              {
+                "step": 5000,
+                "train_acc": 0.93310546875,
+                "holdout_acc": 0.74835205078125,
+                "holdout_auc": 0.8963390588760376,
+                "weight_norm": 8.55804046278891
+              },
+              {
+                "step": 5250,
+                "train_acc": 0.9996337890625,
+                "holdout_acc": 0.8187255859375,
+                "holdout_auc": 0.8997666239738464,
+                "weight_norm": 9.788143544480766
+              },
+              {
+                "step": 5500,
+                "train_acc": 0.99951171875,
+                "holdout_acc": 0.82513427734375,
+                "holdout_auc": 0.9063465595245361,
+                "weight_norm": 10.254103212243097
+              },
+              {
+                "step": 5750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.8275146484375,
+                "holdout_auc": 0.9040002226829529,
+                "weight_norm": 11.004724655781425
+              },
+              {
+                "step": 6000,
+                "train_acc": 0.998046875,
+                "holdout_acc": 0.8314208984375,
+                "holdout_auc": 0.9065608978271484,
+                "weight_norm": 11.272630350158833
+              },
+              {
+                "step": 6250,
+                "train_acc": 0.997802734375,
+                "holdout_acc": 0.8251953125,
+                "holdout_auc": 0.9057618379592896,
+                "weight_norm": 11.572973176460373
+              },
+              {
+                "step": 6500,
+                "train_acc": 0.9998779296875,
+                "holdout_acc": 0.82098388671875,
+                "holdout_auc": 0.9038447141647339,
+                "weight_norm": 11.353597016117993
+              },
+              {
+                "step": 6750,
+                "train_acc": 0.998046875,
+                "holdout_acc": 0.81317138671875,
+                "holdout_auc": 0.9041383862495422,
+                "weight_norm": 11.171045869623565
+              },
+              {
+                "step": 7000,
+                "train_acc": 0.9996337890625,
+                "holdout_acc": 0.82598876953125,
+                "holdout_auc": 0.9035400748252869,
+                "weight_norm": 11.366917520162595
+              },
+              {
+                "step": 7250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.8194580078125,
+                "holdout_auc": 0.9057556390762329,
+                "weight_norm": 11.141630284479383
+              },
+              {
+                "step": 7500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.83880615234375,
+                "holdout_auc": 0.9119207262992859,
+                "weight_norm": 10.933681809772928
+              },
+              {
+                "step": 7750,
+                "train_acc": 0.991943359375,
+                "holdout_acc": 0.8211669921875,
+                "holdout_auc": 0.9071793556213379,
+                "weight_norm": 10.950064464370817
+              },
+              {
+                "step": 8000,
+                "train_acc": 0.9998779296875,
+                "holdout_acc": 0.82421875,
+                "holdout_auc": 0.908959150314331,
+                "weight_norm": 10.668432373205258
+              },
+              {
+                "step": 8250,
+                "train_acc": 0.9993896484375,
+                "holdout_acc": 0.828125,
+                "holdout_auc": 0.909797191619873,
+                "weight_norm": 11.505601963293826
+              },
+              {
+                "step": 8500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.8304443359375,
+                "holdout_auc": 0.908949613571167,
+                "weight_norm": 10.573858845565272
+              },
+              {
+                "step": 8750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.83251953125,
+                "holdout_auc": 0.9114194512367249,
+                "weight_norm": 10.823876133852298
+              },
+              {
+                "step": 9000,
+                "train_acc": 0.9986572265625,
+                "holdout_acc": 0.82916259765625,
+                "holdout_auc": 0.9076284766197205,
+                "weight_norm": 11.166367481436051
+              },
+              {
+                "step": 9250,
+                "train_acc": 0.9986572265625,
+                "holdout_acc": 0.82110595703125,
+                "holdout_auc": 0.9045999646186829,
+                "weight_norm": 10.978877529144246
+              },
+              {
+                "step": 9500,
+                "train_acc": 0.9937744140625,
+                "holdout_acc": 0.8114013671875,
+                "holdout_auc": 0.9052174091339111,
+                "weight_norm": 10.462925648161418
+              },
+              {
+                "step": 9750,
+                "train_acc": 0.9989013671875,
+                "holdout_acc": 0.8333740234375,
+                "holdout_auc": 0.911343514919281,
+                "weight_norm": 10.59784451337478
+              },
+              {
+                "step": 10000,
+                "train_acc": 0.9984130859375,
+                "holdout_acc": 0.81341552734375,
+                "holdout_auc": 0.908785879611969,
+                "weight_norm": 10.531074172608623
+              }
+            ]
+          },
+          "retest": null
+        },
+        "CTRL_RAND_1": {
+          "variant": "CTRL_RAND_1",
+          "rounds": 4,
+          "wd": 1.0,
+          "train_final": {
+            "acc": 1.0,
+            "auc": 1.0,
+            "loss": 2.8652912931192986e-08
+          },
+          "holdout": {
+            "acc": 0.99688720703125,
+            "auc": 0.9999992251396179,
+            "auc_pool_mean": 0.9999995231628418,
+            "auc_pool_se": 4.76837158203125e-07,
+            "acc_pool_se": 0.00035901955561712384,
+            "z_null_auc": 110.84769714428,
+            "z_null_acc": 127.203125
+          },
+          "dynamics": {
+            "t_mem": 250,
+            "t_grok": 250,
+            "min_weight_norm": 3.9062778700191956,
+            "final_weight_norm": 4.102842032263534,
+            "extended": false,
+            "total_steps": 10000,
+            "wall_sec": 44.5270565589999,
+            "trajectory": [
+              {
+                "step": 250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.989013671875,
+                "holdout_auc": 0.9999250173568726,
+                "weight_norm": 38.66819575435639
+              },
+              {
+                "step": 500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.982421875,
+                "holdout_auc": 0.99994957447052,
+                "weight_norm": 30.63799365180051
+              },
+              {
+                "step": 750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98358154296875,
+                "holdout_auc": 0.999964714050293,
+                "weight_norm": 24.4903915396121
+              },
+              {
+                "step": 1000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98779296875,
+                "holdout_auc": 0.9999793767929077,
+                "weight_norm": 19.692872026605304
+              },
+              {
+                "step": 1250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99127197265625,
+                "holdout_auc": 0.999988853931427,
+                "weight_norm": 15.84228978234777
+              },
+              {
+                "step": 1500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9954833984375,
+                "holdout_auc": 0.9999920725822449,
+                "weight_norm": 12.722131457255358
+              },
+              {
+                "step": 1750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99652099609375,
+                "holdout_auc": 0.9999982118606567,
+                "weight_norm": 10.301584250177507
+              },
+              {
+                "step": 2000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99774169921875,
+                "holdout_auc": 0.9999997615814209,
+                "weight_norm": 8.47766003990927
+              },
+              {
+                "step": 2250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9984130859375,
+                "holdout_auc": 0.9999998807907104,
+                "weight_norm": 7.114387624324719
+              },
+              {
+                "step": 2500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9984130859375,
+                "holdout_auc": 1.0,
+                "weight_norm": 6.100322600060557
+              },
+              {
+                "step": 2750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99493408203125,
+                "holdout_auc": 0.9999998807907104,
+                "weight_norm": 5.35494536553731
+              },
+              {
+                "step": 3000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9893798828125,
+                "holdout_auc": 0.9999979138374329,
+                "weight_norm": 4.812649903522333
+              },
+              {
+                "step": 3250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98712158203125,
+                "holdout_auc": 0.9999923706054688,
+                "weight_norm": 4.415161379215382
+              },
+              {
+                "step": 3500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99267578125,
+                "holdout_auc": 0.9999995827674866,
+                "weight_norm": 4.12325851941271
+              },
+              {
+                "step": 3750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9940185546875,
+                "holdout_auc": 0.9999961853027344,
+                "weight_norm": 3.9062778700191956
+              },
+              {
+                "step": 4000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98907470703125,
+                "holdout_auc": 0.9997707605361938,
+                "weight_norm": 5.552991553730688
+              },
+              {
+                "step": 4250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98541259765625,
+                "holdout_auc": 0.9996496438980103,
+                "weight_norm": 4.982140812735805
+              },
+              {
+                "step": 4500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.986572265625,
+                "holdout_auc": 0.9997115731239319,
+                "weight_norm": 4.836260709039366
+              },
+              {
+                "step": 4750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9881591796875,
+                "holdout_auc": 0.9998002648353577,
+                "weight_norm": 4.767894991189786
+              },
+              {
+                "step": 5000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98822021484375,
+                "holdout_auc": 0.9998973608016968,
+                "weight_norm": 4.626352420492435
+              },
+              {
+                "step": 5250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98834228515625,
+                "holdout_auc": 0.9999102354049683,
+                "weight_norm": 4.460099028952524
+              },
+              {
+                "step": 5500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98956298828125,
+                "holdout_auc": 0.999906599521637,
+                "weight_norm": 4.322662098306576
+              },
+              {
+                "step": 5750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99139404296875,
+                "holdout_auc": 0.9999502897262573,
+                "weight_norm": 4.22172911187884
+              },
+              {
+                "step": 6000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99298095703125,
+                "holdout_auc": 0.9999848008155823,
+                "weight_norm": 4.145556539561626
+              },
+              {
+                "step": 6250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99517822265625,
+                "holdout_auc": 0.999995231628418,
+                "weight_norm": 4.081568705439642
+              },
+              {
+                "step": 6500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99676513671875,
+                "holdout_auc": 0.9999979138374329,
+                "weight_norm": 4.023284732772396
+              },
+              {
+                "step": 6750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99285888671875,
+                "holdout_auc": 0.9996107220649719,
+                "weight_norm": 5.687599691517629
+              },
+              {
+                "step": 7000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99176025390625,
+                "holdout_auc": 0.9995049834251404,
+                "weight_norm": 4.939642116660879
+              },
+              {
+                "step": 7250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99237060546875,
+                "holdout_auc": 0.9996199607849121,
+                "weight_norm": 4.807616347187034
+              },
+              {
+                "step": 7500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99224853515625,
+                "holdout_auc": 0.9997245669364929,
+                "weight_norm": 4.88272972371003
+              },
+              {
+                "step": 7750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99090576171875,
+                "holdout_auc": 0.9998518824577332,
+                "weight_norm": 4.819924497958161
+              },
+              {
+                "step": 8000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9903564453125,
+                "holdout_auc": 0.9999139308929443,
+                "weight_norm": 4.675139391659115
+              },
+              {
+                "step": 8250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99163818359375,
+                "holdout_auc": 0.9999386668205261,
+                "weight_norm": 4.5417586372884475
+              },
+              {
+                "step": 8500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99224853515625,
+                "holdout_auc": 0.9999593496322632,
+                "weight_norm": 4.441466429881241
+              },
+              {
+                "step": 8750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99395751953125,
+                "holdout_auc": 0.9999807476997375,
+                "weight_norm": 4.365249498712965
+              },
+              {
+                "step": 9000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9951171875,
+                "holdout_auc": 0.9999917149543762,
+                "weight_norm": 4.3013629822494
+              },
+              {
+                "step": 9250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9967041015625,
+                "holdout_auc": 0.9999974370002747,
+                "weight_norm": 4.241602507641938
+              },
+              {
+                "step": 9500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99761962890625,
+                "holdout_auc": 0.9999972581863403,
+                "weight_norm": 4.18568866753662
+              },
+              {
+                "step": 9750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9970703125,
+                "holdout_auc": 0.9999983310699463,
+                "weight_norm": 4.140445988858383
+              },
+              {
+                "step": 10000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99688720703125,
+                "holdout_auc": 0.9999992251396179,
+                "weight_norm": 4.102842032263534
+              }
+            ]
+          },
+          "retest": null
+        },
+        "CTRL_RAND_2": {
+          "variant": "CTRL_RAND_2",
+          "rounds": 4,
+          "wd": 1.0,
+          "train_final": {
+            "acc": 1.0,
+            "auc": 1.0,
+            "loss": 1.5491843896597857e-07
+          },
+          "holdout": {
+            "acc": 0.991943359375,
+            "auc": 0.9993866086006165,
+            "auc_pool_mean": 0.9993882179260254,
+            "auc_pool_se": 0.0001334421249339357,
+            "acc_pool_se": 0.000704773236066103,
+            "z_null_auc": 110.71188266864387,
+            "z_null_acc": 125.9375
+          },
+          "dynamics": {
+            "t_mem": 250,
+            "t_grok": 250,
+            "min_weight_norm": 3.7832284726090895,
+            "final_weight_norm": 5.930637052245721,
+            "extended": false,
+            "total_steps": 10000,
+            "wall_sec": 43.88259174299992,
+            "trajectory": [
+              {
+                "step": 250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9873046875,
+                "holdout_auc": 0.9998660683631897,
+                "weight_norm": 38.653639713959045
+              },
+              {
+                "step": 500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9840087890625,
+                "holdout_auc": 0.9998882412910461,
+                "weight_norm": 30.608631486525017
+              },
+              {
+                "step": 750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98590087890625,
+                "holdout_auc": 0.9999068975448608,
+                "weight_norm": 24.478483272214536
+              },
+              {
+                "step": 1000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99005126953125,
+                "holdout_auc": 0.9999340772628784,
+                "weight_norm": 19.723819126402105
+              },
+              {
+                "step": 1250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9925537109375,
+                "holdout_auc": 0.9999570846557617,
+                "weight_norm": 15.898255968375299
+              },
+              {
+                "step": 1500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.995361328125,
+                "holdout_auc": 0.9999788999557495,
+                "weight_norm": 12.7915268696554
+              },
+              {
+                "step": 1750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99639892578125,
+                "holdout_auc": 0.9999893307685852,
+                "weight_norm": 10.387586684599055
+              },
+              {
+                "step": 2000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99676513671875,
+                "holdout_auc": 0.9999945759773254,
+                "weight_norm": 8.58686065198981
+              },
+              {
+                "step": 2250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99774169921875,
+                "holdout_auc": 0.9999957084655762,
+                "weight_norm": 7.248352046894503
+              },
+              {
+                "step": 2500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99761962890625,
+                "holdout_auc": 0.9999958872795105,
+                "weight_norm": 6.257641774174375
+              },
+              {
+                "step": 2750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9962158203125,
+                "holdout_auc": 0.9999945163726807,
+                "weight_norm": 5.5314875219457615
+              },
+              {
+                "step": 3000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9940185546875,
+                "holdout_auc": 0.9999837279319763,
+                "weight_norm": 5.004138581685453
+              },
+              {
+                "step": 3250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9903564453125,
+                "holdout_auc": 0.9990682601928711,
+                "weight_norm": 7.0620972155008905
+              },
+              {
+                "step": 3500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9896240234375,
+                "holdout_auc": 0.9993760585784912,
+                "weight_norm": 5.814268666060597
+              },
+              {
+                "step": 3750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98883056640625,
+                "holdout_auc": 0.9993381500244141,
+                "weight_norm": 5.235247378692662
+              },
+              {
+                "step": 4000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9884033203125,
+                "holdout_auc": 0.9994204044342041,
+                "weight_norm": 4.935243413123074
+              },
+              {
+                "step": 4250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98870849609375,
+                "holdout_auc": 0.9996199607849121,
+                "weight_norm": 4.744765701449348
+              },
+              {
+                "step": 4500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98809814453125,
+                "holdout_auc": 0.999763548374176,
+                "weight_norm": 4.517110490347302
+              },
+              {
+                "step": 4750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98858642578125,
+                "holdout_auc": 0.9997527003288269,
+                "weight_norm": 4.320846197126851
+              },
+              {
+                "step": 5000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99005126953125,
+                "holdout_auc": 0.9998540878295898,
+                "weight_norm": 4.164335544229834
+              },
+              {
+                "step": 5250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9930419921875,
+                "holdout_auc": 0.9998942017555237,
+                "weight_norm": 4.044368370319823
+              },
+              {
+                "step": 5500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99365234375,
+                "holdout_auc": 0.9999461770057678,
+                "weight_norm": 3.9466639293844628
+              },
+              {
+                "step": 5750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9947509765625,
+                "holdout_auc": 0.9999669194221497,
+                "weight_norm": 3.861404910132626
+              },
+              {
+                "step": 6000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9951171875,
+                "holdout_auc": 0.9999790191650391,
+                "weight_norm": 3.7832284726090895
+              },
+              {
+                "step": 6250,
+                "train_acc": 0.936767578125,
+                "holdout_acc": 0.927734375,
+                "holdout_auc": 0.9960800409317017,
+                "weight_norm": 4.092545854270812
+              },
+              {
+                "step": 6500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9906005859375,
+                "holdout_auc": 0.9994863271713257,
+                "weight_norm": 5.062190755172969
+              },
+              {
+                "step": 6750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99114990234375,
+                "holdout_auc": 0.9996777772903442,
+                "weight_norm": 4.616115037392037
+              },
+              {
+                "step": 7000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99102783203125,
+                "holdout_auc": 0.999772846698761,
+                "weight_norm": 4.519427387223643
+              },
+              {
+                "step": 7250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98980712890625,
+                "holdout_auc": 0.9998369216918945,
+                "weight_norm": 4.4905417979741475
+              },
+              {
+                "step": 7500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99017333984375,
+                "holdout_auc": 0.9998786449432373,
+                "weight_norm": 4.327996468864064
+              },
+              {
+                "step": 7750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99017333984375,
+                "holdout_auc": 0.9998680949211121,
+                "weight_norm": 4.186940577604431
+              },
+              {
+                "step": 8000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99029541015625,
+                "holdout_auc": 0.9998712539672852,
+                "weight_norm": 4.070054853923665
+              },
+              {
+                "step": 8250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9927978515625,
+                "holdout_auc": 0.9999240040779114,
+                "weight_norm": 3.986681089382952
+              },
+              {
+                "step": 8500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99371337890625,
+                "holdout_auc": 0.9999622702598572,
+                "weight_norm": 3.9273753419028625
+              },
+              {
+                "step": 8750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99468994140625,
+                "holdout_auc": 0.9999733567237854,
+                "weight_norm": 3.8828040490617783
+              },
+              {
+                "step": 9000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9951171875,
+                "holdout_auc": 0.9999841451644897,
+                "weight_norm": 3.8471460544988476
+              },
+              {
+                "step": 9250,
+                "train_acc": 0.9996337890625,
+                "holdout_acc": 0.9915771484375,
+                "holdout_auc": 0.999337375164032,
+                "weight_norm": 5.311554283723679
+              },
+              {
+                "step": 9500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99237060546875,
+                "holdout_auc": 0.9992681741714478,
+                "weight_norm": 6.38414426877901
+              },
+              {
+                "step": 9750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99188232421875,
+                "holdout_auc": 0.9993415474891663,
+                "weight_norm": 5.871085834540965
+              },
+              {
+                "step": 10000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.991943359375,
+                "holdout_auc": 0.9993866086006165,
+                "weight_norm": 5.930637052245721
+              }
+            ]
+          },
+          "retest": null
+        }
+      },
+      "2.0": {
+        "REAL_SHA256": {
+          "variant": "REAL_SHA256",
+          "rounds": 4,
+          "wd": 2.0,
+          "train_final": {
+            "acc": 0.9989013671875,
+            "auc": 1.0,
+            "loss": 0.019211936742067337
+          },
+          "holdout": {
+            "acc": 0.828369140625,
+            "auc": 0.9097686409950256,
+            "auc_pool_mean": 0.9096348285675049,
+            "auc_pool_se": 0.0018048143247142434,
+            "acc_pool_se": 0.0019026268273591995,
+            "z_null_auc": 90.8439612152526,
+            "z_null_acc": 84.0625
+          },
+          "dynamics": {
+            "t_mem": 250,
+            "t_grok": 250,
+            "min_weight_norm": 8.894874605995307,
+            "final_weight_norm": 9.246084445989622,
+            "extended": false,
+            "total_steps": 10000,
+            "wall_sec": 44.83437211599994,
+            "trajectory": [
+              {
+                "step": 250,
+                "train_acc": 0.9971923828125,
+                "holdout_acc": 0.799560546875,
+                "holdout_auc": 0.8781798481941223,
+                "weight_norm": 34.060451864398935
+              },
+              {
+                "step": 500,
+                "train_acc": 0.996826171875,
+                "holdout_acc": 0.8135986328125,
+                "holdout_auc": 0.8940886855125427,
+                "weight_norm": 22.600733438572444
+              },
+              {
+                "step": 750,
+                "train_acc": 0.9969482421875,
+                "holdout_acc": 0.8265380859375,
+                "holdout_auc": 0.9023661017417908,
+                "weight_norm": 16.23845703874609
+              },
+              {
+                "step": 1000,
+                "train_acc": 0.9974365234375,
+                "holdout_acc": 0.82769775390625,
+                "holdout_auc": 0.9042707681655884,
+                "weight_norm": 12.89698010845661
+              },
+              {
+                "step": 1250,
+                "train_acc": 0.9989013671875,
+                "holdout_acc": 0.8297119140625,
+                "holdout_auc": 0.9057875275611877,
+                "weight_norm": 11.309871582665648
+              },
+              {
+                "step": 1500,
+                "train_acc": 0.9993896484375,
+                "holdout_acc": 0.8262939453125,
+                "holdout_auc": 0.9032344222068787,
+                "weight_norm": 10.88216624511361
+              },
+              {
+                "step": 1750,
+                "train_acc": 0.99951171875,
+                "holdout_acc": 0.8292236328125,
+                "holdout_auc": 0.9062807559967041,
+                "weight_norm": 9.813246955923397
+              },
+              {
+                "step": 2000,
+                "train_acc": 0.999267578125,
+                "holdout_acc": 0.8209228515625,
+                "holdout_auc": 0.9061523675918579,
+                "weight_norm": 9.268729300296199
+              },
+              {
+                "step": 2250,
+                "train_acc": 0.9998779296875,
+                "holdout_acc": 0.82440185546875,
+                "holdout_auc": 0.9067633152008057,
+                "weight_norm": 9.061435087366535
+              },
+              {
+                "step": 2500,
+                "train_acc": 0.999755859375,
+                "holdout_acc": 0.8270263671875,
+                "holdout_auc": 0.9108315706253052,
+                "weight_norm": 8.946769651611172
+              },
+              {
+                "step": 2750,
+                "train_acc": 0.9981689453125,
+                "holdout_acc": 0.819091796875,
+                "holdout_auc": 0.90261310338974,
+                "weight_norm": 9.23342380692177
+              },
+              {
+                "step": 3000,
+                "train_acc": 0.9879150390625,
+                "holdout_acc": 0.81658935546875,
+                "holdout_auc": 0.9084214568138123,
+                "weight_norm": 8.894874605995307
+              },
+              {
+                "step": 3250,
+                "train_acc": 0.9937744140625,
+                "holdout_acc": 0.81207275390625,
+                "holdout_auc": 0.9071725606918335,
+                "weight_norm": 8.995197836300235
+              },
+              {
+                "step": 3500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.83380126953125,
+                "holdout_auc": 0.9089291095733643,
+                "weight_norm": 9.003431903124048
+              },
+              {
+                "step": 3750,
+                "train_acc": 0.93115234375,
+                "holdout_acc": 0.78009033203125,
+                "holdout_auc": 0.9043130874633789,
+                "weight_norm": 9.30695915099008
+              },
+              {
+                "step": 4000,
+                "train_acc": 0.877197265625,
+                "holdout_acc": 0.71319580078125,
+                "holdout_auc": 0.905860960483551,
+                "weight_norm": 9.04808276230121
+              },
+              {
+                "step": 4250,
+                "train_acc": 0.99853515625,
+                "holdout_acc": 0.80242919921875,
+                "holdout_auc": 0.9052515029907227,
+                "weight_norm": 9.387263456191972
+              },
+              {
+                "step": 4500,
+                "train_acc": 0.9827880859375,
+                "holdout_acc": 0.77752685546875,
+                "holdout_auc": 0.9006837010383606,
+                "weight_norm": 9.601660417528496
+              },
+              {
+                "step": 4750,
+                "train_acc": 0.8134765625,
+                "holdout_acc": 0.6741943359375,
+                "holdout_auc": 0.9050809741020203,
+                "weight_norm": 9.159207583409987
+              },
+              {
+                "step": 5000,
+                "train_acc": 0.9976806640625,
+                "holdout_acc": 0.81451416015625,
+                "holdout_auc": 0.9079276323318481,
+                "weight_norm": 9.550107708161327
+              },
+              {
+                "step": 5250,
+                "train_acc": 0.999755859375,
+                "holdout_acc": 0.82025146484375,
+                "holdout_auc": 0.9030048847198486,
+                "weight_norm": 9.38631121369589
+              },
+              {
+                "step": 5500,
+                "train_acc": 0.9949951171875,
+                "holdout_acc": 0.8157958984375,
+                "holdout_auc": 0.9034647941589355,
+                "weight_norm": 9.5142467984328
+              },
+              {
+                "step": 5750,
+                "train_acc": 0.9989013671875,
+                "holdout_acc": 0.8238525390625,
+                "holdout_auc": 0.9037671685218811,
+                "weight_norm": 9.825819697218225
+              },
+              {
+                "step": 6000,
+                "train_acc": 0.9976806640625,
+                "holdout_acc": 0.82635498046875,
+                "holdout_auc": 0.9103783369064331,
+                "weight_norm": 9.356356729992267
+              },
+              {
+                "step": 6250,
+                "train_acc": 0.997314453125,
+                "holdout_acc": 0.78375244140625,
+                "holdout_auc": 0.8938009738922119,
+                "weight_norm": 9.890188476244674
+              },
+              {
+                "step": 6500,
+                "train_acc": 0.9976806640625,
+                "holdout_acc": 0.83038330078125,
+                "holdout_auc": 0.9082216620445251,
+                "weight_norm": 9.591621458687925
+              },
+              {
+                "step": 6750,
+                "train_acc": 0.9984130859375,
+                "holdout_acc": 0.8101806640625,
+                "holdout_auc": 0.900076150894165,
+                "weight_norm": 9.351250470249658
+              },
+              {
+                "step": 7000,
+                "train_acc": 0.99755859375,
+                "holdout_acc": 0.83258056640625,
+                "holdout_auc": 0.9080722332000732,
+                "weight_norm": 9.442503548901149
+              },
+              {
+                "step": 7250,
+                "train_acc": 0.999755859375,
+                "holdout_acc": 0.8353271484375,
+                "holdout_auc": 0.9097113609313965,
+                "weight_norm": 9.536209243413063
+              },
+              {
+                "step": 7500,
+                "train_acc": 0.9766845703125,
+                "holdout_acc": 0.81402587890625,
+                "holdout_auc": 0.9048519134521484,
+                "weight_norm": 9.253066885124921
+              },
+              {
+                "step": 7750,
+                "train_acc": 0.9835205078125,
+                "holdout_acc": 0.79742431640625,
+                "holdout_auc": 0.9060379266738892,
+                "weight_norm": 9.643048959604613
+              },
+              {
+                "step": 8000,
+                "train_acc": 0.9996337890625,
+                "holdout_acc": 0.82598876953125,
+                "holdout_auc": 0.9047145247459412,
+                "weight_norm": 9.178546478637992
+              },
+              {
+                "step": 8250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.8282470703125,
+                "holdout_auc": 0.9079112410545349,
+                "weight_norm": 9.655111722815251
+              },
+              {
+                "step": 8500,
+                "train_acc": 0.9942626953125,
+                "holdout_acc": 0.81292724609375,
+                "holdout_auc": 0.9039061069488525,
+                "weight_norm": 9.288004291819703
+              },
+              {
+                "step": 8750,
+                "train_acc": 0.9669189453125,
+                "holdout_acc": 0.80096435546875,
+                "holdout_auc": 0.9040006995201111,
+                "weight_norm": 9.770765817589291
+              },
+              {
+                "step": 9000,
+                "train_acc": 0.9954833984375,
+                "holdout_acc": 0.81854248046875,
+                "holdout_auc": 0.906055748462677,
+                "weight_norm": 10.07006013835417
+              },
+              {
+                "step": 9250,
+                "train_acc": 0.996826171875,
+                "holdout_acc": 0.79833984375,
+                "holdout_auc": 0.9098339080810547,
+                "weight_norm": 9.213439313219666
+              },
+              {
+                "step": 9500,
+                "train_acc": 0.99853515625,
+                "holdout_acc": 0.8270263671875,
+                "holdout_auc": 0.9034023284912109,
+                "weight_norm": 9.352782416986651
+              },
+              {
+                "step": 9750,
+                "train_acc": 0.9979248046875,
+                "holdout_acc": 0.82366943359375,
+                "holdout_auc": 0.9023363590240479,
+                "weight_norm": 9.56161896683941
+              },
+              {
+                "step": 10000,
+                "train_acc": 0.9989013671875,
+                "holdout_acc": 0.828369140625,
+                "holdout_auc": 0.9097686409950256,
+                "weight_norm": 9.246084445989622
+              }
+            ]
+          },
+          "retest": null
+        },
+        "CTRL_RAND_1": {
+          "variant": "CTRL_RAND_1",
+          "rounds": 4,
+          "wd": 2.0,
+          "train_final": {
+            "acc": 1.0,
+            "auc": 1.0,
+            "loss": 1.4553988876286894e-05
+          },
+          "holdout": {
+            "acc": 0.9937744140625,
+            "auc": 0.9996795058250427,
+            "auc_pool_mean": 0.9996812343597412,
+            "auc_pool_se": 7.704914605710655e-05,
+            "acc_pool_se": 0.0003551945264916867,
+            "z_null_auc": 110.77681673492874,
+            "z_null_acc": 126.40625
+          },
+          "dynamics": {
+            "t_mem": 250,
+            "t_grok": 250,
+            "min_weight_norm": 5.433312680709617,
+            "final_weight_norm": 6.364648299775509,
+            "extended": false,
+            "total_steps": 10000,
+            "wall_sec": 44.59643486799996,
+            "trajectory": [
+              {
+                "step": 250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98663330078125,
+                "holdout_auc": 0.9999667406082153,
+                "weight_norm": 33.43454397328293
+              },
+              {
+                "step": 500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98626708984375,
+                "holdout_auc": 0.9999856948852539,
+                "weight_norm": 21.23091275385898
+              },
+              {
+                "step": 750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99066162109375,
+                "holdout_auc": 0.9999969601631165,
+                "weight_norm": 14.223993556139625
+              },
+              {
+                "step": 1000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99609375,
+                "holdout_auc": 0.9999995231628418,
+                "weight_norm": 10.116239384413786
+              },
+              {
+                "step": 1250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9991455078125,
+                "holdout_auc": 0.9999998211860657,
+                "weight_norm": 7.60527161972024
+              },
+              {
+                "step": 1500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99322509765625,
+                "holdout_auc": 0.9999904036521912,
+                "weight_norm": 6.256307701732414
+              },
+              {
+                "step": 1750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9869384765625,
+                "holdout_auc": 0.9993011951446533,
+                "weight_norm": 7.184945828634222
+              },
+              {
+                "step": 2000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9833984375,
+                "holdout_auc": 0.9993705153465271,
+                "weight_norm": 6.0724377230972895
+              },
+              {
+                "step": 2250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9830322265625,
+                "holdout_auc": 0.9994080066680908,
+                "weight_norm": 5.727078668793791
+              },
+              {
+                "step": 2500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.97705078125,
+                "holdout_auc": 0.9996114373207092,
+                "weight_norm": 5.433312680709617
+              },
+              {
+                "step": 2750,
+                "train_acc": 0.9998779296875,
+                "holdout_acc": 0.99200439453125,
+                "holdout_auc": 0.9995054602622986,
+                "weight_norm": 6.036470897638685
+              },
+              {
+                "step": 3000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99420166015625,
+                "holdout_auc": 0.9996763467788696,
+                "weight_norm": 6.25879532344204
+              },
+              {
+                "step": 3250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.993408203125,
+                "holdout_auc": 0.9997323751449585,
+                "weight_norm": 5.893399894919724
+              },
+              {
+                "step": 3500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99456787109375,
+                "holdout_auc": 0.9997549057006836,
+                "weight_norm": 5.750052751580513
+              },
+              {
+                "step": 3750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99371337890625,
+                "holdout_auc": 0.9999480843544006,
+                "weight_norm": 5.595982424519395
+              },
+              {
+                "step": 4000,
+                "train_acc": 0.999755859375,
+                "holdout_acc": 0.99359130859375,
+                "holdout_auc": 0.9998934864997864,
+                "weight_norm": 5.525882060625658
+              },
+              {
+                "step": 4250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9930419921875,
+                "holdout_auc": 0.9995989203453064,
+                "weight_norm": 6.701494397355854
+              },
+              {
+                "step": 4500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99346923828125,
+                "holdout_auc": 0.9996315836906433,
+                "weight_norm": 6.061373848526121
+              },
+              {
+                "step": 4750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99383544921875,
+                "holdout_auc": 0.9997179508209229,
+                "weight_norm": 6.057877913840452
+              },
+              {
+                "step": 5000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99346923828125,
+                "holdout_auc": 0.999829888343811,
+                "weight_norm": 6.025666505997908
+              },
+              {
+                "step": 5250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9921875,
+                "holdout_auc": 0.9999314546585083,
+                "weight_norm": 5.840568715202859
+              },
+              {
+                "step": 5500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9915771484375,
+                "holdout_auc": 0.9999809265136719,
+                "weight_norm": 5.765287639412688
+              },
+              {
+                "step": 5750,
+                "train_acc": 0.999267578125,
+                "holdout_acc": 0.99139404296875,
+                "holdout_auc": 0.999039888381958,
+                "weight_norm": 5.961411979392506
+              },
+              {
+                "step": 6000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9923095703125,
+                "holdout_auc": 0.9994945526123047,
+                "weight_norm": 6.104687203542083
+              },
+              {
+                "step": 6250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99383544921875,
+                "holdout_auc": 0.9996270537376404,
+                "weight_norm": 6.178768880461545
+              },
+              {
+                "step": 6500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99359130859375,
+                "holdout_auc": 0.9996811151504517,
+                "weight_norm": 6.014596900485937
+              },
+              {
+                "step": 6750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9910888671875,
+                "holdout_auc": 0.9999445080757141,
+                "weight_norm": 5.865937570361491
+              },
+              {
+                "step": 7000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9964599609375,
+                "holdout_auc": 0.9999839067459106,
+                "weight_norm": 5.828777440361045
+              },
+              {
+                "step": 7250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99847412109375,
+                "holdout_auc": 0.9999982118606567,
+                "weight_norm": 5.765719626379325
+              },
+              {
+                "step": 7500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.998779296875,
+                "holdout_auc": 0.9999995827674866,
+                "weight_norm": 5.728944398325596
+              },
+              {
+                "step": 7750,
+                "train_acc": 0.999755859375,
+                "holdout_acc": 0.9901123046875,
+                "holdout_auc": 0.9994127750396729,
+                "weight_norm": 6.355037763789611
+              },
+              {
+                "step": 8000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99237060546875,
+                "holdout_auc": 0.9996480941772461,
+                "weight_norm": 5.74770451700863
+              },
+              {
+                "step": 8250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9935302734375,
+                "holdout_auc": 0.9997456669807434,
+                "weight_norm": 5.819154389096662
+              },
+              {
+                "step": 8500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.994384765625,
+                "holdout_auc": 0.9998718500137329,
+                "weight_norm": 5.918984196463868
+              },
+              {
+                "step": 8750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99188232421875,
+                "holdout_auc": 0.9999613761901855,
+                "weight_norm": 5.878410104262157
+              },
+              {
+                "step": 9000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9903564453125,
+                "holdout_auc": 0.9999883770942688,
+                "weight_norm": 5.878616063958923
+              },
+              {
+                "step": 9250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99951171875,
+                "holdout_auc": 0.9999995827674866,
+                "weight_norm": 5.821609379750231
+              },
+              {
+                "step": 9500,
+                "train_acc": 0.998291015625,
+                "holdout_acc": 0.98974609375,
+                "holdout_auc": 0.9989520907402039,
+                "weight_norm": 7.0219757269391465
+              },
+              {
+                "step": 9750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99371337890625,
+                "holdout_auc": 0.9996551275253296,
+                "weight_norm": 6.684116781612613
+              },
+              {
+                "step": 10000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9937744140625,
+                "holdout_auc": 0.9996795058250427,
+                "weight_norm": 6.364648299775509
+              }
+            ]
+          },
+          "retest": null
+        },
+        "CTRL_RAND_2": {
+          "variant": "CTRL_RAND_2",
+          "rounds": 4,
+          "wd": 2.0,
+          "train_final": {
+            "acc": 1.0,
+            "auc": 1.0,
+            "loss": 2.935912490897863e-08
+          },
+          "holdout": {
+            "acc": 0.99755859375,
+            "auc": 0.9999805092811584,
+            "auc_pool_mean": 0.9999790191650391,
+            "auc_pool_se": 1.9491697457851842e-05,
+            "acc_pool_se": 0.0003986799856647849,
+            "z_null_auc": 110.84354791822925,
+            "z_null_acc": 127.375
+          },
+          "dynamics": {
+            "t_mem": 250,
+            "t_grok": 250,
+            "min_weight_norm": 5.180901473326488,
+            "final_weight_norm": 5.4689583294209765,
+            "extended": false,
+            "total_steps": 10000,
+            "wall_sec": 44.358695746000194,
+            "trajectory": [
+              {
+                "step": 250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98614501953125,
+                "holdout_auc": 0.9998951554298401,
+                "weight_norm": 33.42080689172704
+              },
+              {
+                "step": 500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98895263671875,
+                "holdout_auc": 0.9999471306800842,
+                "weight_norm": 21.245435894504094
+              },
+              {
+                "step": 750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9923095703125,
+                "holdout_auc": 0.9999778270721436,
+                "weight_norm": 14.284601057354239
+              },
+              {
+                "step": 1000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99853515625,
+                "holdout_auc": 0.9999926686286926,
+                "weight_norm": 10.173962337074622
+              },
+              {
+                "step": 1250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.998046875,
+                "holdout_auc": 0.9999837875366211,
+                "weight_norm": 7.663277160392157
+              },
+              {
+                "step": 1500,
+                "train_acc": 0.9984130859375,
+                "holdout_acc": 0.9786376953125,
+                "holdout_auc": 0.9983015060424805,
+                "weight_norm": 8.206193075824519
+              },
+              {
+                "step": 1750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.990966796875,
+                "holdout_auc": 0.9995279312133789,
+                "weight_norm": 7.1459741099326335
+              },
+              {
+                "step": 2000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9906005859375,
+                "holdout_auc": 0.999614953994751,
+                "weight_norm": 6.065846183650897
+              },
+              {
+                "step": 2250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99365234375,
+                "holdout_auc": 0.999638020992279,
+                "weight_norm": 5.7958840727105
+              },
+              {
+                "step": 2500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.98980712890625,
+                "holdout_auc": 0.9997756481170654,
+                "weight_norm": 5.553379809976361
+              },
+              {
+                "step": 2750,
+                "train_acc": 0.9991455078125,
+                "holdout_acc": 0.99139404296875,
+                "holdout_auc": 0.9992680549621582,
+                "weight_norm": 6.826972466221938
+              },
+              {
+                "step": 3000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9925537109375,
+                "holdout_auc": 0.999498188495636,
+                "weight_norm": 5.5553418710788005
+              },
+              {
+                "step": 3250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99176025390625,
+                "holdout_auc": 0.9995527267456055,
+                "weight_norm": 5.322931647737762
+              },
+              {
+                "step": 3500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9923095703125,
+                "holdout_auc": 0.9995352625846863,
+                "weight_norm": 5.220455747319334
+              },
+              {
+                "step": 3750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99139404296875,
+                "holdout_auc": 0.9998511672019958,
+                "weight_norm": 5.180901473326488
+              },
+              {
+                "step": 4000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99273681640625,
+                "holdout_auc": 0.9994950890541077,
+                "weight_norm": 6.585149589447239
+              },
+              {
+                "step": 4250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99267578125,
+                "holdout_auc": 0.9994800686836243,
+                "weight_norm": 7.15837395093657
+              },
+              {
+                "step": 4500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9932861328125,
+                "holdout_auc": 0.999507486820221,
+                "weight_norm": 7.017851402923452
+              },
+              {
+                "step": 4750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99346923828125,
+                "holdout_auc": 0.9995149374008179,
+                "weight_norm": 6.3498535377508345
+              },
+              {
+                "step": 5000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.993408203125,
+                "holdout_auc": 0.9995942115783691,
+                "weight_norm": 5.961036666160006
+              },
+              {
+                "step": 5250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9896240234375,
+                "holdout_auc": 0.9996727108955383,
+                "weight_norm": 5.6919786916838016
+              },
+              {
+                "step": 5500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99420166015625,
+                "holdout_auc": 0.9997737407684326,
+                "weight_norm": 5.636679076080849
+              },
+              {
+                "step": 5750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9967041015625,
+                "holdout_auc": 0.9998919367790222,
+                "weight_norm": 5.537962971113258
+              },
+              {
+                "step": 6000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99725341796875,
+                "holdout_auc": 0.9999735355377197,
+                "weight_norm": 5.458188029663416
+              },
+              {
+                "step": 6250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99847412109375,
+                "holdout_auc": 0.9999936819076538,
+                "weight_norm": 5.403097513140689
+              },
+              {
+                "step": 6500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.988037109375,
+                "holdout_auc": 0.9991471767425537,
+                "weight_norm": 6.451572192585841
+              },
+              {
+                "step": 6750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99267578125,
+                "holdout_auc": 0.9993852972984314,
+                "weight_norm": 6.135468692641242
+              },
+              {
+                "step": 7000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99237060546875,
+                "holdout_auc": 0.999475359916687,
+                "weight_norm": 5.582479791403695
+              },
+              {
+                "step": 7250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9913330078125,
+                "holdout_auc": 0.9996969699859619,
+                "weight_norm": 5.61456940840402
+              },
+              {
+                "step": 7500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.991943359375,
+                "holdout_auc": 0.9998195171356201,
+                "weight_norm": 5.507634572102723
+              },
+              {
+                "step": 7750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9912109375,
+                "holdout_auc": 0.9999184012413025,
+                "weight_norm": 5.471848731566247
+              },
+              {
+                "step": 8000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99420166015625,
+                "holdout_auc": 0.9999580979347229,
+                "weight_norm": 5.436883442770077
+              },
+              {
+                "step": 8250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99755859375,
+                "holdout_auc": 0.999997615814209,
+                "weight_norm": 5.399524827972339
+              },
+              {
+                "step": 8500,
+                "train_acc": 0.9998779296875,
+                "holdout_acc": 0.9866943359375,
+                "holdout_auc": 0.9988412857055664,
+                "weight_norm": 6.2869992571451805
+              },
+              {
+                "step": 8750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.990234375,
+                "holdout_auc": 0.9994139671325684,
+                "weight_norm": 5.321704050761616
+              },
+              {
+                "step": 9000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9903564453125,
+                "holdout_auc": 0.9996508359909058,
+                "weight_norm": 5.311519860064102
+              },
+              {
+                "step": 9250,
+                "train_acc": 1.0,
+                "holdout_acc": 0.992431640625,
+                "holdout_auc": 0.999778151512146,
+                "weight_norm": 5.471426380770284
+              },
+              {
+                "step": 9500,
+                "train_acc": 1.0,
+                "holdout_acc": 0.9931640625,
+                "holdout_auc": 0.9998970031738281,
+                "weight_norm": 5.489839946593938
+              },
+              {
+                "step": 9750,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99359130859375,
+                "holdout_auc": 0.9999359250068665,
+                "weight_norm": 5.514726266278638
+              },
+              {
+                "step": 10000,
+                "train_acc": 1.0,
+                "holdout_acc": 0.99755859375,
+                "holdout_auc": 0.9999805092811584,
+                "weight_norm": 5.4689583294209765
+              }
+            ]
+          },
+          "retest": null
+        }
+      }
+    }
+  },
+  "comparisons": {
+    "track_a": {},
+    "track_b": {
+      "4": {
+        "0.1": {
+          "delta_auc_vs_ctrl1": -0.0982009768486023,
+          "delta_auc_vs_ctrl2": -0.09816312789916992,
+          "z_vs_ctrl1": -40.23699240589607,
+          "z_vs_ctrl2": -40.21778880999385,
+          "z_vs_ctrl_min": -40.23699240589607,
+          "ctrl_star": "CTRL_RAND_1",
+          "t_grok_real": 250,
+          "t_grok_ctrl_min": 250,
+          "delta_t_grok": 0
+        },
+        "0.5": {
+          "delta_auc_vs_ctrl1": -0.09350031614303589,
+          "delta_auc_vs_ctrl2": -0.09354627132415771,
+          "z_vs_ctrl1": -48.65484747979756,
+          "z_vs_ctrl2": -48.68104759402124,
+          "z_vs_ctrl_min": -48.68104759402124,
+          "ctrl_star": "CTRL_RAND_2",
+          "t_grok_real": 250,
+          "t_grok_ctrl_min": 250,
+          "delta_t_grok": 0
+        },
+        "1.0": {
+          "delta_auc_vs_ctrl1": -0.09121334552764893,
+          "delta_auc_vs_ctrl2": -0.09060072898864746,
+          "z_vs_ctrl1": -40.95660129891836,
+          "z_vs_ctrl2": -40.60869417929661,
+          "z_vs_ctrl_min": -40.95660129891836,
+          "ctrl_star": "CTRL_RAND_1",
+          "t_grok_real": 250,
+          "t_grok_ctrl_min": 250,
+          "delta_t_grok": 0
+        },
+        "2.0": {
+          "delta_auc_vs_ctrl1": -0.08991086483001709,
+          "delta_auc_vs_ctrl2": -0.09021186828613281,
+          "z_vs_ctrl1": -49.771896091666136,
+          "z_vs_ctrl2": -49.981093717164015,
+          "z_vs_ctrl_min": -49.981093717164015,
+          "ctrl_star": "CTRL_RAND_2",
+          "t_grok_real": 250,
+          "t_grok_ctrl_min": 250,
+          "delta_t_grok": 0
+        }
+      }
+    }
+  },
+  "zero_param_baselines": {
+    "track_a": {},
+    "track_b": {
+      "4": {
+        "REAL_SHA256": {
+          "null_constant": {
+            "acc": 0.5,
+            "auc": 0.5
+          },
+          "zero_param_neg_hamming": {
+            "acc": 0.58184814453125,
+            "auc": 0.6176224946975708
+          },
+          "diff_linear_matched_filter": {
+            "acc": 0.82061767578125,
+            "auc": 0.8984940052032471,
+            "z_null_auc": 88.34442251434731
+          }
+        },
+        "CTRL_RAND_1": {
+          "null_constant": {
+            "acc": 0.5,
+            "auc": 0.5
+          },
+          "zero_param_neg_hamming": {
+            "acc": 0.73486328125,
+            "auc": 0.8698242902755737
+          },
+          "diff_linear_matched_filter": {
+            "acc": 0.9976806640625,
+            "auc": 1.0,
+            "z_null_auc": 110.84786892752415
+          }
+        },
+        "CTRL_RAND_2": {
+          "null_constant": {
+            "acc": 0.5,
+            "auc": 0.5
+          },
+          "zero_param_neg_hamming": {
+            "acc": 0.6904296875,
+            "auc": 0.7882515788078308
+          },
+          "diff_linear_matched_filter": {
+            "acc": 0.9952392578125,
+            "auc": 0.9999966621398926,
+            "z_null_auc": 110.84712893816477
+          }
+        }
+      }
+    }
+  },
+  "dissections": [
+    {
+      "reason": "R4_positive_calibration",
+      "track": "track_b",
+      "rounds": 4,
+      "wd": 2.0,
+      "variant": "REAL_SHA256",
+      "walsh_fourier": {
+        "r2_walsh": 0.5612393116696137,
+        "walsh_surrogate_auc": 0.9283285737037659,
+        "spectral_entropy_532": 7.7657009903426255,
+        "top_k_energy_532": {
+          "8": 0.12224392786569496,
+          "16": 0.212857136680438,
+          "32": 0.3500601174682949
+        },
+        "top16_walsh_terms": [
+          {
+            "term": "MOD_HR5_b5*MOD_HR5_b4",
+            "order": 2,
+            "corr_holdout": 0.40144938230514526
+          },
+          {
+            "term": "MOD_HR5_b0",
+            "order": 1,
+            "corr_holdout": 0.46050363779067993
+          },
+          {
+            "term": "XOR_HR5_b0",
+            "order": 1,
+            "corr_holdout": 0.46050363779067993
+          },
+          {
+            "term": "MOD_HR5_b3*MOD_HR5_b5",
+            "order": 2,
+            "corr_holdout": 0.37857142090797424
+          },
+          {
+            "term": "MOD_HR5_b3*MOD_HR5_b4",
+            "order": 2,
+            "corr_holdout": 0.3890739381313324
+          },
+          {
+            "term": "XOR_HR5_b5*XOR_HR5_b4",
+            "order": 2,
+            "corr_holdout": 0.34826770424842834
+          },
+          {
+            "term": "XOR_HR5_b24",
+            "order": 1,
+            "corr_holdout": 0.3813956379890442
+          },
+          {
+            "term": "XOR_HR5_b0*XOR_HR5_b5",
+            "order": 2,
+            "corr_holdout": 0.36787232756614685
+          },
+          {
+            "term": "MOD_HR5_b0*XOR_HR5_b5",
+            "order": 2,
+            "corr_holdout": 0.36787232756614685
+          },
+          {
+            "term": "XOR_HR5_b24*XOR_HR5_b23",
+            "order": 2,
+            "corr_holdout": 0.307664692401886
+          },
+          {
+            "term": "XOR_HR5_b5",
+            "order": 1,
+            "corr_holdout": 0.3887144923210144
+          },
+          {
+            "term": "XOR_HR5_b19*XOR_HR5_b18",
+            "order": 2,
+            "corr_holdout": -0.32176852226257324
+          },
+          {
+            "term": "XOR_HR5_b19",
+            "order": 1,
+            "corr_holdout": -0.373149573802948
+          },
+          {
+            "term": "XOR_HR5_b13*XOR_HR5_b12",
+            "order": 2,
+            "corr_holdout": -0.26332545280456543
+          },
+          {
+            "term": "MOD_HR5_b0*XOR_HR5_b19",
+            "order": 2,
+            "corr_holdout": -0.3454855978488922
+          },
+          {
+            "term": "XOR_HR5_b0*XOR_HR5_b19",
+            "order": 2,
+            "corr_holdout": -0.3454855978488922
+          }
+        ]
+      },
+      "sae": {
+        "r2_sae": 0.9987501528344582,
+        "l0_mean": 101.3909912109375,
+        "dead_frac": 0.0364583358168602,
+        "top8_features": [
+          {
+            "feature_idx": 13,
+            "corr_to_target": 0.6805897355079651,
+            "act_freq": 0.4813232421875,
+            "mean_act": 0.21895992755889893
+          },
+          {
+            "feature_idx": 229,
+            "corr_to_target": -0.6634835004806519,
+            "act_freq": 0.52972412109375,
+            "mean_act": 0.3371323347091675
+          },
+          {
+            "feature_idx": 323,
+            "corr_to_target": 0.6346402168273926,
+            "act_freq": 0.4105224609375,
+            "mean_act": 0.06543617695569992
+          },
+          {
+            "feature_idx": 92,
+            "corr_to_target": 0.5695653557777405,
+            "act_freq": 0.42852783203125,
+            "mean_act": 0.008223036304116249
+          },
+          {
+            "feature_idx": 215,
+            "corr_to_target": 0.5563592314720154,
+            "act_freq": 0.469970703125,
+            "mean_act": 0.009528536349534988
+          },
+          {
+            "feature_idx": 677,
+            "corr_to_target": -0.5177305340766907,
+            "act_freq": 0.43988037109375,
+            "mean_act": 0.024487027898430824
+          },
+          {
+            "feature_idx": 695,
+            "corr_to_target": 0.48742711544036865,
+            "act_freq": 0.43011474609375,
+            "mean_act": 0.006047582253813744
+          },
+          {
+            "feature_idx": 55,
+            "corr_to_target": -0.4380350708961487,
+            "act_freq": 0.35711669921875,
+            "mean_act": 0.005976702086627483
+          }
+        ],
+        "auc_orig": 0.9097686409950256,
+        "auc_sae_recon": 0.9097949862480164,
+        "auc_ablated": 0.893480658531189,
+        "causal_delta_auc_ablate": 0.016314327716827393,
+        "causal_delta_auc_vs_orig": 0.01628798246383667,
+        "acc_orig": 0.828369140625,
+        "acc_sae_recon": 0.82965087890625,
+        "acc_ablated": 0.5,
+        "causal_delta_acc_ablate": 0.32965087890625
+      }
+    },
+    {
+      "reason": "R4_positive_calibration",
+      "track": "track_b",
+      "rounds": 4,
+      "wd": 1.0,
+      "variant": "CTRL_RAND_1",
+      "walsh_fourier": {
+        "r2_walsh": 0.8595968425216943,
+        "walsh_surrogate_auc": 0.9998779296875,
+        "spectral_entropy_532": 8.333779531626494,
+        "top_k_energy_532": {
+          "8": 0.026797207241037988,
+          "16": 0.05334132013665856,
+          "32": 0.10571862567876882
+        },
+        "top16_walsh_terms": [
+          {
+            "term": "MOD_HR5_b5*XOR_HR4_b4",
+            "order": 2,
+            "corr_holdout": -0.501879096031189
+          },
+          {
+            "term": "MOD_HR5_b2*XOR_HR5_b7",
+            "order": 2,
+            "corr_holdout": 0.49097880721092224
+          },
+          {
+            "term": "MOD_HR5_b13",
+            "order": 1,
+            "corr_holdout": -0.5031557083129883
+          },
+          {
+            "term": "XOR_HR4_b2*MOD_HR5_b6",
+            "order": 2,
+            "corr_holdout": 0.4945864975452423
+          },
+          {
+            "term": "XOR_HR5_b0*XOR_HR5_b3",
+            "order": 2,
+            "corr_holdout": 0.49541428685188293
+          },
+          {
+            "term": "MOD_HR5_b0*XOR_HR5_b3",
+            "order": 2,
+            "corr_holdout": 0.49541428685188293
+          },
+          {
+            "term": "XOR_HR5_b8*MOD_HR5_b6",
+            "order": 2,
+            "corr_holdout": 0.49756482243537903
+          },
+          {
+            "term": "XOR_HR4_b2*MOD_HR5_b9",
+            "order": 2,
+            "corr_holdout": 0.4965703785419464
+          },
+          {
+            "term": "MOD_HR5_b0*MOD_HR5_b4",
+            "order": 2,
+            "corr_holdout": 0.497237890958786
+          },
+          {
+            "term": "XOR_HR5_b0*MOD_HR5_b4",
+            "order": 2,
+            "corr_holdout": 0.497237890958786
+          },
+          {
+            "term": "MOD_HR5_b8*XOR_HR5_b0",
+            "order": 2,
+            "corr_holdout": 0.4953972399234772
+          },
+          {
+            "term": "MOD_HR5_b8*MOD_HR5_b0",
+            "order": 2,
+            "corr_holdout": 0.4953972399234772
+          },
+          {
+            "term": "XOR_HR4_b2*XOR_HR5_b11",
+            "order": 2,
+            "corr_holdout": 0.4960508942604065
+          },
+          {
+            "term": "MOD_HR4_b2*XOR_HR5_b12",
+            "order": 2,
+            "corr_holdout": 0.49617519974708557
+          },
+          {
+            "term": "XOR_HR5_b1*MOD_HR5_b11",
+            "order": 2,
+            "corr_holdout": 0.5072318315505981
+          },
+          {
+            "term": "MOD_HR5_b8",
+            "order": 1,
+            "corr_holdout": 0.49496394395828247
+          }
+        ]
+      },
+      "sae": {
+        "r2_sae": 0.9995576729637404,
+        "l0_mean": 8.1693115234375,
+        "dead_frac": 0.7669271230697632,
+        "top8_features": [
+          {
+            "feature_idx": 309,
+            "corr_to_target": 0.9983847141265869,
+            "act_freq": 0.5029296875,
+            "mean_act": 0.11858674138784409
+          },
+          {
+            "feature_idx": 430,
+            "corr_to_target": 0.9978277683258057,
+            "act_freq": 0.50439453125,
+            "mean_act": 0.0639822781085968
+          },
+          {
+            "feature_idx": 343,
+            "corr_to_target": -0.9884650111198425,
+            "act_freq": 0.49871826171875,
+            "mean_act": 0.17409905791282654
+          },
+          {
+            "feature_idx": 264,
+            "corr_to_target": -0.9861283898353577,
+            "act_freq": 0.49737548828125,
+            "mean_act": 0.046127475798130035
+          },
+          {
+            "feature_idx": 734,
+            "corr_to_target": -0.9459032416343689,
+            "act_freq": 0.4920654296875,
+            "mean_act": 0.0287766270339489
+          },
+          {
+            "feature_idx": 270,
+            "corr_to_target": -0.9267654418945312,
+            "act_freq": 0.48828125,
+            "mean_act": 0.02139037288725376
+          },
+          {
+            "feature_idx": 691,
+            "corr_to_target": -0.822100043296814,
+            "act_freq": 0.46185302734375,
+            "mean_act": 0.0061233690939843655
+          },
+          {
+            "feature_idx": 200,
+            "corr_to_target": -0.693114161491394,
+            "act_freq": 0.51312255859375,
+            "mean_act": 0.009688972495496273
+          }
+        ],
+        "auc_orig": 0.9999992251396179,
+        "auc_sae_recon": 0.9999973177909851,
+        "auc_ablated": 0.9959942102432251,
+        "causal_delta_auc_ablate": 0.00400310754776001,
+        "causal_delta_auc_vs_orig": 0.004005014896392822,
+        "acc_orig": 0.99688720703125,
+        "acc_sae_recon": 0.99658203125,
+        "acc_ablated": 0.5,
+        "causal_delta_acc_ablate": 0.49658203125
+      }
+    }
+  ]
+}

@@ -1,0 +1,2530 @@
+{
+  "diagnostic": "domain_gap_readonly",
+  "fp32_check": {
+    "cuda_available": true,
+    "allow_tf32_matmul": false,
+    "allow_tf32_cudnn": false,
+    "fp32_locked": true
+  },
+  "device": "cuda",
+  "n_crystals": 8,
+  "seed": 20261124,
+  "fast_mode": false,
+  "elapsed_sec": 21.506,
+  "models": {
+    "best_m3v2": {
+      "label": "best_m3v2",
+      "ckpt_path": "v10_ouroboros64/runs/a100_m3v2/checkpoints/best_m3v2.pt",
+      "step": 200,
+      "input_proj_norms": {
+        "weight_shape": [
+          160,
+          104
+        ],
+        "overall_col_l2_mean": 0.780567,
+        "coarse_groups": {
+          "bipolar_[0..26]": {
+            "dims": 27,
+            "l2_mean": 0.622551,
+            "l2_std": 0.041201,
+            "l2_max": 0.69411,
+            "l2_min": 0.551131
+          },
+          "unk_[27..45]": {
+            "dims": 19,
+            "l2_mean": 0.740493,
+            "l2_std": 0.026207,
+            "l2_max": 0.779382,
+            "l2_min": 0.677454
+          },
+          "delta_[46..72]": {
+            "dims": 27,
+            "l2_mean": 1.061099,
+            "l2_std": 0.119567,
+            "l2_max": 1.250578,
+            "l2_min": 0.811031
+          },
+          "conf_W_[73]": {
+            "dims": 1,
+            "l2_mean": 0.686327,
+            "l2_std": 0.0,
+            "l2_max": 0.686327,
+            "l2_min": 0.686327
+          },
+          "conf_SC_[74..91]": {
+            "dims": 18,
+            "l2_mean": 0.721507,
+            "l2_std": 0.019013,
+            "l2_max": 0.754124,
+            "l2_min": 0.687859
+          },
+          "k_pos_[92..103]": {
+            "dims": 12,
+            "l2_mean": 0.664795,
+            "l2_std": 0.064473,
+            "l2_max": 0.775882,
+            "l2_min": 0.569268
+          }
+        },
+        "fine_groups": {
+          "w_bip_[0]": {
+            "dims": 1,
+            "l2_mean": 0.556151,
+            "l2_std": 0.0,
+            "l2_max": 0.556151,
+            "l2_min": 0.556151
+          },
+          "s_cur_bip_[1..8]": {
+            "dims": 8,
+            "l2_mean": 0.595464,
+            "l2_std": 0.0276,
+            "l2_max": 0.63088,
+            "l2_min": 0.551131
+          },
+          "s_next_bip_[9..16]": {
+            "dims": 8,
+            "l2_mean": 0.607536,
+            "l2_std": 0.029141,
+            "l2_max": 0.644387,
+            "l2_min": 0.557824
+          },
+          "c_bip_[17..26]": {
+            "dims": 10,
+            "l2_mean": 0.662874,
+            "l2_std": 0.021456,
+            "l2_max": 0.69411,
+            "l2_min": 0.623932
+          },
+          "unk_[27..45]": {
+            "dims": 19,
+            "l2_mean": 0.740493,
+            "l2_std": 0.026207,
+            "l2_max": 0.779382,
+            "l2_min": 0.677454
+          },
+          "dw_[46]": {
+            "dims": 1,
+            "l2_mean": 1.250578,
+            "l2_std": 0.0,
+            "l2_max": 1.250578,
+            "l2_min": 1.250578
+          },
+          "ds_in_[47..54]": {
+            "dims": 8,
+            "l2_mean": 0.959694,
+            "l2_std": 0.106896,
+            "l2_max": 1.181694,
+            "l2_min": 0.811031
+          },
+          "ds_out_[55..62]": {
+            "dims": 8,
+            "l2_mean": 1.037574,
+            "l2_std": 0.051209,
+            "l2_max": 1.084152,
+            "l2_min": 0.934398
+          },
+          "dc_[63..72]": {
+            "dims": 10,
+            "l2_mean": 1.142095,
+            "l2_std": 0.092416,
+            "l2_max": 1.24901,
+            "l2_min": 0.900238
+          },
+          "conf_W_[73]": {
+            "dims": 1,
+            "l2_mean": 0.686327,
+            "l2_std": 0.0,
+            "l2_max": 0.686327,
+            "l2_min": 0.686327
+          },
+          "conf_SC_[74..91]": {
+            "dims": 18,
+            "l2_mean": 0.721507,
+            "l2_std": 0.019013,
+            "l2_max": 0.754124,
+            "l2_min": 0.687859
+          },
+          "k_feat_[92]": {
+            "dims": 1,
+            "l2_mean": 0.635237,
+            "l2_std": 0.0,
+            "l2_max": 0.635237,
+            "l2_min": 0.635237
+          },
+          "pos_feat_[93..103]": {
+            "dims": 11,
+            "l2_mean": 0.667483,
+            "l2_std": 0.066693,
+            "l2_max": 0.775882,
+            "l2_min": 0.569268
+          }
+        }
+      },
+      "phase_and_collapse": {
+        "domain_A_R64_cluster_all_W0_15": {
+          "n_unknown_w_bits": 4096,
+          "entropy_bits_mean": 0.960946,
+          "bce_loss_mean": 0.720524,
+          "ln2_baseline": 0.693147,
+          "confidence_abs_p_minus_05_mean": 0.11169,
+          "confidence_abs_p_minus_05_p90": 0.147288,
+          "confidence_abs_p_minus_05_max": 0.191339,
+          "frac_abs_logit_ge_008": 0.991943,
+          "phase_accuracy": 0.501221,
+          "collapse_score_mean": 3.494287,
+          "collapse_score_std": 0.681521,
+          "collapse_near_w0_3_mean": 3.701993,
+          "collapse_far_w4_15_mean": 3.425052,
+          "collapse_near_to_far_ratio": 1.0809
+        },
+        "domain_B_R24_32b": {
+          "n_unknown_w_bits": 256,
+          "entropy_bits_mean": 0.964365,
+          "bce_loss_mean": 0.727263,
+          "ln2_baseline": 0.693147,
+          "confidence_abs_p_minus_05_mean": 0.110635,
+          "confidence_abs_p_minus_05_p90": 0.114489,
+          "confidence_abs_p_minus_05_max": 0.116218,
+          "frac_abs_logit_ge_008": 1.0,
+          "phase_accuracy": 0.480469,
+          "collapse_score_mean": 0.487842,
+          "collapse_score_std": 0.021047,
+          "collapse_near_w0_3_mean": null,
+          "collapse_far_w4_15_mean": 0.487842,
+          "collapse_near_to_far_ratio": null
+        },
+        "domain_B_R24_40b": {
+          "n_unknown_w_bits": 320,
+          "entropy_bits_mean": 0.964456,
+          "bce_loss_mean": 0.713868,
+          "ln2_baseline": 0.693147,
+          "confidence_abs_p_minus_05_mean": 0.110498,
+          "confidence_abs_p_minus_05_p90": 0.113953,
+          "confidence_abs_p_minus_05_max": 0.116356,
+          "frac_abs_logit_ge_008": 1.0,
+          "phase_accuracy": 0.509375,
+          "collapse_score_mean": 0.4867,
+          "collapse_score_std": 0.019332,
+          "collapse_near_w0_3_mean": null,
+          "collapse_far_w4_15_mean": 0.4867,
+          "collapse_near_to_far_ratio": null,
+          "cadical_lookahead_probe_n": 64,
+          "collapse_vs_cadical_lookahead_pearson": -0.007962,
+          "cadical_lookahead_target_mean": 0.933047
+        },
+        "domain_B_R25_24b": {
+          "n_unknown_w_bits": 192,
+          "entropy_bits_mean": 0.964728,
+          "bce_loss_mean": 0.706473,
+          "ln2_baseline": 0.693147,
+          "confidence_abs_p_minus_05_mean": 0.110078,
+          "confidence_abs_p_minus_05_p90": 0.113442,
+          "confidence_abs_p_minus_05_max": 0.117146,
+          "frac_abs_logit_ge_008": 1.0,
+          "phase_accuracy": 0.526042,
+          "collapse_score_mean": 0.480621,
+          "collapse_score_std": 0.011753,
+          "collapse_near_w0_3_mean": null,
+          "collapse_far_w4_15_mean": 0.480621,
+          "collapse_near_to_far_ratio": null,
+          "cadical_lookahead_probe_n": 64,
+          "collapse_vs_cadical_lookahead_pearson": 0.287733,
+          "cadical_lookahead_target_mean": 1.599798
+        },
+        "domain_B_R64_512b": {
+          "n_unknown_w_bits": 4096,
+          "entropy_bits_mean": 0.962986,
+          "bce_loss_mean": 0.717719,
+          "ln2_baseline": 0.693147,
+          "confidence_abs_p_minus_05_mean": 0.112622,
+          "confidence_abs_p_minus_05_p90": 0.118778,
+          "confidence_abs_p_minus_05_max": 0.142396,
+          "frac_abs_logit_ge_008": 1.0,
+          "phase_accuracy": 0.503662,
+          "collapse_score_mean": 0.528835,
+          "collapse_score_std": 0.050122,
+          "collapse_near_w0_3_mean": 0.55821,
+          "collapse_far_w4_15_mean": 0.519043,
+          "collapse_near_to_far_ratio": 1.0755
+        }
+      },
+      "pair_entanglement_vs_copy_dummy": {
+        "domain_A_R64_medium": {
+          "active_pair_count": 142080,
+          "pair_joint_nll": 0.016405,
+          "pair_rank1_marginal_nll": 0.017267,
+          "nll_gain_over_rank1": 0.000861,
+          "non_rank1_mutual_info_kl": 0.00242,
+          "overall_model_pair_acc": 0.997304,
+          "overall_copy_cd_dummy_acc": 0.998255,
+          "model_vs_copy_agreement": 0.998093,
+          "uncorrupted_pairs": {
+            "count": 141832,
+            "frac_of_active": 0.998255,
+            "model_acc": 0.998576,
+            "copy_cd_acc": 1.0
+          },
+          "corrupted_flipped_pairs": {
+            "count": 248,
+            "frac_of_active": 0.001745,
+            "model_acc": 0.270161,
+            "copy_cd_acc": 0.0
+          }
+        },
+        "domain_A_R64_cluster": {
+          "active_pair_count": 142080,
+          "pair_joint_nll": 0.01687,
+          "pair_rank1_marginal_nll": 0.018192,
+          "nll_gain_over_rank1": 0.001322,
+          "non_rank1_mutual_info_kl": 0.002969,
+          "overall_model_pair_acc": 0.997241,
+          "overall_copy_cd_dummy_acc": 0.998895,
+          "model_vs_copy_agreement": 0.997508,
+          "uncorrupted_pairs": {
+            "count": 141923,
+            "frac_of_active": 0.998895,
+            "model_acc": 0.997971,
+            "copy_cd_acc": 1.0
+          },
+          "corrupted_flipped_pairs": {
+            "count": 157,
+            "frac_of_active": 0.001105,
+            "model_acc": 0.33758,
+            "copy_cd_acc": 0.0
+          }
+        },
+        "domain_B_R64_512b_blind": {
+          "active_pair_count": 142080,
+          "pair_joint_nll": 3.638096,
+          "pair_joint_acc": 0.381363,
+          "uniform_4state_baseline_acc": 0.25
+        }
+      },
+      "channel_activation_104d": {
+        "domain_A_R64_cluster": {
+          "shape": [
+            8,
+            64,
+            32,
+            104
+          ],
+          "channels": {
+            "w_bip_[0]": {
+              "nonzero_ratio": 1.0,
+              "mean": 0.000244,
+              "std": 1.0
+            },
+            "s_cur_bip_[1..8]": {
+              "nonzero_ratio": 1.0,
+              "mean": 0.013916,
+              "std": 0.999903
+            },
+            "s_next_bip_[9..16]": {
+              "nonzero_ratio": 1.0,
+              "mean": 0.012772,
+              "std": 0.999918
+            },
+            "c_bip_[17..26]": {
+              "nonzero_ratio": 1.0,
+              "mean": -0.129419,
+              "std": 0.99159
+            },
+            "unk_[27..45]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "dw_[46]": {
+              "nonzero_ratio": 0.014221,
+              "mean": 0.014221,
+              "std": 0.118402
+            },
+            "ds_in_[47..54]": {
+              "nonzero_ratio": 0.00457,
+              "mean": 0.00457,
+              "std": 0.067447
+            },
+            "ds_out_[55..62]": {
+              "nonzero_ratio": 0.004608,
+              "mean": 0.004608,
+              "std": 0.067727
+            },
+            "dc_[63..72]": {
+              "nonzero_ratio": 0.005298,
+              "mean": 0.005298,
+              "std": 0.072593
+            },
+            "conf_W_[73]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_SC_[74..91]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "k_feat_[92]": {
+              "nonzero_ratio": 1.0,
+              "mean": -0.030273,
+              "std": 0.999542
+            },
+            "pos_feat_[93..103]": {
+              "nonzero_ratio": 0.806818,
+              "mean": 0.139205,
+              "std": 0.589974
+            }
+          },
+          "site_defect_signal_nonzero_ratio": 0.059949,
+          "site_defect_signal_mean": 0.010991
+        },
+        "domain_A_R64_medium": {
+          "shape": [
+            8,
+            64,
+            32,
+            104
+          ],
+          "channels": {
+            "w_bip_[0]": {
+              "nonzero_ratio": 1.0,
+              "mean": -0.000244,
+              "std": 1.0
+            },
+            "s_cur_bip_[1..8]": {
+              "nonzero_ratio": 1.0,
+              "mean": 0.013824,
+              "std": 0.999904
+            },
+            "s_next_bip_[9..16]": {
+              "nonzero_ratio": 1.0,
+              "mean": 0.01268,
+              "std": 0.99992
+            },
+            "c_bip_[17..26]": {
+              "nonzero_ratio": 1.0,
+              "mean": -0.129272,
+              "std": 0.991609
+            },
+            "unk_[27..45]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "dw_[46]": {
+              "nonzero_ratio": 0.006348,
+              "mean": 0.006348,
+              "std": 0.079419
+            },
+            "ds_in_[47..54]": {
+              "nonzero_ratio": 0.005112,
+              "mean": 0.005112,
+              "std": 0.071313
+            },
+            "ds_out_[55..62]": {
+              "nonzero_ratio": 0.00515,
+              "mean": 0.00515,
+              "std": 0.071577
+            },
+            "dc_[63..72]": {
+              "nonzero_ratio": 0.004572,
+              "mean": 0.004572,
+              "std": 0.067458
+            },
+            "conf_W_[73]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_SC_[74..91]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "k_feat_[92]": {
+              "nonzero_ratio": 1.0,
+              "mean": -0.030273,
+              "std": 0.999542
+            },
+            "pos_feat_[93..103]": {
+              "nonzero_ratio": 0.806818,
+              "mean": 0.139205,
+              "std": 0.589974
+            }
+          },
+          "site_defect_signal_nonzero_ratio": 0.052917,
+          "site_defect_signal_mean": 0.008141
+        },
+        "domain_B_R24_40b_arx_blind": {
+          "shape": [
+            8,
+            24,
+            32,
+            104
+          ],
+          "channels": {
+            "w_bip_[0]": {
+              "nonzero_ratio": 0.627279,
+              "mean": -0.000651,
+              "std": 0.792009
+            },
+            "s_cur_bip_[1..8]": {
+              "nonzero_ratio": 0.86613,
+              "mean": -0.005981,
+              "std": 0.930642
+            },
+            "s_next_bip_[9..16]": {
+              "nonzero_ratio": 0.86613,
+              "mean": -0.007894,
+              "std": 0.930627
+            },
+            "c_bip_[17..26]": {
+              "nonzero_ratio": 0.723942,
+              "mean": -0.248324,
+              "std": 0.813804
+            },
+            "unk_[27..45]": {
+              "nonzero_ratio": 0.221277,
+              "mean": 0.221277,
+              "std": 0.415107
+            },
+            "dw_[46]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_in_[47..54]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_out_[55..62]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "dc_[63..72]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_W_[73]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_SC_[74..91]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "k_feat_[92]": {
+              "nonzero_ratio": 1.0,
+              "mean": 0.002604,
+              "std": 0.999997
+            },
+            "pos_feat_[93..103]": {
+              "nonzero_ratio": 0.806818,
+              "mean": 0.143939,
+              "std": 0.593549
+            }
+          },
+          "site_defect_signal_nonzero_ratio": 0.0,
+          "site_defect_signal_mean": 0.0
+        },
+        "domain_B_R24_40b_dyn_ep1_zero_heat": {
+          "shape": [
+            8,
+            24,
+            32,
+            104
+          ],
+          "channels": {
+            "w_bip_[0]": {
+              "nonzero_ratio": 0.614583,
+              "mean": 0.0,
+              "std": 0.783954
+            },
+            "s_cur_bip_[1..8]": {
+              "nonzero_ratio": 0.041667,
+              "mean": 0.002604,
+              "std": 0.204108
+            },
+            "s_next_bip_[9..16]": {
+              "nonzero_ratio": 0.041667,
+              "mean": 0.000692,
+              "std": 0.204123
+            },
+            "c_bip_[17..26]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "unk_[27..45]": {
+              "nonzero_ratio": 0.95011,
+              "mean": 0.95011,
+              "std": 0.217718
+            },
+            "dw_[46]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_in_[47..54]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_out_[55..62]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "dc_[63..72]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_W_[73]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_SC_[74..91]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "k_feat_[92]": {
+              "nonzero_ratio": 1.0,
+              "mean": 0.002604,
+              "std": 0.999997
+            },
+            "pos_feat_[93..103]": {
+              "nonzero_ratio": 0.806818,
+              "mean": 0.143939,
+              "std": 0.593549
+            }
+          },
+          "site_defect_signal_nonzero_ratio": 0.0,
+          "site_defect_signal_mean": 0.0
+        },
+        "domain_B_R24_40b_dyn_ep2_stamped_heat": {
+          "shape": [
+            8,
+            24,
+            32,
+            104
+          ],
+          "channels": {
+            "w_bip_[0]": {
+              "nonzero_ratio": 0.614583,
+              "mean": 0.0,
+              "std": 0.783954
+            },
+            "s_cur_bip_[1..8]": {
+              "nonzero_ratio": 0.041667,
+              "mean": 0.002604,
+              "std": 0.204108
+            },
+            "s_next_bip_[9..16]": {
+              "nonzero_ratio": 0.041667,
+              "mean": 0.000692,
+              "std": 0.204123
+            },
+            "c_bip_[17..26]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "unk_[27..45]": {
+              "nonzero_ratio": 0.95011,
+              "mean": 0.95011,
+              "std": 0.217718
+            },
+            "dw_[46]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_in_[47..54]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_out_[55..62]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "dc_[63..72]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_W_[73]": {
+              "nonzero_ratio": 0.011719,
+              "mean": 0.010376,
+              "std": 0.098072
+            },
+            "conf_SC_[74..91]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "k_feat_[92]": {
+              "nonzero_ratio": 1.0,
+              "mean": 0.002604,
+              "std": 0.999997
+            },
+            "pos_feat_[93..103]": {
+              "nonzero_ratio": 0.806818,
+              "mean": 0.143939,
+              "std": 0.593549
+            }
+          },
+          "site_defect_signal_nonzero_ratio": 0.0,
+          "site_defect_signal_mean": 0.0
+        },
+        "domain_B_R25_24b_arx_blind": {
+          "shape": [
+            8,
+            25,
+            32,
+            104
+          ],
+          "channels": {
+            "w_bip_[0]": {
+              "nonzero_ratio": 0.743437,
+              "mean": 0.00625,
+              "std": 0.862206
+            },
+            "s_cur_bip_[1..8]": {
+              "nonzero_ratio": 0.853984,
+              "mean": 0.003516,
+              "std": 0.924106
+            },
+            "s_next_bip_[9..16]": {
+              "nonzero_ratio": 0.853984,
+              "mean": 0.001523,
+              "std": 0.924111
+            },
+            "c_bip_[17..26]": {
+              "nonzero_ratio": 0.759203,
+              "mean": -0.233328,
+              "std": 0.8395
+            },
+            "unk_[27..45]": {
+              "nonzero_ratio": 0.201719,
+              "mean": 0.201719,
+              "std": 0.401283
+            },
+            "dw_[46]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_in_[47..54]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_out_[55..62]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "dc_[63..72]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_W_[73]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_SC_[74..91]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "k_feat_[92]": {
+              "nonzero_ratio": 1.0,
+              "mean": -0.0025,
+              "std": 0.999997
+            },
+            "pos_feat_[93..103]": {
+              "nonzero_ratio": 0.806818,
+              "mean": 0.143636,
+              "std": 0.59332
+            }
+          },
+          "site_defect_signal_nonzero_ratio": 0.0,
+          "site_defect_signal_mean": 0.0
+        },
+        "domain_B_R25_24b_dyn_ep1_zero_heat": {
+          "shape": [
+            8,
+            25,
+            32,
+            104
+          ],
+          "channels": {
+            "w_bip_[0]": {
+              "nonzero_ratio": 0.61,
+              "mean": 0.010625,
+              "std": 0.780953
+            },
+            "s_cur_bip_[1..8]": {
+              "nonzero_ratio": 0.04,
+              "mean": 0.0025,
+              "std": 0.199984
+            },
+            "s_next_bip_[9..16]": {
+              "nonzero_ratio": 0.04,
+              "mean": 0.000508,
+              "std": 0.199999
+            },
+            "c_bip_[17..26]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "unk_[27..45]": {
+              "nonzero_ratio": 0.951053,
+              "mean": 0.951053,
+              "std": 0.215758
+            },
+            "dw_[46]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_in_[47..54]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_out_[55..62]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "dc_[63..72]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_W_[73]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_SC_[74..91]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "k_feat_[92]": {
+              "nonzero_ratio": 1.0,
+              "mean": -0.0025,
+              "std": 0.999997
+            },
+            "pos_feat_[93..103]": {
+              "nonzero_ratio": 0.806818,
+              "mean": 0.143636,
+              "std": 0.59332
+            }
+          },
+          "site_defect_signal_nonzero_ratio": 0.0,
+          "site_defect_signal_mean": 0.0
+        },
+        "domain_B_R25_24b_dyn_ep2_stamped_heat": {
+          "shape": [
+            8,
+            25,
+            32,
+            104
+          ],
+          "channels": {
+            "w_bip_[0]": {
+              "nonzero_ratio": 0.61,
+              "mean": 0.010625,
+              "std": 0.780953
+            },
+            "s_cur_bip_[1..8]": {
+              "nonzero_ratio": 0.04,
+              "mean": 0.0025,
+              "std": 0.199984
+            },
+            "s_next_bip_[9..16]": {
+              "nonzero_ratio": 0.04,
+              "mean": 0.000508,
+              "std": 0.199999
+            },
+            "c_bip_[17..26]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "unk_[27..45]": {
+              "nonzero_ratio": 0.951053,
+              "mean": 0.951053,
+              "std": 0.215758
+            },
+            "dw_[46]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_in_[47..54]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_out_[55..62]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "dc_[63..72]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_W_[73]": {
+              "nonzero_ratio": 0.0125,
+              "mean": 0.010336,
+              "std": 0.096657
+            },
+            "conf_SC_[74..91]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "k_feat_[92]": {
+              "nonzero_ratio": 1.0,
+              "mean": -0.0025,
+              "std": 0.999997
+            },
+            "pos_feat_[93..103]": {
+              "nonzero_ratio": 0.806818,
+              "mean": 0.143636,
+              "std": 0.59332
+            }
+          },
+          "site_defect_signal_nonzero_ratio": 0.0,
+          "site_defect_signal_mean": 0.0
+        },
+        "domain_B_R64_512b_arx_blind": {
+          "shape": [
+            8,
+            64,
+            32,
+            104
+          ],
+          "channels": {
+            "w_bip_[0]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "s_cur_bip_[1..8]": {
+              "nonzero_ratio": 0.09375,
+              "mean": 0.002914,
+              "std": 0.306172
+            },
+            "s_next_bip_[9..16]": {
+              "nonzero_ratio": 0.09375,
+              "mean": 0.00177,
+              "std": 0.306181
+            },
+            "c_bip_[17..26]": {
+              "nonzero_ratio": 0.135974,
+              "mean": -0.107788,
+              "std": 0.352641
+            },
+            "unk_[27..45]": {
+              "nonzero_ratio": 0.888961,
+              "mean": 0.888961,
+              "std": 0.31418
+            },
+            "dw_[46]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_in_[47..54]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_out_[55..62]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "dc_[63..72]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_W_[73]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_SC_[74..91]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "k_feat_[92]": {
+              "nonzero_ratio": 1.0,
+              "mean": -0.030273,
+              "std": 0.999542
+            },
+            "pos_feat_[93..103]": {
+              "nonzero_ratio": 0.806818,
+              "mean": 0.139205,
+              "std": 0.589974
+            }
+          },
+          "site_defect_signal_nonzero_ratio": 0.0,
+          "site_defect_signal_mean": 0.0
+        },
+        "domain_B_R64_512b_dyn_ep1_zero_heat": {
+          "shape": [
+            8,
+            64,
+            32,
+            104
+          ],
+          "channels": {
+            "w_bip_[0]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "s_cur_bip_[1..8]": {
+              "nonzero_ratio": 0.015625,
+              "mean": 0.000977,
+              "std": 0.124996
+            },
+            "s_next_bip_[9..16]": {
+              "nonzero_ratio": 0.015625,
+              "mean": -0.000168,
+              "std": 0.125
+            },
+            "c_bip_[17..26]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "unk_[27..45]": {
+              "nonzero_ratio": 0.993421,
+              "mean": 0.993421,
+              "std": 0.080843
+            },
+            "dw_[46]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_in_[47..54]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_out_[55..62]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "dc_[63..72]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_W_[73]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_SC_[74..91]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "k_feat_[92]": {
+              "nonzero_ratio": 1.0,
+              "mean": -0.030273,
+              "std": 0.999542
+            },
+            "pos_feat_[93..103]": {
+              "nonzero_ratio": 0.806818,
+              "mean": 0.139205,
+              "std": 0.589974
+            }
+          },
+          "site_defect_signal_nonzero_ratio": 0.0,
+          "site_defect_signal_mean": 0.0
+        },
+        "domain_B_R64_512b_dyn_ep2_stamped_heat": {
+          "shape": [
+            8,
+            64,
+            32,
+            104
+          ],
+          "channels": {
+            "w_bip_[0]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "s_cur_bip_[1..8]": {
+              "nonzero_ratio": 0.015625,
+              "mean": 0.000977,
+              "std": 0.124996
+            },
+            "s_next_bip_[9..16]": {
+              "nonzero_ratio": 0.015625,
+              "mean": -0.000168,
+              "std": 0.125
+            },
+            "c_bip_[17..26]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "unk_[27..45]": {
+              "nonzero_ratio": 0.993421,
+              "mean": 0.993421,
+              "std": 0.080843
+            },
+            "dw_[46]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_in_[47..54]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_out_[55..62]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "dc_[63..72]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_W_[73]": {
+              "nonzero_ratio": 0.004395,
+              "mean": 0.003891,
+              "std": 0.060266
+            },
+            "conf_SC_[74..91]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "k_feat_[92]": {
+              "nonzero_ratio": 1.0,
+              "mean": -0.030273,
+              "std": 0.999542
+            },
+            "pos_feat_[93..103]": {
+              "nonzero_ratio": 0.806818,
+              "mean": 0.139205,
+              "std": 0.589974
+            }
+          },
+          "site_defect_signal_nonzero_ratio": 0.0,
+          "site_defect_signal_mean": 0.0
+        }
+      },
+      "ablation_domain_a_zero_defects": {
+        "zero_defects_false_intact": {
+          "flip_precision": 0.406736,
+          "flip_recall": 0.951515,
+          "flip_f1": 0.569873,
+          "flip_top64_recall": 0.975,
+          "wolff_any_reducing_hit_rate": 1.0,
+          "wolff_best_delta_e_mean": -121.375,
+          "wolff_candidate_reducing_frac": 1.0,
+          "site_defect_signal_nonzero": 0.055301
+        },
+        "zero_defects_true_ablated": {
+          "flip_precision": 0.0,
+          "flip_recall": 0.0,
+          "flip_f1": 0.0,
+          "flip_top64_recall": 0.004167,
+          "wolff_any_reducing_hit_rate": 0.0,
+          "wolff_best_delta_e_mean": 2.875,
+          "wolff_candidate_reducing_frac": 0.0,
+          "site_defect_signal_nonzero": 0.0
+        }
+      },
+      "ablation_stage_b_mask_mismatch": {
+        "stage_b_random_reveal_50pct": {
+          "n_unknown_w_bits": 2098,
+          "entropy_bits_mean": 0.960933,
+          "bce_loss_mean": 0.726916,
+          "ln2_baseline": 0.693147,
+          "confidence_abs_p_minus_05_mean": 0.115064,
+          "confidence_abs_p_minus_05_p90": 0.124317,
+          "confidence_abs_p_minus_05_max": 0.192128,
+          "frac_abs_logit_ge_008": 0.997617,
+          "phase_accuracy": 0.488561,
+          "collapse_score_mean": 0.807795,
+          "collapse_score_std": 0.937077,
+          "collapse_near_w0_3_mean": 1.609899,
+          "collapse_far_w4_15_mean": 0.549525,
+          "collapse_near_to_far_ratio": 2.9296,
+          "regime": "stage_b_random_50pct",
+          "arx_unit_deductions_mean": 2203.88,
+          "collapse_vs_cadical_lookahead_pearson": 0.738188
+        },
+        "stage_b_random_reveal_25pct": {
+          "n_unknown_w_bits": 3052,
+          "entropy_bits_mean": 0.961452,
+          "bce_loss_mean": 0.723698,
+          "ln2_baseline": 0.693147,
+          "confidence_abs_p_minus_05_mean": 0.114336,
+          "confidence_abs_p_minus_05_p90": 0.122551,
+          "confidence_abs_p_minus_05_max": 0.193259,
+          "frac_abs_logit_ge_008": 0.997051,
+          "phase_accuracy": 0.49443,
+          "collapse_score_mean": 0.795783,
+          "collapse_score_std": 0.906896,
+          "collapse_near_w0_3_mean": 1.546238,
+          "collapse_far_w4_15_mean": 0.547377,
+          "collapse_near_to_far_ratio": 2.8248,
+          "regime": "stage_b_random_25pct",
+          "arx_unit_deductions_mean": 2139.88,
+          "collapse_vs_cadical_lookahead_pearson": 0.047349
+        },
+        "stage_b_random_reveal_07pct": {
+          "n_unknown_w_bits": 3810,
+          "entropy_bits_mean": 0.961577,
+          "bce_loss_mean": 0.724519,
+          "ln2_baseline": 0.693147,
+          "confidence_abs_p_minus_05_mean": 0.114189,
+          "confidence_abs_p_minus_05_p90": 0.122496,
+          "confidence_abs_p_minus_05_max": 0.196229,
+          "frac_abs_logit_ge_008": 0.9979,
+          "phase_accuracy": 0.492126,
+          "collapse_score_mean": 0.780311,
+          "collapse_score_std": 0.856451,
+          "collapse_near_w0_3_mean": 1.492891,
+          "collapse_far_w4_15_mean": 0.543615,
+          "collapse_near_to_far_ratio": 2.7462,
+          "regime": "stage_b_random_07pct",
+          "arx_unit_deductions_mean": 2117.0,
+          "collapse_vs_cadical_lookahead_pearson": 0.7073
+        },
+        "eval_end_free_32b": {
+          "n_unknown_w_bits": 255,
+          "entropy_bits_mean": 0.922553,
+          "bce_loss_mean": 0.728846,
+          "ln2_baseline": 0.693147,
+          "confidence_abs_p_minus_05_mean": 0.161531,
+          "confidence_abs_p_minus_05_p90": 0.178078,
+          "confidence_abs_p_minus_05_max": 0.201714,
+          "frac_abs_logit_ge_008": 1.0,
+          "phase_accuracy": 0.529412,
+          "collapse_score_mean": 1.451057,
+          "collapse_score_std": 0.600075,
+          "collapse_near_w0_3_mean": null,
+          "collapse_far_w4_15_mean": 1.451057,
+          "collapse_near_to_far_ratio": null,
+          "regime": "end_free_32b",
+          "arx_unit_deductions_mean": 9791.62,
+          "collapse_vs_cadical_lookahead_pearson": 0.946718
+        },
+        "eval_end_free_40b": {
+          "n_unknown_w_bits": 320,
+          "entropy_bits_mean": 0.942329,
+          "bce_loss_mean": 0.722792,
+          "ln2_baseline": 0.693147,
+          "confidence_abs_p_minus_05_mean": 0.139056,
+          "confidence_abs_p_minus_05_p90": 0.167297,
+          "confidence_abs_p_minus_05_max": 0.187251,
+          "frac_abs_logit_ge_008": 1.0,
+          "phase_accuracy": 0.51875,
+          "collapse_score_mean": 1.124705,
+          "collapse_score_std": 0.797801,
+          "collapse_near_w0_3_mean": null,
+          "collapse_far_w4_15_mean": 1.124705,
+          "collapse_near_to_far_ratio": null,
+          "regime": "end_free_40b",
+          "arx_unit_deductions_mean": 9262.0,
+          "collapse_vs_cadical_lookahead_pearson": 0.970301
+        }
+      }
+    },
+    "m2_step4000": {
+      "label": "m2_step4000",
+      "ckpt_path": "v10_ouroboros64/runs/a100_m2/checkpoints/ouroboros_a100_step4000.pt",
+      "step": 4000,
+      "input_proj_norms": {
+        "weight_shape": [
+          160,
+          104
+        ],
+        "overall_col_l2_mean": 0.78063,
+        "coarse_groups": {
+          "bipolar_[0..26]": {
+            "dims": 27,
+            "l2_mean": 0.622545,
+            "l2_std": 0.041352,
+            "l2_max": 0.695509,
+            "l2_min": 0.551521
+          },
+          "unk_[27..45]": {
+            "dims": 19,
+            "l2_mean": 0.740421,
+            "l2_std": 0.026048,
+            "l2_max": 0.781648,
+            "l2_min": 0.677225
+          },
+          "delta_[46..72]": {
+            "dims": 27,
+            "l2_mean": 1.061878,
+            "l2_std": 0.118253,
+            "l2_max": 1.247363,
+            "l2_min": 0.814872
+          },
+          "conf_W_[73]": {
+            "dims": 1,
+            "l2_mean": 0.686327,
+            "l2_std": 0.0,
+            "l2_max": 0.686327,
+            "l2_min": 0.686327
+          },
+          "conf_SC_[74..91]": {
+            "dims": 18,
+            "l2_mean": 0.721507,
+            "l2_std": 0.019013,
+            "l2_max": 0.754124,
+            "l2_min": 0.687859
+          },
+          "k_pos_[92..103]": {
+            "dims": 12,
+            "l2_mean": 0.663714,
+            "l2_std": 0.063069,
+            "l2_max": 0.774455,
+            "l2_min": 0.569167
+          }
+        },
+        "fine_groups": {
+          "w_bip_[0]": {
+            "dims": 1,
+            "l2_mean": 0.556503,
+            "l2_std": 0.0,
+            "l2_max": 0.556503,
+            "l2_min": 0.556503
+          },
+          "s_cur_bip_[1..8]": {
+            "dims": 8,
+            "l2_mean": 0.595474,
+            "l2_std": 0.027678,
+            "l2_max": 0.630567,
+            "l2_min": 0.551521
+          },
+          "s_next_bip_[9..16]": {
+            "dims": 8,
+            "l2_mean": 0.607262,
+            "l2_std": 0.028756,
+            "l2_max": 0.644194,
+            "l2_min": 0.557949
+          },
+          "c_bip_[17..26]": {
+            "dims": 10,
+            "l2_mean": 0.663034,
+            "l2_std": 0.022228,
+            "l2_max": 0.695509,
+            "l2_min": 0.623284
+          },
+          "unk_[27..45]": {
+            "dims": 19,
+            "l2_mean": 0.740421,
+            "l2_std": 0.026048,
+            "l2_max": 0.781648,
+            "l2_min": 0.677225
+          },
+          "dw_[46]": {
+            "dims": 1,
+            "l2_mean": 1.247363,
+            "l2_std": 0.0,
+            "l2_max": 1.247363,
+            "l2_min": 1.247363
+          },
+          "ds_in_[47..54]": {
+            "dims": 8,
+            "l2_mean": 0.960925,
+            "l2_std": 0.106145,
+            "l2_max": 1.181694,
+            "l2_min": 0.814872
+          },
+          "ds_out_[55..62]": {
+            "dims": 8,
+            "l2_mean": 1.039218,
+            "l2_std": 0.049618,
+            "l2_max": 1.084152,
+            "l2_min": 0.940202
+          },
+          "dc_[63..72]": {
+            "dims": 10,
+            "l2_mean": 1.142221,
+            "l2_std": 0.09118,
+            "l2_max": 1.24596,
+            "l2_min": 0.902394
+          },
+          "conf_W_[73]": {
+            "dims": 1,
+            "l2_mean": 0.686327,
+            "l2_std": 0.0,
+            "l2_max": 0.686327,
+            "l2_min": 0.686327
+          },
+          "conf_SC_[74..91]": {
+            "dims": 18,
+            "l2_mean": 0.721507,
+            "l2_std": 0.019013,
+            "l2_max": 0.754124,
+            "l2_min": 0.687859
+          },
+          "k_feat_[92]": {
+            "dims": 1,
+            "l2_mean": 0.635329,
+            "l2_std": 0.0,
+            "l2_max": 0.635329,
+            "l2_min": 0.635329
+          },
+          "pos_feat_[93..103]": {
+            "dims": 11,
+            "l2_mean": 0.666295,
+            "l2_std": 0.065264,
+            "l2_max": 0.774455,
+            "l2_min": 0.569167
+          }
+        }
+      },
+      "phase_and_collapse": {
+        "domain_A_R64_cluster_all_W0_15": {
+          "n_unknown_w_bits": 4096,
+          "entropy_bits_mean": 0.997131,
+          "bce_loss_mean": 0.696889,
+          "ln2_baseline": 0.693147,
+          "confidence_abs_p_minus_05_mean": 0.025677,
+          "confidence_abs_p_minus_05_p90": 0.0514,
+          "confidence_abs_p_minus_05_max": 0.110378,
+          "frac_abs_logit_ge_008": 0.558838,
+          "phase_accuracy": 0.489258,
+          "collapse_score_mean": 3.304236,
+          "collapse_score_std": 0.553252,
+          "collapse_near_w0_3_mean": 3.42975,
+          "collapse_far_w4_15_mean": 3.262398,
+          "collapse_near_to_far_ratio": 1.0513
+        },
+        "domain_B_R24_32b": {
+          "n_unknown_w_bits": 256,
+          "entropy_bits_mean": 0.998074,
+          "bce_loss_mean": 0.696832,
+          "ln2_baseline": 0.693147,
+          "confidence_abs_p_minus_05_mean": 0.025707,
+          "confidence_abs_p_minus_05_p90": 0.029074,
+          "confidence_abs_p_minus_05_max": 0.029555,
+          "frac_abs_logit_ge_008": 0.96875,
+          "phase_accuracy": 0.480469,
+          "collapse_score_mean": 4.528317,
+          "collapse_score_std": 0.053591,
+          "collapse_near_w0_3_mean": null,
+          "collapse_far_w4_15_mean": 4.528317,
+          "collapse_near_to_far_ratio": null
+        },
+        "domain_B_R24_40b": {
+          "n_unknown_w_bits": 320,
+          "entropy_bits_mean": 0.998007,
+          "bce_loss_mean": 0.69344,
+          "ln2_baseline": 0.693147,
+          "confidence_abs_p_minus_05_mean": 0.026153,
+          "confidence_abs_p_minus_05_p90": 0.029005,
+          "confidence_abs_p_minus_05_max": 0.031164,
+          "frac_abs_logit_ge_008": 0.975,
+          "phase_accuracy": 0.509375,
+          "collapse_score_mean": 4.527385,
+          "collapse_score_std": 0.053575,
+          "collapse_near_w0_3_mean": null,
+          "collapse_far_w4_15_mean": 4.527385,
+          "collapse_near_to_far_ratio": null,
+          "cadical_lookahead_probe_n": 64,
+          "collapse_vs_cadical_lookahead_pearson": 0.092381,
+          "cadical_lookahead_target_mean": 0.933047
+        },
+        "domain_B_R25_24b": {
+          "n_unknown_w_bits": 192,
+          "entropy_bits_mean": 0.997934,
+          "bce_loss_mean": 0.691487,
+          "ln2_baseline": 0.693147,
+          "confidence_abs_p_minus_05_mean": 0.026666,
+          "confidence_abs_p_minus_05_p90": 0.029037,
+          "confidence_abs_p_minus_05_max": 0.032435,
+          "frac_abs_logit_ge_008": 1.0,
+          "phase_accuracy": 0.526042,
+          "collapse_score_mean": 4.509029,
+          "collapse_score_std": 0.045571,
+          "collapse_near_w0_3_mean": null,
+          "collapse_far_w4_15_mean": 4.509029,
+          "collapse_near_to_far_ratio": null,
+          "cadical_lookahead_probe_n": 64,
+          "collapse_vs_cadical_lookahead_pearson": -0.011235,
+          "cadical_lookahead_target_mean": 1.599798
+        },
+        "domain_B_R64_512b": {
+          "n_unknown_w_bits": 4096,
+          "entropy_bits_mean": 0.998192,
+          "bce_loss_mean": 0.693966,
+          "ln2_baseline": 0.693147,
+          "confidence_abs_p_minus_05_mean": 0.024799,
+          "confidence_abs_p_minus_05_p90": 0.028402,
+          "confidence_abs_p_minus_05_max": 0.048901,
+          "frac_abs_logit_ge_008": 0.957031,
+          "phase_accuracy": 0.503662,
+          "collapse_score_mean": 4.560141,
+          "collapse_score_std": 0.068843,
+          "collapse_near_w0_3_mean": 4.573271,
+          "collapse_far_w4_15_mean": 4.555764,
+          "collapse_near_to_far_ratio": 1.0038
+        }
+      },
+      "pair_entanglement_vs_copy_dummy": {
+        "domain_A_R64_medium": {
+          "active_pair_count": 142080,
+          "pair_joint_nll": 0.008206,
+          "pair_rank1_marginal_nll": 0.008317,
+          "nll_gain_over_rank1": 0.000112,
+          "non_rank1_mutual_info_kl": 0.000355,
+          "overall_model_pair_acc": 0.99824,
+          "overall_copy_cd_dummy_acc": 0.998255,
+          "model_vs_copy_agreement": 0.999338,
+          "uncorrupted_pairs": {
+            "count": 141832,
+            "frac_of_active": 0.998255,
+            "model_acc": 0.999662,
+            "copy_cd_acc": 1.0
+          },
+          "corrupted_flipped_pairs": {
+            "count": 248,
+            "frac_of_active": 0.001745,
+            "model_acc": 0.185484,
+            "copy_cd_acc": 0.0
+          }
+        },
+        "domain_A_R64_cluster": {
+          "active_pair_count": 142080,
+          "pair_joint_nll": 0.007251,
+          "pair_rank1_marginal_nll": 0.007564,
+          "nll_gain_over_rank1": 0.000313,
+          "non_rank1_mutual_info_kl": 0.000645,
+          "overall_model_pair_acc": 0.998656,
+          "overall_copy_cd_dummy_acc": 0.998895,
+          "model_vs_copy_agreement": 0.999071,
+          "uncorrupted_pairs": {
+            "count": 141923,
+            "frac_of_active": 0.998895,
+            "model_acc": 0.999457,
+            "copy_cd_acc": 1.0
+          },
+          "corrupted_flipped_pairs": {
+            "count": 157,
+            "frac_of_active": 0.001105,
+            "model_acc": 0.273885,
+            "copy_cd_acc": 0.0
+          }
+        },
+        "domain_B_R64_512b_blind": {
+          "active_pair_count": 142080,
+          "pair_joint_nll": 2.382777,
+          "pair_joint_acc": 0.377794,
+          "uniform_4state_baseline_acc": 0.25
+        }
+      },
+      "channel_activation_104d": {
+        "domain_A_R64_cluster": {
+          "shape": [
+            8,
+            64,
+            32,
+            104
+          ],
+          "channels": {
+            "w_bip_[0]": {
+              "nonzero_ratio": 1.0,
+              "mean": 0.000244,
+              "std": 1.0
+            },
+            "s_cur_bip_[1..8]": {
+              "nonzero_ratio": 1.0,
+              "mean": 0.013916,
+              "std": 0.999903
+            },
+            "s_next_bip_[9..16]": {
+              "nonzero_ratio": 1.0,
+              "mean": 0.012772,
+              "std": 0.999918
+            },
+            "c_bip_[17..26]": {
+              "nonzero_ratio": 1.0,
+              "mean": -0.129419,
+              "std": 0.99159
+            },
+            "unk_[27..45]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "dw_[46]": {
+              "nonzero_ratio": 0.014221,
+              "mean": 0.014221,
+              "std": 0.118402
+            },
+            "ds_in_[47..54]": {
+              "nonzero_ratio": 0.00457,
+              "mean": 0.00457,
+              "std": 0.067447
+            },
+            "ds_out_[55..62]": {
+              "nonzero_ratio": 0.004608,
+              "mean": 0.004608,
+              "std": 0.067727
+            },
+            "dc_[63..72]": {
+              "nonzero_ratio": 0.005298,
+              "mean": 0.005298,
+              "std": 0.072593
+            },
+            "conf_W_[73]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_SC_[74..91]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "k_feat_[92]": {
+              "nonzero_ratio": 1.0,
+              "mean": -0.030273,
+              "std": 0.999542
+            },
+            "pos_feat_[93..103]": {
+              "nonzero_ratio": 0.806818,
+              "mean": 0.139205,
+              "std": 0.589974
+            }
+          },
+          "site_defect_signal_nonzero_ratio": 0.059949,
+          "site_defect_signal_mean": 0.010991
+        },
+        "domain_A_R64_medium": {
+          "shape": [
+            8,
+            64,
+            32,
+            104
+          ],
+          "channels": {
+            "w_bip_[0]": {
+              "nonzero_ratio": 1.0,
+              "mean": -0.000244,
+              "std": 1.0
+            },
+            "s_cur_bip_[1..8]": {
+              "nonzero_ratio": 1.0,
+              "mean": 0.013824,
+              "std": 0.999904
+            },
+            "s_next_bip_[9..16]": {
+              "nonzero_ratio": 1.0,
+              "mean": 0.01268,
+              "std": 0.99992
+            },
+            "c_bip_[17..26]": {
+              "nonzero_ratio": 1.0,
+              "mean": -0.129272,
+              "std": 0.991609
+            },
+            "unk_[27..45]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "dw_[46]": {
+              "nonzero_ratio": 0.006348,
+              "mean": 0.006348,
+              "std": 0.079419
+            },
+            "ds_in_[47..54]": {
+              "nonzero_ratio": 0.005112,
+              "mean": 0.005112,
+              "std": 0.071313
+            },
+            "ds_out_[55..62]": {
+              "nonzero_ratio": 0.00515,
+              "mean": 0.00515,
+              "std": 0.071577
+            },
+            "dc_[63..72]": {
+              "nonzero_ratio": 0.004572,
+              "mean": 0.004572,
+              "std": 0.067458
+            },
+            "conf_W_[73]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_SC_[74..91]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "k_feat_[92]": {
+              "nonzero_ratio": 1.0,
+              "mean": -0.030273,
+              "std": 0.999542
+            },
+            "pos_feat_[93..103]": {
+              "nonzero_ratio": 0.806818,
+              "mean": 0.139205,
+              "std": 0.589974
+            }
+          },
+          "site_defect_signal_nonzero_ratio": 0.052917,
+          "site_defect_signal_mean": 0.008141
+        },
+        "domain_B_R24_40b_arx_blind": {
+          "shape": [
+            8,
+            24,
+            32,
+            104
+          ],
+          "channels": {
+            "w_bip_[0]": {
+              "nonzero_ratio": 0.627279,
+              "mean": -0.000651,
+              "std": 0.792009
+            },
+            "s_cur_bip_[1..8]": {
+              "nonzero_ratio": 0.86613,
+              "mean": -0.005981,
+              "std": 0.930642
+            },
+            "s_next_bip_[9..16]": {
+              "nonzero_ratio": 0.86613,
+              "mean": -0.007894,
+              "std": 0.930627
+            },
+            "c_bip_[17..26]": {
+              "nonzero_ratio": 0.723942,
+              "mean": -0.248324,
+              "std": 0.813804
+            },
+            "unk_[27..45]": {
+              "nonzero_ratio": 0.221277,
+              "mean": 0.221277,
+              "std": 0.415107
+            },
+            "dw_[46]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_in_[47..54]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_out_[55..62]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "dc_[63..72]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_W_[73]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_SC_[74..91]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "k_feat_[92]": {
+              "nonzero_ratio": 1.0,
+              "mean": 0.002604,
+              "std": 0.999997
+            },
+            "pos_feat_[93..103]": {
+              "nonzero_ratio": 0.806818,
+              "mean": 0.143939,
+              "std": 0.593549
+            }
+          },
+          "site_defect_signal_nonzero_ratio": 0.0,
+          "site_defect_signal_mean": 0.0
+        },
+        "domain_B_R24_40b_dyn_ep1_zero_heat": {
+          "shape": [
+            8,
+            24,
+            32,
+            104
+          ],
+          "channels": {
+            "w_bip_[0]": {
+              "nonzero_ratio": 0.614583,
+              "mean": 0.0,
+              "std": 0.783954
+            },
+            "s_cur_bip_[1..8]": {
+              "nonzero_ratio": 0.041667,
+              "mean": 0.002604,
+              "std": 0.204108
+            },
+            "s_next_bip_[9..16]": {
+              "nonzero_ratio": 0.041667,
+              "mean": 0.000692,
+              "std": 0.204123
+            },
+            "c_bip_[17..26]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "unk_[27..45]": {
+              "nonzero_ratio": 0.95011,
+              "mean": 0.95011,
+              "std": 0.217718
+            },
+            "dw_[46]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_in_[47..54]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_out_[55..62]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "dc_[63..72]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_W_[73]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_SC_[74..91]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "k_feat_[92]": {
+              "nonzero_ratio": 1.0,
+              "mean": 0.002604,
+              "std": 0.999997
+            },
+            "pos_feat_[93..103]": {
+              "nonzero_ratio": 0.806818,
+              "mean": 0.143939,
+              "std": 0.593549
+            }
+          },
+          "site_defect_signal_nonzero_ratio": 0.0,
+          "site_defect_signal_mean": 0.0
+        },
+        "domain_B_R24_40b_dyn_ep2_stamped_heat": {
+          "shape": [
+            8,
+            24,
+            32,
+            104
+          ],
+          "channels": {
+            "w_bip_[0]": {
+              "nonzero_ratio": 0.614583,
+              "mean": 0.0,
+              "std": 0.783954
+            },
+            "s_cur_bip_[1..8]": {
+              "nonzero_ratio": 0.041667,
+              "mean": 0.002604,
+              "std": 0.204108
+            },
+            "s_next_bip_[9..16]": {
+              "nonzero_ratio": 0.041667,
+              "mean": 0.000692,
+              "std": 0.204123
+            },
+            "c_bip_[17..26]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "unk_[27..45]": {
+              "nonzero_ratio": 0.95011,
+              "mean": 0.95011,
+              "std": 0.217718
+            },
+            "dw_[46]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_in_[47..54]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_out_[55..62]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "dc_[63..72]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_W_[73]": {
+              "nonzero_ratio": 0.011719,
+              "mean": 0.010376,
+              "std": 0.098072
+            },
+            "conf_SC_[74..91]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "k_feat_[92]": {
+              "nonzero_ratio": 1.0,
+              "mean": 0.002604,
+              "std": 0.999997
+            },
+            "pos_feat_[93..103]": {
+              "nonzero_ratio": 0.806818,
+              "mean": 0.143939,
+              "std": 0.593549
+            }
+          },
+          "site_defect_signal_nonzero_ratio": 0.0,
+          "site_defect_signal_mean": 0.0
+        },
+        "domain_B_R25_24b_arx_blind": {
+          "shape": [
+            8,
+            25,
+            32,
+            104
+          ],
+          "channels": {
+            "w_bip_[0]": {
+              "nonzero_ratio": 0.743437,
+              "mean": 0.00625,
+              "std": 0.862206
+            },
+            "s_cur_bip_[1..8]": {
+              "nonzero_ratio": 0.853984,
+              "mean": 0.003516,
+              "std": 0.924106
+            },
+            "s_next_bip_[9..16]": {
+              "nonzero_ratio": 0.853984,
+              "mean": 0.001523,
+              "std": 0.924111
+            },
+            "c_bip_[17..26]": {
+              "nonzero_ratio": 0.759203,
+              "mean": -0.233328,
+              "std": 0.8395
+            },
+            "unk_[27..45]": {
+              "nonzero_ratio": 0.201719,
+              "mean": 0.201719,
+              "std": 0.401283
+            },
+            "dw_[46]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_in_[47..54]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_out_[55..62]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "dc_[63..72]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_W_[73]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_SC_[74..91]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "k_feat_[92]": {
+              "nonzero_ratio": 1.0,
+              "mean": -0.0025,
+              "std": 0.999997
+            },
+            "pos_feat_[93..103]": {
+              "nonzero_ratio": 0.806818,
+              "mean": 0.143636,
+              "std": 0.59332
+            }
+          },
+          "site_defect_signal_nonzero_ratio": 0.0,
+          "site_defect_signal_mean": 0.0
+        },
+        "domain_B_R25_24b_dyn_ep1_zero_heat": {
+          "shape": [
+            8,
+            25,
+            32,
+            104
+          ],
+          "channels": {
+            "w_bip_[0]": {
+              "nonzero_ratio": 0.61,
+              "mean": 0.010625,
+              "std": 0.780953
+            },
+            "s_cur_bip_[1..8]": {
+              "nonzero_ratio": 0.04,
+              "mean": 0.0025,
+              "std": 0.199984
+            },
+            "s_next_bip_[9..16]": {
+              "nonzero_ratio": 0.04,
+              "mean": 0.000508,
+              "std": 0.199999
+            },
+            "c_bip_[17..26]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "unk_[27..45]": {
+              "nonzero_ratio": 0.951053,
+              "mean": 0.951053,
+              "std": 0.215758
+            },
+            "dw_[46]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_in_[47..54]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_out_[55..62]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "dc_[63..72]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_W_[73]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_SC_[74..91]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "k_feat_[92]": {
+              "nonzero_ratio": 1.0,
+              "mean": -0.0025,
+              "std": 0.999997
+            },
+            "pos_feat_[93..103]": {
+              "nonzero_ratio": 0.806818,
+              "mean": 0.143636,
+              "std": 0.59332
+            }
+          },
+          "site_defect_signal_nonzero_ratio": 0.0,
+          "site_defect_signal_mean": 0.0
+        },
+        "domain_B_R25_24b_dyn_ep2_stamped_heat": {
+          "shape": [
+            8,
+            25,
+            32,
+            104
+          ],
+          "channels": {
+            "w_bip_[0]": {
+              "nonzero_ratio": 0.61,
+              "mean": 0.010625,
+              "std": 0.780953
+            },
+            "s_cur_bip_[1..8]": {
+              "nonzero_ratio": 0.04,
+              "mean": 0.0025,
+              "std": 0.199984
+            },
+            "s_next_bip_[9..16]": {
+              "nonzero_ratio": 0.04,
+              "mean": 0.000508,
+              "std": 0.199999
+            },
+            "c_bip_[17..26]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "unk_[27..45]": {
+              "nonzero_ratio": 0.951053,
+              "mean": 0.951053,
+              "std": 0.215758
+            },
+            "dw_[46]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_in_[47..54]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_out_[55..62]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "dc_[63..72]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_W_[73]": {
+              "nonzero_ratio": 0.0125,
+              "mean": 0.010336,
+              "std": 0.096657
+            },
+            "conf_SC_[74..91]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "k_feat_[92]": {
+              "nonzero_ratio": 1.0,
+              "mean": -0.0025,
+              "std": 0.999997
+            },
+            "pos_feat_[93..103]": {
+              "nonzero_ratio": 0.806818,
+              "mean": 0.143636,
+              "std": 0.59332
+            }
+          },
+          "site_defect_signal_nonzero_ratio": 0.0,
+          "site_defect_signal_mean": 0.0
+        },
+        "domain_B_R64_512b_arx_blind": {
+          "shape": [
+            8,
+            64,
+            32,
+            104
+          ],
+          "channels": {
+            "w_bip_[0]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "s_cur_bip_[1..8]": {
+              "nonzero_ratio": 0.09375,
+              "mean": 0.002914,
+              "std": 0.306172
+            },
+            "s_next_bip_[9..16]": {
+              "nonzero_ratio": 0.09375,
+              "mean": 0.00177,
+              "std": 0.306181
+            },
+            "c_bip_[17..26]": {
+              "nonzero_ratio": 0.135974,
+              "mean": -0.107788,
+              "std": 0.352641
+            },
+            "unk_[27..45]": {
+              "nonzero_ratio": 0.888961,
+              "mean": 0.888961,
+              "std": 0.31418
+            },
+            "dw_[46]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_in_[47..54]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_out_[55..62]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "dc_[63..72]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_W_[73]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_SC_[74..91]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "k_feat_[92]": {
+              "nonzero_ratio": 1.0,
+              "mean": -0.030273,
+              "std": 0.999542
+            },
+            "pos_feat_[93..103]": {
+              "nonzero_ratio": 0.806818,
+              "mean": 0.139205,
+              "std": 0.589974
+            }
+          },
+          "site_defect_signal_nonzero_ratio": 0.0,
+          "site_defect_signal_mean": 0.0
+        },
+        "domain_B_R64_512b_dyn_ep1_zero_heat": {
+          "shape": [
+            8,
+            64,
+            32,
+            104
+          ],
+          "channels": {
+            "w_bip_[0]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "s_cur_bip_[1..8]": {
+              "nonzero_ratio": 0.015625,
+              "mean": 0.000977,
+              "std": 0.124996
+            },
+            "s_next_bip_[9..16]": {
+              "nonzero_ratio": 0.015625,
+              "mean": -0.000168,
+              "std": 0.125
+            },
+            "c_bip_[17..26]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "unk_[27..45]": {
+              "nonzero_ratio": 0.993421,
+              "mean": 0.993421,
+              "std": 0.080843
+            },
+            "dw_[46]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_in_[47..54]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_out_[55..62]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "dc_[63..72]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_W_[73]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_SC_[74..91]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "k_feat_[92]": {
+              "nonzero_ratio": 1.0,
+              "mean": -0.030273,
+              "std": 0.999542
+            },
+            "pos_feat_[93..103]": {
+              "nonzero_ratio": 0.806818,
+              "mean": 0.139205,
+              "std": 0.589974
+            }
+          },
+          "site_defect_signal_nonzero_ratio": 0.0,
+          "site_defect_signal_mean": 0.0
+        },
+        "domain_B_R64_512b_dyn_ep2_stamped_heat": {
+          "shape": [
+            8,
+            64,
+            32,
+            104
+          ],
+          "channels": {
+            "w_bip_[0]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "s_cur_bip_[1..8]": {
+              "nonzero_ratio": 0.015625,
+              "mean": 0.000977,
+              "std": 0.124996
+            },
+            "s_next_bip_[9..16]": {
+              "nonzero_ratio": 0.015625,
+              "mean": -0.000168,
+              "std": 0.125
+            },
+            "c_bip_[17..26]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "unk_[27..45]": {
+              "nonzero_ratio": 0.993421,
+              "mean": 0.993421,
+              "std": 0.080843
+            },
+            "dw_[46]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_in_[47..54]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "ds_out_[55..62]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "dc_[63..72]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "conf_W_[73]": {
+              "nonzero_ratio": 0.004395,
+              "mean": 0.003891,
+              "std": 0.060266
+            },
+            "conf_SC_[74..91]": {
+              "nonzero_ratio": 0.0,
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "k_feat_[92]": {
+              "nonzero_ratio": 1.0,
+              "mean": -0.030273,
+              "std": 0.999542
+            },
+            "pos_feat_[93..103]": {
+              "nonzero_ratio": 0.806818,
+              "mean": 0.139205,
+              "std": 0.589974
+            }
+          },
+          "site_defect_signal_nonzero_ratio": 0.0,
+          "site_defect_signal_mean": 0.0
+        }
+      },
+      "ablation_domain_a_zero_defects": {
+        "zero_defects_false_intact": {
+          "flip_precision": 0.357298,
+          "flip_recall": 0.993939,
+          "flip_f1": 0.525641,
+          "flip_top64_recall": 0.983333,
+          "wolff_any_reducing_hit_rate": 1.0,
+          "wolff_best_delta_e_mean": -120.75,
+          "wolff_candidate_reducing_frac": 1.0,
+          "site_defect_signal_nonzero": 0.055301
+        },
+        "zero_defects_true_ablated": {
+          "flip_precision": 0.0,
+          "flip_recall": 0.0,
+          "flip_f1": 0.0,
+          "flip_top64_recall": 0.004167,
+          "wolff_any_reducing_hit_rate": 0.125,
+          "wolff_best_delta_e_mean": 3.0,
+          "wolff_candidate_reducing_frac": 0.007812,
+          "site_defect_signal_nonzero": 0.0
+        }
+      },
+      "ablation_stage_b_mask_mismatch": {
+        "stage_b_random_reveal_50pct": {
+          "n_unknown_w_bits": 2098,
+          "entropy_bits_mean": 0.99914,
+          "bce_loss_mean": 0.694941,
+          "ln2_baseline": 0.693147,
+          "confidence_abs_p_minus_05_mean": 0.015858,
+          "confidence_abs_p_minus_05_p90": 0.022771,
+          "confidence_abs_p_minus_05_max": 0.059753,
+          "frac_abs_logit_ge_008": 0.191134,
+          "phase_accuracy": 0.486177,
+          "collapse_score_mean": 4.699965,
+          "collapse_score_std": 0.189085,
+          "collapse_near_w0_3_mean": 4.546994,
+          "collapse_far_w4_15_mean": 4.74922,
+          "collapse_near_to_far_ratio": 0.9574,
+          "regime": "stage_b_random_50pct",
+          "arx_unit_deductions_mean": 2203.88,
+          "collapse_vs_cadical_lookahead_pearson": -0.664334
+        },
+        "stage_b_random_reveal_25pct": {
+          "n_unknown_w_bits": 3052,
+          "entropy_bits_mean": 0.999217,
+          "bce_loss_mean": 0.694009,
+          "ln2_baseline": 0.693147,
+          "confidence_abs_p_minus_05_mean": 0.015035,
+          "confidence_abs_p_minus_05_p90": 0.022117,
+          "confidence_abs_p_minus_05_max": 0.05746,
+          "frac_abs_logit_ge_008": 0.147772,
+          "phase_accuracy": 0.496396,
+          "collapse_score_mean": 4.71568,
+          "collapse_score_std": 0.163884,
+          "collapse_near_w0_3_mean": 4.591669,
+          "collapse_far_w4_15_mean": 4.756729,
+          "collapse_near_to_far_ratio": 0.9653,
+          "regime": "stage_b_random_25pct",
+          "arx_unit_deductions_mean": 2139.88,
+          "collapse_vs_cadical_lookahead_pearson": -0.017446
+        },
+        "stage_b_random_reveal_07pct": {
+          "n_unknown_w_bits": 3810,
+          "entropy_bits_mean": 0.999277,
+          "bce_loss_mean": 0.693999,
+          "ln2_baseline": 0.693147,
+          "confidence_abs_p_minus_05_mean": 0.014426,
+          "confidence_abs_p_minus_05_p90": 0.020985,
+          "confidence_abs_p_minus_05_max": 0.057559,
+          "frac_abs_logit_ge_008": 0.11916,
+          "phase_accuracy": 0.493176,
+          "collapse_score_mean": 4.724828,
+          "collapse_score_std": 0.151191,
+          "collapse_near_w0_3_mean": 4.609205,
+          "collapse_far_w4_15_mean": 4.763234,
+          "collapse_near_to_far_ratio": 0.9677,
+          "regime": "stage_b_random_07pct",
+          "arx_unit_deductions_mean": 2117.0,
+          "collapse_vs_cadical_lookahead_pearson": -0.719495
+        },
+        "eval_end_free_32b": {
+          "n_unknown_w_bits": 255,
+          "entropy_bits_mean": 0.998411,
+          "bce_loss_mean": 0.690935,
+          "ln2_baseline": 0.693147,
+          "confidence_abs_p_minus_05_mean": 0.01896,
+          "confidence_abs_p_minus_05_p90": 0.037599,
+          "confidence_abs_p_minus_05_max": 0.0677,
+          "frac_abs_logit_ge_008": 0.415686,
+          "phase_accuracy": 0.54902,
+          "collapse_score_mean": 3.963845,
+          "collapse_score_std": 0.227051,
+          "collapse_near_w0_3_mean": null,
+          "collapse_far_w4_15_mean": 3.963845,
+          "collapse_near_to_far_ratio": null,
+          "regime": "end_free_32b",
+          "arx_unit_deductions_mean": 9791.62,
+          "collapse_vs_cadical_lookahead_pearson": -0.419111
+        },
+        "eval_end_free_40b": {
+          "n_unknown_w_bits": 320,
+          "entropy_bits_mean": 0.99871,
+          "bce_loss_mean": 0.691049,
+          "ln2_baseline": 0.693147,
+          "confidence_abs_p_minus_05_mean": 0.017014,
+          "confidence_abs_p_minus_05_p90": 0.034371,
+          "confidence_abs_p_minus_05_max": 0.062651,
+          "frac_abs_logit_ge_008": 0.35625,
+          "phase_accuracy": 0.528125,
+          "collapse_score_mean": 4.290489,
+          "collapse_score_std": 0.317362,
+          "collapse_near_w0_3_mean": null,
+          "collapse_far_w4_15_mean": 4.290489,
+          "collapse_near_to_far_ratio": null,
+          "regime": "end_free_40b",
+          "arx_unit_deductions_mean": 9262.0,
+          "collapse_vs_cadical_lookahead_pearson": -0.856993
+        }
+      }
+    }
+  }
+}

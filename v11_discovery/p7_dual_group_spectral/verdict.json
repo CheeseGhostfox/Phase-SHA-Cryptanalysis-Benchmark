@@ -1,0 +1,123 @@
+{
+  "line": "P7_Dual_Group_Spectral_Telescope",
+  "title": "双群混合基底稀疏化望远镜 (F_2 × Z/2^32Z Dual-Group Mixed-Basis Sparsification Telescope)",
+  "status": "NULL",
+  "colab_stopped": true,
+  "rounds_tested": [2, 4, 6, 8, 10, 12],
+  "positive_calibration_round": 2,
+  "hit_light_rounds_deep": [],
+  "execution_env": {
+    "hardware_name": "Tesla T4",
+    "device": "cuda",
+    "torch_version": "2.14.1+cu130",
+    "python_version": "3.13.16",
+    "fp32_locked": true,
+    "tf32_disabled": true,
+    "complex_disabled": true,
+    "colab_session_name": "v11-p7",
+    "colab_stopped": true,
+    "total_wall_sec": 443.3027377128601,
+    "probe_timings_sec": {
+      "probe1": 209.97116875648499,
+      "probe2": 80.17124390602112,
+      "probe3": 153.1602463722229
+    },
+    "source_summary": "v11_discovery/p7_dual_group_spectral/results/p7_sweep_summary.json",
+    "source_distillation": "v11_discovery/p7_dual_group_spectral/results/p7_distillation.json",
+    "source_meta": "v11_discovery/p7_dual_group_spectral/results/p7_run_meta.json"
+  },
+  "conservation_check": {
+    "max_ortho_err": 3.5212424336350523e-06,
+    "max_det_err": 5.245208740234375e-06,
+    "max_norm_err": 3.0517578125e-05,
+    "threshold": 0.0001,
+    "passed": true
+  },
+  "control_rotr_k_spec": {
+    "seed": 20261226,
+    "sig0_upper": [6, 7, 11],
+    "sig1_upper": [23, 28, 29],
+    "sig0_lower": [8, 11, 24],
+    "sig1_lower": [28, 30, 17]
+  },
+  "positive_calibration_r2": {
+    "probe1_slice_lsb": {
+      "best_init": "init_dft",
+      "entropy_std": 0.9839,
+      "entropy_walsh": 0.4721,
+      "entropy_dft": 0.4438,
+      "entropy_haar": 0.8692,
+      "entropy_learned": 0.4046,
+      "l1_l2_learned": 6.054,
+      "top16_learned": 0.8746,
+      "z_entropy_vs_cl": 23.26,
+      "z_l1_l2_vs_cl": 12.04,
+      "z_entropy_vs_rand_perm": 23.40,
+      "z_entropy_vs_rotr_k": -20.40
+    },
+    "probe1_slice_msb": {
+      "best_init": "init_dft",
+      "entropy_dft": 0.3935,
+      "entropy_learned": 0.3538,
+      "l1_l2_learned": 5.180,
+      "top16_learned": 0.8988,
+      "z_entropy_vs_cl": 10.86,
+      "z_entropy_vs_rand_perm": 11.19
+    },
+    "probe1_cross_word_A_sub_E_entropy": {
+      "slice_lsb": 0.2558,
+      "slice_msb": 0.2374,
+      "slice_strided": 0.2061
+    },
+    "probe3_A_sub_E_low8": {
+      "best_init": "init_dft",
+      "entropy_std": 0.7210,
+      "entropy_dft": 0.5540,
+      "entropy_learned": 0.4125,
+      "l1_l2_learned": 23.38,
+      "z_entropy_vs_cl": 20.85,
+      "z_l1_l2_vs_cl": 15.72,
+      "z_entropy_vs_rand_perm": 26.73
+    },
+    "probe3_E_low8": {
+      "best_init": "init_dft",
+      "entropy_dft": 0.4796,
+      "entropy_learned": 0.3939,
+      "l1_l2_learned": 37.04,
+      "z_entropy_vs_cl": 9.15,
+      "z_l1_l2_vs_cl": 28.44,
+      "z_entropy_vs_rotr_k": 11.67,
+      "z_entropy_vs_rand_perm": 10.24
+    }
+  },
+  "deep_rounds_summary_r4_to_r12": {
+    "probe1_bit_slice": {
+      "learned_entropy_range": [0.8684, 0.8693],
+      "haar_entropy_range": [0.8688, 0.8695],
+      "ctrl_perm_entropy_range": [0.8685, 0.8693],
+      "learned_l1_l2_range": [12.754, 12.783],
+      "max_z_entropy_vs_cl": -5.40,
+      "max_z_entropy_vs_rand_perm_r4_to_r12": 1.42,
+      "max_z_entropy_vs_rand_perm_r6_to_r12": 1.42
+    },
+    "probe2_io_coupling": {
+      "mc_noise_floor": 2.1116,
+      "main_frob_norm_sq_range": [2.0998, 2.1099],
+      "ctrl_perm_frob_norm_sq_range": [2.0994, 2.1054],
+      "max_z_entropy_vs_cl_r12": 5.78,
+      "max_z_entropy_vs_rand_perm_r4_to_r12": 1.29,
+      "z_vs_rand_perm_at_r8": -0.05,
+      "z_vs_rand_perm_at_r12": 0.64,
+      "artifact_diagnosis": "Subtle ~0.0008 entropy shift vs Haar at R=8,12 is identically reproduced by ctrl_rand_perm (H=0.9245 vs 0.9245) due to disjoint [0,2^30) vs [2^30,2^32) high-bit domain geometry."
+    },
+    "probe3_operator_transfer": {
+      "learned_entropy_range": [0.9341, 0.9344],
+      "haar_entropy_range": [0.9341, 0.9344],
+      "ctrl_perm_entropy_range": [0.9341, 0.9344],
+      "learned_l1_l2_range": [204.18, 204.38],
+      "max_z_entropy_vs_cl": -107.49,
+      "max_z_entropy_vs_rand_perm_r4_to_r12": 0.59
+    }
+  },
+  "verdict_reason": "R=2 positive calibration strongly succeeds in Probe I and Probe III (Cayley rotations around 2-adic DFT beat Walsh, DFT, Haar, and random permutations at z=9.15~28.44, with cross-word algebraic cancellation (A_2 - E_2) mod 2^32 reaching H=0.2061). However, from R=4 onward through R=12, all three dual-group representations collapse onto the Haar random orthogonal baseline and become statistically indistinguishable from random bijections (max z_vs_rand_perm <= 1.42 across R=4..12)."
+}

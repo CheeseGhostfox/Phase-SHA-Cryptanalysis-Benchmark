@@ -1,0 +1,49 @@
+{
+  "experiment": "P11_Tensor_Network_Disentangler_And_Lyapunov_Funnel",
+  "status": "completed",
+  "hardware": "Colab Tesla T4 (pure IEEE-754 FP32, TF32 disabled, ~0.54 CU consumed)",
+  "verdict_tier": "EXACT_MPO_CONFIRMED_FAST_PAGE_CURVE_SATURATION_AT_R3_AND_LYAPUNOV_WALL_AT_R4",
+  "reference_verification": {
+    "sha256_64r_ref_xor_diff": 0,
+    "mpo_add_chi": 2,
+    "mpo_xor_chi": 1,
+    "mpo_bit_mismatches_n4_8_16_32": 0,
+    "disentangler_ortho_max_err": 2e-07
+  },
+  "summary": {
+    "part_1_mpo_tebd": {
+      "rotr_zero_n12_r6": {"max_bond_dim": 1, "cum_trunc_err_sq": 0.0, "mps_norm": 1.000007},
+      "rotr_sha_like_n12_r6_chi32": {"max_bond_dim": 32, "cum_trunc_err_sq": 143.873854, "mps_norm": 0.017326},
+      "rotr_random_ctrl_n12_r6_chi32": {"max_bond_dim": 32, "cum_trunc_err_sq": 221.390106, "mps_norm": 0.002128},
+      "finding": "Exact chi=2 ADD and chi=1 XOR produce zero entanglement growth across 6 rounds when ROTR=0; long-range ROTR swaps are 100% responsible for volume-law entanglement explosion."
+    },
+    "part_2_sha256_entanglement": {
+      "k4_R2_sha256_real": {"mid_vn_mean": 5.53838, "mid_chi99_mean": 103.75, "F32": 0.71752},
+      "k4_R2_rand_cipher_ctrl": {"mid_vn_mean": 2.88672, "mid_chi99_mean": 17.25, "F32": 0.99853},
+      "k4_R3_sha256_real": {"mid_vn_mean": 7.10453, "mid_chi99_mean": 195.38, "F32": 0.2402},
+      "k4_R3_random_oracle_page": {"mid_vn_mean": 7.10227, "mid_chi99_mean": 195.38, "F32": 0.23958},
+      "k8_R2_sha256_real": {"mid_vn_mean": 6.72925, "mid_chi99_mean": 128.0, "F32": 0.34419},
+      "k8_R2_rand_cipher_ctrl": {"mid_vn_mean": 3.94455, "mid_chi99_mean": 18.5, "F32": 1.0},
+      "k8_R2_random_oracle_page": {"mid_vn_mean": 6.71118, "mid_chi99_mean": 128.25, "F32": 0.35354},
+      "R3_to_R64_plateau": "From R>=3 all the way to R=64 (full SHA-256 with real message schedule), SHA-256 solution manifolds sit identically on the random-oracle Page curve (k=4: ~7.106 bits, chi99~195.4; k=8: ~6.72 bits, chi99~128.6), with zero low-entanglement channels. Notably at R=2, SHA-256's rotation constants (2,13,22)/(6,11,25) generate ~2x higher entanglement entropy than generic random rotations."
+    },
+    "part_3_neural_disentangler": {
+      "local_R2_sha256_real": {"vn_before": 6.51658, "vn_after": 6.17298, "delta_vn": -0.3436, "chi99_before": 160, "chi99_after": 129},
+      "local_R3_to_R16_sha256_delta_vn_range": [-0.04854, -0.0036],
+      "local_R3_to_R16_random_oracle_delta_vn_range": [-0.06133, -0.01282],
+      "amortized_heldout_R2_sha256_delta_vn": -0.30194,
+      "amortized_heldout_R2_rand_ctrl_delta_vn": -0.52191,
+      "amortized_heldout_R3_to_R8_sha256_delta_vn_range": [0.0003, 0.00181],
+      "finding": "Zero-collapse O(4) Cayley disentanglers genuinely compress R=2 SHA-256 solution manifolds both locally (-0.3436 bits) and out-of-sample across unseen midstates (-0.3019 bits), but from R>=3 onward both target-conditioned local fitting and cross-midstate amortization become indistinguishable from a random Boolean oracle."
+    },
+    "part_4_lyapunov_funnel": {
+      "endpoint_only_R1_greedy": 1.0,
+      "endpoint_only_R2_to_R8_1v4_range": [0.47412, 0.52002],
+      "endpoint_only_R2_to_R8_greedy_range": [0.00391, 0.03906],
+      "intermediate_traj_R1_R2_R3_greedy": [1.0, 0.99219, 0.99609],
+      "intermediate_traj_R4_R5_R6_R8_greedy": [0.02734, 0.04688, 0.03125, 0.01953],
+      "intermediate_traj_R4_to_R8_1v4_confounder_range": [0.72949, 0.96924],
+      "finding": "Endpoint-only V(x,y*) collapses to pure random guessing at R>=2 (golf-course avalanche wall). Intermediate-state V(S_mid,y*) achieves 99.2%-100% greedy 1-bit recovery up to R=3 (<=2 remaining rounds), but drops to random (0.62x-1.50x) at R>=4; its high 1v4 score at R=4..8 is rigorously diagnosed by the greedy control as forward-manifold membership detection (fixed IV / zero W_1..15 constraints in words B..H) rather than target-directed gradient toward y*."
+    }
+  }
+}

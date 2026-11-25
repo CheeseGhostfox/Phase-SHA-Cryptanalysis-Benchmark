@@ -1,0 +1,59 @@
+[2026-11-24 19:18:56] P9 Experiment start | mode=full | device=cuda | torch=2.14.1+cu130
+[2026-11-24 19:18:56] CUDA device=Tesla T4 | allow_tf32=False
+[2026-11-24 19:18:57] === [1/23] A1 R=2 (w=32, n_in=320, exact_AND=562) ===
+[2026-11-24 19:19:51]   Completed A1 R=2 in 54.2s (total elapsed 55.6s)
+[2026-11-24 19:19:51] === [2/23] A1 R=3 (w=32, n_in=352, exact_AND=843) ===
+[2026-11-24 19:20:47]   Completed A1 R=3 in 56.1s (total elapsed 111.6s)
+[2026-11-24 19:20:47] === [3/23] A1 R=4 (w=32, n_in=384, exact_AND=1124) ===
+[2026-11-24 19:21:48]   Completed A1 R=4 in 61.1s (total elapsed 172.7s)
+[2026-11-24 19:21:48] === [4/23] A1 R=5 (w=32, n_in=416, exact_AND=1405) ===
+[2026-11-24 19:22:57]   Completed A1 R=5 in 68.8s (total elapsed 241.5s)
+[2026-11-24 19:22:57] === [5/23] A1 R=6 (w=32, n_in=448, exact_AND=1686) ===
+[2026-11-24 19:24:12]   Completed A1 R=6 in 74.6s (total elapsed 316.1s)
+[2026-11-24 19:24:12] === [6/23] A2 R=2 (w=32, n_in=64, exact_AND=562) ===
+[2026-11-24 19:24:49]   [SIGNAL] A2_R2_a2[0]: p=0.72374 bias=0.22374 z=916.44 AND=7 deg=3 | known=B4_c_first3_g_a(0.36839) delta=-0.14465 z_inc=-665.96 ctrl_max=0.33140 z_ctrl=-252.82
+[2026-11-24 19:24:49]   [SIGNAL] A2_R2_e2[0]: p=0.83173 bias=0.33173 z=1358.77 AND=2 deg=3 | known=B4_c_first3_exact_a(0.38347) delta=-0.05174 z_inc=-228.09 ctrl_max=0.39012 z_ctrl=-164.08
+[2026-11-24 19:24:49]   [SIGNAL] A2_R2_e2[1]: p=0.62446 bias=0.12446 z=509.78 AND=6 deg=4 | known=B4_c_first2_last1_exact_a(0.19841) delta=-0.07395 z_inc=-234.81 ctrl_max=0.23320 z_ctrl=-220.85
+[2026-11-24 19:24:49]   [SIGNAL] A2_R2_e2[7]: p=0.58534 bias=0.08534 z=349.57 AND=6 deg=2 | known=B1_lin_e_xor_g_a(0.06021) delta=+0.02513 z_inc=103.03 ctrl_max=0.17843 z_ctrl=-180.52
+[2026-11-24 19:24:50]   [SIGNAL] A2_R2_e2[15]: p=0.63033 bias=0.13033 z=533.81 AND=6 deg=4 | known=B4_c_first3_g_a(0.06286) delta=+0.06747 z_inc=220.16 ctrl_max=0.19258 z_ctrl=-122.42
+[2026-11-24 19:24:50]   [SIGNAL] A2_R2_e2[23]: p=0.67579 bias=0.17579 z=720.03 AND=1 deg=2 | known=B4_c_first3_g_a(0.22359) delta=-0.04780 z_inc=-279.07 ctrl_max=0.20934 z_ctrl=-67.25
+[2026-11-24 19:24:50]   [SIGNAL] A2_R2_e2[31]: p=0.57904 bias=0.07904 z=323.75 AND=5 deg=3 | known=B4_c_first2_exact_a(0.04463) delta=+0.03441 z_inc=106.69 ctrl_max=0.14967 z_ctrl=-134.64
+[2026-11-24 19:24:50]   Completed A2 R=2 in 37.9s (total elapsed 354.0s)
+[2026-11-24 19:24:50] === [7/23] A2 R=3 (w=32, n_in=96, exact_AND=843) ===
+[2026-11-24 19:25:30]   Completed A2 R=3 in 40.9s (total elapsed 394.9s)
+[2026-11-24 19:25:30] === [8/23] A2 R=4 (w=32, n_in=128, exact_AND=1124) ===
+[2026-11-24 19:26:15]   Completed A2 R=4 in 44.5s (total elapsed 439.4s)
+[2026-11-24 19:26:15] === [9/23] A2 R=5 (w=32, n_in=160, exact_AND=1405) ===
+[2026-11-24 19:27:02]   Completed A2 R=5 in 47.2s (total elapsed 486.7s)
+[2026-11-24 19:27:02] === [10/23] A2 R=6 (w=32, n_in=192, exact_AND=1686) ===
+[2026-11-24 19:27:56]   Completed A2 R=6 in 54.0s (total elapsed 540.7s)
+[2026-11-24 19:27:56] === [11/23] B R=2 (w=32, n_in=512, exact_AND=186) ===
+[2026-11-24 19:28:30]   [SIGNAL] B_R2_W17[0]: p=1.00000 bias=0.50000 z=2048.00 AND=0 deg=1 | known=B1_lin_g_a(0.50000) delta=+0.00000 z_inc=0.00 ctrl_max=0.50000 z_ctrl=0.00
+[2026-11-24 19:28:30]   [SIGNAL] B_R2_W17[1]: p=1.00000 bias=0.50000 z=2048.00 AND=4 deg=2 | known=B2_c_last1(0.50000) delta=+0.00000 z_inc=0.00 ctrl_max=0.50000 z_ctrl=0.00
+[2026-11-24 19:28:30]   [SIGNAL] B_R2_W17[31]: p=0.61500 bias=0.11500 z=471.03 AND=5 deg=3 | known=B2_c_last1(0.05030) delta=+0.06470 z_inc=199.41 ctrl_max=0.00136 z_ctrl=209.26
+[2026-11-24 19:28:30]   Completed B R=2 in 33.6s (total elapsed 574.3s)
+[2026-11-24 19:28:30] === [12/23] B R=3 (w=32, n_in=512, exact_AND=279) ===
+[2026-11-24 19:29:00]   Completed B R=3 in 29.9s (total elapsed 604.2s)
+[2026-11-24 19:29:00] === [13/23] B R=4 (w=32, n_in=512, exact_AND=372) ===
+[2026-11-24 19:29:30]   Completed B R=4 in 29.7s (total elapsed 633.9s)
+[2026-11-24 19:29:30] === [14/23] B R=5 (w=32, n_in=512, exact_AND=465) ===
+[2026-11-24 19:29:59]   Completed B R=5 in 29.1s (total elapsed 663.0s)
+[2026-11-24 19:29:59] === [15/23] B R=6 (w=32, n_in=512, exact_AND=558) ===
+[2026-11-24 19:30:28]   Completed B R=6 in 29.2s (total elapsed 692.2s)
+[2026-11-24 19:30:28] === [16/23] B_joint R=2 (w=32, n_in=768, exact_AND=748) ===
+[2026-11-24 19:31:46]   Completed B_joint R=2 in 78.5s (total elapsed 770.7s)
+[2026-11-24 19:31:46] === [17/23] B_joint R=3 (w=32, n_in=768, exact_AND=1122) ===
+[2026-11-24 19:33:12]   Completed B_joint R=3 in 85.2s (total elapsed 855.9s)
+[2026-11-24 19:33:12] === [18/23] C4 R=2 (w=4, n_in=40, exact_AND=58) ===
+[2026-11-24 19:33:31]   Completed C4 R=2 in 19.2s (total elapsed 875.1s)
+[2026-11-24 19:33:31] === [19/23] C4 R=3 (w=4, n_in=44, exact_AND=87) ===
+[2026-11-24 19:33:51]   Completed C4 R=3 in 20.0s (total elapsed 895.1s)
+[2026-11-24 19:33:51] === [20/23] C4 R=4 (w=4, n_in=48, exact_AND=116) ===
+[2026-11-24 19:34:11]   Completed C4 R=4 in 20.7s (total elapsed 915.8s)
+[2026-11-24 19:34:11] === [21/23] C8 R=2 (w=8, n_in=80, exact_AND=130) ===
+[2026-11-24 19:34:39]   Completed C8 R=2 in 27.4s (total elapsed 943.1s)
+[2026-11-24 19:34:39] === [22/23] C8 R=3 (w=8, n_in=88, exact_AND=195) ===
+[2026-11-24 19:35:07]   Completed C8 R=3 in 28.7s (total elapsed 971.9s)
+[2026-11-24 19:35:07] === [23/23] C8 R=4 (w=8, n_in=96, exact_AND=260) ===
+[2026-11-24 19:35:37]   Completed C8 R=4 in 29.3s (total elapsed 1001.2s)
+[2026-11-24 19:35:37] P9 Experiment finished in 1001.2s | configs=216

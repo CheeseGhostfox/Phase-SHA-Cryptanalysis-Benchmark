@@ -1,0 +1,7 @@
+name = "PhaseSHA"
+version = "0.1.0"
+defaultTargets = ["PhaseSHA"]
+moreLeanArgs = ["-j", "2", "-M", "2048"]
+
+[[lean_lib]]
+name = "PhaseSHA"

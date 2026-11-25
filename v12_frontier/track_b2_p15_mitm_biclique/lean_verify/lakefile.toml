@@ -1,0 +1,7 @@
+name = "P15Verify"
+version = "0.1.0"
+defaultTargets = ["P15Verify"]
+moreLeanArgs = ["-j", "2", "-M", "2048"]
+
+[[lean_lib]]
+name = "P15Verify"

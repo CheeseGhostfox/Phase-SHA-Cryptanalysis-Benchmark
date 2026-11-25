@@ -1,0 +1,45 @@
+{
+  "mode": "full",
+  "gpu_name": "Tesla T4",
+  "device": "cuda",
+  "torch_version": "2.14.1+cu130",
+  "python_version": "3.13.16",
+  "fp32_locked": true,
+  "tf32_disabled": true,
+  "complex_disabled": true,
+  "timing_sec": {
+    "probe1": 209.97116875648499,
+    "probe2": 80.17124390602112,
+    "probe3": 153.1602463722229,
+    "total": 443.3027377128601
+  },
+  "conservation": {
+    "max_ortho_err": 3.5212424336350523e-06,
+    "max_det_err": 5.245208740234375e-06,
+    "max_norm_err": 3.0517578125e-05,
+    "passed": true
+  },
+  "config": {
+    "rounds": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12
+    ],
+    "probe1_k_train": 16,
+    "probe1_k_holdout": 32,
+    "probe2_k_train": 4,
+    "probe2_n_train": 65536,
+    "probe2_k_holdout": 4,
+    "probe2_n_pools": 16,
+    "probe2_n_pool_samples": 8192,
+    "probe3_k_train": 8,
+    "probe3_k_holdout": 16,
+    "opt_steps": 400,
+    "lr_max": 0.03,
+    "lr_min": 0.001,
+    "seed": 20261125
+  }
+}

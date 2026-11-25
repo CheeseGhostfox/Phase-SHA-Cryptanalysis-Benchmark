@@ -1,0 +1,57 @@
+{
+  "experiment": "P10_Ugly_Algebra_And_Single_Round_Koopman",
+  "status": "completed",
+  "hardware": "Colab NVIDIA L4 (pure IEEE-754 FP32, TF32 disabled)",
+  "verdict_tier": "PARTIAL_POSITIVE_ON_32BIT_ARX_NULL_ON_256BIT_SHA256_KOOPMAN",
+  "summary": {
+    "part_a_tiny_bitwidth": {
+      "human_hybrid_d95": {"4": 32, "6": 32, "8": 32, "10": 64, "12": 64, "16": 64},
+      "ugly_bilinear_d95": {"4": 32, "6": 64, "8": 128, "10": 512, "12": 1024, "16": null},
+      "ugly_invertible_d95": {"4": 32, "6": 32, "8": 128, "10": 128, "12": 128, "16": 256},
+      "key_finding": "ugly_bilinear suffers an exponential finite-group linear representation bottleneck (failing D_95 at n=16 up to D=1024 with add=0.8287, hi=0.6578), whereas ugly_invertible escapes that lower bound via analytically invertible coupling and reaches add=0.98932 / comp3=0.99377 at n=16, D=256 (higher than human_hybrid comp3=0.98283 with 2x lower latent error)."
+    },
+    "part_b_32bit_joint_arx": {
+      "best_ugly_invertible": {
+        "dim": 512,
+        "recon_acc": 1.0,
+        "xor_acc": 1.0,
+        "rotr_acc": 1.0,
+        "add_acc": 0.97124,
+        "add_low_half_acc": 0.97458,
+        "add_high_half_acc": 0.9679,
+        "comp3_acc": 0.96696,
+        "latent_rel_err_add": 0.18394,
+        "inv_roundtrip_max_err": 1.9e-06
+      },
+      "bilinear_baseline_at_D512": {
+        "dim": 512,
+        "recon_acc": 1.0,
+        "xor_acc": 1.0,
+        "rotr_acc": 1.0,
+        "add_acc": 0.59376,
+        "add_high_half_acc": 0.50185,
+        "comp3_acc": 0.59483
+      },
+      "human_hybrid_best": {
+        "dim": 512,
+        "recon_acc": 1.0,
+        "add_acc": 0.99931,
+        "comp3_acc": 0.98817,
+        "latent_rel_err_add": 0.45826
+      },
+      "high_width_collapse": "At D>=1024 (ugly_invertible) and D=4096 (all three methods), unscaled fixed LR and joint latent MSE caused optimization/encoder collapse (recon dropping to ~0.50 at D=4096 and rel_err collapsing to 0.00383 for bilinear)."
+    },
+    "part_c_sha256_koopman": {
+      "all_six_runs_recon_acc_range": [0.49912, 0.50059],
+      "all_six_runs_fwd_inv_k1_to_k16_range": [0.49879, 0.50159],
+      "max_abs_z_vs_random": 2.31,
+      "sha_vs_rand_ctrl_separation": false,
+      "diagnosis": "All 6 end-to-end 256-bit single-round Koopman models suffered total autoencoder + latent collapse (fwd/inv latent relative discrepancy 0.0011..0.0020, recon=0.499..0.501) when jointly minimizing multi-step MSE and BCE from scratch over 2^256 states. No forward G^k or inverse G^{-k} signal above Monte Carlo noise or isomorphic random cipher control was observed."
+    }
+  },
+  "reference_verification": {
+    "sha256_ref_xor_diff": 0,
+    "coupling_roundtrip_max_err": 0.0,
+    "ortho_roundtrip_max_err": 2.86102294921875e-06
+  }
+}

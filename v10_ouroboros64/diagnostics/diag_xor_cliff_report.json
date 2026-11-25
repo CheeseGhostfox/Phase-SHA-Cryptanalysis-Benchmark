@@ -1,0 +1,566 @@
+{
+  "diagnostic": "xor_cliff_readonly",
+  "fp32_check": {
+    "cuda_available": true,
+    "allow_tf32_matmul": false,
+    "allow_tf32_cudnn": false,
+    "fp32_locked": true
+  },
+  "seed": 20260499,
+  "n_cases_per_tier": 4,
+  "time_limit_sec": 3.0,
+  "fast_mode": false,
+  "total_sat_verified": 52,
+  "verify_pass_rate": 1.0,
+  "elapsed_sec": 73.118,
+  "tiers": [
+    {
+      "rounds": 20,
+      "free_bits": 12,
+      "cases": 4,
+      "static_gates": {
+        "carry_compress_gates": 4340,
+        "carry_msg_sched_gates": 372,
+        "total_carry_gates": 4712,
+        "ch_gates": 640,
+        "maj_gates": 640,
+        "total_nonlinear_gates": 5992
+      },
+      "xor_cnf_encoding": {
+        "num_vars": 15544,
+        "num_cnf_clauses_mean": 35145.2,
+        "num_xor_clauses_mean": 7296.0
+      },
+      "pure_cnf_bcp_only": {
+        "deduced_vars_mean": 2865.75,
+        "w0_15_determined_bits_mean": 500.0,
+        "w0_15_remaining_free_bits_mean": 12.0
+      },
+      "dual_plane_after_prop": {
+        "unknown_after_mean": 0.0,
+        "active_carry_gates_mean": 0.0,
+        "active_carry_ratio": 0.0,
+        "ch_undetermined_ratio_mean": 0.0,
+        "ch_nonlinearized_ratio_mean": 0.0,
+        "maj_undetermined_ratio_mean": 0.0,
+        "maj_nonlinearized_ratio_mean": 0.0,
+        "gf2_rank_mean": 9856.0,
+        "gf2_deductions_mean": 0.0,
+        "gf2_residual_dof_mean": 319.75,
+        "unknown_W_rounds": [],
+        "unknown_S_rounds": []
+      },
+      "cnf_xor_coupling": {
+        "shared_vars_mean": 12751.0,
+        "jaccard_coupling_ratio_mean": 0.820317,
+        "shared_over_xor_ratio_mean": 0.907157,
+        "cnf_mean_deg_on_shared": 7.5214,
+        "xor_mean_deg_on_shared": 1.8149
+      },
+      "solver_cliff_empirical": {
+        "cms_xor_sat": 4,
+        "cms_xor_sat_rate": 1.0,
+        "cms_xor_mean_sec": 0.0118,
+        "cms_xor_median_sec": 0.0117,
+        "cadical_sat": 4,
+        "cadical_sat_rate": 1.0,
+        "cadical_mean_conflicts": 0.0,
+        "cadical_mean_sec": 0.0318
+      }
+    },
+    {
+      "rounds": 24,
+      "free_bits": 12,
+      "cases": 4,
+      "static_gates": {
+        "carry_compress_gates": 5208,
+        "carry_msg_sched_gates": 744,
+        "total_carry_gates": 5952,
+        "ch_gates": 768,
+        "maj_gates": 768,
+        "total_nonlinear_gates": 7488
+      },
+      "xor_cnf_encoding": {
+        "num_vars": 19216,
+        "num_cnf_clauses_mean": 43801.0,
+        "num_xor_clauses_mean": 9472.0
+      },
+      "pure_cnf_bcp_only": {
+        "deduced_vars_mean": 2866.0,
+        "w0_15_determined_bits_mean": 500.0,
+        "w0_15_remaining_free_bits_mean": 12.0
+      },
+      "dual_plane_after_prop": {
+        "unknown_after_mean": 0.0,
+        "active_carry_gates_mean": 0.0,
+        "active_carry_ratio": 0.0,
+        "ch_undetermined_ratio_mean": 0.0,
+        "ch_nonlinearized_ratio_mean": 0.0,
+        "maj_undetermined_ratio_mean": 0.0,
+        "maj_nonlinearized_ratio_mean": 0.0,
+        "gf2_rank_mean": 11776.0,
+        "gf2_deductions_mean": 0.0,
+        "gf2_residual_dof_mean": 401.75,
+        "unknown_W_rounds": [],
+        "unknown_S_rounds": []
+      },
+      "cnf_xor_coupling": {
+        "shared_vars_mean": 15991.0,
+        "jaccard_coupling_ratio_mean": 0.832171,
+        "shared_over_xor_ratio_mean": 0.902019,
+        "cnf_mean_deg_on_shared": 7.601,
+        "xor_mean_deg_on_shared": 1.8746
+      },
+      "solver_cliff_empirical": {
+        "cms_xor_sat": 4,
+        "cms_xor_sat_rate": 1.0,
+        "cms_xor_mean_sec": 0.0251,
+        "cms_xor_median_sec": 0.0212,
+        "cadical_sat": 4,
+        "cadical_sat_rate": 1.0,
+        "cadical_mean_conflicts": 0.0,
+        "cadical_mean_sec": 0.0508
+      }
+    },
+    {
+      "rounds": 24,
+      "free_bits": 32,
+      "cases": 4,
+      "static_gates": {
+        "carry_compress_gates": 5208,
+        "carry_msg_sched_gates": 744,
+        "total_carry_gates": 5952,
+        "ch_gates": 768,
+        "maj_gates": 768,
+        "total_nonlinear_gates": 7488
+      },
+      "xor_cnf_encoding": {
+        "num_vars": 19216,
+        "num_cnf_clauses_mean": 43779.2,
+        "num_xor_clauses_mean": 9472.0
+      },
+      "pure_cnf_bcp_only": {
+        "deduced_vars_mean": 2842.75,
+        "w0_15_determined_bits_mean": 480.0,
+        "w0_15_remaining_free_bits_mean": 32.0
+      },
+      "dual_plane_after_prop": {
+        "unknown_after_mean": 2556.5,
+        "active_carry_gates_mean": 1646.25,
+        "active_carry_ratio": 0.276588,
+        "ch_undetermined_ratio_mean": 0.236003,
+        "ch_nonlinearized_ratio_mean": 0.152344,
+        "maj_undetermined_ratio_mean": 0.063151,
+        "maj_nonlinearized_ratio_mean": 0.0,
+        "gf2_rank_mean": 10235.75,
+        "gf2_deductions_mean": 7.25,
+        "gf2_residual_dof_mean": 1944.25,
+        "unknown_W_rounds": [
+          15,
+          17,
+          19,
+          21,
+          22,
+          23
+        ],
+        "unknown_S_rounds": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ]
+      },
+      "cnf_xor_coupling": {
+        "shared_vars_mean": 15991.0,
+        "jaccard_coupling_ratio_mean": 0.832171,
+        "shared_over_xor_ratio_mean": 0.902019,
+        "cnf_mean_deg_on_shared": 7.5994,
+        "xor_mean_deg_on_shared": 1.8746
+      },
+      "solver_cliff_empirical": {
+        "cms_xor_sat": 4,
+        "cms_xor_sat_rate": 1.0,
+        "cms_xor_mean_sec": 0.0774,
+        "cms_xor_median_sec": 0.0539,
+        "cadical_sat": 4,
+        "cadical_sat_rate": 1.0,
+        "cadical_mean_conflicts": 783.25,
+        "cadical_mean_sec": 0.0827
+      }
+    },
+    {
+      "rounds": 25,
+      "free_bits": 12,
+      "cases": 4,
+      "static_gates": {
+        "carry_compress_gates": 5425,
+        "carry_msg_sched_gates": 837,
+        "total_carry_gates": 6262,
+        "ch_gates": 800,
+        "maj_gates": 800,
+        "total_nonlinear_gates": 7862
+      },
+      "xor_cnf_encoding": {
+        "num_vars": 20134,
+        "num_cnf_clauses_mean": 45968.5,
+        "num_xor_clauses_mean": 10016.0
+      },
+      "pure_cnf_bcp_only": {
+        "deduced_vars_mean": 2875.75,
+        "w0_15_determined_bits_mean": 500.0,
+        "w0_15_remaining_free_bits_mean": 12.0
+      },
+      "dual_plane_after_prop": {
+        "unknown_after_mean": 2689.0,
+        "active_carry_gates_mean": 1720.75,
+        "active_carry_ratio": 0.274792,
+        "ch_undetermined_ratio_mean": 0.238437,
+        "ch_nonlinearized_ratio_mean": 0.15875,
+        "maj_undetermined_ratio_mean": 0.076875,
+        "maj_nonlinearized_ratio_mean": 0.03,
+        "gf2_rank_mean": 10625.25,
+        "gf2_deductions_mean": 4.25,
+        "gf2_residual_dof_mean": 2044.75,
+        "unknown_W_rounds": [
+          15,
+          17,
+          19,
+          21,
+          22,
+          23,
+          24
+        ],
+        "unknown_S_rounds": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      },
+      "cnf_xor_coupling": {
+        "shared_vars_mean": 16801.0,
+        "jaccard_coupling_ratio_mean": 0.834459,
+        "shared_over_xor_ratio_mean": 0.901051,
+        "cnf_mean_deg_on_shared": 7.6161,
+        "xor_mean_deg_on_shared": 1.8858
+      },
+      "solver_cliff_empirical": {
+        "cms_xor_sat": 4,
+        "cms_xor_sat_rate": 1.0,
+        "cms_xor_mean_sec": 0.1346,
+        "cms_xor_median_sec": 0.116,
+        "cadical_sat": 4,
+        "cadical_sat_rate": 1.0,
+        "cadical_mean_conflicts": 731.5,
+        "cadical_mean_sec": 0.0771
+      }
+    },
+    {
+      "rounds": 25,
+      "free_bits": 24,
+      "cases": 4,
+      "static_gates": {
+        "carry_compress_gates": 5425,
+        "carry_msg_sched_gates": 837,
+        "total_carry_gates": 6262,
+        "ch_gates": 800,
+        "maj_gates": 800,
+        "total_nonlinear_gates": 7862
+      },
+      "xor_cnf_encoding": {
+        "num_vars": 20134,
+        "num_cnf_clauses_mean": 45945.0,
+        "num_xor_clauses_mean": 10016.0
+      },
+      "pure_cnf_bcp_only": {
+        "deduced_vars_mean": 2865.25,
+        "w0_15_determined_bits_mean": 488.0,
+        "w0_15_remaining_free_bits_mean": 24.0
+      },
+      "dual_plane_after_prop": {
+        "unknown_after_mean": 3092.0,
+        "active_carry_gates_mean": 1937.75,
+        "active_carry_ratio": 0.309446,
+        "ch_undetermined_ratio_mean": 0.264687,
+        "ch_nonlinearized_ratio_mean": 0.187188,
+        "maj_undetermined_ratio_mean": 0.104375,
+        "maj_nonlinearized_ratio_mean": 0.06,
+        "gf2_rank_mean": 10351.5,
+        "gf2_deductions_mean": 0.5,
+        "gf2_residual_dof_mean": 2293.25,
+        "unknown_W_rounds": [
+          15,
+          17,
+          19,
+          21,
+          22,
+          23,
+          24
+        ],
+        "unknown_S_rounds": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      },
+      "cnf_xor_coupling": {
+        "shared_vars_mean": 16801.0,
+        "jaccard_coupling_ratio_mean": 0.834459,
+        "shared_over_xor_ratio_mean": 0.901051,
+        "cnf_mean_deg_on_shared": 7.6143,
+        "xor_mean_deg_on_shared": 1.8858
+      },
+      "solver_cliff_empirical": {
+        "cms_xor_sat": 4,
+        "cms_xor_sat_rate": 1.0,
+        "cms_xor_mean_sec": 0.6212,
+        "cms_xor_median_sec": 0.3319,
+        "cadical_sat": 4,
+        "cadical_sat_rate": 1.0,
+        "cadical_mean_conflicts": 5692.5,
+        "cadical_mean_sec": 0.3205
+      }
+    },
+    {
+      "rounds": 26,
+      "free_bits": 12,
+      "cases": 4,
+      "static_gates": {
+        "carry_compress_gates": 5642,
+        "carry_msg_sched_gates": 930,
+        "total_carry_gates": 6572,
+        "ch_gates": 832,
+        "maj_gates": 832,
+        "total_nonlinear_gates": 8236
+      },
+      "xor_cnf_encoding": {
+        "num_vars": 21052,
+        "num_cnf_clauses_mean": 48120.8,
+        "num_xor_clauses_mean": 10560.0
+      },
+      "pure_cnf_bcp_only": {
+        "deduced_vars_mean": 2863.75,
+        "w0_15_determined_bits_mean": 500.0,
+        "w0_15_remaining_free_bits_mean": 12.0
+      },
+      "dual_plane_after_prop": {
+        "unknown_after_mean": 3515.0,
+        "active_carry_gates_mean": 2189.25,
+        "active_carry_ratio": 0.333118,
+        "ch_undetermined_ratio_mean": 0.282452,
+        "ch_nonlinearized_ratio_mean": 0.205829,
+        "maj_undetermined_ratio_mean": 0.128005,
+        "maj_nonlinearized_ratio_mean": 0.090745,
+        "gf2_rank_mean": 10544.0,
+        "gf2_deductions_mean": 1.75,
+        "gf2_residual_dof_mean": 2590.25,
+        "unknown_W_rounds": [
+          15,
+          17,
+          19,
+          21,
+          22,
+          23,
+          24,
+          25
+        ],
+        "unknown_S_rounds": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      },
+      "cnf_xor_coupling": {
+        "shared_vars_mean": 17611.0,
+        "jaccard_coupling_ratio_mean": 0.836548,
+        "shared_over_xor_ratio_mean": 0.900174,
+        "cnf_mean_deg_on_shared": 7.6289,
+        "xor_mean_deg_on_shared": 1.8961
+      },
+      "solver_cliff_empirical": {
+        "cms_xor_sat": 0,
+        "cms_xor_sat_rate": 0.0,
+        "cms_xor_mean_sec": 3.031,
+        "cms_xor_median_sec": 3.0256,
+        "cadical_sat": 4,
+        "cadical_sat_rate": 1.0,
+        "cadical_mean_conflicts": 2875.25,
+        "cadical_mean_sec": 0.1884
+      }
+    },
+    {
+      "rounds": 26,
+      "free_bits": 16,
+      "cases": 4,
+      "static_gates": {
+        "carry_compress_gates": 5642,
+        "carry_msg_sched_gates": 930,
+        "total_carry_gates": 6572,
+        "ch_gates": 832,
+        "maj_gates": 832,
+        "total_nonlinear_gates": 8236
+      },
+      "xor_cnf_encoding": {
+        "num_vars": 21052,
+        "num_cnf_clauses_mean": 48118.8,
+        "num_xor_clauses_mean": 10560.0
+      },
+      "pure_cnf_bcp_only": {
+        "deduced_vars_mean": 2856.75,
+        "w0_15_determined_bits_mean": 496.0,
+        "w0_15_remaining_free_bits_mean": 16.0
+      },
+      "dual_plane_after_prop": {
+        "unknown_after_mean": 3631.25,
+        "active_carry_gates_mean": 2256.75,
+        "active_carry_ratio": 0.343389,
+        "ch_undetermined_ratio_mean": 0.292368,
+        "ch_nonlinearized_ratio_mean": 0.211538,
+        "maj_undetermined_ratio_mean": 0.135517,
+        "maj_nonlinearized_ratio_mean": 0.096154,
+        "gf2_rank_mean": 10463.25,
+        "gf2_deductions_mean": 0.25,
+        "gf2_residual_dof_mean": 2672.75,
+        "unknown_W_rounds": [
+          15,
+          17,
+          19,
+          21,
+          22,
+          23,
+          24,
+          25
+        ],
+        "unknown_S_rounds": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      },
+      "cnf_xor_coupling": {
+        "shared_vars_mean": 17611.0,
+        "jaccard_coupling_ratio_mean": 0.836548,
+        "shared_over_xor_ratio_mean": 0.900174,
+        "cnf_mean_deg_on_shared": 7.6291,
+        "xor_mean_deg_on_shared": 1.8961
+      },
+      "solver_cliff_empirical": {
+        "cms_xor_sat": 0,
+        "cms_xor_sat_rate": 0.0,
+        "cms_xor_mean_sec": 3.0279,
+        "cms_xor_median_sec": 3.0281,
+        "cadical_sat": 4,
+        "cadical_sat_rate": 1.0,
+        "cadical_mean_conflicts": 19853.25,
+        "cadical_mean_sec": 1.3485
+      }
+    },
+    {
+      "rounds": 28,
+      "free_bits": 12,
+      "cases": 4,
+      "static_gates": {
+        "carry_compress_gates": 6076,
+        "carry_msg_sched_gates": 1116,
+        "total_carry_gates": 7192,
+        "ch_gates": 896,
+        "maj_gates": 896,
+        "total_nonlinear_gates": 8984
+      },
+      "xor_cnf_encoding": {
+        "num_vars": 22888,
+        "num_cnf_clauses_mean": 52449.0,
+        "num_xor_clauses_mean": 11648.0
+      },
+      "pure_cnf_bcp_only": {
+        "deduced_vars_mean": 2873.75,
+        "w0_15_determined_bits_mean": 500.0,
+        "w0_15_remaining_free_bits_mean": 12.0
+      },
+      "dual_plane_after_prop": {
+        "unknown_after_mean": 4746.25,
+        "active_carry_gates_mean": 2842.0,
+        "active_carry_ratio": 0.395161,
+        "ch_undetermined_ratio_mean": 0.336775,
+        "ch_nonlinearized_ratio_mean": 0.263393,
+        "maj_undetermined_ratio_mean": 0.193359,
+        "maj_nonlinearized_ratio_mean": 0.15625,
+        "gf2_rank_mean": 10722.0,
+        "gf2_deductions_mean": 1.25,
+        "gf2_residual_dof_mean": 3365.0,
+        "unknown_W_rounds": [
+          15,
+          17,
+          19,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "unknown_S_rounds": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ]
+      },
+      "cnf_xor_coupling": {
+        "shared_vars_mean": 19231.0,
+        "jaccard_coupling_ratio_mean": 0.840222,
+        "shared_over_xor_ratio_mean": 0.898645,
+        "cnf_mean_deg_on_shared": 7.6529,
+        "xor_mean_deg_on_shared": 1.914
+      },
+      "solver_cliff_empirical": {
+        "cms_xor_sat": 0,
+        "cms_xor_sat_rate": 0.0,
+        "cms_xor_mean_sec": 3.0282,
+        "cms_xor_median_sec": 3.0289,
+        "cadical_sat": 4,
+        "cadical_sat_rate": 1.0,
+        "cadical_mean_conflicts": 7620.25,
+        "cadical_mean_sec": 0.9632
+      }
+    }
+  ]
+}

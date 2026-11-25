@@ -1,0 +1,92 @@
+{
+  "line": "P9_arx_proxy_circuit",
+  "title": "ARX 多轮复合 AlphaTensor 式低次概率代理电路发现",
+  "status": "NULL",
+  "colab_stopped": true,
+  "colab_session": "v11-p9",
+  "hardware": "NVIDIA Tesla T4 (Colab, pure FP32 allow_tf32=False, int64 bit-packed exact arithmetic)",
+  "elapsed_seconds": 1001.12,
+  "complexity_budget": {
+    "max_and_gates": 16,
+    "max_degree": 4,
+    "max_xor_gates": 128,
+    "max_affine_support": 32,
+    "exact_circuit_and_gates_range": {
+      "A1_A2_R2_to_R6": [562, 1686],
+      "B_R2_to_R6": [186, 558],
+      "B_joint_R2_to_R3": [748, 1122],
+      "C4_R2_to_R4": [58, 116],
+      "C8_R2_to_R4": [130, 260]
+    }
+  },
+  "sample_sizes": {
+    "n_search": 65536,
+    "n_eval_main": 1048576,
+    "n_eval_escalated": 4194304,
+    "n_random_arx_controls": 3
+  },
+  "coverage": {
+    "total_operator_configs": 23,
+    "total_target_bits": 216,
+    "families": {
+      "A1_uniform_state_compression": {"rounds": [2, 3, 4, 5, 6], "targets": 60},
+      "A2_iv_anchored_compression": {"rounds": [2, 3, 4, 5, 6], "targets": 60},
+      "B_message_schedule": {"rounds": [2, 3, 4, 5, 6], "targets": 30},
+      "B_joint_schedule_plus_compression": {"rounds": [2, 3], "targets": 24},
+      "C4_mini_arx_4bit": {"rounds": [2, 3, 4], "targets": 18},
+      "C8_mini_arx_8bit": {"rounds": [2, 3, 4], "targets": 24}
+    }
+  },
+  "main_metrics": {
+    "A1_R2_to_R6_max_proxy_z": 2.28,
+    "A2_R3_to_R6_max_proxy_z": 2.42,
+    "B_R3_to_R6_max_proxy_z": 2.60,
+    "B_joint_R2_to_R3_max_proxy_z": 1.93,
+    "C4_C8_R2_to_R4_max_proxy_z": 2.39,
+    "non_degenerate_hits_count": 0,
+    "all_non_degenerate_p_adj_bonferroni": 1.0
+  },
+  "boundary_and_trivial_audit": {
+    "A2_R2_iv_folding_boundary": {
+      "note": "S_0=IV 固定导致 t=0 轮退化为常量加 W0，t=1 轮 Ch 退化为仿射线性门，实为单轮有效非线性。",
+      "targets_with_z_ge_6": ["a2[0]", "e2[0]", "e2[1]", "e2[7]", "e2[15]", "e2[23]", "e2[31]"],
+      "max_proxy_bias": 0.33173,
+      "max_proxy_z": 1358.77,
+      "incremental_pass_vs_finite_B4": ["e2[7]", "e2[15]", "e2[31]"],
+      "random_arx_control_max_bias_on_those_3": [0.17843, 0.19258, 0.14967],
+      "z_vs_ctrl_on_those_3": [-180.52, -122.42, -134.64],
+      "passed_anti_triviality": false,
+      "decays_at_R3": true,
+      "A2_R3_max_proxy_z": 1.53
+    },
+    "B_R2_W17_single_step_4sum": {
+      "W17_0_and_1": {
+        "eval_p": 1.0,
+        "z_score": 2048.0,
+        "z3_equivalent_to_known": ["B1_lin_g_a", "B2_c_last1"],
+        "passed_anti_triviality": false
+      },
+      "W17_31": {
+        "proxy_and_gates": 5,
+        "proxy_degree": 3,
+        "eval_p": 0.61500,
+        "eval_bias": 0.11500,
+        "z_score": 471.03,
+        "known_B2_c_last1_bias": 0.05030,
+        "delta_bias_vs_B2": 0.06470,
+        "reported_ctrl_max_in_search": 0.00136,
+        "math_audit": "W17 = s1(W15)+W10+s0(W2)+W1 全部 4 个操作数均为原始输入 W[0..15]，不含 W16 复合（深度=1）；其 bit-31 偏置源于单步 4-操作数模加 bit-30 对称进位 e2(a,b,c,d)。独立复算显式 3-AND deg=2 对称进位公式：SHA-256 W17[31] 得 bias=0.20778，3 组随机 ARX 对照组同构公式分别得 bias=0.20856、0.20694、0.20773（完全一致）；且进入真正 2 步递推 R=3 (W18[31]) 后偏置彻底归零 (z=1.54)。",
+        "passed_anti_triviality": false
+      }
+    }
+  },
+  "z3_verification": {
+    "family_c_exact_counts_checked": 24,
+    "all_passed_mc_consistency": true,
+    "circuit_complexity_anf_checked": 87,
+    "all_valid_within_budget": true,
+    "known_equivalences_caught_by_z3": ["B_R2_W17[0] == B1_lin_g_a", "B_R2_W17[1] == B2_c_last1"],
+    "local_smoke_tests_passed": "3/3"
+  },
+  "conclusion": "在 M_AND <= 16、GF(2) 代数次数 <= 4 的严格紧凑预算下，对 2~6 轮全均匀状态 SHA-256 压缩、2 步及以上递归消息扩展 (W18..W21)、扩展+压缩联合算子及 Mini-ARX (C4/C8) 进行了系统性 AlphaTensor 式多线性分解 + MCTS/演化 SLP + 纯 FP32 可微 STE 门搜索与 1M~4.19M 留出验证。所有真正多轮复合算子均未发现任何超越已知基线库且通过随机 ARX 对照组的非平凡概率代理电路（max z <= 2.60, p_adj=1.00）；仅有的高偏置信号全部局限于固定 IV 首轮折叠 (A2 R=2) 与无递归单步 4-操作数加法 (W17)，且均在同构随机 ARX 对照组上呈现同等或更高偏置，并从第 3 轮起彻底消退。因此 P9 正式结案为 NULL。"
+}

@@ -1,0 +1,167 @@
+{
+  "device": "cpu",
+  "cuda_visible_devices": "",
+  "control_params": {
+    "seed": 20261125,
+    "sigma0_upper": [
+      11,
+      21,
+      25
+    ],
+    "sigma1_upper": [
+      15,
+      20,
+      24
+    ],
+    "sigma0_lower": [
+      13,
+      15,
+      2
+    ],
+    "sigma1_lower": [
+      15,
+      23,
+      4
+    ],
+    "k_words_head8": [
+      "0xd837115f",
+      "0xea8ff5f8",
+      "0x26f4c84",
+      "0x50a74cff",
+      "0x73e1d036",
+      "0x8f8de0e9",
+      "0x3eb459c8",
+      "0xf11fc8de"
+    ]
+  },
+  "rounds_checked": [
+    {
+      "rounds": 4,
+      "variants": {
+        "main": {
+          "n_var_bits": 3616,
+          "n_nl_rep": 5632,
+          "gt_e32_max": 6.310887241768095e-30,
+          "gt_disc_viol_max": 0,
+          "gt_exact_hits": 2,
+          "s1_v6a_pb_max_diff": 1.1920928955078125e-07,
+          "max_fixed_point_err": 0.0,
+          "per_path_max_fp_err": {
+            "P0_uniform": 0.0,
+            "P1_bit_lsb_to_msb": 0.0,
+            "P2_bit_msb_to_lsb": 0.0,
+            "P3_round_forward": 0.0,
+            "P4_round_backward": 0.0,
+            "P5a_gate_bool_then_add": 0.0,
+            "P5b_gate_add_then_bool": 0.0,
+            "P6_cd_complex_detour": 0.0,
+            "P7_learned_aniso": 0.0,
+            "P6_gamma02": 0.0,
+            "P6_gamma07": 0.0,
+            "P6_pure_damping": 0.0,
+            "P6_pure_complex": 0.0
+          },
+          "gf2_lin_violations": 0,
+          "gf2_nullity": 996,
+          "alpha0_lin_viol_max": 0.0,
+          "alpha0_e_hom_max": 0.0,
+          "passed": true
+        },
+        "control": {
+          "n_var_bits": 3616,
+          "n_nl_rep": 5632,
+          "gt_e32_max": 7.099748146989106e-30,
+          "gt_disc_viol_max": 0,
+          "gt_exact_hits": 2,
+          "s1_v6a_pb_max_diff": 0.0,
+          "max_fixed_point_err": 0.0,
+          "per_path_max_fp_err": {
+            "P0_uniform": 0.0,
+            "P1_bit_lsb_to_msb": 0.0,
+            "P2_bit_msb_to_lsb": 0.0,
+            "P3_round_forward": 0.0,
+            "P4_round_backward": 0.0,
+            "P5a_gate_bool_then_add": 0.0,
+            "P5b_gate_add_then_bool": 0.0,
+            "P6_cd_complex_detour": 0.0,
+            "P7_learned_aniso": 0.0,
+            "P6_gamma02": 0.0,
+            "P6_gamma07": 0.0,
+            "P6_pure_damping": 0.0,
+            "P6_pure_complex": 0.0
+          },
+          "gf2_lin_violations": 0,
+          "gf2_nullity": 996,
+          "alpha0_lin_viol_max": 0.0,
+          "alpha0_e_hom_max": 0.0,
+          "passed": true
+        }
+      }
+    },
+    {
+      "rounds": 8,
+      "variants": {
+        "main": {
+          "n_var_bits": 6176,
+          "n_nl_rep": 10240,
+          "gt_e32_max": 6.7053176943786e-30,
+          "gt_disc_viol_max": 0,
+          "gt_exact_hits": 2,
+          "s1_v6a_pb_max_diff": 1.1920928955078125e-07,
+          "max_fixed_point_err": 0.0,
+          "per_path_max_fp_err": {
+            "P0_uniform": 0.0,
+            "P1_bit_lsb_to_msb": 0.0,
+            "P2_bit_msb_to_lsb": 0.0,
+            "P3_round_forward": 0.0,
+            "P4_round_backward": 0.0,
+            "P5a_gate_bool_then_add": 0.0,
+            "P5b_gate_add_then_bool": 0.0,
+            "P6_cd_complex_detour": 0.0,
+            "P7_learned_aniso": 0.0,
+            "P6_gamma02": 0.0,
+            "P6_gamma07": 0.0,
+            "P6_pure_damping": 0.0,
+            "P6_pure_complex": 0.0
+          },
+          "gf2_lin_violations": 0,
+          "gf2_nullity": 2248,
+          "alpha0_lin_viol_max": 0.0,
+          "alpha0_e_hom_max": 0.0,
+          "passed": true
+        },
+        "control": {
+          "n_var_bits": 6176,
+          "n_nl_rep": 10240,
+          "gt_e32_max": 1.6171648557030742e-29,
+          "gt_disc_viol_max": 0,
+          "gt_exact_hits": 2,
+          "s1_v6a_pb_max_diff": 0.0,
+          "max_fixed_point_err": 0.0,
+          "per_path_max_fp_err": {
+            "P0_uniform": 0.0,
+            "P1_bit_lsb_to_msb": 0.0,
+            "P2_bit_msb_to_lsb": 0.0,
+            "P3_round_forward": 0.0,
+            "P4_round_backward": 0.0,
+            "P5a_gate_bool_then_add": 0.0,
+            "P5b_gate_add_then_bool": 0.0,
+            "P6_cd_complex_detour": 0.0,
+            "P7_learned_aniso": 0.0,
+            "P6_gamma02": 0.0,
+            "P6_gamma07": 0.0,
+            "P6_pure_damping": 0.0,
+            "P6_pure_complex": 0.0
+          },
+          "gf2_lin_violations": 0,
+          "gf2_nullity": 2248,
+          "alpha0_lin_viol_max": 0.0,
+          "alpha0_e_hom_max": 0.0,
+          "passed": true
+        }
+      }
+    }
+  ],
+  "all_passed": true,
+  "elapsed_sec": 1.672
+}

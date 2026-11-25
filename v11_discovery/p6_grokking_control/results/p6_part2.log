@@ -1,0 +1,72 @@
+[verify] REAL_SHA256 parity with src/sha256_ref.py PASSED.
+[verify] Tie-aware batched AUC PASSED (tie_val=0.6667).
+W1124 21:30:10.894000 4015 usr/local/lib/python3.13/dist-packages/torch/_inductor/utils.py:1806] [0/0] Not enough SMs to use max_autotune_gemm mode
+[calibration] gpu=Tesla T4, n_runs=36, dt_400=1.800s, est_10k=27.0m, est_12k=32.4m, est_15k=40.5m -> steps_base=10000
+
+=== Round R=8 (track=track_a) ===
+[R=8 wd=0.1 REAL_SHA256] | A: d12_auc=0.5019 (best=HR0_b0:0.5124, mse=1.5200, ext=False, t=45.8s)
+[R=8 wd=0.1 CTRL_RAND_1] | A: d12_auc=0.5020 (best=HR0_b31:0.5106, mse=1.5143, ext=False, t=46.8s)
+[R=8 wd=0.1 CTRL_RAND_2] | A: d12_auc=0.4973 (best=Em1_b0:0.5137, mse=1.4892, ext=False, t=48.7s)
+[R=8 wd=0.5 REAL_SHA256] | A: d12_auc=0.5005 (best=Em1_b31:0.5108, mse=1.5606, ext=False, t=47.4s)
+[R=8 wd=0.5 CTRL_RAND_1] | A: d12_auc=0.5010 (best=HR0_b31:0.5118, mse=1.4886, ext=False, t=47.6s)
+[R=8 wd=0.5 CTRL_RAND_2] | A: d12_auc=0.4984 (best=Em1_b31:0.5129, mse=1.5178, ext=False, t=47.1s)
+[R=8 wd=1.0 REAL_SHA256] | A: d12_auc=0.5013 (best=HR0_b15:0.5108, mse=1.5900, ext=False, t=45.7s)
+[R=8 wd=1.0 CTRL_RAND_1] | A: d12_auc=0.4999 (best=HR0_b7:0.5114, mse=1.6074, ext=False, t=45.8s)
+[R=8 wd=1.0 CTRL_RAND_2] | A: d12_auc=0.4971 (best=Em1_b15:0.5144, mse=1.5390, ext=False, t=45.8s)
+[R=8 wd=2.0 REAL_SHA256] | A: d12_auc=0.5029 (best=HR0_b1:0.5109, mse=1.0693, ext=False, t=45.1s)
+[R=8 wd=2.0 CTRL_RAND_1] | A: d12_auc=0.4988 (best=HR0_b1:0.5141, mse=1.0788, ext=False, t=45.2s)
+[R=8 wd=2.0 CTRL_RAND_2] | A: d12_auc=0.4992 (best=HR4_b15:0.5103, mse=1.1094, ext=False, t=44.9s)
+[progress] Saved p6_part_track_a_r8_12.json through R=8, elapsed=585.6s
+
+=== Round R=10 (track=track_a) ===
+[R=10 wd=0.1 REAL_SHA256] | A: d12_auc=0.5028 (best=HR0_parity:0.5180, mse=1.4492, ext=True, t=108.6s)
+[R=10 wd=0.1 CTRL_RAND_1] | A: d12_auc=0.5017 (best=HR4_b31:0.5110, mse=1.4673, ext=False, t=47.4s)
+[R=10 wd=0.1 CTRL_RAND_2] | A: d12_auc=0.5018 (best=Em1_b31:0.5128, mse=1.5380, ext=False, t=46.6s)
+[R=10 wd=0.5 REAL_SHA256] | A: d12_auc=0.5022 (best=HR0_parity:0.5228, mse=1.5322, ext=False, t=45.5s)
+[R=10 wd=0.5 CTRL_RAND_1] | A: d12_auc=0.4999 (best=HR0_b31:0.5100, mse=1.5097, ext=False, t=46.5s)
+[R=10 wd=0.5 CTRL_RAND_2] | A: d12_auc=0.5019 (best=HR4_b1:0.5134, mse=1.5718, ext=False, t=46.4s)
+[R=10 wd=1.0 REAL_SHA256] | A: d12_auc=0.5019 (best=HR4_b15:0.5153, mse=1.6241, ext=False, t=46.2s)
+[R=10 wd=1.0 CTRL_RAND_1] | A: d12_auc=0.5017 (best=HR0_b23:0.5148, mse=1.5652, ext=False, t=45.7s)
+[R=10 wd=1.0 CTRL_RAND_2] | A: d12_auc=0.4997 (best=HR4_b31:0.5108, mse=1.6223, ext=False, t=45.8s)
+[R=10 wd=2.0 REAL_SHA256] | A: d12_auc=0.5027 (best=Em1_b15:0.5145, mse=1.1287, ext=False, t=45.7s)
+[R=10 wd=2.0 CTRL_RAND_1] | A: d12_auc=0.5009 (best=HR4_b15:0.5091, mse=1.1202, ext=False, t=45.3s)
+[R=10 wd=2.0 CTRL_RAND_2] | A: d12_auc=0.5000 (best=HR0_b31:0.5097, mse=1.1189, ext=False, t=46.1s)
+[progress] Saved p6_part_track_a_r8_12.json through R=10, elapsed=1201.5s
+
+=== Round R=12 (track=track_a) ===
+[R=12 wd=0.1 REAL_SHA256] | A: d12_auc=0.4991 (best=HR4_b1:0.5070, mse=1.5270, ext=False, t=45.7s)
+[R=12 wd=0.1 CTRL_RAND_1] | A: d12_auc=0.4993 (best=HR4_b1:0.5112, mse=1.5269, ext=False, t=46.1s)
+[R=12 wd=0.1 CTRL_RAND_2] | A: d12_auc=0.4995 (best=HR4_parity:0.5099, mse=1.5175, ext=False, t=46.9s)
+[R=12 wd=0.5 REAL_SHA256] | A: d12_auc=0.5008 (best=HR0_parity:0.5080, mse=1.5338, ext=False, t=45.7s)
+[R=12 wd=0.5 CTRL_RAND_1] | A: d12_auc=0.4980 (best=HR0_parity:0.5112, mse=1.5537, ext=False, t=45.2s)
+[R=12 wd=0.5 CTRL_RAND_2] | A: d12_auc=0.5005 (best=HR0_b0:0.5127, mse=1.5098, ext=False, t=45.9s)
+[R=12 wd=1.0 REAL_SHA256] | A: d12_auc=0.5025 (best=HR0_b23:0.5153, mse=1.6031, ext=False, t=45.7s)
+[R=12 wd=1.0 CTRL_RAND_1] | A: d12_auc=0.4969 (best=HR4_parity:0.5133, mse=1.6103, ext=False, t=45.6s)
+[R=12 wd=1.0 CTRL_RAND_2] | A: d12_auc=0.5008 (best=HR0_b0:0.5149, mse=1.5745, ext=False, t=46.3s)
+[R=12 wd=2.0 REAL_SHA256] | A: d12_auc=0.4995 (best=Em1_b7:0.5101, mse=1.0851, ext=False, t=45.3s)
+[R=12 wd=2.0 CTRL_RAND_1] | A: d12_auc=0.4976 (best=Em1_b7:0.5073, mse=1.1125, ext=False, t=45.6s)
+[R=12 wd=2.0 CTRL_RAND_2] | A: d12_auc=0.5011 (best=HR4_b1:0.5183, mse=1.1000, ext=False, t=45.5s)
+[progress] Saved p6_part_track_a_r8_12.json through R=12, elapsed=1751.1s
+[done] All finished in 1751.10s
+[verify] REAL_SHA256 parity with src/sha256_ref.py PASSED.
+[verify] Tie-aware batched AUC PASSED (tie_val=0.6667).
+W1124 21:59:17.172000 11204 usr/local/lib/python3.13/dist-packages/torch/_inductor/utils.py:1806] [0/0] Not enough SMs to use max_autotune_gemm mode
+[calibration] gpu=Tesla T4, n_runs=12, dt_400=2.114s, est_10k=10.6m, est_12k=12.7m, est_15k=15.9m -> steps_base=10000
+
+=== Round R=4 (track=track_b) ===
+[R=4 wd=0.1 REAL_SHA256] | B: auc=0.9018 (z=+89.08, ext=False, t=44.3s)
+[R=4 wd=0.1 CTRL_RAND_1] | B: auc=1.0000 (z=+110.85, ext=False, t=44.5s)
+[R=4 wd=0.1 CTRL_RAND_2] | B: auc=1.0000 (z=+110.84, ext=False, t=43.8s)
+[R=4 wd=0.5 REAL_SHA256] | B: auc=0.9064 (z=+90.10, ext=False, t=45.0s)
+[R=4 wd=0.5 CTRL_RAND_1] | B: auc=0.9999 (z=+110.83, ext=False, t=43.8s)
+[R=4 wd=0.5 CTRL_RAND_2] | B: auc=0.9999 (z=+110.84, ext=False, t=44.3s)
+[R=4 wd=1.0 REAL_SHA256] | B: auc=0.9088 (z=+90.63, ext=False, t=44.5s)
+[R=4 wd=1.0 CTRL_RAND_1] | B: auc=1.0000 (z=+110.85, ext=False, t=44.5s)
+[R=4 wd=1.0 CTRL_RAND_2] | B: auc=0.9994 (z=+110.71, ext=False, t=43.9s)
+[R=4 wd=2.0 REAL_SHA256] | B: auc=0.9098 (z=+90.84, ext=False, t=44.8s)
+[R=4 wd=2.0 CTRL_RAND_1] | B: auc=0.9997 (z=+110.78, ext=False, t=44.6s)
+[R=4 wd=2.0 CTRL_RAND_2] | B: auc=1.0000 (z=+110.84, ext=False, t=44.4s)
+[dissection] Running mandatory R=4 positive calibration dissections...
+[progress] Saved p6_part_track_b_r4.json through R=4, elapsed=557.7s
+[done] All finished in 557.66s
+PART2_DONE

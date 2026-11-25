@@ -1,0 +1,636 @@
+{
+  "meta": {
+    "total_candidates": 11,
+    "verified_count": 11
+  },
+  "candidates": [
+    {
+      "candidate_id": "p15_stage1a_mitm_20r",
+      "category": "Stage1A_Reduced_MitM",
+      "rounds_range": [
+        0,
+        19
+      ],
+      "fwd_range": [
+        0,
+        15
+      ],
+      "bwd_range": [
+        15,
+        0
+      ],
+      "basis_start": 1,
+      "use_msg_schedule": true,
+      "fixed_padding_mode": "standard",
+      "gray_vars": [
+        "W[1]",
+        "W[2]",
+        "W[3]",
+        "W[4]",
+        "W[5]",
+        "W[6]",
+        "W[7]",
+        "W[8]",
+        "W[9]",
+        "W[10]",
+        "W[11]",
+        "W[12]",
+        "W[14]",
+        "W[16]"
+      ],
+      "red_vars": [
+        "W[13]"
+      ],
+      "blue_vars": [
+        "W[15]"
+      ],
+      "fwd_target_slots": [
+        "d",
+        "h",
+        "c",
+        "g",
+        "b",
+        "f",
+        "a",
+        "e"
+      ],
+      "bwd_target_slots": [
+        "d",
+        "h",
+        "c",
+        "g",
+        "b",
+        "f",
+        "a",
+        "e"
+      ],
+      "target_expr": "Fwd['d', 'h', 'c', 'g', 'b', 'f', 'a', 'e']@r15 / Bwd['d', 'h', 'c', 'g', 'b', 'f', 'a', 'e']@r15",
+      "non_interference_side": "Both_Red_and_Blue",
+      "z3_v1_red_indep": "unsat",
+      "z3_v2_blue_indep": "unsat",
+      "z3_v3_red_nondeg": "sat",
+      "z3_v3_blue_nondeg": "sat",
+      "z3_status": "VERIFIED",
+      "z3_ms": 1215.53
+    },
+    {
+      "candidate_id": "p15_stage1a_mitm_24r",
+      "category": "Stage1A_Reduced_MitM",
+      "rounds_range": [
+        0,
+        23
+      ],
+      "fwd_range": [
+        0,
+        11
+      ],
+      "bwd_range": [
+        11,
+        0
+      ],
+      "basis_start": 2,
+      "use_msg_schedule": true,
+      "fixed_padding_mode": "standard",
+      "gray_vars": [
+        "W[2]",
+        "W[3]",
+        "W[4]",
+        "W[5]",
+        "W[6]",
+        "W[7]",
+        "W[8]",
+        "W[9]",
+        "W[12]",
+        "W[13]",
+        "W[14]",
+        "W[15]",
+        "W[16]",
+        "W[17]"
+      ],
+      "red_vars": [
+        "W[10]"
+      ],
+      "blue_vars": [
+        "W[11]"
+      ],
+      "fwd_target_slots": [
+        "d",
+        "h",
+        "c",
+        "g",
+        "b",
+        "f",
+        "a",
+        "e"
+      ],
+      "bwd_target_slots": [
+        "d",
+        "h",
+        "c",
+        "g",
+        "b",
+        "f",
+        "a",
+        "e"
+      ],
+      "target_expr": "Fwd['d', 'h', 'c', 'g', 'b', 'f', 'a', 'e']@r11 / Bwd['d', 'h', 'c', 'g', 'b', 'f', 'a', 'e']@r11",
+      "non_interference_side": "Both_Red_and_Blue",
+      "z3_v1_red_indep": "unsat",
+      "z3_v2_blue_indep": "unsat",
+      "z3_v3_red_nondeg": "sat",
+      "z3_v3_blue_nondeg": "sat",
+      "z3_status": "VERIFIED",
+      "z3_ms": 12800.08
+    },
+    {
+      "candidate_id": "p15_stage1a_mitm_28r",
+      "category": "Stage1A_Reduced_MitM",
+      "rounds_range": [
+        0,
+        27
+      ],
+      "fwd_range": [
+        0,
+        8
+      ],
+      "bwd_range": [
+        8,
+        0
+      ],
+      "basis_start": 7,
+      "use_msg_schedule": true,
+      "fixed_padding_mode": "standard",
+      "gray_vars": [
+        "W[7]",
+        "W[9]",
+        "W[10]",
+        "W[11]",
+        "W[12]",
+        "W[14]",
+        "W[15]",
+        "W[16]",
+        "W[17]",
+        "W[18]",
+        "W[19]",
+        "W[20]",
+        "W[21]",
+        "W[22]"
+      ],
+      "red_vars": [
+        "W[13]"
+      ],
+      "blue_vars": [
+        "W[8]"
+      ],
+      "fwd_target_slots": [
+        "b",
+        "a"
+      ],
+      "bwd_target_slots": [
+        "b",
+        "a"
+      ],
+      "target_expr": "Fwd['b', 'a']@r8 / Bwd['b', 'a']@r8",
+      "non_interference_side": "Both_Red_and_Blue",
+      "z3_v1_red_indep": "unsat",
+      "z3_v2_blue_indep": "unsat",
+      "z3_v3_red_nondeg": "sat",
+      "z3_v3_blue_nondeg": "sat",
+      "z3_status": "VERIFIED",
+      "z3_ms": 13592.44
+    },
+    {
+      "candidate_id": "p15_stage1a_mitm_32r",
+      "category": "Stage1A_Reduced_MitM",
+      "rounds_range": [
+        0,
+        31
+      ],
+      "fwd_range": [
+        16,
+        31
+      ],
+      "bwd_range": [
+        31,
+        16
+      ],
+      "basis_start": 7,
+      "use_msg_schedule": true,
+      "fixed_padding_mode": "standard",
+      "gray_vars": [
+        "W[7]",
+        "W[8]",
+        "W[9]",
+        "W[10]",
+        "W[11]",
+        "W[12]",
+        "W[13]",
+        "W[14]",
+        "W[17]",
+        "W[18]",
+        "W[19]",
+        "W[20]",
+        "W[21]",
+        "W[22]"
+      ],
+      "red_vars": [
+        "W[16]"
+      ],
+      "blue_vars": [
+        "W[15]"
+      ],
+      "fwd_target_slots": [
+        "d",
+        "c",
+        "b"
+      ],
+      "bwd_target_slots": [
+        "d",
+        "c",
+        "b"
+      ],
+      "target_expr": "Fwd['d', 'c', 'b']@r31 / Bwd['d', 'c', 'b']@r31",
+      "non_interference_side": "Both_Red_and_Blue",
+      "z3_v1_red_indep": "unsat",
+      "z3_v2_blue_indep": "unsat",
+      "z3_v3_red_nondeg": "sat",
+      "z3_v3_blue_nondeg": "sat",
+      "z3_status": "VERIFIED",
+      "z3_ms": 8072.98
+    },
+    {
+      "candidate_id": "p15_stage1b_local_bic_6r_t0",
+      "category": "Local_Independent_Biclique_64R",
+      "rounds_range": [
+        0,
+        5
+      ],
+      "use_msg_schedule": false,
+      "fixed_padding_mode": "standard",
+      "gray_vars": [
+        "W[2]",
+        "W[3]"
+      ],
+      "red_vars": [
+        "W[0]",
+        "W[1]"
+      ],
+      "blue_vars": [
+        "W[4]",
+        "W[5]"
+      ],
+      "fwd_mid_round": 3,
+      "fwd_invar_under_blue": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h"
+      ],
+      "fwd_sensitive_to_red": [
+        "a",
+        "b",
+        "c",
+        "e",
+        "f",
+        "g"
+      ],
+      "bwd_invar_under_red_at_start": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "bwd_sensitive_to_blue_at_start": [
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "target_expr": "Fwd['a', 'b', 'c', 'e', 'f', 'g']@r3 / Bwd['c', 'd', 'e', 'f']@r0",
+      "non_interference_side": "Both_Red_and_Blue",
+      "z3_status": "VERIFIED",
+      "z3_ms": 15949.32
+    },
+    {
+      "candidate_id": "p15_stage1b_local_bic_8r_t0",
+      "category": "Local_Independent_Biclique_64R",
+      "rounds_range": [
+        0,
+        7
+      ],
+      "use_msg_schedule": false,
+      "fixed_padding_mode": "standard",
+      "gray_vars": [
+        "W[2]",
+        "W[3]",
+        "W[4]",
+        "W[5]"
+      ],
+      "red_vars": [
+        "W[0]",
+        "W[1]"
+      ],
+      "blue_vars": [
+        "W[6]",
+        "W[7]"
+      ],
+      "fwd_mid_round": 4,
+      "fwd_invar_under_blue": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h"
+      ],
+      "fwd_sensitive_to_red": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h"
+      ],
+      "bwd_invar_under_red_at_start": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "bwd_sensitive_to_blue_at_start": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "target_expr": "Fwd['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']@r4 / Bwd['a', 'b', 'c', 'd', 'e', 'f']@r0",
+      "non_interference_side": "Both_Red_and_Blue",
+      "z3_status": "VERIFIED",
+      "z3_ms": 13846.91
+    },
+    {
+      "candidate_id": "p15_s2b_block2_16r_mitm",
+      "category": "Stage2B_Block2_Padding_MitM",
+      "rounds_range": [
+        0,
+        15
+      ],
+      "fwd_range": [
+        0,
+        1
+      ],
+      "bwd_range": [
+        1,
+        16
+      ],
+      "basis_start": 0,
+      "use_msg_schedule": true,
+      "fixed_padding_mode": "btc_block2",
+      "gray_vars": [
+        "W[1]",
+        "W[2]",
+        "W[3]",
+        "W[4]",
+        "W[5]",
+        "W[6]"
+      ],
+      "red_vars": [
+        "W[0]"
+      ],
+      "blue_vars": [
+        "W[7]"
+      ],
+      "fwd_target_slots": [
+        "d",
+        "h",
+        "c",
+        "g",
+        "b",
+        "f",
+        "a",
+        "e"
+      ],
+      "bwd_target_slots": [
+        "d",
+        "h",
+        "c",
+        "g",
+        "b",
+        "f",
+        "a",
+        "e"
+      ],
+      "target_expr": "Fwd['d', 'h', 'c', 'g', 'b', 'f', 'a', 'e']@r1 / Bwd['d', 'h', 'c', 'g', 'b', 'f', 'a', 'e']@r1",
+      "non_interference_side": "Both_Red_and_Blue",
+      "z3_v1_red_indep": "unsat",
+      "z3_v2_blue_indep": "unsat",
+      "z3_v3_red_nondeg": "sat",
+      "z3_v3_blue_nondeg": "sat",
+      "z3_status": "VERIFIED",
+      "z3_ms": 918.65
+    },
+    {
+      "candidate_id": "p15_btc_crossblock_wp4_7_decouple",
+      "category": "BTC_CrossBlock_Padding_NonInterference",
+      "rounds_range": [
+        68,
+        82
+      ],
+      "use_msg_schedule": true,
+      "fixed_padding_mode": "btc_block2",
+      "gray_vars": [
+        "W'[8]=0x80000000",
+        "W'[9..14]=0",
+        "W'[15]=256"
+      ],
+      "red_vars": [
+        "W'[0..3] (Block1b A-track)"
+      ],
+      "blue_vars": [
+        "W'[4..7] (Block1b E-track)"
+      ],
+      "target_expr": "(W'[16], W'[17], W'[18]) and Bwd(A_4..A_1) from S'_8",
+      "non_interference_side": "Independent_of_W'[4..7]",
+      "z3_status": "VERIFIED",
+      "z3_ms": 15.58
+    },
+    {
+      "candidate_id": "p15_backsolve_4r_chunk",
+      "category": "Baseline_4R_backSolveA_Chunk",
+      "rounds_range": [
+        0,
+        23
+      ],
+      "fwd_range": [
+        0,
+        20
+      ],
+      "bwd_range": [
+        20,
+        24
+      ],
+      "basis_start": 0,
+      "use_msg_schedule": false,
+      "fixed_padding_mode": "standard",
+      "gray_vars": [
+        "W[1]",
+        "W[2]",
+        "W[3]",
+        "W[4]",
+        "W[5]",
+        "W[6]",
+        "W[7]",
+        "W[8]",
+        "W[9]",
+        "W[10]",
+        "W[11]",
+        "W[12]",
+        "W[13]",
+        "W[14]",
+        "W[15]",
+        "W[16]",
+        "W[17]",
+        "W[18]",
+        "W[19]"
+      ],
+      "red_vars": [
+        "W[0]"
+      ],
+      "blue_vars": [
+        "W[20]",
+        "W[21]",
+        "W[22]",
+        "W[23]"
+      ],
+      "fwd_target_slots": [
+        "a",
+        "e"
+      ],
+      "bwd_target_slots": [
+        "e",
+        "f",
+        "g",
+        "h"
+      ],
+      "target_expr": "Fwd['a', 'e']@r20 / Bwd['e', 'f', 'g', 'h']@r20",
+      "non_interference_side": "Both_Red_and_Blue",
+      "z3_v1_red_indep": "unsat",
+      "z3_v2_blue_indep": "unsat",
+      "z3_v3_red_nondeg": "sat",
+      "z3_v3_blue_nondeg": "sat",
+      "z3_status": "VERIFIED",
+      "z3_ms": 5498.11
+    },
+    {
+      "candidate_id": "p15_btc_b2_r0_16_chunk",
+      "category": "BTC_Block2_16R_Chunk",
+      "rounds_range": [
+        0,
+        15
+      ],
+      "fwd_range": [
+        0,
+        6
+      ],
+      "bwd_range": [
+        6,
+        16
+      ],
+      "basis_start": 0,
+      "use_msg_schedule": false,
+      "fixed_padding_mode": "btc_block2",
+      "gray_vars": [
+        "W[2]",
+        "W[3]",
+        "W[4]",
+        "W[5]"
+      ],
+      "red_vars": [
+        "W[0]",
+        "W[1]"
+      ],
+      "blue_vars": [
+        "W[6]",
+        "W[7]"
+      ],
+      "fwd_target_slots": [
+        "a",
+        "e"
+      ],
+      "bwd_target_slots": [
+        "e",
+        "f",
+        "g",
+        "h"
+      ],
+      "target_expr": "Fwd['a', 'e']@r6 / Bwd['e', 'f', 'g', 'h']@r6",
+      "non_interference_side": "Both_Red_and_Blue",
+      "z3_v1_red_indep": "unsat",
+      "z3_v2_blue_indep": "unsat",
+      "z3_v3_red_nondeg": "sat",
+      "z3_v3_blue_nondeg": "sat",
+      "z3_status": "VERIFIED",
+      "z3_ms": 577.67
+    },
+    {
+      "candidate_id": "p15_btc_b1b_r0_16_chunk",
+      "category": "BTC_Block1b_16R_Chunk",
+      "rounds_range": [
+        0,
+        15
+      ],
+      "fwd_range": [
+        0,
+        2
+      ],
+      "bwd_range": [
+        2,
+        16
+      ],
+      "basis_start": 0,
+      "use_msg_schedule": false,
+      "fixed_padding_mode": "btc_block1b_hdr",
+      "gray_vars": [],
+      "red_vars": [
+        "W[0]",
+        "W[1]"
+      ],
+      "blue_vars": [
+        "W[2]",
+        "W[3]"
+      ],
+      "fwd_target_slots": [
+        "a",
+        "e"
+      ],
+      "bwd_target_slots": [
+        "e",
+        "f",
+        "g",
+        "h"
+      ],
+      "target_expr": "Fwd['a', 'e']@r2 / Bwd['e', 'f', 'g', 'h']@r2",
+      "non_interference_side": "Both_Red_and_Blue",
+      "z3_v1_red_indep": "unsat",
+      "z3_v2_blue_indep": "unsat",
+      "z3_v3_red_nondeg": "sat",
+      "z3_v3_blue_nondeg": "sat",
+      "z3_status": "VERIFIED",
+      "z3_ms": 570.83
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+[P12-COLAB] Start on Tesla T4 | allow_tf32={'default_dtype': 'torch.float32', 'matmul_allow_tf32': False, 'cudnn_allow_tf32': False}
+[P12-COLAB] sha256_ref xor_diff == 0 verified.
+[P12-COLAB] BTC bit_exactness: {'btc_genesis_xor_diff': 0, 'btc_genesis_hash_matched': True, 'random_headers_tested': 256, 'max_xor_diff': 0}
+[Stage 1/3] Running A1 calibration ...
+[A1] BASE_NO_ASICBOOST (2^32 amort): 512590.8 GE/hash
+[A1] Overt k= 4 | 2^32 saving= 7.61% (473569.5 GE) | sym(N=64) saving= 7.61%
+[A1] Overt k= 8 | 2^32 saving= 8.90% (466986.3 GE) | sym(N=64) saving= 8.90%
+[A1] Overt k=16 | 2^32 saving= 9.54% (463694.7 GE) | sym(N=64) saving= 9.54%
+[A1] Saved -> /content/p12_work/results/a1_calibration.json
+[Stage 2/3] Running A2 GPU GNBC search (N_holdout=262144, MAIN + 3 CTRL) ...
+[A2] Device=cuda (Tesla T4), allow_tf32=False, n_holdout=262144
+[A2] Running variant 1/4: SHA256_MAIN ...
+  [SHA256_MAIN] A2-1 start ...
+  [SHA256_MAIN] A2-2 start ...
+  [SHA256_MAIN] A2-3 start ...
+[A2] Done SHA256_MAIN in 284.7s | best_nonce_d4 holdout_saving=0.430% net_vs_classic=-10.091%
+[A2] Running variant 2/4: CTRL_RAND_ROTR_K_S0 ...
+  [CTRL_RAND_ROTR_K_S0] A2-1 start ...
+  [CTRL_RAND_ROTR_K_S0] A2-2 start ...
+  [CTRL_RAND_ROTR_K_S0] A2-3 start ...
+[A2] Done CTRL_RAND_ROTR_K_S0 in 275.6s | best_nonce_d4 holdout_saving=0.504% net_vs_classic=-9.984%
+[A2] Running variant 3/4: CTRL_RAND_ROTR_K_S1 ...
+  [CTRL_RAND_ROTR_K_S1] A2-1 start ...
+  [CTRL_RAND_ROTR_K_S1] A2-2 start ...
+  [CTRL_RAND_ROTR_K_S1] A2-3 start ...
+[A2] Done CTRL_RAND_ROTR_K_S1 in 270.9s | best_nonce_d4 holdout_saving=0.423% net_vs_classic=-10.081%
+[A2] Running variant 4/4: CTRL_RAND_ROTR_K_S2 ...
+  [CTRL_RAND_ROTR_K_S2] A2-1 start ...
+  [CTRL_RAND_ROTR_K_S2] A2-2 start ...
+  [CTRL_RAND_ROTR_K_S2] A2-3 start ...
+[A2] Done CTRL_RAND_ROTR_K_S2 in 270.7s | best_nonce_d4 holdout_saving=0.431% net_vs_classic=-10.042%
+[A2] Saved -> /content/p12_work/results/a2_gnbc_search.json
+[Stage 3/3] Running A3 Z3 + PySAT CaDiCaL195 exact bounds (MAIN + 3 CTRL) ...
+[A3] Solving Z3 + Cadical195 exact bounds for SHA256_MAIN ...
+[A3-PySAT] SHA256_MAIN Chunk2_onlyW3 R= 4: status=EXACT_MIN_PROVEN min_active=2/2 (UNSAT<=1) in 0.927s
+[A3-PySAT] SHA256_MAIN Chunk2_onlyW3 R= 6: status=EXACT_MIN_PROVEN min_active=2/6 (UNSAT<=1) in 15.532s
+[A3-PySAT] SHA256_MAIN Chunk2_onlyW3 R= 8: status=BUDGET_LOWER_BOUND min_active=2/10 (UNSAT<=1) in 33.686s
+[A3-PySAT] SHA256_MAIN Chunk2_onlyW3 R=10: status=BUDGET_LOWER_BOUND min_active=3/14 (UNSAT<=2) in 38.53s
+[A3-PySAT] SHA256_MAIN Chunk2_onlyW3 R=12: status=BUDGET_LOWER_BOUND min_active=2/18 (UNSAT<=1) in 30.915s
+[A3-PySAT] SHA256_MAIN Hash2_W0_inj0 R= 4: status=BUDGET_LOWER_BOUND min_active=2/8 (UNSAT<=1) in 57.212s
+[A3-PySAT] SHA256_MAIN Hash2_W0_inj0 R= 6: status=BUDGET_LOWER_BOUND min_active=2/12 (UNSAT<=1) in 57.898s
+[A3-PySAT] SHA256_MAIN Hash2_W0_inj0 R= 8: status=BUDGET_LOWER_BOUND min_active=2/16 (UNSAT<=1) in 53.437s
+[A3-PySAT] SHA256_MAIN Hash2_W0_inj0 R=10: status=BUDGET_LOWER_BOUND min_active=2/20 (UNSAT<=1) in 56.186s
+[A3-PySAT] SHA256_MAIN Hash2_W0_inj0 R=12: status=BUDGET_LOWER_BOUND min_active=2/24 (UNSAT<=1) in 54.022s
+[A3-PySAT] SHA256_MAIN Hash2_W0to7 R= 4: status=EXACT_MIN_PROVEN min_active=0/8 (UNSAT<=-1) in 0.228s
+[A3-PySAT] SHA256_MAIN Hash2_W0to7 R= 6: status=EXACT_MIN_PROVEN min_active=0/12 (UNSAT<=-1) in 0.094s
+[A3-PySAT] SHA256_MAIN Hash2_W0to7 R= 8: status=EXACT_MIN_PROVEN min_active=2/16 (UNSAT<=1) in 35.476s
+[A3-PySAT] SHA256_MAIN Hash2_W0to7 R=10: status=BUDGET_LOWER_BOUND min_active=2/20 (UNSAT<=1) in 80.02s
+[A3-PySAT] SHA256_MAIN Hash2_W0to7 R=12: status=BUDGET_LOWER_BOUND min_active=2/24 (UNSAT<=1) in 78.484s
+[A3] Solving Z3 + Cadical195 exact bounds for CTRL_RAND_ROTR_K_S0 ...
+[A3-PySAT] CTRL_RAND_ROTR_K_S0 Chunk2_onlyW3 R= 4: status=EXACT_MIN_PROVEN min_active=2/2 (UNSAT<=1) in 0.694s
+[A3-PySAT] CTRL_RAND_ROTR_K_S0 Chunk2_onlyW3 R= 6: status=EXACT_MIN_PROVEN min_active=2/6 (UNSAT<=1) in 6.905s
+[A3-PySAT] CTRL_RAND_ROTR_K_S0 Chunk2_onlyW3 R= 8: status=BUDGET_LOWER_BOUND min_active=3/10 (UNSAT<=2) in 37.148s
+[A3-PySAT] CTRL_RAND_ROTR_K_S0 Chunk2_onlyW3 R=10: status=BUDGET_LOWER_BOUND min_active=3/14 (UNSAT<=2) in 35.777s
+[A3-PySAT] CTRL_RAND_ROTR_K_S0 Chunk2_onlyW3 R=12: status=BUDGET_LOWER_BOUND min_active=3/18 (UNSAT<=2) in 41.624s
+[A3-PySAT] CTRL_RAND_ROTR_K_S0 Hash2_W0_inj0 R= 4: status=BUDGET_LOWER_BOUND min_active=2/8 (UNSAT<=1) in 59.248s
+[A3-PySAT] CTRL_RAND_ROTR_K_S0 Hash2_W0_inj0 R= 6: status=BUDGET_LOWER_BOUND min_active=2/12 (UNSAT<=1) in 52.53s
+[A3-PySAT] CTRL_RAND_ROTR_K_S0 Hash2_W0_inj0 R= 8: status=BUDGET_LOWER_BOUND min_active=2/16 (UNSAT<=1) in 52.647s
+[A3-PySAT] CTRL_RAND_ROTR_K_S0 Hash2_W0_inj0 R=10: status=BUDGET_LOWER_BOUND min_active=2/20 (UNSAT<=1) in 58.445s
+[A3-PySAT] CTRL_RAND_ROTR_K_S0 Hash2_W0_inj0 R=12: status=BUDGET_LOWER_BOUND min_active=2/24 (UNSAT<=1) in 50.068s
+[A3-PySAT] CTRL_RAND_ROTR_K_S0 Hash2_W0to7 R= 4: status=EXACT_MIN_PROVEN min_active=0/8 (UNSAT<=-1) in 0.044s
+[A3-PySAT] CTRL_RAND_ROTR_K_S0 Hash2_W0to7 R= 6: status=EXACT_MIN_PROVEN min_active=0/12 (UNSAT<=-1) in 0.054s
+[A3-PySAT] CTRL_RAND_ROTR_K_S0 Hash2_W0to7 R= 8: status=EXACT_MIN_PROVEN min_active=2/16 (UNSAT<=1) in 29.462s
+[A3-PySAT] CTRL_RAND_ROTR_K_S0 Hash2_W0to7 R=10: status=BUDGET_LOWER_BOUND min_active=2/20 (UNSAT<=1) in 73.665s
+[A3-PySAT] CTRL_RAND_ROTR_K_S0 Hash2_W0to7 R=12: status=BUDGET_LOWER_BOUND min_active=2/24 (UNSAT<=1) in 75.213s
+[A3] Solving Z3 + Cadical195 exact bounds for CTRL_RAND_ROTR_K_S1 ...
+[A3-PySAT] CTRL_RAND_ROTR_K_S1 Chunk2_onlyW3 R= 4: status=EXACT_MIN_PROVEN min_active=2/2 (UNSAT<=1) in 0.669s
+[A3-PySAT] CTRL_RAND_ROTR_K_S1 Chunk2_onlyW3 R= 6: status=EXACT_MIN_PROVEN min_active=2/6 (UNSAT<=1) in 8.052s
+[A3-PySAT] CTRL_RAND_ROTR_K_S1 Chunk2_onlyW3 R= 8: status=BUDGET_LOWER_BOUND min_active=3/10 (UNSAT<=2) in 50.186s
+[A3-PySAT] CTRL_RAND_ROTR_K_S1 Chunk2_onlyW3 R=10: status=BUDGET_LOWER_BOUND min_active=3/14 (UNSAT<=2) in 53.534s
+[A3-PySAT] CTRL_RAND_ROTR_K_S1 Chunk2_onlyW3 R=12: status=BUDGET_LOWER_BOUND min_active=3/18 (UNSAT<=2) in 46.485s
+[A3-PySAT] CTRL_RAND_ROTR_K_S1 Hash2_W0_inj0 R= 4: status=BUDGET_LOWER_BOUND min_active=2/8 (UNSAT<=1) in 56.141s
+[A3-PySAT] CTRL_RAND_ROTR_K_S1 Hash2_W0_inj0 R= 6: status=BUDGET_LOWER_BOUND min_active=3/12 (UNSAT<=2) in 54.95s
+[A3-PySAT] CTRL_RAND_ROTR_K_S1 Hash2_W0_inj0 R= 8: status=BUDGET_LOWER_BOUND min_active=2/16 (UNSAT<=1) in 52.024s
+[A3-PySAT] CTRL_RAND_ROTR_K_S1 Hash2_W0_inj0 R=10: status=BUDGET_LOWER_BOUND min_active=2/20 (UNSAT<=1) in 54.866s
+[A3-PySAT] CTRL_RAND_ROTR_K_S1 Hash2_W0_inj0 R=12: status=BUDGET_LOWER_BOUND min_active=2/24 (UNSAT<=1) in 52.297s
+[A3-PySAT] CTRL_RAND_ROTR_K_S1 Hash2_W0to7 R= 4: status=EXACT_MIN_PROVEN min_active=0/8 (UNSAT<=-1) in 0.077s
+[A3-PySAT] CTRL_RAND_ROTR_K_S1 Hash2_W0to7 R= 6: status=EXACT_MIN_PROVEN min_active=0/12 (UNSAT<=-1) in 0.096s
+[A3-PySAT] CTRL_RAND_ROTR_K_S1 Hash2_W0to7 R= 8: status=EXACT_MIN_PROVEN min_active=2/16 (UNSAT<=1) in 39.573s
+[A3-PySAT] CTRL_RAND_ROTR_K_S1 Hash2_W0to7 R=10: status=BUDGET_LOWER_BOUND min_active=2/20 (UNSAT<=1) in 84.292s
+[A3-PySAT] CTRL_RAND_ROTR_K_S1 Hash2_W0to7 R=12: status=BUDGET_LOWER_BOUND min_active=2/24 (UNSAT<=1) in 94.122s
+[A3] Solving Z3 + Cadical195 exact bounds for CTRL_RAND_ROTR_K_S2 ...
+[A3-PySAT] CTRL_RAND_ROTR_K_S2 Chunk2_onlyW3 R= 4: status=EXACT_MIN_PROVEN min_active=2/2 (UNSAT<=1) in 0.684s
+[A3-PySAT] CTRL_RAND_ROTR_K_S2 Chunk2_onlyW3 R= 6: status=EXACT_MIN_PROVEN min_active=2/6 (UNSAT<=1) in 8.501s
+[A3-PySAT] CTRL_RAND_ROTR_K_S2 Chunk2_onlyW3 R= 8: status=BUDGET_LOWER_BOUND min_active=2/10 (UNSAT<=1) in 32.271s
+[A3-PySAT] CTRL_RAND_ROTR_K_S2 Chunk2_onlyW3 R=10: status=BUDGET_LOWER_BOUND min_active=2/14 (UNSAT<=1) in 38.991s
+[A3-PySAT] CTRL_RAND_ROTR_K_S2 Chunk2_onlyW3 R=12: status=BUDGET_LOWER_BOUND min_active=3/18 (UNSAT<=2) in 44.765s
+[A3-PySAT] CTRL_RAND_ROTR_K_S2 Hash2_W0_inj0 R= 4: status=BUDGET_LOWER_BOUND min_active=2/8 (UNSAT<=1) in 65.042s
+[A3-PySAT] CTRL_RAND_ROTR_K_S2 Hash2_W0_inj0 R= 6: status=BUDGET_LOWER_BOUND min_active=3/12 (UNSAT<=2) in 68.521s
+[A3-PySAT] CTRL_RAND_ROTR_K_S2 Hash2_W0_inj0 R= 8: status=BUDGET_LOWER_BOUND min_active=2/16 (UNSAT<=1) in 66.766s
+[A3-PySAT] CTRL_RAND_ROTR_K_S2 Hash2_W0_inj0 R=10: status=BUDGET_LOWER_BOUND min_active=2/20 (UNSAT<=1) in 64.875s
+[A3-PySAT] CTRL_RAND_ROTR_K_S2 Hash2_W0_inj0 R=12: status=BUDGET_LOWER_BOUND min_active=2/24 (UNSAT<=1) in 65.325s
+[A3-PySAT] CTRL_RAND_ROTR_K_S2 Hash2_W0to7 R= 4: status=EXACT_MIN_PROVEN min_active=0/8 (UNSAT<=-1) in 0.043s
+[A3-PySAT] CTRL_RAND_ROTR_K_S2 Hash2_W0to7 R= 6: status=EXACT_MIN_PROVEN min_active=0/12 (UNSAT<=-1) in 0.059s
+[A3-PySAT] CTRL_RAND_ROTR_K_S2 Hash2_W0to7 R= 8: status=EXACT_MIN_PROVEN min_active=2/16 (UNSAT<=1) in 30.503s
+[A3-PySAT] CTRL_RAND_ROTR_K_S2 Hash2_W0to7 R=10: status=BUDGET_LOWER_BOUND min_active=2/20 (UNSAT<=1) in 84.623s
+[A3-PySAT] CTRL_RAND_ROTR_K_S2 Hash2_W0to7 R=12: status=BUDGET_LOWER_BOUND min_active=2/24 (UNSAT<=1) in 90.056s
+[A3] Saved -> /content/p12_work/results/a3_sat_bounds.json
+[P12-COLAB] ALL STAGES FINISHED.

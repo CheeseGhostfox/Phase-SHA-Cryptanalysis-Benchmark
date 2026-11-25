@@ -1,0 +1,4412 @@
+{
+  "experiment": "P11_Tensor_Network_Disentangler_And_Lyapunov_Funnel",
+  "device": "cuda",
+  "gpu_name": "Tesla T4",
+  "fp32_lock": {
+    "allow_tf32_matmul": false,
+    "allow_tf32_cudnn": false
+  },
+  "reference_verification": {
+    "sha256_64r_ref_xor_diff": 0,
+    "mpo_exact_checks": {
+      "4": {
+        "mpo_add_bond_dim": 2,
+        "mpo_xor_bond_dim": 1,
+        "trials": 8,
+        "bit_mismatches": 0,
+        "max_inverse_overlap_err": 1.07e-06,
+        "post_compression_max_chi_on_basis": 1
+      },
+      "8": {
+        "mpo_add_bond_dim": 2,
+        "mpo_xor_bond_dim": 1,
+        "trials": 8,
+        "bit_mismatches": 0,
+        "max_inverse_overlap_err": 2.09e-06,
+        "post_compression_max_chi_on_basis": 1
+      },
+      "16": {
+        "mpo_add_bond_dim": 2,
+        "mpo_xor_bond_dim": 1,
+        "trials": 8,
+        "bit_mismatches": 0,
+        "max_inverse_overlap_err": 3.81e-06,
+        "post_compression_max_chi_on_basis": 1
+      },
+      "32": {
+        "mpo_add_bond_dim": 2,
+        "mpo_xor_bond_dim": 1,
+        "trials": 8,
+        "bit_mismatches": 0,
+        "max_inverse_overlap_err": 5.36e-06,
+        "post_compression_max_chi_on_basis": 1
+      }
+    },
+    "disentangler_ortho_max_err": 2e-07
+  },
+  "status": "completed",
+  "part_1_mpo_tebd": [
+    {
+      "n_bits": 8,
+      "rot_mode": "rotr_zero",
+      "rot_val": 0,
+      "chi_max": 32,
+      "rounds": 6,
+      "per_round": [
+        {
+          "round": 1,
+          "max_bond_dim": 1,
+          "round_trunc_err_sq": 0.0,
+          "cum_trunc_err_sq": 0.0,
+          "mps_norm": 1.000005
+        },
+        {
+          "round": 2,
+          "max_bond_dim": 1,
+          "round_trunc_err_sq": 0.0,
+          "cum_trunc_err_sq": 0.0,
+          "mps_norm": 1.000004
+        },
+        {
+          "round": 3,
+          "max_bond_dim": 1,
+          "round_trunc_err_sq": 0.0,
+          "cum_trunc_err_sq": 0.0,
+          "mps_norm": 1.000003
+        },
+        {
+          "round": 4,
+          "max_bond_dim": 1,
+          "round_trunc_err_sq": 0.0,
+          "cum_trunc_err_sq": 0.0,
+          "mps_norm": 1.000003
+        },
+        {
+          "round": 5,
+          "max_bond_dim": 1,
+          "round_trunc_err_sq": 0.0,
+          "cum_trunc_err_sq": 0.0,
+          "mps_norm": 1.000004
+        },
+        {
+          "round": 6,
+          "max_bond_dim": 1,
+          "round_trunc_err_sq": 0.0,
+          "cum_trunc_err_sq": 0.0,
+          "mps_norm": 1.000005
+        }
+      ],
+      "elapsed_sec": 0.08
+    },
+    {
+      "n_bits": 8,
+      "rot_mode": "rotr_sha_like",
+      "rot_val": 2,
+      "chi_max": 16,
+      "rounds": 6,
+      "per_round": [
+        {
+          "round": 1,
+          "max_bond_dim": 16,
+          "round_trunc_err_sq": 0.0,
+          "cum_trunc_err_sq": 0.0,
+          "mps_norm": 1.000027
+        },
+        {
+          "round": 2,
+          "max_bond_dim": 16,
+          "round_trunc_err_sq": 19.547437,
+          "cum_trunc_err_sq": 19.547437,
+          "mps_norm": 0.202376
+        },
+        {
+          "round": 3,
+          "max_bond_dim": 16,
+          "round_trunc_err_sq": 11.455766,
+          "cum_trunc_err_sq": 31.003203,
+          "mps_norm": 0.130477
+        },
+        {
+          "round": 4,
+          "max_bond_dim": 16,
+          "round_trunc_err_sq": 9.24152,
+          "cum_trunc_err_sq": 40.244723,
+          "mps_norm": 0.104755
+        },
+        {
+          "round": 5,
+          "max_bond_dim": 16,
+          "round_trunc_err_sq": 5.448757,
+          "cum_trunc_err_sq": 45.69348,
+          "mps_norm": 0.098106
+        },
+        {
+          "round": 6,
+          "max_bond_dim": 16,
+          "round_trunc_err_sq": 4.457188,
+          "cum_trunc_err_sq": 50.150667,
+          "mps_norm": 0.096214
+        }
+      ],
+      "elapsed_sec": 0.47
+    },
+    {
+      "n_bits": 8,
+      "rot_mode": "rotr_sha_like",
+      "rot_val": 2,
+      "chi_max": 32,
+      "rounds": 6,
+      "per_round": [
+        {
+          "round": 1,
+          "max_bond_dim": 16,
+          "round_trunc_err_sq": 0.0,
+          "cum_trunc_err_sq": 0.0,
+          "mps_norm": 1.000027
+        },
+        {
+          "round": 2,
+          "max_bond_dim": 32,
+          "round_trunc_err_sq": 33.889944,
+          "cum_trunc_err_sq": 33.889944,
+          "mps_norm": 0.402233
+        },
+        {
+          "round": 3,
+          "max_bond_dim": 32,
+          "round_trunc_err_sq": 11.71237,
+          "cum_trunc_err_sq": 45.602314,
+          "mps_norm": 0.311199
+        },
+        {
+          "round": 4,
+          "max_bond_dim": 32,
+          "round_trunc_err_sq": 5.302428,
+          "cum_trunc_err_sq": 50.904742,
+          "mps_norm": 0.287748
+        },
+        {
+          "round": 5,
+          "max_bond_dim": 32,
+          "round_trunc_err_sq": 4.904642,
+          "cum_trunc_err_sq": 55.809384,
+          "mps_norm": 0.270938
+        },
+        {
+          "round": 6,
+          "max_bond_dim": 32,
+          "round_trunc_err_sq": 4.763314,
+          "cum_trunc_err_sq": 60.572697,
+          "mps_norm": 0.257297
+        }
+      ],
+      "elapsed_sec": 0.35
+    },
+    {
+      "n_bits": 8,
+      "rot_mode": "rotr_random_ctrl",
+      "rot_val": 3,
+      "chi_max": 32,
+      "rounds": 6,
+      "per_round": [
+        {
+          "round": 1,
+          "max_bond_dim": 32,
+          "round_trunc_err_sq": 11.008648,
+          "cum_trunc_err_sq": 11.008648,
+          "mps_norm": 0.55862
+        },
+        {
+          "round": 2,
+          "max_bond_dim": 32,
+          "round_trunc_err_sq": 39.655275,
+          "cum_trunc_err_sq": 50.663923,
+          "mps_norm": 0.178044
+        },
+        {
+          "round": 3,
+          "max_bond_dim": 32,
+          "round_trunc_err_sq": 25.343685,
+          "cum_trunc_err_sq": 76.007608,
+          "mps_norm": 0.110579
+        },
+        {
+          "round": 4,
+          "max_bond_dim": 32,
+          "round_trunc_err_sq": 20.123093,
+          "cum_trunc_err_sq": 96.130701,
+          "mps_norm": 0.084282
+        },
+        {
+          "round": 5,
+          "max_bond_dim": 32,
+          "round_trunc_err_sq": 11.492096,
+          "cum_trunc_err_sq": 107.622797,
+          "mps_norm": 0.075871
+        },
+        {
+          "round": 6,
+          "max_bond_dim": 32,
+          "round_trunc_err_sq": 7.456663,
+          "cum_trunc_err_sq": 115.07946,
+          "mps_norm": 0.071465
+        }
+      ],
+      "elapsed_sec": 0.39
+    },
+    {
+      "n_bits": 12,
+      "rot_mode": "rotr_zero",
+      "rot_val": 0,
+      "chi_max": 32,
+      "rounds": 6,
+      "per_round": [
+        {
+          "round": 1,
+          "max_bond_dim": 1,
+          "round_trunc_err_sq": 0.0,
+          "cum_trunc_err_sq": 0.0,
+          "mps_norm": 1.000007
+        },
+        {
+          "round": 2,
+          "max_bond_dim": 1,
+          "round_trunc_err_sq": 0.0,
+          "cum_trunc_err_sq": 0.0,
+          "mps_norm": 1.000004
+        },
+        {
+          "round": 3,
+          "max_bond_dim": 1,
+          "round_trunc_err_sq": 0.0,
+          "cum_trunc_err_sq": 0.0,
+          "mps_norm": 1.000007
+        },
+        {
+          "round": 4,
+          "max_bond_dim": 1,
+          "round_trunc_err_sq": 0.0,
+          "cum_trunc_err_sq": 0.0,
+          "mps_norm": 1.000006
+        },
+        {
+          "round": 5,
+          "max_bond_dim": 1,
+          "round_trunc_err_sq": 0.0,
+          "cum_trunc_err_sq": 0.0,
+          "mps_norm": 1.000006
+        },
+        {
+          "round": 6,
+          "max_bond_dim": 1,
+          "round_trunc_err_sq": 0.0,
+          "cum_trunc_err_sq": 0.0,
+          "mps_norm": 1.000007
+        }
+      ],
+      "elapsed_sec": 0.13
+    },
+    {
+      "n_bits": 12,
+      "rot_mode": "rotr_sha_like",
+      "rot_val": 3,
+      "chi_max": 16,
+      "rounds": 6,
+      "per_round": [
+        {
+          "round": 1,
+          "max_bond_dim": 16,
+          "round_trunc_err_sq": 14.818002,
+          "cum_trunc_err_sq": 14.818002,
+          "mps_norm": 0.271939
+        },
+        {
+          "round": 2,
+          "max_bond_dim": 16,
+          "round_trunc_err_sq": 33.375122,
+          "cum_trunc_err_sq": 48.193124,
+          "mps_norm": 0.016564
+        },
+        {
+          "round": 3,
+          "max_bond_dim": 16,
+          "round_trunc_err_sq": 14.24329,
+          "cum_trunc_err_sq": 62.436414,
+          "mps_norm": 0.010786
+        },
+        {
+          "round": 4,
+          "max_bond_dim": 16,
+          "round_trunc_err_sq": 7.185349,
+          "cum_trunc_err_sq": 69.621763,
+          "mps_norm": 0.008296
+        },
+        {
+          "round": 5,
+          "max_bond_dim": 16,
+          "round_trunc_err_sq": 3.361763,
+          "cum_trunc_err_sq": 72.983526,
+          "mps_norm": 0.007616
+        },
+        {
+          "round": 6,
+          "max_bond_dim": 16,
+          "round_trunc_err_sq": 2.55498,
+          "cum_trunc_err_sq": 75.538506,
+          "mps_norm": 0.007441
+        }
+      ],
+      "elapsed_sec": 0.66
+    },
+    {
+      "n_bits": 12,
+      "rot_mode": "rotr_sha_like",
+      "rot_val": 3,
+      "chi_max": 32,
+      "rounds": 6,
+      "per_round": [
+        {
+          "round": 1,
+          "max_bond_dim": 32,
+          "round_trunc_err_sq": 11.636408,
+          "cum_trunc_err_sq": 11.636408,
+          "mps_norm": 0.522329
+        },
+        {
+          "round": 2,
+          "max_bond_dim": 32,
+          "round_trunc_err_sq": 71.60512,
+          "cum_trunc_err_sq": 83.241527,
+          "mps_norm": 0.041192
+        },
+        {
+          "round": 3,
+          "max_bond_dim": 32,
+          "round_trunc_err_sq": 34.529544,
+          "cum_trunc_err_sq": 117.771072,
+          "mps_norm": 0.022753
+        },
+        {
+          "round": 4,
+          "max_bond_dim": 32,
+          "round_trunc_err_sq": 18.357055,
+          "cum_trunc_err_sq": 136.128127,
+          "mps_norm": 0.018692
+        },
+        {
+          "round": 5,
+          "max_bond_dim": 32,
+          "round_trunc_err_sq": 5.140676,
+          "cum_trunc_err_sq": 141.268802,
+          "mps_norm": 0.017728
+        },
+        {
+          "round": 6,
+          "max_bond_dim": 32,
+          "round_trunc_err_sq": 2.605052,
+          "cum_trunc_err_sq": 143.873854,
+          "mps_norm": 0.017326
+        }
+      ],
+      "elapsed_sec": 1.0
+    },
+    {
+      "n_bits": 12,
+      "rot_mode": "rotr_random_ctrl",
+      "rot_val": 5,
+      "chi_max": 32,
+      "rounds": 6,
+      "per_round": [
+        {
+          "round": 1,
+          "max_bond_dim": 32,
+          "round_trunc_err_sq": 62.863949,
+          "cum_trunc_err_sq": 62.863949,
+          "mps_norm": 0.089272
+        },
+        {
+          "round": 2,
+          "max_bond_dim": 32,
+          "round_trunc_err_sq": 85.17873,
+          "cum_trunc_err_sq": 148.042679,
+          "mps_norm": 0.006193
+        },
+        {
+          "round": 3,
+          "max_bond_dim": 32,
+          "round_trunc_err_sq": 34.536396,
+          "cum_trunc_err_sq": 182.579075,
+          "mps_norm": 0.003936
+        },
+        {
+          "round": 4,
+          "max_bond_dim": 32,
+          "round_trunc_err_sq": 22.851974,
+          "cum_trunc_err_sq": 205.431049,
+          "mps_norm": 0.002898
+        },
+        {
+          "round": 5,
+          "max_bond_dim": 32,
+          "round_trunc_err_sq": 9.774498,
+          "cum_trunc_err_sq": 215.205547,
+          "mps_norm": 0.002298
+        },
+        {
+          "round": 6,
+          "max_bond_dim": 32,
+          "round_trunc_err_sq": 6.184559,
+          "cum_trunc_err_sq": 221.390106,
+          "mps_norm": 0.002128
+        }
+      ],
+      "elapsed_sec": 1.54
+    }
+  ],
+  "part_2_sha256_entanglement": [
+    {
+      "num_rounds": 1,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "sha256_real",
+      "n_midstates": 8,
+      "mean_n_valid": 0.0,
+      "mid_vn_mean": 0.0,
+      "mid_vn_std": 0.0,
+      "max_vn_mean": 0.0,
+      "mid_chi99_mean": 1.0,
+      "fidelity_mean_by_chi": {
+        "2": 1.0,
+        "4": 1.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "elapsed_sec": 0.85
+    },
+    {
+      "num_rounds": 1,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_midstates": 8,
+      "mean_n_valid": 0.0,
+      "mid_vn_mean": 0.0,
+      "mid_vn_std": 0.0,
+      "max_vn_mean": 0.0,
+      "mid_chi99_mean": 1.0,
+      "fidelity_mean_by_chi": {
+        "2": 1.0,
+        "4": 1.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "elapsed_sec": 0.66
+    },
+    {
+      "num_rounds": 1,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "random_oracle_page",
+      "n_midstates": 8,
+      "mean_n_valid": 4096.0,
+      "mid_vn_mean": 7.10983,
+      "mid_vn_std": 0.00414,
+      "max_vn_mean": 7.10983,
+      "mid_chi99_mean": 195.75,
+      "fidelity_mean_by_chi": {
+        "2": 0.06308,
+        "4": 0.06622,
+        "8": 0.07717,
+        "16": 0.1175,
+        "32": 0.23812,
+        "64": 0.52183
+      },
+      "elapsed_sec": 1.01
+    },
+    {
+      "num_rounds": 2,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "sha256_real",
+      "n_midstates": 8,
+      "mean_n_valid": 4094.12,
+      "mid_vn_mean": 5.53838,
+      "mid_vn_std": 0.10507,
+      "max_vn_mean": 5.72135,
+      "mid_chi99_mean": 103.75,
+      "fidelity_mean_by_chi": {
+        "2": 0.01882,
+        "4": 0.0702,
+        "8": 0.20278,
+        "16": 0.41665,
+        "32": 0.71752,
+        "64": 0.93683
+      },
+      "elapsed_sec": 1.12
+    },
+    {
+      "num_rounds": 2,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_midstates": 8,
+      "mean_n_valid": 4066.5,
+      "mid_vn_mean": 2.88672,
+      "mid_vn_std": 0.19959,
+      "max_vn_mean": 3.30054,
+      "mid_chi99_mean": 17.25,
+      "fidelity_mean_by_chi": {
+        "2": 0.26189,
+        "4": 0.54658,
+        "8": 0.86545,
+        "16": 0.9793,
+        "32": 0.99853,
+        "64": 1.0
+      },
+      "elapsed_sec": 1.24
+    },
+    {
+      "num_rounds": 2,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "random_oracle_page",
+      "n_midstates": 8,
+      "mean_n_valid": 4096.0,
+      "mid_vn_mean": 7.10908,
+      "mid_vn_std": 0.00347,
+      "max_vn_mean": 7.10908,
+      "mid_chi99_mean": 195.25,
+      "fidelity_mean_by_chi": {
+        "2": 0.06265,
+        "4": 0.06608,
+        "8": 0.07763,
+        "16": 0.11714,
+        "32": 0.2388,
+        "64": 0.5221
+      },
+      "elapsed_sec": 1.04
+    },
+    {
+      "num_rounds": 3,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "sha256_real",
+      "n_midstates": 8,
+      "mean_n_valid": 4098.0,
+      "mid_vn_mean": 7.10453,
+      "mid_vn_std": 0.00859,
+      "max_vn_mean": 7.10453,
+      "mid_chi99_mean": 195.38,
+      "fidelity_mean_by_chi": {
+        "2": 0.06274,
+        "4": 0.06567,
+        "8": 0.07722,
+        "16": 0.11666,
+        "32": 0.2402,
+        "64": 0.52445
+      },
+      "elapsed_sec": 0.96
+    },
+    {
+      "num_rounds": 3,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_midstates": 8,
+      "mean_n_valid": 4105.5,
+      "mid_vn_mean": 7.08411,
+      "mid_vn_std": 0.00702,
+      "max_vn_mean": 7.08411,
+      "mid_chi99_mean": 194.0,
+      "fidelity_mean_by_chi": {
+        "2": 0.06304,
+        "4": 0.06642,
+        "8": 0.07914,
+        "16": 0.12298,
+        "32": 0.2525,
+        "64": 0.53858
+      },
+      "elapsed_sec": 0.98
+    },
+    {
+      "num_rounds": 3,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "random_oracle_page",
+      "n_midstates": 8,
+      "mean_n_valid": 4096.0,
+      "mid_vn_mean": 7.10227,
+      "mid_vn_std": 0.00591,
+      "max_vn_mean": 7.10227,
+      "mid_chi99_mean": 195.38,
+      "fidelity_mean_by_chi": {
+        "2": 0.06282,
+        "4": 0.06602,
+        "8": 0.07706,
+        "16": 0.11791,
+        "32": 0.23958,
+        "64": 0.52409
+      },
+      "elapsed_sec": 1.01
+    },
+    {
+      "num_rounds": 4,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "sha256_real",
+      "n_midstates": 8,
+      "mean_n_valid": 4101.5,
+      "mid_vn_mean": 7.10799,
+      "mid_vn_std": 0.00684,
+      "max_vn_mean": 7.10799,
+      "mid_chi99_mean": 195.62,
+      "fidelity_mean_by_chi": {
+        "2": 0.06302,
+        "4": 0.06602,
+        "8": 0.07756,
+        "16": 0.11711,
+        "32": 0.23873,
+        "64": 0.52272
+      },
+      "elapsed_sec": 1.09
+    },
+    {
+      "num_rounds": 4,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_midstates": 8,
+      "mean_n_valid": 4079.62,
+      "mid_vn_mean": 7.11394,
+      "mid_vn_std": 0.00495,
+      "max_vn_mean": 7.11394,
+      "mid_chi99_mean": 195.5,
+      "fidelity_mean_by_chi": {
+        "2": 0.06258,
+        "4": 0.06563,
+        "8": 0.07683,
+        "16": 0.11599,
+        "32": 0.23785,
+        "64": 0.52097
+      },
+      "elapsed_sec": 1.0
+    },
+    {
+      "num_rounds": 4,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "random_oracle_page",
+      "n_midstates": 8,
+      "mean_n_valid": 4096.0,
+      "mid_vn_mean": 7.10363,
+      "mid_vn_std": 0.00572,
+      "max_vn_mean": 7.10363,
+      "mid_chi99_mean": 195.25,
+      "fidelity_mean_by_chi": {
+        "2": 0.06281,
+        "4": 0.06625,
+        "8": 0.07801,
+        "16": 0.11763,
+        "32": 0.23928,
+        "64": 0.52457
+      },
+      "elapsed_sec": 0.94
+    },
+    {
+      "num_rounds": 5,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "sha256_real",
+      "n_midstates": 8,
+      "mean_n_valid": 4100.75,
+      "mid_vn_mean": 7.10735,
+      "mid_vn_std": 0.00482,
+      "max_vn_mean": 7.10735,
+      "mid_chi99_mean": 195.12,
+      "fidelity_mean_by_chi": {
+        "2": 0.06305,
+        "4": 0.06618,
+        "8": 0.07783,
+        "16": 0.11694,
+        "32": 0.23871,
+        "64": 0.52221
+      },
+      "elapsed_sec": 1.0
+    },
+    {
+      "num_rounds": 5,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_midstates": 8,
+      "mean_n_valid": 4061.62,
+      "mid_vn_mean": 7.10422,
+      "mid_vn_std": 0.00461,
+      "max_vn_mean": 7.10422,
+      "mid_chi99_mean": 195.12,
+      "fidelity_mean_by_chi": {
+        "2": 0.06248,
+        "4": 0.06571,
+        "8": 0.07718,
+        "16": 0.11638,
+        "32": 0.23912,
+        "64": 0.52435
+      },
+      "elapsed_sec": 0.98
+    },
+    {
+      "num_rounds": 5,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "random_oracle_page",
+      "n_midstates": 8,
+      "mean_n_valid": 4096.0,
+      "mid_vn_mean": 7.10536,
+      "mid_vn_std": 0.00686,
+      "max_vn_mean": 7.10536,
+      "mid_chi99_mean": 195.25,
+      "fidelity_mean_by_chi": {
+        "2": 0.06303,
+        "4": 0.06613,
+        "8": 0.07758,
+        "16": 0.1169,
+        "32": 0.2393,
+        "64": 0.52374
+      },
+      "elapsed_sec": 0.96
+    },
+    {
+      "num_rounds": 6,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "sha256_real",
+      "n_midstates": 8,
+      "mean_n_valid": 4118.88,
+      "mid_vn_mean": 7.10552,
+      "mid_vn_std": 0.00688,
+      "max_vn_mean": 7.10552,
+      "mid_chi99_mean": 195.12,
+      "fidelity_mean_by_chi": {
+        "2": 0.06352,
+        "4": 0.06656,
+        "8": 0.0784,
+        "16": 0.11814,
+        "32": 0.24023,
+        "64": 0.52372
+      },
+      "elapsed_sec": 1.08
+    },
+    {
+      "num_rounds": 6,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_midstates": 8,
+      "mean_n_valid": 4114.0,
+      "mid_vn_mean": 7.10692,
+      "mid_vn_std": 0.00734,
+      "max_vn_mean": 7.10692,
+      "mid_chi99_mean": 195.38,
+      "fidelity_mean_by_chi": {
+        "2": 0.06318,
+        "4": 0.06639,
+        "8": 0.07772,
+        "16": 0.11782,
+        "32": 0.23907,
+        "64": 0.52303
+      },
+      "elapsed_sec": 1.12
+    },
+    {
+      "num_rounds": 6,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "random_oracle_page",
+      "n_midstates": 8,
+      "mean_n_valid": 4096.0,
+      "mid_vn_mean": 7.10555,
+      "mid_vn_std": 0.00509,
+      "max_vn_mean": 7.10555,
+      "mid_chi99_mean": 195.5,
+      "fidelity_mean_by_chi": {
+        "2": 0.06291,
+        "4": 0.06599,
+        "8": 0.07745,
+        "16": 0.11773,
+        "32": 0.23966,
+        "64": 0.52362
+      },
+      "elapsed_sec": 1.11
+    },
+    {
+      "num_rounds": 8,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "sha256_real",
+      "n_midstates": 8,
+      "mean_n_valid": 4116.88,
+      "mid_vn_mean": 7.10696,
+      "mid_vn_std": 0.00661,
+      "max_vn_mean": 7.10696,
+      "mid_chi99_mean": 195.38,
+      "fidelity_mean_by_chi": {
+        "2": 0.06333,
+        "4": 0.06631,
+        "8": 0.07748,
+        "16": 0.11713,
+        "32": 0.23903,
+        "64": 0.5224
+      },
+      "elapsed_sec": 1.01
+    },
+    {
+      "num_rounds": 8,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_midstates": 8,
+      "mean_n_valid": 4115.25,
+      "mid_vn_mean": 7.10352,
+      "mid_vn_std": 0.00385,
+      "max_vn_mean": 7.10352,
+      "mid_chi99_mean": 195.12,
+      "fidelity_mean_by_chi": {
+        "2": 0.06334,
+        "4": 0.06636,
+        "8": 0.07758,
+        "16": 0.11828,
+        "32": 0.24014,
+        "64": 0.52386
+      },
+      "elapsed_sec": 1.03
+    },
+    {
+      "num_rounds": 8,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "random_oracle_page",
+      "n_midstates": 8,
+      "mean_n_valid": 4096.0,
+      "mid_vn_mean": 7.10421,
+      "mid_vn_std": 0.00743,
+      "max_vn_mean": 7.10421,
+      "mid_chi99_mean": 195.12,
+      "fidelity_mean_by_chi": {
+        "2": 0.06295,
+        "4": 0.06614,
+        "8": 0.07746,
+        "16": 0.11782,
+        "32": 0.23891,
+        "64": 0.52288
+      },
+      "elapsed_sec": 0.94
+    },
+    {
+      "num_rounds": 12,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "sha256_real",
+      "n_midstates": 8,
+      "mean_n_valid": 4110.5,
+      "mid_vn_mean": 7.10502,
+      "mid_vn_std": 0.00929,
+      "max_vn_mean": 7.10502,
+      "mid_chi99_mean": 195.0,
+      "fidelity_mean_by_chi": {
+        "2": 0.06318,
+        "4": 0.06637,
+        "8": 0.07764,
+        "16": 0.11761,
+        "32": 0.24036,
+        "64": 0.52332
+      },
+      "elapsed_sec": 1.04
+    },
+    {
+      "num_rounds": 12,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_midstates": 8,
+      "mean_n_valid": 4073.62,
+      "mid_vn_mean": 7.1052,
+      "mid_vn_std": 0.0059,
+      "max_vn_mean": 7.1052,
+      "mid_chi99_mean": 195.12,
+      "fidelity_mean_by_chi": {
+        "2": 0.06258,
+        "4": 0.06571,
+        "8": 0.07687,
+        "16": 0.11722,
+        "32": 0.23805,
+        "64": 0.52294
+      },
+      "elapsed_sec": 1.06
+    },
+    {
+      "num_rounds": 12,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "random_oracle_page",
+      "n_midstates": 8,
+      "mean_n_valid": 4096.0,
+      "mid_vn_mean": 7.10604,
+      "mid_vn_std": 0.00526,
+      "max_vn_mean": 7.10604,
+      "mid_chi99_mean": 195.5,
+      "fidelity_mean_by_chi": {
+        "2": 0.06312,
+        "4": 0.06621,
+        "8": 0.07825,
+        "16": 0.11797,
+        "32": 0.23898,
+        "64": 0.52219
+      },
+      "elapsed_sec": 0.95
+    },
+    {
+      "num_rounds": 16,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "sha256_real",
+      "n_midstates": 8,
+      "mean_n_valid": 4122.12,
+      "mid_vn_mean": 7.10479,
+      "mid_vn_std": 0.00691,
+      "max_vn_mean": 7.10479,
+      "mid_chi99_mean": 195.38,
+      "fidelity_mean_by_chi": {
+        "2": 0.063,
+        "4": 0.06665,
+        "8": 0.07831,
+        "16": 0.11763,
+        "32": 0.2401,
+        "64": 0.52296
+      },
+      "elapsed_sec": 1.09
+    },
+    {
+      "num_rounds": 16,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_midstates": 8,
+      "mean_n_valid": 4085.25,
+      "mid_vn_mean": 7.10496,
+      "mid_vn_std": 0.00443,
+      "max_vn_mean": 7.10496,
+      "mid_chi99_mean": 194.88,
+      "fidelity_mean_by_chi": {
+        "2": 0.06264,
+        "4": 0.06574,
+        "8": 0.07689,
+        "16": 0.11716,
+        "32": 0.23851,
+        "64": 0.52311
+      },
+      "elapsed_sec": 1.07
+    },
+    {
+      "num_rounds": 16,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "random_oracle_page",
+      "n_midstates": 8,
+      "mean_n_valid": 4096.0,
+      "mid_vn_mean": 7.10869,
+      "mid_vn_std": 0.00257,
+      "max_vn_mean": 7.10869,
+      "mid_chi99_mean": 195.25,
+      "fidelity_mean_by_chi": {
+        "2": 0.06317,
+        "4": 0.06643,
+        "8": 0.07752,
+        "16": 0.11725,
+        "32": 0.23797,
+        "64": 0.52259
+      },
+      "elapsed_sec": 0.94
+    },
+    {
+      "num_rounds": 32,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "sha256_real",
+      "n_midstates": 8,
+      "mean_n_valid": 4109.75,
+      "mid_vn_mean": 7.10722,
+      "mid_vn_std": 0.00622,
+      "max_vn_mean": 7.10722,
+      "mid_chi99_mean": 195.5,
+      "fidelity_mean_by_chi": {
+        "2": 0.06311,
+        "4": 0.06628,
+        "8": 0.07766,
+        "16": 0.11709,
+        "32": 0.23927,
+        "64": 0.52139
+      },
+      "elapsed_sec": 1.4
+    },
+    {
+      "num_rounds": 32,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_midstates": 8,
+      "mean_n_valid": 4083.5,
+      "mid_vn_mean": 7.1061,
+      "mid_vn_std": 0.00444,
+      "max_vn_mean": 7.1061,
+      "mid_chi99_mean": 195.25,
+      "fidelity_mean_by_chi": {
+        "2": 0.0627,
+        "4": 0.06611,
+        "8": 0.07715,
+        "16": 0.11813,
+        "32": 0.23987,
+        "64": 0.52329
+      },
+      "elapsed_sec": 1.48
+    },
+    {
+      "num_rounds": 32,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "random_oracle_page",
+      "n_midstates": 8,
+      "mean_n_valid": 4096.0,
+      "mid_vn_mean": 7.10743,
+      "mid_vn_std": 0.00412,
+      "max_vn_mean": 7.10743,
+      "mid_chi99_mean": 195.38,
+      "fidelity_mean_by_chi": {
+        "2": 0.06277,
+        "4": 0.06601,
+        "8": 0.07775,
+        "16": 0.11696,
+        "32": 0.23868,
+        "64": 0.52155
+      },
+      "elapsed_sec": 0.99
+    },
+    {
+      "num_rounds": 64,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "sha256_real",
+      "n_midstates": 8,
+      "mean_n_valid": 4097.25,
+      "mid_vn_mean": 7.10621,
+      "mid_vn_std": 0.00594,
+      "max_vn_mean": 7.10621,
+      "mid_chi99_mean": 195.5,
+      "fidelity_mean_by_chi": {
+        "2": 0.06305,
+        "4": 0.06615,
+        "8": 0.07773,
+        "16": 0.11677,
+        "32": 0.2398,
+        "64": 0.52241
+      },
+      "elapsed_sec": 1.61
+    },
+    {
+      "num_rounds": 64,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_midstates": 8,
+      "mean_n_valid": 4048.75,
+      "mid_vn_mean": 7.11025,
+      "mid_vn_std": 0.0037,
+      "max_vn_mean": 7.11025,
+      "mid_chi99_mean": 195.38,
+      "fidelity_mean_by_chi": {
+        "2": 0.06214,
+        "4": 0.06541,
+        "8": 0.07645,
+        "16": 0.11663,
+        "32": 0.23754,
+        "64": 0.52075
+      },
+      "elapsed_sec": 1.62
+    },
+    {
+      "num_rounds": 64,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 4,
+      "cipher_kind": "random_oracle_page",
+      "n_midstates": 8,
+      "mean_n_valid": 4096.0,
+      "mid_vn_mean": 7.10532,
+      "mid_vn_std": 0.00705,
+      "max_vn_mean": 7.10532,
+      "mid_chi99_mean": 195.38,
+      "fidelity_mean_by_chi": {
+        "2": 0.06298,
+        "4": 0.06583,
+        "8": 0.07733,
+        "16": 0.1178,
+        "32": 0.23892,
+        "64": 0.52366
+      },
+      "elapsed_sec": 0.95
+    },
+    {
+      "num_rounds": 1,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "sha256_real",
+      "n_midstates": 8,
+      "mean_n_valid": 0.0,
+      "mid_vn_mean": 0.0015,
+      "mid_vn_std": 0.00398,
+      "max_vn_mean": 0.04293,
+      "mid_chi99_mean": 1.0,
+      "fidelity_mean_by_chi": {
+        "2": 1.0,
+        "4": 1.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "elapsed_sec": 0.69
+    },
+    {
+      "num_rounds": 1,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_midstates": 8,
+      "mean_n_valid": 0.0,
+      "mid_vn_mean": 0.0,
+      "mid_vn_std": 0.0,
+      "max_vn_mean": 0.0,
+      "mid_chi99_mean": 1.0,
+      "fidelity_mean_by_chi": {
+        "2": 1.0,
+        "4": 1.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "elapsed_sec": 0.67
+    },
+    {
+      "num_rounds": 1,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "random_oracle_page",
+      "n_midstates": 8,
+      "mean_n_valid": 256.0,
+      "mid_vn_mean": 6.73055,
+      "mid_vn_std": 0.03831,
+      "max_vn_mean": 6.73055,
+      "mid_chi99_mean": 129.12,
+      "fidelity_mean_by_chi": {
+        "2": 0.01142,
+        "4": 0.02662,
+        "8": 0.06204,
+        "16": 0.14795,
+        "32": 0.33695,
+        "64": 0.67789
+      },
+      "elapsed_sec": 0.91
+    },
+    {
+      "num_rounds": 2,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "sha256_real",
+      "n_midstates": 8,
+      "mean_n_valid": 259.38,
+      "mid_vn_mean": 6.72925,
+      "mid_vn_std": 0.06067,
+      "max_vn_mean": 6.73531,
+      "mid_chi99_mean": 128.0,
+      "fidelity_mean_by_chi": {
+        "2": 0.0176,
+        "4": 0.03834,
+        "8": 0.07959,
+        "16": 0.1685,
+        "32": 0.34419,
+        "64": 0.65998
+      },
+      "elapsed_sec": 0.86
+    },
+    {
+      "num_rounds": 2,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_midstates": 8,
+      "mean_n_valid": 247.75,
+      "mid_vn_mean": 3.94455,
+      "mid_vn_std": 0.18085,
+      "max_vn_mean": 3.95451,
+      "mid_chi99_mean": 18.5,
+      "fidelity_mean_by_chi": {
+        "2": 0.12034,
+        "4": 0.3038,
+        "8": 0.59318,
+        "16": 0.92491,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "elapsed_sec": 0.81
+    },
+    {
+      "num_rounds": 2,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "random_oracle_page",
+      "n_midstates": 8,
+      "mean_n_valid": 256.0,
+      "mid_vn_mean": 6.71118,
+      "mid_vn_std": 0.0571,
+      "max_vn_mean": 6.71118,
+      "mid_chi99_mean": 128.25,
+      "fidelity_mean_by_chi": {
+        "2": 0.01088,
+        "4": 0.02685,
+        "8": 0.06424,
+        "16": 0.15799,
+        "32": 0.35354,
+        "64": 0.67821
+      },
+      "elapsed_sec": 0.91
+    },
+    {
+      "num_rounds": 3,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "sha256_real",
+      "n_midstates": 8,
+      "mean_n_valid": 261.12,
+      "mid_vn_mean": 6.72473,
+      "mid_vn_std": 0.05754,
+      "max_vn_mean": 6.72473,
+      "mid_chi99_mean": 128.62,
+      "fidelity_mean_by_chi": {
+        "2": 0.00963,
+        "4": 0.02235,
+        "8": 0.05995,
+        "16": 0.14262,
+        "32": 0.33386,
+        "64": 0.67343
+      },
+      "elapsed_sec": 1.07
+    },
+    {
+      "num_rounds": 3,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_midstates": 8,
+      "mean_n_valid": 254.5,
+      "mid_vn_mean": 6.71295,
+      "mid_vn_std": 0.06855,
+      "max_vn_mean": 6.71295,
+      "mid_chi99_mean": 128.62,
+      "fidelity_mean_by_chi": {
+        "2": 0.01037,
+        "4": 0.02291,
+        "8": 0.05747,
+        "16": 0.13783,
+        "32": 0.33316,
+        "64": 0.67437
+      },
+      "elapsed_sec": 1.02
+    },
+    {
+      "num_rounds": 3,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "random_oracle_page",
+      "n_midstates": 8,
+      "mean_n_valid": 256.0,
+      "mid_vn_mean": 6.72683,
+      "mid_vn_std": 0.04396,
+      "max_vn_mean": 6.72683,
+      "mid_chi99_mean": 129.5,
+      "fidelity_mean_by_chi": {
+        "2": 0.01055,
+        "4": 0.02541,
+        "8": 0.05898,
+        "16": 0.14936,
+        "32": 0.33569,
+        "64": 0.66406
+      },
+      "elapsed_sec": 0.98
+    },
+    {
+      "num_rounds": 4,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "sha256_real",
+      "n_midstates": 8,
+      "mean_n_valid": 264.62,
+      "mid_vn_mean": 6.69462,
+      "mid_vn_std": 0.02964,
+      "max_vn_mean": 6.69462,
+      "mid_chi99_mean": 127.88,
+      "fidelity_mean_by_chi": {
+        "2": 0.00981,
+        "4": 0.02341,
+        "8": 0.06285,
+        "16": 0.15199,
+        "32": 0.3526,
+        "64": 0.68447
+      },
+      "elapsed_sec": 0.94
+    },
+    {
+      "num_rounds": 4,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_midstates": 8,
+      "mean_n_valid": 261.0,
+      "mid_vn_mean": 6.70485,
+      "mid_vn_std": 0.06303,
+      "max_vn_mean": 6.70485,
+      "mid_chi99_mean": 128.38,
+      "fidelity_mean_by_chi": {
+        "2": 0.00825,
+        "4": 0.02188,
+        "8": 0.0581,
+        "16": 0.14357,
+        "32": 0.33334,
+        "64": 0.67462
+      },
+      "elapsed_sec": 0.94
+    },
+    {
+      "num_rounds": 4,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "random_oracle_page",
+      "n_midstates": 8,
+      "mean_n_valid": 256.0,
+      "mid_vn_mean": 6.71206,
+      "mid_vn_std": 0.02843,
+      "max_vn_mean": 6.71206,
+      "mid_chi99_mean": 128.62,
+      "fidelity_mean_by_chi": {
+        "2": 0.01134,
+        "4": 0.02698,
+        "8": 0.06288,
+        "16": 0.14377,
+        "32": 0.33739,
+        "64": 0.66829
+      },
+      "elapsed_sec": 0.9
+    },
+    {
+      "num_rounds": 5,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "sha256_real",
+      "n_midstates": 8,
+      "mean_n_valid": 256.25,
+      "mid_vn_mean": 6.71297,
+      "mid_vn_std": 0.05016,
+      "max_vn_mean": 6.71297,
+      "mid_chi99_mean": 127.75,
+      "fidelity_mean_by_chi": {
+        "2": 0.01061,
+        "4": 0.02406,
+        "8": 0.0567,
+        "16": 0.14328,
+        "32": 0.3413,
+        "64": 0.67829
+      },
+      "elapsed_sec": 0.95
+    },
+    {
+      "num_rounds": 5,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_midstates": 8,
+      "mean_n_valid": 262.75,
+      "mid_vn_mean": 6.71407,
+      "mid_vn_std": 0.03285,
+      "max_vn_mean": 6.71407,
+      "mid_chi99_mean": 128.5,
+      "fidelity_mean_by_chi": {
+        "2": 0.01144,
+        "4": 0.02598,
+        "8": 0.06063,
+        "16": 0.14729,
+        "32": 0.34192,
+        "64": 0.67868
+      },
+      "elapsed_sec": 0.95
+    },
+    {
+      "num_rounds": 5,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "random_oracle_page",
+      "n_midstates": 8,
+      "mean_n_valid": 256.0,
+      "mid_vn_mean": 6.72935,
+      "mid_vn_std": 0.04096,
+      "max_vn_mean": 6.72935,
+      "mid_chi99_mean": 128.62,
+      "fidelity_mean_by_chi": {
+        "2": 0.01174,
+        "4": 0.028,
+        "8": 0.06416,
+        "16": 0.14636,
+        "32": 0.32837,
+        "64": 0.67105
+      },
+      "elapsed_sec": 0.9
+    },
+    {
+      "num_rounds": 6,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "sha256_real",
+      "n_midstates": 8,
+      "mean_n_valid": 252.12,
+      "mid_vn_mean": 6.7271,
+      "mid_vn_std": 0.01942,
+      "max_vn_mean": 6.7271,
+      "mid_chi99_mean": 128.0,
+      "fidelity_mean_by_chi": {
+        "2": 0.00994,
+        "4": 0.02552,
+        "8": 0.05912,
+        "16": 0.14261,
+        "32": 0.33334,
+        "64": 0.66746
+      },
+      "elapsed_sec": 0.93
+    },
+    {
+      "num_rounds": 6,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_midstates": 8,
+      "mean_n_valid": 259.38,
+      "mid_vn_mean": 6.70298,
+      "mid_vn_std": 0.07627,
+      "max_vn_mean": 6.70298,
+      "mid_chi99_mean": 128.25,
+      "fidelity_mean_by_chi": {
+        "2": 0.01104,
+        "4": 0.02735,
+        "8": 0.06303,
+        "16": 0.1496,
+        "32": 0.33649,
+        "64": 0.67871
+      },
+      "elapsed_sec": 0.97
+    },
+    {
+      "num_rounds": 6,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "random_oracle_page",
+      "n_midstates": 8,
+      "mean_n_valid": 256.0,
+      "mid_vn_mean": 6.70657,
+      "mid_vn_std": 0.04855,
+      "max_vn_mean": 6.70657,
+      "mid_chi99_mean": 128.25,
+      "fidelity_mean_by_chi": {
+        "2": 0.00994,
+        "4": 0.02503,
+        "8": 0.06164,
+        "16": 0.15331,
+        "32": 0.33803,
+        "64": 0.67958
+      },
+      "elapsed_sec": 0.91
+    },
+    {
+      "num_rounds": 8,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "sha256_real",
+      "n_midstates": 8,
+      "mean_n_valid": 250.88,
+      "mid_vn_mean": 6.74198,
+      "mid_vn_std": 0.07207,
+      "max_vn_mean": 6.74198,
+      "mid_chi99_mean": 129.75,
+      "fidelity_mean_by_chi": {
+        "2": 0.01175,
+        "4": 0.02319,
+        "8": 0.05457,
+        "16": 0.13822,
+        "32": 0.32625,
+        "64": 0.66305
+      },
+      "elapsed_sec": 0.95
+    },
+    {
+      "num_rounds": 8,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_midstates": 8,
+      "mean_n_valid": 267.12,
+      "mid_vn_mean": 6.72787,
+      "mid_vn_std": 0.03091,
+      "max_vn_mean": 6.72787,
+      "mid_chi99_mean": 130.5,
+      "fidelity_mean_by_chi": {
+        "2": 0.01198,
+        "4": 0.02446,
+        "8": 0.05922,
+        "16": 0.13902,
+        "32": 0.33574,
+        "64": 0.67677
+      },
+      "elapsed_sec": 1.12
+    },
+    {
+      "num_rounds": 8,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "random_oracle_page",
+      "n_midstates": 8,
+      "mean_n_valid": 256.0,
+      "mid_vn_mean": 6.70969,
+      "mid_vn_std": 0.04738,
+      "max_vn_mean": 6.70969,
+      "mid_chi99_mean": 127.5,
+      "fidelity_mean_by_chi": {
+        "2": 0.01217,
+        "4": 0.0255,
+        "8": 0.06553,
+        "16": 0.15077,
+        "32": 0.34698,
+        "64": 0.67758
+      },
+      "elapsed_sec": 1.0
+    },
+    {
+      "num_rounds": 12,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "sha256_real",
+      "n_midstates": 8,
+      "mean_n_valid": 253.62,
+      "mid_vn_mean": 6.69128,
+      "mid_vn_std": 0.04778,
+      "max_vn_mean": 6.69128,
+      "mid_chi99_mean": 125.88,
+      "fidelity_mean_by_chi": {
+        "2": 0.0106,
+        "4": 0.02603,
+        "8": 0.0603,
+        "16": 0.14714,
+        "32": 0.34207,
+        "64": 0.67902
+      },
+      "elapsed_sec": 1.15
+    },
+    {
+      "num_rounds": 12,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_midstates": 8,
+      "mean_n_valid": 256.12,
+      "mid_vn_mean": 6.72938,
+      "mid_vn_std": 0.03824,
+      "max_vn_mean": 6.72938,
+      "mid_chi99_mean": 129.88,
+      "fidelity_mean_by_chi": {
+        "2": 0.00927,
+        "4": 0.02248,
+        "8": 0.05832,
+        "16": 0.14667,
+        "32": 0.34064,
+        "64": 0.67436
+      },
+      "elapsed_sec": 0.99
+    },
+    {
+      "num_rounds": 12,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "random_oracle_page",
+      "n_midstates": 8,
+      "mean_n_valid": 256.0,
+      "mid_vn_mean": 6.72882,
+      "mid_vn_std": 0.02415,
+      "max_vn_mean": 6.72882,
+      "mid_chi99_mean": 129.25,
+      "fidelity_mean_by_chi": {
+        "2": 0.01096,
+        "4": 0.02629,
+        "8": 0.06367,
+        "16": 0.15113,
+        "32": 0.33891,
+        "64": 0.66848
+      },
+      "elapsed_sec": 0.9
+    },
+    {
+      "num_rounds": 16,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "sha256_real",
+      "n_midstates": 8,
+      "mean_n_valid": 256.5,
+      "mid_vn_mean": 6.72143,
+      "mid_vn_std": 0.05521,
+      "max_vn_mean": 6.72143,
+      "mid_chi99_mean": 128.62,
+      "fidelity_mean_by_chi": {
+        "2": 0.01242,
+        "4": 0.02608,
+        "8": 0.06436,
+        "16": 0.15216,
+        "32": 0.33648,
+        "64": 0.67372
+      },
+      "elapsed_sec": 1.04
+    },
+    {
+      "num_rounds": 16,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_midstates": 8,
+      "mean_n_valid": 258.75,
+      "mid_vn_mean": 6.7464,
+      "mid_vn_std": 0.04764,
+      "max_vn_mean": 6.7464,
+      "mid_chi99_mean": 131.25,
+      "fidelity_mean_by_chi": {
+        "2": 0.00994,
+        "4": 0.02509,
+        "8": 0.06411,
+        "16": 0.1496,
+        "32": 0.34005,
+        "64": 0.66573
+      },
+      "elapsed_sec": 1.03
+    },
+    {
+      "num_rounds": 16,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "random_oracle_page",
+      "n_midstates": 8,
+      "mean_n_valid": 256.0,
+      "mid_vn_mean": 6.71507,
+      "mid_vn_std": 0.03014,
+      "max_vn_mean": 6.71507,
+      "mid_chi99_mean": 128.38,
+      "fidelity_mean_by_chi": {
+        "2": 0.01081,
+        "4": 0.02554,
+        "8": 0.06152,
+        "16": 0.15552,
+        "32": 0.34412,
+        "64": 0.67909
+      },
+      "elapsed_sec": 0.91
+    },
+    {
+      "num_rounds": 32,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "sha256_real",
+      "n_midstates": 8,
+      "mean_n_valid": 254.62,
+      "mid_vn_mean": 6.74048,
+      "mid_vn_std": 0.06764,
+      "max_vn_mean": 6.74048,
+      "mid_chi99_mean": 130.0,
+      "fidelity_mean_by_chi": {
+        "2": 0.01011,
+        "4": 0.02511,
+        "8": 0.06073,
+        "16": 0.14987,
+        "32": 0.34374,
+        "64": 0.6678
+      },
+      "elapsed_sec": 1.22
+    },
+    {
+      "num_rounds": 32,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_midstates": 8,
+      "mean_n_valid": 260.75,
+      "mid_vn_mean": 6.71472,
+      "mid_vn_std": 0.03157,
+      "max_vn_mean": 6.71472,
+      "mid_chi99_mean": 129.5,
+      "fidelity_mean_by_chi": {
+        "2": 0.01016,
+        "4": 0.02553,
+        "8": 0.05925,
+        "16": 0.14703,
+        "32": 0.34047,
+        "64": 0.67287
+      },
+      "elapsed_sec": 1.22
+    },
+    {
+      "num_rounds": 32,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "random_oracle_page",
+      "n_midstates": 8,
+      "mean_n_valid": 256.0,
+      "mid_vn_mean": 6.69556,
+      "mid_vn_std": 0.04237,
+      "max_vn_mean": 6.69556,
+      "mid_chi99_mean": 126.25,
+      "fidelity_mean_by_chi": {
+        "2": 0.0104,
+        "4": 0.02633,
+        "8": 0.06567,
+        "16": 0.15551,
+        "32": 0.34729,
+        "64": 0.67538
+      },
+      "elapsed_sec": 0.91
+    },
+    {
+      "num_rounds": 64,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "sha256_real",
+      "n_midstates": 8,
+      "mean_n_valid": 263.38,
+      "mid_vn_mean": 6.71905,
+      "mid_vn_std": 0.08156,
+      "max_vn_mean": 6.71905,
+      "mid_chi99_mean": 129.62,
+      "fidelity_mean_by_chi": {
+        "2": 0.01084,
+        "4": 0.02436,
+        "8": 0.06123,
+        "16": 0.15043,
+        "32": 0.33828,
+        "64": 0.669
+      },
+      "elapsed_sec": 1.72
+    },
+    {
+      "num_rounds": 64,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_midstates": 8,
+      "mean_n_valid": 254.5,
+      "mid_vn_mean": 6.74098,
+      "mid_vn_std": 0.05424,
+      "max_vn_mean": 6.74098,
+      "mid_chi99_mean": 130.12,
+      "fidelity_mean_by_chi": {
+        "2": 0.01065,
+        "4": 0.02463,
+        "8": 0.06166,
+        "16": 0.14457,
+        "32": 0.32707,
+        "64": 0.66854
+      },
+      "elapsed_sec": 1.95
+    },
+    {
+      "num_rounds": 64,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 8,
+      "cipher_kind": "random_oracle_page",
+      "n_midstates": 8,
+      "mean_n_valid": 256.0,
+      "mid_vn_mean": 6.69606,
+      "mid_vn_std": 0.04825,
+      "max_vn_mean": 6.69606,
+      "mid_chi99_mean": 128.0,
+      "fidelity_mean_by_chi": {
+        "2": 0.00937,
+        "4": 0.02371,
+        "8": 0.06314,
+        "16": 0.15266,
+        "32": 0.35109,
+        "64": 0.68103
+      },
+      "elapsed_sec": 0.9
+    }
+  ],
+  "part_3a_local_disentangler": [
+    {
+      "mode": "target_conditioned_local",
+      "num_rounds": 1,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "sha256_real",
+      "n_valid": 0,
+      "train_info": {
+        "renyi2_loss_init": 1e-05,
+        "renyi2_loss_final": 1e-05,
+        "ortho_max_err": 4e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "before": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 0.0,
+          "max_vn_entropy_bits": 0.0,
+          "mean_vn_entropy_bits": 0.0,
+          "mid_renyi2_bits": -0.0,
+          "mid_chi99": 1,
+          "max_chi99": 1,
+          "mid_chi999": 1,
+          "fidelity_by_chi": {
+            "4": 1.0,
+            "8": 1.0,
+            "16": 1.0,
+            "32": 1.0
+          }
+        },
+        "p_random": 1.0,
+        "hit_prob_by_chi": {
+          "4": 1.0,
+          "8": 1.0,
+          "16": 1.0,
+          "32": 1.0
+        },
+        "enrichment_by_chi": {
+          "4": 1.0,
+          "8": 1.0,
+          "16": 1.0,
+          "32": 1.0
+        }
+      },
+      "after": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 0.0,
+          "max_vn_entropy_bits": 0.27651,
+          "mean_vn_entropy_bits": 0.10484,
+          "mid_renyi2_bits": -0.0,
+          "mid_chi99": 1,
+          "max_chi99": 2,
+          "mid_chi999": 1,
+          "fidelity_by_chi": {
+            "4": 1.0,
+            "8": 1.0,
+            "16": 1.0,
+            "32": 1.000001
+          }
+        },
+        "p_random": 1.0,
+        "hit_prob_by_chi": {
+          "4": 1.0,
+          "8": 1.0,
+          "16": 1.0,
+          "32": 1.0
+        },
+        "enrichment_by_chi": {
+          "4": 1.0,
+          "8": 1.0,
+          "16": 1.0,
+          "32": 1.0
+        }
+      },
+      "delta_mid_vn_bits": 0.0,
+      "elapsed_sec": 17.57
+    },
+    {
+      "mode": "target_conditioned_local",
+      "num_rounds": 1,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_valid": 0,
+      "train_info": {
+        "renyi2_loss_init": 1e-05,
+        "renyi2_loss_final": 1e-05,
+        "ortho_max_err": 4e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "before": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 0.0,
+          "max_vn_entropy_bits": 0.0,
+          "mean_vn_entropy_bits": 0.0,
+          "mid_renyi2_bits": -0.0,
+          "mid_chi99": 1,
+          "max_chi99": 1,
+          "mid_chi999": 1,
+          "fidelity_by_chi": {
+            "4": 1.0,
+            "8": 1.0,
+            "16": 1.0,
+            "32": 1.0
+          }
+        },
+        "p_random": 1.0,
+        "hit_prob_by_chi": {
+          "4": 1.0,
+          "8": 1.0,
+          "16": 1.0,
+          "32": 1.0
+        },
+        "enrichment_by_chi": {
+          "4": 1.0,
+          "8": 1.0,
+          "16": 1.0,
+          "32": 1.0
+        }
+      },
+      "after": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 0.0,
+          "max_vn_entropy_bits": 0.27651,
+          "mean_vn_entropy_bits": 0.10484,
+          "mid_renyi2_bits": -0.0,
+          "mid_chi99": 1,
+          "max_chi99": 2,
+          "mid_chi999": 1,
+          "fidelity_by_chi": {
+            "4": 1.0,
+            "8": 1.0,
+            "16": 1.0,
+            "32": 1.000001
+          }
+        },
+        "p_random": 1.0,
+        "hit_prob_by_chi": {
+          "4": 1.0,
+          "8": 1.0,
+          "16": 1.0,
+          "32": 1.0
+        },
+        "enrichment_by_chi": {
+          "4": 1.0,
+          "8": 1.0,
+          "16": 1.0,
+          "32": 1.0
+        }
+      },
+      "delta_mid_vn_bits": 0.0,
+      "elapsed_sec": 10.45
+    },
+    {
+      "mode": "target_conditioned_local",
+      "num_rounds": 1,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "random_oracle_page",
+      "n_valid": 1024,
+      "train_info": {
+        "renyi2_loss_init": 4.90886,
+        "renyi2_loss_final": 4.87512,
+        "ortho_max_err": 3e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "before": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.12614,
+          "max_vn_entropy_bits": 7.12614,
+          "mean_vn_entropy_bits": 4.14868,
+          "mid_renyi2_bits": 6.78296,
+          "mid_chi99": 187,
+          "max_chi99": 187,
+          "mid_chi999": 219,
+          "fidelity_by_chi": {
+            "4": 0.018365,
+            "8": 0.034205,
+            "16": 0.089096,
+            "32": 0.235782
+          }
+        },
+        "p_random": 0.015625,
+        "hit_prob_by_chi": {
+          "4": 0.044794,
+          "8": 0.111338,
+          "16": 0.279179,
+          "32": 0.408655
+        },
+        "enrichment_by_chi": {
+          "4": 2.8668,
+          "8": 7.1256,
+          "16": 17.8675,
+          "32": 26.1539
+        }
+      },
+      "after": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.10557,
+          "max_vn_entropy_bits": 7.10557,
+          "mean_vn_entropy_bits": 4.14547,
+          "mid_renyi2_bits": 6.74694,
+          "mid_chi99": 188,
+          "max_chi99": 188,
+          "mid_chi999": 223,
+          "fidelity_by_chi": {
+            "4": 0.0081,
+            "8": 0.026701,
+            "16": 0.083729,
+            "32": 0.237474
+          }
+        },
+        "p_random": 0.015625,
+        "hit_prob_by_chi": {
+          "4": 0.065451,
+          "8": 0.117581,
+          "16": 0.190111,
+          "32": 0.355586
+        },
+        "enrichment_by_chi": {
+          "4": 4.1888,
+          "8": 7.5252,
+          "16": 12.1671,
+          "32": 22.7575
+        }
+      },
+      "delta_mid_vn_bits": -0.02057,
+      "elapsed_sec": 10.57
+    },
+    {
+      "mode": "target_conditioned_local",
+      "num_rounds": 2,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "sha256_real",
+      "n_valid": 1042,
+      "train_info": {
+        "renyi2_loss_init": 4.17469,
+        "renyi2_loss_final": 3.90545,
+        "ortho_max_err": 2e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "before": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 6.51658,
+          "max_vn_entropy_bits": 6.58198,
+          "mean_vn_entropy_bits": 3.72484,
+          "mid_renyi2_bits": 6.07909,
+          "mid_chi99": 160,
+          "max_chi99": 160,
+          "mid_chi999": 192,
+          "fidelity_by_chi": {
+            "4": 0.02846,
+            "8": 0.066446,
+            "16": 0.157973,
+            "32": 0.385113
+          }
+        },
+        "p_random": 0.0159,
+        "hit_prob_by_chi": {
+          "4": 0.681525,
+          "8": 0.574648,
+          "16": 0.394787,
+          "32": 0.57374
+        },
+        "enrichment_by_chi": {
+          "4": 42.8641,
+          "8": 36.1422,
+          "16": 24.8299,
+          "32": 36.0851
+        }
+      },
+      "after": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 6.17298,
+          "max_vn_entropy_bits": 6.29564,
+          "mean_vn_entropy_bits": 3.65124,
+          "mid_renyi2_bits": 5.63723,
+          "mid_chi99": 129,
+          "max_chi99": 129,
+          "mid_chi999": 159,
+          "fidelity_by_chi": {
+            "4": 0.052237,
+            "8": 0.117851,
+            "16": 0.266902,
+            "32": 0.513261
+          }
+        },
+        "p_random": 0.0159,
+        "hit_prob_by_chi": {
+          "4": 0.256864,
+          "8": 0.332128,
+          "16": 0.485281,
+          "32": 0.657899
+        },
+        "enrichment_by_chi": {
+          "4": 16.1553,
+          "8": 20.889,
+          "16": 30.5215,
+          "32": 41.3782
+        }
+      },
+      "delta_mid_vn_bits": -0.3436,
+      "elapsed_sec": 10.41
+    },
+    {
+      "mode": "target_conditioned_local",
+      "num_rounds": 2,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_valid": 1022,
+      "train_info": {
+        "renyi2_loss_init": 1.75961,
+        "renyi2_loss_final": 0.68306,
+        "ortho_max_err": 2e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "before": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 1.53689,
+          "max_vn_entropy_bits": 2.964,
+          "mean_vn_entropy_bits": 1.94953,
+          "mid_renyi2_bits": 1.20545,
+          "mid_chi99": 5,
+          "max_chi99": 9,
+          "mid_chi999": 6,
+          "fidelity_by_chi": {
+            "4": 0.60184,
+            "8": 0.957343,
+            "16": 1.0,
+            "32": 1.0
+          }
+        },
+        "p_random": 0.015594,
+        "hit_prob_by_chi": {
+          "4": 0.942875,
+          "8": 0.992526,
+          "16": 1.0,
+          "32": 1.0
+        },
+        "enrichment_by_chi": {
+          "4": 60.4621,
+          "8": 63.646,
+          "16": 64.1252,
+          "32": 64.1253
+        }
+      },
+      "after": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 1.53613,
+          "max_vn_entropy_bits": 2.29953,
+          "mean_vn_entropy_bits": 1.29146,
+          "mid_renyi2_bits": 1.20375,
+          "mid_chi99": 5,
+          "max_chi99": 11,
+          "mid_chi999": 7,
+          "fidelity_by_chi": {
+            "4": 0.808314,
+            "8": 0.965038,
+            "16": 0.996282,
+            "32": 1.0
+          }
+        },
+        "p_random": 0.015594,
+        "hit_prob_by_chi": {
+          "4": 0.875188,
+          "8": 0.980099,
+          "16": 0.998007,
+          "32": 1.0
+        },
+        "enrichment_by_chi": {
+          "4": 56.1217,
+          "8": 62.8491,
+          "16": 63.9974,
+          "32": 64.1252
+        }
+      },
+      "delta_mid_vn_bits": -0.00076,
+      "elapsed_sec": 9.89
+    },
+    {
+      "mode": "target_conditioned_local",
+      "num_rounds": 2,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "random_oracle_page",
+      "n_valid": 1024,
+      "train_info": {
+        "renyi2_loss_init": 4.92318,
+        "renyi2_loss_final": 4.86969,
+        "ortho_max_err": 4e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "before": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.1646,
+          "max_vn_entropy_bits": 7.1646,
+          "mean_vn_entropy_bits": 4.15483,
+          "mid_renyi2_bits": 6.83888,
+          "mid_chi99": 189,
+          "max_chi99": 189,
+          "mid_chi999": 222,
+          "fidelity_by_chi": {
+            "4": 0.017999,
+            "8": 0.034812,
+            "16": 0.088715,
+            "32": 0.231808
+          }
+        },
+        "p_random": 0.015625,
+        "hit_prob_by_chi": {
+          "4": 0.094061,
+          "8": 0.201443,
+          "16": 0.314796,
+          "32": 0.421574
+        },
+        "enrichment_by_chi": {
+          "4": 6.0199,
+          "8": 12.8923,
+          "16": 20.1469,
+          "32": 26.9807
+        }
+      },
+      "after": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.11637,
+          "max_vn_entropy_bits": 7.11637,
+          "mean_vn_entropy_bits": 4.14304,
+          "mid_renyi2_bits": 6.75458,
+          "mid_chi99": 188,
+          "max_chi99": 188,
+          "mid_chi999": 222,
+          "fidelity_by_chi": {
+            "4": 0.009293,
+            "8": 0.029072,
+            "16": 0.083116,
+            "32": 0.235281
+          }
+        },
+        "p_random": 0.015625,
+        "hit_prob_by_chi": {
+          "4": 0.151964,
+          "8": 0.150672,
+          "16": 0.223197,
+          "32": 0.368191
+        },
+        "enrichment_by_chi": {
+          "4": 9.7257,
+          "8": 9.643,
+          "16": 14.2846,
+          "32": 23.5642
+        }
+      },
+      "delta_mid_vn_bits": -0.04823,
+      "elapsed_sec": 10.32
+    },
+    {
+      "mode": "target_conditioned_local",
+      "num_rounds": 3,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "sha256_real",
+      "n_valid": 1036,
+      "train_info": {
+        "renyi2_loss_init": 4.90821,
+        "renyi2_loss_final": 4.86171,
+        "ortho_max_err": 3e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "before": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.14314,
+          "max_vn_entropy_bits": 7.14314,
+          "mean_vn_entropy_bits": 4.15171,
+          "mid_renyi2_bits": 6.79671,
+          "mid_chi99": 190,
+          "max_chi99": 190,
+          "mid_chi999": 222,
+          "fidelity_by_chi": {
+            "4": 0.019544,
+            "8": 0.036156,
+            "16": 0.088448,
+            "32": 0.237259
+          }
+        },
+        "p_random": 0.015808,
+        "hit_prob_by_chi": {
+          "4": 0.075189,
+          "8": 0.159062,
+          "16": 0.271143,
+          "32": 0.431168
+        },
+        "enrichment_by_chi": {
+          "4": 4.7564,
+          "8": 10.062,
+          "16": 17.1521,
+          "32": 27.2751
+        }
+      },
+      "after": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.0946,
+          "max_vn_entropy_bits": 7.0946,
+          "mean_vn_entropy_bits": 4.14292,
+          "mid_renyi2_bits": 6.72868,
+          "mid_chi99": 188,
+          "max_chi99": 188,
+          "mid_chi999": 222,
+          "fidelity_by_chi": {
+            "4": 0.009907,
+            "8": 0.030409,
+            "16": 0.089795,
+            "32": 0.23838
+          }
+        },
+        "p_random": 0.015808,
+        "hit_prob_by_chi": {
+          "4": 0.154071,
+          "8": 0.179939,
+          "16": 0.250732,
+          "32": 0.381828
+        },
+        "enrichment_by_chi": {
+          "4": 9.7463,
+          "8": 11.3827,
+          "16": 15.861,
+          "32": 24.154
+        }
+      },
+      "delta_mid_vn_bits": -0.04854,
+      "elapsed_sec": 10.44
+    },
+    {
+      "mode": "target_conditioned_local",
+      "num_rounds": 3,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_valid": 1063,
+      "train_info": {
+        "renyi2_loss_init": 4.9111,
+        "renyi2_loss_final": 4.87583,
+        "ortho_max_err": 4e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "before": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.13954,
+          "max_vn_entropy_bits": 7.13954,
+          "mean_vn_entropy_bits": 4.15357,
+          "mid_renyi2_bits": 6.80109,
+          "mid_chi99": 188,
+          "max_chi99": 188,
+          "mid_chi999": 220,
+          "fidelity_by_chi": {
+            "4": 0.017773,
+            "8": 0.033872,
+            "16": 0.083367,
+            "32": 0.228726
+          }
+        },
+        "p_random": 0.01622,
+        "hit_prob_by_chi": {
+          "4": 0.086546,
+          "8": 0.137593,
+          "16": 0.211741,
+          "32": 0.390275
+        },
+        "enrichment_by_chi": {
+          "4": 5.3357,
+          "8": 8.4828,
+          "16": 13.0542,
+          "32": 24.0612
+        }
+      },
+      "after": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.107,
+          "max_vn_entropy_bits": 7.107,
+          "mean_vn_entropy_bits": 4.14401,
+          "mid_renyi2_bits": 6.76124,
+          "mid_chi99": 187,
+          "max_chi99": 187,
+          "mid_chi999": 221,
+          "fidelity_by_chi": {
+            "4": 0.009508,
+            "8": 0.028038,
+            "16": 0.085463,
+            "32": 0.236588
+          }
+        },
+        "p_random": 0.01622,
+        "hit_prob_by_chi": {
+          "4": 0.140938,
+          "8": 0.178505,
+          "16": 0.221752,
+          "32": 0.369154
+        },
+        "enrichment_by_chi": {
+          "4": 8.6891,
+          "8": 11.0052,
+          "16": 13.6714,
+          "32": 22.759
+        }
+      },
+      "delta_mid_vn_bits": -0.03254,
+      "elapsed_sec": 10.45
+    },
+    {
+      "mode": "target_conditioned_local",
+      "num_rounds": 3,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "random_oracle_page",
+      "n_valid": 1024,
+      "train_info": {
+        "renyi2_loss_init": 4.92279,
+        "renyi2_loss_final": 4.88503,
+        "ortho_max_err": 2e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "before": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.15836,
+          "max_vn_entropy_bits": 7.15836,
+          "mean_vn_entropy_bits": 4.15483,
+          "mid_renyi2_bits": 6.8282,
+          "mid_chi99": 190,
+          "max_chi99": 190,
+          "mid_chi999": 222,
+          "fidelity_by_chi": {
+            "4": 0.019244,
+            "8": 0.036371,
+            "16": 0.087687,
+            "32": 0.230039
+          }
+        },
+        "p_random": 0.015625,
+        "hit_prob_by_chi": {
+          "4": 0.080237,
+          "8": 0.177429,
+          "16": 0.266732,
+          "32": 0.420539
+        },
+        "enrichment_by_chi": {
+          "4": 5.1352,
+          "8": 11.3554,
+          "16": 17.0709,
+          "32": 26.9145
+        }
+      },
+      "after": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.13127,
+          "max_vn_entropy_bits": 7.13127,
+          "mean_vn_entropy_bits": 4.14921,
+          "mid_renyi2_bits": 6.77996,
+          "mid_chi99": 190,
+          "max_chi99": 190,
+          "mid_chi999": 225,
+          "fidelity_by_chi": {
+            "4": 0.008676,
+            "8": 0.027697,
+            "16": 0.084972,
+            "32": 0.233057
+          }
+        },
+        "p_random": 0.015625,
+        "hit_prob_by_chi": {
+          "4": 0.166707,
+          "8": 0.159287,
+          "16": 0.208013,
+          "32": 0.351854
+        },
+        "enrichment_by_chi": {
+          "4": 10.6693,
+          "8": 10.1944,
+          "16": 13.3129,
+          "32": 22.5187
+        }
+      },
+      "delta_mid_vn_bits": -0.02709,
+      "elapsed_sec": 10.41
+    },
+    {
+      "mode": "target_conditioned_local",
+      "num_rounds": 4,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "sha256_real",
+      "n_valid": 1050,
+      "train_info": {
+        "renyi2_loss_init": 4.9127,
+        "renyi2_loss_final": 4.87434,
+        "ortho_max_err": 2e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "before": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.1419,
+          "max_vn_entropy_bits": 7.1419,
+          "mean_vn_entropy_bits": 4.15367,
+          "mid_renyi2_bits": 6.791,
+          "mid_chi99": 190,
+          "max_chi99": 190,
+          "mid_chi999": 222,
+          "fidelity_by_chi": {
+            "4": 0.02046,
+            "8": 0.035152,
+            "16": 0.085144,
+            "32": 0.226564
+          }
+        },
+        "p_random": 0.016022,
+        "hit_prob_by_chi": {
+          "4": 0.136911,
+          "8": 0.159141,
+          "16": 0.246484,
+          "32": 0.389809
+        },
+        "enrichment_by_chi": {
+          "4": 8.5453,
+          "8": 9.9328,
+          "16": 15.3844,
+          "32": 24.3301
+        }
+      },
+      "after": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.11674,
+          "max_vn_entropy_bits": 7.11674,
+          "mean_vn_entropy_bits": 4.14617,
+          "mid_renyi2_bits": 6.75631,
+          "mid_chi99": 189,
+          "max_chi99": 189,
+          "mid_chi999": 223,
+          "fidelity_by_chi": {
+            "4": 0.012257,
+            "8": 0.03089,
+            "16": 0.086423,
+            "32": 0.231248
+          }
+        },
+        "p_random": 0.016022,
+        "hit_prob_by_chi": {
+          "4": 0.063532,
+          "8": 0.139944,
+          "16": 0.2057,
+          "32": 0.341511
+        },
+        "enrichment_by_chi": {
+          "4": 3.9654,
+          "8": 8.7347,
+          "16": 12.8388,
+          "32": 21.3155
+        }
+      },
+      "delta_mid_vn_bits": -0.02516,
+      "elapsed_sec": 10.42
+    },
+    {
+      "mode": "target_conditioned_local",
+      "num_rounds": 4,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_valid": 1023,
+      "train_info": {
+        "renyi2_loss_init": 4.91883,
+        "renyi2_loss_final": 4.86386,
+        "ortho_max_err": 2e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "before": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.15726,
+          "max_vn_entropy_bits": 7.15726,
+          "mean_vn_entropy_bits": 4.15632,
+          "mid_renyi2_bits": 6.81154,
+          "mid_chi99": 191,
+          "max_chi99": 191,
+          "mid_chi999": 223,
+          "fidelity_by_chi": {
+            "4": 0.017869,
+            "8": 0.035041,
+            "16": 0.087953,
+            "32": 0.230929
+          }
+        },
+        "p_random": 0.01561,
+        "hit_prob_by_chi": {
+          "4": 0.095688,
+          "8": 0.16968,
+          "16": 0.288636,
+          "32": 0.411422
+        },
+        "enrichment_by_chi": {
+          "4": 6.13,
+          "8": 10.8701,
+          "16": 18.4908,
+          "32": 26.3567
+        }
+      },
+      "after": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.0938,
+          "max_vn_entropy_bits": 7.0938,
+          "mean_vn_entropy_bits": 4.13993,
+          "mid_renyi2_bits": 6.74254,
+          "mid_chi99": 186,
+          "max_chi99": 186,
+          "mid_chi999": 220,
+          "fidelity_by_chi": {
+            "4": 0.009276,
+            "8": 0.030512,
+            "16": 0.084661,
+            "32": 0.2391
+          }
+        },
+        "p_random": 0.01561,
+        "hit_prob_by_chi": {
+          "4": 0.13806,
+          "8": 0.244924,
+          "16": 0.276568,
+          "32": 0.388419
+        },
+        "enrichment_by_chi": {
+          "4": 8.8444,
+          "8": 15.6904,
+          "16": 17.7177,
+          "32": 24.8831
+        }
+      },
+      "delta_mid_vn_bits": -0.06346,
+      "elapsed_sec": 9.84
+    },
+    {
+      "mode": "target_conditioned_local",
+      "num_rounds": 4,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "random_oracle_page",
+      "n_valid": 1024,
+      "train_info": {
+        "renyi2_loss_init": 4.9226,
+        "renyi2_loss_final": 4.88685,
+        "ortho_max_err": 2e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "before": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.15523,
+          "max_vn_entropy_bits": 7.15523,
+          "mean_vn_entropy_bits": 4.15718,
+          "mid_renyi2_bits": 6.817,
+          "mid_chi99": 188,
+          "max_chi99": 188,
+          "mid_chi999": 221,
+          "fidelity_by_chi": {
+            "4": 0.01906,
+            "8": 0.0337,
+            "16": 0.086135,
+            "32": 0.230905
+          }
+        },
+        "p_random": 0.015625,
+        "hit_prob_by_chi": {
+          "4": 0.144502,
+          "8": 0.169881,
+          "16": 0.266314,
+          "32": 0.412937
+        },
+        "enrichment_by_chi": {
+          "4": 9.2481,
+          "8": 10.8724,
+          "16": 17.0441,
+          "32": 26.428
+        }
+      },
+      "after": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.12161,
+          "max_vn_entropy_bits": 7.12161,
+          "mean_vn_entropy_bits": 4.14938,
+          "mid_renyi2_bits": 6.77668,
+          "mid_chi99": 189,
+          "max_chi99": 189,
+          "mid_chi999": 223,
+          "fidelity_by_chi": {
+            "4": 0.008168,
+            "8": 0.028223,
+            "16": 0.080897,
+            "32": 0.225511
+          }
+        },
+        "p_random": 0.015625,
+        "hit_prob_by_chi": {
+          "4": 0.074682,
+          "8": 0.14318,
+          "16": 0.206278,
+          "32": 0.331768
+        },
+        "enrichment_by_chi": {
+          "4": 4.7797,
+          "8": 9.1635,
+          "16": 13.2018,
+          "32": 21.2332
+        }
+      },
+      "delta_mid_vn_bits": -0.03362,
+      "elapsed_sec": 10.49
+    },
+    {
+      "mode": "target_conditioned_local",
+      "num_rounds": 5,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "sha256_real",
+      "n_valid": 1074,
+      "train_info": {
+        "renyi2_loss_init": 4.91517,
+        "renyi2_loss_final": 4.86384,
+        "ortho_max_err": 2e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "before": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.12885,
+          "max_vn_entropy_bits": 7.12885,
+          "mean_vn_entropy_bits": 4.15188,
+          "mid_renyi2_bits": 6.79188,
+          "mid_chi99": 186,
+          "max_chi99": 186,
+          "mid_chi999": 217,
+          "fidelity_by_chi": {
+            "4": 0.018635,
+            "8": 0.038222,
+            "16": 0.091312,
+            "32": 0.230764
+          }
+        },
+        "p_random": 0.016388,
+        "hit_prob_by_chi": {
+          "4": 0.085734,
+          "8": 0.204369,
+          "16": 0.275305,
+          "32": 0.41197
+        },
+        "enrichment_by_chi": {
+          "4": 5.2315,
+          "8": 12.4707,
+          "16": 16.7992,
+          "32": 25.1386
+        }
+      },
+      "after": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.1018,
+          "max_vn_entropy_bits": 7.1018,
+          "mean_vn_entropy_bits": 4.13917,
+          "mid_renyi2_bits": 6.75662,
+          "mid_chi99": 186,
+          "max_chi99": 186,
+          "mid_chi999": 219,
+          "fidelity_by_chi": {
+            "4": 0.009737,
+            "8": 0.02919,
+            "16": 0.087036,
+            "32": 0.238823
+          }
+        },
+        "p_random": 0.016388,
+        "hit_prob_by_chi": {
+          "4": 0.257163,
+          "8": 0.209381,
+          "16": 0.254137,
+          "32": 0.377175
+        },
+        "enrichment_by_chi": {
+          "4": 15.6922,
+          "8": 12.7765,
+          "16": 15.5076,
+          "32": 23.0154
+        }
+      },
+      "delta_mid_vn_bits": -0.02705,
+      "elapsed_sec": 10.29
+    },
+    {
+      "mode": "target_conditioned_local",
+      "num_rounds": 5,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_valid": 979,
+      "train_info": {
+        "renyi2_loss_init": 4.91025,
+        "renyi2_loss_final": 4.86488,
+        "ortho_max_err": 3e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "before": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.1464,
+          "max_vn_entropy_bits": 7.1464,
+          "mean_vn_entropy_bits": 4.15082,
+          "mid_renyi2_bits": 6.8024,
+          "mid_chi99": 189,
+          "max_chi99": 189,
+          "mid_chi999": 220,
+          "fidelity_by_chi": {
+            "4": 0.023778,
+            "8": 0.040204,
+            "16": 0.088645,
+            "32": 0.229751
+          }
+        },
+        "p_random": 0.014938,
+        "hit_prob_by_chi": {
+          "4": 0.209636,
+          "8": 0.35023,
+          "16": 0.318014,
+          "32": 0.414554
+        },
+        "enrichment_by_chi": {
+          "4": 14.0334,
+          "8": 23.445,
+          "16": 21.2884,
+          "32": 27.751
+        }
+      },
+      "after": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.10607,
+          "max_vn_entropy_bits": 7.10607,
+          "mean_vn_entropy_bits": 4.14358,
+          "mid_renyi2_bits": 6.74323,
+          "mid_chi99": 189,
+          "max_chi99": 189,
+          "mid_chi999": 224,
+          "fidelity_by_chi": {
+            "4": 0.011376,
+            "8": 0.033077,
+            "16": 0.089373,
+            "32": 0.238171
+          }
+        },
+        "p_random": 0.014938,
+        "hit_prob_by_chi": {
+          "4": 0.215317,
+          "8": 0.234933,
+          "16": 0.262778,
+          "32": 0.367392
+        },
+        "enrichment_by_chi": {
+          "4": 14.4137,
+          "8": 15.7269,
+          "16": 17.5908,
+          "32": 24.5939
+        }
+      },
+      "delta_mid_vn_bits": -0.04033,
+      "elapsed_sec": 10.39
+    },
+    {
+      "mode": "target_conditioned_local",
+      "num_rounds": 5,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "random_oracle_page",
+      "n_valid": 1024,
+      "train_info": {
+        "renyi2_loss_init": 4.88449,
+        "renyi2_loss_final": 4.84537,
+        "ortho_max_err": 2e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "before": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.09001,
+          "max_vn_entropy_bits": 7.09001,
+          "mean_vn_entropy_bits": 4.14205,
+          "mid_renyi2_bits": 6.73001,
+          "mid_chi99": 185,
+          "max_chi99": 185,
+          "mid_chi999": 217,
+          "fidelity_by_chi": {
+            "4": 0.021117,
+            "8": 0.037034,
+            "16": 0.091566,
+            "32": 0.23712
+          }
+        },
+        "p_random": 0.015625,
+        "hit_prob_by_chi": {
+          "4": 0.133775,
+          "8": 0.196933,
+          "16": 0.290726,
+          "32": 0.42277
+        },
+        "enrichment_by_chi": {
+          "4": 8.5616,
+          "8": 12.6037,
+          "16": 18.6064,
+          "32": 27.0573
+        }
+      },
+      "after": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.07719,
+          "max_vn_entropy_bits": 7.07719,
+          "mean_vn_entropy_bits": 4.13475,
+          "mid_renyi2_bits": 6.70347,
+          "mid_chi99": 186,
+          "max_chi99": 186,
+          "mid_chi999": 219,
+          "fidelity_by_chi": {
+            "4": 0.012677,
+            "8": 0.034218,
+            "16": 0.095182,
+            "32": 0.246463
+          }
+        },
+        "p_random": 0.015625,
+        "hit_prob_by_chi": {
+          "4": 0.182348,
+          "8": 0.218009,
+          "16": 0.263988,
+          "32": 0.392138
+        },
+        "enrichment_by_chi": {
+          "4": 11.6703,
+          "8": 13.9526,
+          "16": 16.8953,
+          "32": 25.0969
+        }
+      },
+      "delta_mid_vn_bits": -0.01282,
+      "elapsed_sec": 10.33
+    },
+    {
+      "mode": "target_conditioned_local",
+      "num_rounds": 6,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "sha256_real",
+      "n_valid": 995,
+      "train_info": {
+        "renyi2_loss_init": 4.89926,
+        "renyi2_loss_final": 4.86201,
+        "ortho_max_err": 4e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "before": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.10831,
+          "max_vn_entropy_bits": 7.10831,
+          "mean_vn_entropy_bits": 4.14811,
+          "mid_renyi2_bits": 6.74985,
+          "mid_chi99": 187,
+          "max_chi99": 187,
+          "mid_chi999": 218,
+          "fidelity_by_chi": {
+            "4": 0.020694,
+            "8": 0.039208,
+            "16": 0.095101,
+            "32": 0.243923
+          }
+        },
+        "p_random": 0.015182,
+        "hit_prob_by_chi": {
+          "4": 0.145427,
+          "8": 0.238576,
+          "16": 0.325582,
+          "32": 0.453673
+        },
+        "enrichment_by_chi": {
+          "4": 9.5786,
+          "8": 15.7139,
+          "16": 21.4445,
+          "32": 29.8813
+        }
+      },
+      "after": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.10471,
+          "max_vn_entropy_bits": 7.10471,
+          "mean_vn_entropy_bits": 4.14426,
+          "mid_renyi2_bits": 6.7439,
+          "mid_chi99": 187,
+          "max_chi99": 187,
+          "mid_chi999": 219,
+          "fidelity_by_chi": {
+            "4": 0.010939,
+            "8": 0.031715,
+            "16": 0.089359,
+            "32": 0.235277
+          }
+        },
+        "p_random": 0.015182,
+        "hit_prob_by_chi": {
+          "4": 0.055798,
+          "8": 0.119294,
+          "16": 0.233048,
+          "32": 0.367797
+        },
+        "enrichment_by_chi": {
+          "4": 3.6752,
+          "8": 7.8574,
+          "16": 15.3498,
+          "32": 24.2251
+        }
+      },
+      "delta_mid_vn_bits": -0.0036,
+      "elapsed_sec": 10.36
+    },
+    {
+      "mode": "target_conditioned_local",
+      "num_rounds": 6,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_valid": 988,
+      "train_info": {
+        "renyi2_loss_init": 4.88969,
+        "renyi2_loss_final": 4.85475,
+        "ortho_max_err": 2e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "before": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.10708,
+          "max_vn_entropy_bits": 7.10708,
+          "mean_vn_entropy_bits": 4.14529,
+          "mid_renyi2_bits": 6.74955,
+          "mid_chi99": 186,
+          "max_chi99": 186,
+          "mid_chi999": 218,
+          "fidelity_by_chi": {
+            "4": 0.020102,
+            "8": 0.037813,
+            "16": 0.090863,
+            "32": 0.241466
+          }
+        },
+        "p_random": 0.015076,
+        "hit_prob_by_chi": {
+          "4": 0.175936,
+          "8": 0.243419,
+          "16": 0.308799,
+          "32": 0.454417
+        },
+        "enrichment_by_chi": {
+          "4": 11.6702,
+          "8": 16.1465,
+          "16": 20.4832,
+          "32": 30.1424
+        }
+      },
+      "after": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.09201,
+          "max_vn_entropy_bits": 7.09201,
+          "mean_vn_entropy_bits": 4.14221,
+          "mid_renyi2_bits": 6.71919,
+          "mid_chi99": 188,
+          "max_chi99": 188,
+          "mid_chi999": 223,
+          "fidelity_by_chi": {
+            "4": 0.012509,
+            "8": 0.030169,
+            "16": 0.089483,
+            "32": 0.241164
+          }
+        },
+        "p_random": 0.015076,
+        "hit_prob_by_chi": {
+          "4": 0.169592,
+          "8": 0.174837,
+          "16": 0.237677,
+          "32": 0.376827
+        },
+        "enrichment_by_chi": {
+          "4": 11.2494,
+          "8": 11.5973,
+          "16": 15.7656,
+          "32": 24.9957
+        }
+      },
+      "delta_mid_vn_bits": -0.01507,
+      "elapsed_sec": 9.85
+    },
+    {
+      "mode": "target_conditioned_local",
+      "num_rounds": 6,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "random_oracle_page",
+      "n_valid": 1024,
+      "train_info": {
+        "renyi2_loss_init": 4.92808,
+        "renyi2_loss_final": 4.87091,
+        "ortho_max_err": 2e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "before": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.16996,
+          "max_vn_entropy_bits": 7.16996,
+          "mean_vn_entropy_bits": 4.15855,
+          "mid_renyi2_bits": 6.83542,
+          "mid_chi99": 191,
+          "max_chi99": 191,
+          "mid_chi999": 223,
+          "fidelity_by_chi": {
+            "4": 0.019875,
+            "8": 0.035641,
+            "16": 0.085979,
+            "32": 0.231489
+          }
+        },
+        "p_random": 0.015625,
+        "hit_prob_by_chi": {
+          "4": 0.209173,
+          "8": 0.200241,
+          "16": 0.285514,
+          "32": 0.418178
+        },
+        "enrichment_by_chi": {
+          "4": 13.3871,
+          "8": 12.8154,
+          "16": 18.2729,
+          "32": 26.7634
+        }
+      },
+      "after": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.10863,
+          "max_vn_entropy_bits": 7.10863,
+          "mean_vn_entropy_bits": 4.14416,
+          "mid_renyi2_bits": 6.75663,
+          "mid_chi99": 188,
+          "max_chi99": 188,
+          "mid_chi999": 222,
+          "fidelity_by_chi": {
+            "4": 0.008469,
+            "8": 0.027286,
+            "16": 0.085637,
+            "32": 0.234088
+          }
+        },
+        "p_random": 0.015625,
+        "hit_prob_by_chi": {
+          "4": 0.195993,
+          "8": 0.18952,
+          "16": 0.234139,
+          "32": 0.373948
+        },
+        "enrichment_by_chi": {
+          "4": 12.5436,
+          "8": 12.1293,
+          "16": 14.9849,
+          "32": 23.9326
+        }
+      },
+      "delta_mid_vn_bits": -0.06133,
+      "elapsed_sec": 10.27
+    },
+    {
+      "mode": "target_conditioned_local",
+      "num_rounds": 8,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "sha256_real",
+      "n_valid": 1027,
+      "train_info": {
+        "renyi2_loss_init": 4.92405,
+        "renyi2_loss_final": 4.88386,
+        "ortho_max_err": 2e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "before": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.15806,
+          "max_vn_entropy_bits": 7.15806,
+          "mean_vn_entropy_bits": 4.15646,
+          "mid_renyi2_bits": 6.82623,
+          "mid_chi99": 190,
+          "max_chi99": 190,
+          "mid_chi999": 222,
+          "fidelity_by_chi": {
+            "4": 0.018826,
+            "8": 0.034976,
+            "16": 0.083932,
+            "32": 0.230532
+          }
+        },
+        "p_random": 0.015671,
+        "hit_prob_by_chi": {
+          "4": 0.124895,
+          "8": 0.155762,
+          "16": 0.249133,
+          "32": 0.417944
+        },
+        "enrichment_by_chi": {
+          "4": 7.97,
+          "8": 9.9397,
+          "16": 15.898,
+          "32": 26.6703
+        }
+      },
+      "after": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.13,
+          "max_vn_entropy_bits": 7.13,
+          "mean_vn_entropy_bits": 4.14984,
+          "mid_renyi2_bits": 6.78105,
+          "mid_chi99": 191,
+          "max_chi99": 191,
+          "mid_chi999": 225,
+          "fidelity_by_chi": {
+            "4": 0.010808,
+            "8": 0.030909,
+            "16": 0.082692,
+            "32": 0.227775
+          }
+        },
+        "p_random": 0.015671,
+        "hit_prob_by_chi": {
+          "4": 0.080515,
+          "8": 0.112249,
+          "16": 0.173805,
+          "32": 0.3194
+        },
+        "enrichment_by_chi": {
+          "4": 5.1379,
+          "8": 7.163,
+          "16": 11.091,
+          "32": 20.3819
+        }
+      },
+      "delta_mid_vn_bits": -0.02806,
+      "elapsed_sec": 10.35
+    },
+    {
+      "mode": "target_conditioned_local",
+      "num_rounds": 8,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_valid": 1030,
+      "train_info": {
+        "renyi2_loss_init": 4.90631,
+        "renyi2_loss_final": 4.8657,
+        "ortho_max_err": 3e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "before": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.11336,
+          "max_vn_entropy_bits": 7.11336,
+          "mean_vn_entropy_bits": 4.14942,
+          "mid_renyi2_bits": 6.76954,
+          "mid_chi99": 186,
+          "max_chi99": 186,
+          "mid_chi999": 218,
+          "fidelity_by_chi": {
+            "4": 0.018079,
+            "8": 0.034316,
+            "16": 0.087396,
+            "32": 0.234217
+          }
+        },
+        "p_random": 0.015717,
+        "hit_prob_by_chi": {
+          "4": 0.092526,
+          "8": 0.183452,
+          "16": 0.256787,
+          "32": 0.424497
+        },
+        "enrichment_by_chi": {
+          "4": 5.8872,
+          "8": 11.6726,
+          "16": 16.3386,
+          "32": 27.0095
+        }
+      },
+      "after": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.09334,
+          "max_vn_entropy_bits": 7.09334,
+          "mean_vn_entropy_bits": 4.14346,
+          "mid_renyi2_bits": 6.72882,
+          "mid_chi99": 186,
+          "max_chi99": 186,
+          "mid_chi999": 221,
+          "fidelity_by_chi": {
+            "4": 0.010207,
+            "8": 0.029345,
+            "16": 0.087912,
+            "32": 0.236353
+          }
+        },
+        "p_random": 0.015717,
+        "hit_prob_by_chi": {
+          "4": 0.118328,
+          "8": 0.171233,
+          "16": 0.230291,
+          "32": 0.365885
+        },
+        "enrichment_by_chi": {
+          "4": 7.5289,
+          "8": 10.8951,
+          "16": 14.6528,
+          "32": 23.2802
+        }
+      },
+      "delta_mid_vn_bits": -0.02002,
+      "elapsed_sec": 10.3
+    },
+    {
+      "mode": "target_conditioned_local",
+      "num_rounds": 8,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "random_oracle_page",
+      "n_valid": 1024,
+      "train_info": {
+        "renyi2_loss_init": 4.9167,
+        "renyi2_loss_final": 4.87391,
+        "ortho_max_err": 3e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "before": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.13253,
+          "max_vn_entropy_bits": 7.13253,
+          "mean_vn_entropy_bits": 4.15362,
+          "mid_renyi2_bits": 6.79635,
+          "mid_chi99": 186,
+          "max_chi99": 186,
+          "mid_chi999": 218,
+          "fidelity_by_chi": {
+            "4": 0.017319,
+            "8": 0.033398,
+            "16": 0.083267,
+            "32": 0.228297
+          }
+        },
+        "p_random": 0.015625,
+        "hit_prob_by_chi": {
+          "4": 0.076507,
+          "8": 0.163921,
+          "16": 0.252124,
+          "32": 0.40679
+        },
+        "enrichment_by_chi": {
+          "4": 4.8965,
+          "8": 10.4909,
+          "16": 16.136,
+          "32": 26.0346
+        }
+      },
+      "after": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.10655,
+          "max_vn_entropy_bits": 7.10655,
+          "mean_vn_entropy_bits": 4.1439,
+          "mid_renyi2_bits": 6.75044,
+          "mid_chi99": 188,
+          "max_chi99": 188,
+          "mid_chi999": 223,
+          "fidelity_by_chi": {
+            "4": 0.007574,
+            "8": 0.0259,
+            "16": 0.08075,
+            "32": 0.234653
+          }
+        },
+        "p_random": 0.015625,
+        "hit_prob_by_chi": {
+          "4": 0.061319,
+          "8": 0.09341,
+          "16": 0.185844,
+          "32": 0.339132
+        },
+        "enrichment_by_chi": {
+          "4": 3.9244,
+          "8": 5.9783,
+          "16": 11.894,
+          "32": 21.7044
+        }
+      },
+      "delta_mid_vn_bits": -0.02598,
+      "elapsed_sec": 10.33
+    },
+    {
+      "mode": "target_conditioned_local",
+      "num_rounds": 16,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "sha256_real",
+      "n_valid": 1058,
+      "train_info": {
+        "renyi2_loss_init": 4.91934,
+        "renyi2_loss_final": 4.88359,
+        "ortho_max_err": 4e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "before": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.14667,
+          "max_vn_entropy_bits": 7.14667,
+          "mean_vn_entropy_bits": 4.15407,
+          "mid_renyi2_bits": 6.8074,
+          "mid_chi99": 188,
+          "max_chi99": 188,
+          "mid_chi999": 221,
+          "fidelity_by_chi": {
+            "4": 0.019736,
+            "8": 0.037422,
+            "16": 0.088216,
+            "32": 0.231646
+          }
+        },
+        "p_random": 0.016144,
+        "hit_prob_by_chi": {
+          "4": 0.07453,
+          "8": 0.203677,
+          "16": 0.26389,
+          "32": 0.425358
+        },
+        "enrichment_by_chi": {
+          "4": 4.6167,
+          "8": 12.6164,
+          "16": 16.3462,
+          "32": 26.3481
+        }
+      },
+      "after": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.13959,
+          "max_vn_entropy_bits": 7.13959,
+          "mean_vn_entropy_bits": 4.14674,
+          "mid_renyi2_bits": 6.78165,
+          "mid_chi99": 190,
+          "max_chi99": 190,
+          "mid_chi999": 225,
+          "fidelity_by_chi": {
+            "4": 0.012923,
+            "8": 0.033625,
+            "16": 0.08669,
+            "32": 0.234309
+          }
+        },
+        "p_random": 0.016144,
+        "hit_prob_by_chi": {
+          "4": 0.049467,
+          "8": 0.109241,
+          "16": 0.183664,
+          "32": 0.345581
+        },
+        "enrichment_by_chi": {
+          "4": 3.0641,
+          "8": 6.7668,
+          "16": 11.3767,
+          "32": 21.4064
+        }
+      },
+      "delta_mid_vn_bits": -0.00708,
+      "elapsed_sec": 10.37
+    },
+    {
+      "mode": "target_conditioned_local",
+      "num_rounds": 16,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_valid": 1052,
+      "train_info": {
+        "renyi2_loss_init": 4.91818,
+        "renyi2_loss_final": 4.88502,
+        "ortho_max_err": 2e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "before": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.15759,
+          "max_vn_entropy_bits": 7.15759,
+          "mean_vn_entropy_bits": 4.15595,
+          "mid_renyi2_bits": 6.81958,
+          "mid_chi99": 190,
+          "max_chi99": 190,
+          "mid_chi999": 221,
+          "fidelity_by_chi": {
+            "4": 0.020379,
+            "8": 0.035156,
+            "16": 0.084533,
+            "32": 0.223357
+          }
+        },
+        "p_random": 0.016052,
+        "hit_prob_by_chi": {
+          "4": 0.116528,
+          "8": 0.154837,
+          "16": 0.258742,
+          "32": 0.385883
+        },
+        "enrichment_by_chi": {
+          "4": 7.2593,
+          "8": 9.6458,
+          "16": 16.1187,
+          "32": 24.0392
+        }
+      },
+      "after": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.12565,
+          "max_vn_entropy_bits": 7.12565,
+          "mean_vn_entropy_bits": 4.15032,
+          "mid_renyi2_bits": 6.77481,
+          "mid_chi99": 190,
+          "max_chi99": 190,
+          "mid_chi999": 224,
+          "fidelity_by_chi": {
+            "4": 0.007103,
+            "8": 0.023937,
+            "16": 0.08133,
+            "32": 0.232785
+          }
+        },
+        "p_random": 0.016052,
+        "hit_prob_by_chi": {
+          "4": 0.095685,
+          "8": 0.103221,
+          "16": 0.188381,
+          "32": 0.336126
+        },
+        "enrichment_by_chi": {
+          "4": 5.9608,
+          "8": 6.4303,
+          "16": 11.7355,
+          "32": 20.9395
+        }
+      },
+      "delta_mid_vn_bits": -0.03194,
+      "elapsed_sec": 9.84
+    },
+    {
+      "mode": "target_conditioned_local",
+      "num_rounds": 16,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "random_oracle_page",
+      "n_valid": 1024,
+      "train_info": {
+        "renyi2_loss_init": 4.90915,
+        "renyi2_loss_final": 4.87533,
+        "ortho_max_err": 2e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "before": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.12811,
+          "max_vn_entropy_bits": 7.12811,
+          "mean_vn_entropy_bits": 4.15178,
+          "mid_renyi2_bits": 6.78478,
+          "mid_chi99": 187,
+          "max_chi99": 187,
+          "mid_chi999": 219,
+          "fidelity_by_chi": {
+            "4": 0.019671,
+            "8": 0.03696,
+            "16": 0.084851,
+            "32": 0.229625
+          }
+        },
+        "p_random": 0.015625,
+        "hit_prob_by_chi": {
+          "4": 0.077982,
+          "8": 0.190653,
+          "16": 0.235241,
+          "32": 0.403899
+        },
+        "enrichment_by_chi": {
+          "4": 4.9908,
+          "8": 12.2018,
+          "16": 15.0554,
+          "32": 25.8495
+        }
+      },
+      "after": {
+        "entanglement": {
+          "mid_vn_entropy_bits": 7.11411,
+          "max_vn_entropy_bits": 7.11411,
+          "mean_vn_entropy_bits": 4.14653,
+          "mid_renyi2_bits": 6.75861,
+          "mid_chi99": 188,
+          "max_chi99": 188,
+          "mid_chi999": 223,
+          "fidelity_by_chi": {
+            "4": 0.009136,
+            "8": 0.02793,
+            "16": 0.084448,
+            "32": 0.231198
+          }
+        },
+        "p_random": 0.015625,
+        "hit_prob_by_chi": {
+          "4": 0.080522,
+          "8": 0.118041,
+          "16": 0.180646,
+          "32": 0.333308
+        },
+        "enrichment_by_chi": {
+          "4": 5.1534,
+          "8": 7.5546,
+          "16": 11.5613,
+          "32": 21.3317
+        }
+      },
+      "delta_mid_vn_bits": -0.014,
+      "elapsed_sec": 10.33
+    }
+  ],
+  "part_3b_amortized_disentangler": [
+    {
+      "mode": "amortized_cross_midstate",
+      "num_rounds": 1,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "sha256_real",
+      "n_train_midstates": 48,
+      "n_test_midstates": 24,
+      "train_info": {
+        "renyi2_loss_init": 0.0,
+        "renyi2_loss_final": 1e-05,
+        "ortho_max_err": 2e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "heldout_mid_vn_before": 0.0,
+      "heldout_mid_vn_after": 0.0,
+      "heldout_delta_vn": 0.0,
+      "heldout_chi99_before": 1.0,
+      "heldout_chi99_after": 1.0,
+      "heldout_fid_chi8_before": 1.0,
+      "heldout_fid_chi8_after": 1.0,
+      "heldout_enrichment_chi8_before": 1.0,
+      "heldout_enrichment_chi8_after": 1.0,
+      "elapsed_sec": 20.73
+    },
+    {
+      "mode": "amortized_cross_midstate",
+      "num_rounds": 1,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_train_midstates": 48,
+      "n_test_midstates": 24,
+      "train_info": {
+        "renyi2_loss_init": 3e-05,
+        "renyi2_loss_final": 4e-05,
+        "ortho_max_err": 2e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "heldout_mid_vn_before": 0.0,
+      "heldout_mid_vn_after": 0.0,
+      "heldout_delta_vn": 0.0,
+      "heldout_chi99_before": 1.0,
+      "heldout_chi99_after": 1.0,
+      "heldout_fid_chi8_before": 1.0,
+      "heldout_fid_chi8_after": 1.0,
+      "heldout_enrichment_chi8_before": 1.0,
+      "heldout_enrichment_chi8_after": 1.0,
+      "elapsed_sec": 20.68
+    },
+    {
+      "mode": "amortized_cross_midstate",
+      "num_rounds": 2,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "sha256_real",
+      "n_train_midstates": 48,
+      "n_test_midstates": 24,
+      "train_info": {
+        "renyi2_loss_init": 4.16201,
+        "renyi2_loss_final": 4.01069,
+        "ortho_max_err": 2e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "heldout_mid_vn_before": 6.53098,
+      "heldout_mid_vn_after": 6.22904,
+      "heldout_delta_vn": -0.30194,
+      "heldout_chi99_before": 156.25,
+      "heldout_chi99_after": 128.29167,
+      "heldout_fid_chi8_before": 0.06721,
+      "heldout_fid_chi8_after": 0.11014,
+      "heldout_enrichment_chi8_before": 38.06507,
+      "heldout_enrichment_chi8_after": 28.46728,
+      "elapsed_sec": 21.07
+    },
+    {
+      "mode": "amortized_cross_midstate",
+      "num_rounds": 2,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_train_midstates": 48,
+      "n_test_midstates": 24,
+      "train_info": {
+        "renyi2_loss_init": 3.26025,
+        "renyi2_loss_final": 2.69534,
+        "ortho_max_err": 2e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "heldout_mid_vn_before": 4.88553,
+      "heldout_mid_vn_after": 4.36362,
+      "heldout_delta_vn": -0.52191,
+      "heldout_chi99_before": 55.04167,
+      "heldout_chi99_after": 47.625,
+      "heldout_fid_chi8_before": 0.16483,
+      "heldout_fid_chi8_after": 0.33587,
+      "heldout_enrichment_chi8_before": 43.46042,
+      "heldout_enrichment_chi8_after": 34.26696,
+      "elapsed_sec": 21.21
+    },
+    {
+      "mode": "amortized_cross_midstate",
+      "num_rounds": 3,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "sha256_real",
+      "n_train_midstates": 48,
+      "n_test_midstates": 24,
+      "train_info": {
+        "renyi2_loss_init": 4.91481,
+        "renyi2_loss_final": 4.90914,
+        "ortho_max_err": 2e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "heldout_mid_vn_before": 7.14472,
+      "heldout_mid_vn_after": 7.14653,
+      "heldout_delta_vn": 0.00181,
+      "heldout_chi99_before": 188.45833,
+      "heldout_chi99_after": 189.75,
+      "heldout_fid_chi8_before": 0.03648,
+      "heldout_fid_chi8_after": 0.03022,
+      "heldout_enrichment_chi8_before": 13.46413,
+      "heldout_enrichment_chi8_after": 8.2689,
+      "elapsed_sec": 21.09
+    },
+    {
+      "mode": "amortized_cross_midstate",
+      "num_rounds": 3,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_train_midstates": 48,
+      "n_test_midstates": 24,
+      "train_info": {
+        "renyi2_loss_init": 4.91351,
+        "renyi2_loss_final": 4.91321,
+        "ortho_max_err": 2e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "heldout_mid_vn_before": 7.13918,
+      "heldout_mid_vn_after": 7.14005,
+      "heldout_delta_vn": 0.00087,
+      "heldout_chi99_before": 188.16667,
+      "heldout_chi99_after": 188.20833,
+      "heldout_fid_chi8_before": 0.03626,
+      "heldout_fid_chi8_after": 0.03021,
+      "heldout_enrichment_chi8_before": 13.22429,
+      "heldout_enrichment_chi8_after": 8.10031,
+      "elapsed_sec": 20.79
+    },
+    {
+      "mode": "amortized_cross_midstate",
+      "num_rounds": 4,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "sha256_real",
+      "n_train_midstates": 48,
+      "n_test_midstates": 24,
+      "train_info": {
+        "renyi2_loss_init": 4.91129,
+        "renyi2_loss_final": 4.90791,
+        "ortho_max_err": 2e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "heldout_mid_vn_before": 7.13602,
+      "heldout_mid_vn_after": 7.13632,
+      "heldout_delta_vn": 0.0003,
+      "heldout_chi99_before": 187.91667,
+      "heldout_chi99_after": 188.04167,
+      "heldout_fid_chi8_before": 0.03663,
+      "heldout_fid_chi8_after": 0.03108,
+      "heldout_enrichment_chi8_before": 13.51948,
+      "heldout_enrichment_chi8_after": 7.35106,
+      "elapsed_sec": 20.85
+    },
+    {
+      "mode": "amortized_cross_midstate",
+      "num_rounds": 4,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_train_midstates": 48,
+      "n_test_midstates": 24,
+      "train_info": {
+        "renyi2_loss_init": 4.9133,
+        "renyi2_loss_final": 4.91076,
+        "ortho_max_err": 4e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "heldout_mid_vn_before": 7.13928,
+      "heldout_mid_vn_after": 7.13976,
+      "heldout_delta_vn": 0.00048,
+      "heldout_chi99_before": 188.41667,
+      "heldout_chi99_after": 188.66667,
+      "heldout_fid_chi8_before": 0.03708,
+      "heldout_fid_chi8_after": 0.03121,
+      "heldout_enrichment_chi8_before": 13.17072,
+      "heldout_enrichment_chi8_after": 7.47542,
+      "elapsed_sec": 21.07
+    },
+    {
+      "mode": "amortized_cross_midstate",
+      "num_rounds": 6,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "sha256_real",
+      "n_train_midstates": 48,
+      "n_test_midstates": 24,
+      "train_info": {
+        "renyi2_loss_init": 4.91136,
+        "renyi2_loss_final": 4.91154,
+        "ortho_max_err": 2e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "heldout_mid_vn_before": 7.13944,
+      "heldout_mid_vn_after": 7.14038,
+      "heldout_delta_vn": 0.00094,
+      "heldout_chi99_before": 188.04167,
+      "heldout_chi99_after": 188.16667,
+      "heldout_fid_chi8_before": 0.03668,
+      "heldout_fid_chi8_after": 0.02951,
+      "heldout_enrichment_chi8_before": 12.3296,
+      "heldout_enrichment_chi8_after": 6.92792,
+      "elapsed_sec": 21.06
+    },
+    {
+      "mode": "amortized_cross_midstate",
+      "num_rounds": 6,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_train_midstates": 48,
+      "n_test_midstates": 24,
+      "train_info": {
+        "renyi2_loss_init": 4.91092,
+        "renyi2_loss_final": 4.91026,
+        "ortho_max_err": 2e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "heldout_mid_vn_before": 7.14439,
+      "heldout_mid_vn_after": 7.14484,
+      "heldout_delta_vn": 0.00045,
+      "heldout_chi99_before": 188.54167,
+      "heldout_chi99_after": 188.625,
+      "heldout_fid_chi8_before": 0.03591,
+      "heldout_fid_chi8_after": 0.02972,
+      "heldout_enrichment_chi8_before": 12.4156,
+      "heldout_enrichment_chi8_after": 7.96841,
+      "elapsed_sec": 21.07
+    },
+    {
+      "mode": "amortized_cross_midstate",
+      "num_rounds": 8,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "sha256_real",
+      "n_train_midstates": 48,
+      "n_test_midstates": 24,
+      "train_info": {
+        "renyi2_loss_init": 4.90916,
+        "renyi2_loss_final": 4.90673,
+        "ortho_max_err": 3e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "heldout_mid_vn_before": 7.14019,
+      "heldout_mid_vn_after": 7.14082,
+      "heldout_delta_vn": 0.00063,
+      "heldout_chi99_before": 188.25,
+      "heldout_chi99_after": 188.33333,
+      "heldout_fid_chi8_before": 0.0369,
+      "heldout_fid_chi8_after": 0.02961,
+      "heldout_enrichment_chi8_before": 13.95405,
+      "heldout_enrichment_chi8_after": 8.73134,
+      "elapsed_sec": 21.41
+    },
+    {
+      "mode": "amortized_cross_midstate",
+      "num_rounds": 8,
+      "m_nonce_bits": 16,
+      "k_zero_bits": 6,
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_train_midstates": 48,
+      "n_test_midstates": 24,
+      "train_info": {
+        "renyi2_loss_init": 4.91107,
+        "renyi2_loss_final": 4.90844,
+        "ortho_max_err": 2e-07,
+        "n_gates": 42,
+        "n_params": 672
+      },
+      "heldout_mid_vn_before": 7.13916,
+      "heldout_mid_vn_after": 7.13961,
+      "heldout_delta_vn": 0.00045,
+      "heldout_chi99_before": 188.29167,
+      "heldout_chi99_after": 188.375,
+      "heldout_fid_chi8_before": 0.03678,
+      "heldout_fid_chi8_after": 0.03093,
+      "heldout_enrichment_chi8_before": 13.10366,
+      "heldout_enrichment_chi8_after": 8.24999,
+      "elapsed_sec": 21.32
+    }
+  ],
+  "part_4_lyapunov_funnel": [
+    {
+      "num_rounds": 1,
+      "mid_round": 0,
+      "funnel_mode": "endpoint_only",
+      "cipher_kind": "sha256_real",
+      "n_params": 1813633,
+      "rank_acc_true_vs_1flip": 1.0,
+      "rank_acc_1flip_vs_4flip": 1.0,
+      "rank_acc_true_vs_4flip": 1.0,
+      "z_1flip_vs_4flip": 45.25,
+      "greedy_1bit_recover_rate": 1.0,
+      "greedy_enrichment_vs_random": 32.0,
+      "elapsed_sec": 20.57
+    },
+    {
+      "num_rounds": 1,
+      "mid_round": 0,
+      "funnel_mode": "endpoint_only",
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_params": 1813633,
+      "rank_acc_true_vs_1flip": 1.0,
+      "rank_acc_1flip_vs_4flip": 1.0,
+      "rank_acc_true_vs_4flip": 1.0,
+      "z_1flip_vs_4flip": 45.25,
+      "greedy_1bit_recover_rate": 1.0,
+      "greedy_enrichment_vs_random": 32.0,
+      "elapsed_sec": 20.82
+    },
+    {
+      "num_rounds": 1,
+      "mid_round": 1,
+      "funnel_mode": "intermediate_traj",
+      "cipher_kind": "sha256_real",
+      "n_params": 1899649,
+      "rank_acc_true_vs_1flip": 1.0,
+      "rank_acc_1flip_vs_4flip": 1.0,
+      "rank_acc_true_vs_4flip": 1.0,
+      "z_1flip_vs_4flip": 45.25,
+      "greedy_1bit_recover_rate": 1.0,
+      "greedy_enrichment_vs_random": 32.0,
+      "elapsed_sec": 20.99
+    },
+    {
+      "num_rounds": 1,
+      "mid_round": 1,
+      "funnel_mode": "intermediate_traj",
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_params": 1899649,
+      "rank_acc_true_vs_1flip": 1.0,
+      "rank_acc_1flip_vs_4flip": 1.0,
+      "rank_acc_true_vs_4flip": 1.0,
+      "z_1flip_vs_4flip": 45.25,
+      "greedy_1bit_recover_rate": 1.0,
+      "greedy_enrichment_vs_random": 32.0,
+      "elapsed_sec": 20.09
+    },
+    {
+      "num_rounds": 2,
+      "mid_round": 0,
+      "funnel_mode": "endpoint_only",
+      "cipher_kind": "sha256_real",
+      "n_params": 1813633,
+      "rank_acc_true_vs_1flip": 0.50244,
+      "rank_acc_1flip_vs_4flip": 0.49463,
+      "rank_acc_true_vs_4flip": 0.51562,
+      "z_1flip_vs_4flip": -0.49,
+      "greedy_1bit_recover_rate": 0.03125,
+      "greedy_enrichment_vs_random": 1.0,
+      "elapsed_sec": 22.54
+    },
+    {
+      "num_rounds": 2,
+      "mid_round": 0,
+      "funnel_mode": "endpoint_only",
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_params": 1813633,
+      "rank_acc_true_vs_1flip": 0.49805,
+      "rank_acc_1flip_vs_4flip": 0.50879,
+      "rank_acc_true_vs_4flip": 0.50879,
+      "z_1flip_vs_4flip": 0.8,
+      "greedy_1bit_recover_rate": 0.04688,
+      "greedy_enrichment_vs_random": 1.5,
+      "elapsed_sec": 22.64
+    },
+    {
+      "num_rounds": 2,
+      "mid_round": 1,
+      "funnel_mode": "intermediate_traj",
+      "cipher_kind": "sha256_real",
+      "n_params": 1899649,
+      "rank_acc_true_vs_1flip": 1.0,
+      "rank_acc_1flip_vs_4flip": 1.0,
+      "rank_acc_true_vs_4flip": 1.0,
+      "z_1flip_vs_4flip": 45.25,
+      "greedy_1bit_recover_rate": 0.99219,
+      "greedy_enrichment_vs_random": 31.75,
+      "elapsed_sec": 22.47
+    },
+    {
+      "num_rounds": 2,
+      "mid_round": 1,
+      "funnel_mode": "intermediate_traj",
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_params": 1899649,
+      "rank_acc_true_vs_1flip": 1.0,
+      "rank_acc_1flip_vs_4flip": 1.0,
+      "rank_acc_true_vs_4flip": 1.0,
+      "z_1flip_vs_4flip": 45.25,
+      "greedy_1bit_recover_rate": 1.0,
+      "greedy_enrichment_vs_random": 32.0,
+      "elapsed_sec": 22.49
+    },
+    {
+      "num_rounds": 3,
+      "mid_round": 0,
+      "funnel_mode": "endpoint_only",
+      "cipher_kind": "sha256_real",
+      "n_params": 1813633,
+      "rank_acc_true_vs_1flip": 0.50977,
+      "rank_acc_1flip_vs_4flip": 0.48828,
+      "rank_acc_true_vs_4flip": 0.49512,
+      "z_1flip_vs_4flip": -1.06,
+      "greedy_1bit_recover_rate": 0.03516,
+      "greedy_enrichment_vs_random": 1.125,
+      "elapsed_sec": 24.19
+    },
+    {
+      "num_rounds": 3,
+      "mid_round": 0,
+      "funnel_mode": "endpoint_only",
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_params": 1813633,
+      "rank_acc_true_vs_1flip": 0.50586,
+      "rank_acc_1flip_vs_4flip": 0.47559,
+      "rank_acc_true_vs_4flip": 0.49756,
+      "z_1flip_vs_4flip": -2.21,
+      "greedy_1bit_recover_rate": 0.02734,
+      "greedy_enrichment_vs_random": 0.875,
+      "elapsed_sec": 24.1
+    },
+    {
+      "num_rounds": 3,
+      "mid_round": 1,
+      "funnel_mode": "intermediate_traj",
+      "cipher_kind": "sha256_real",
+      "n_params": 1899649,
+      "rank_acc_true_vs_1flip": 0.99951,
+      "rank_acc_1flip_vs_4flip": 1.0,
+      "rank_acc_true_vs_4flip": 1.0,
+      "z_1flip_vs_4flip": 45.25,
+      "greedy_1bit_recover_rate": 0.99609,
+      "greedy_enrichment_vs_random": 31.875,
+      "elapsed_sec": 24.33
+    },
+    {
+      "num_rounds": 3,
+      "mid_round": 1,
+      "funnel_mode": "intermediate_traj",
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_params": 1899649,
+      "rank_acc_true_vs_1flip": 0.99902,
+      "rank_acc_1flip_vs_4flip": 0.99951,
+      "rank_acc_true_vs_4flip": 1.0,
+      "z_1flip_vs_4flip": 45.21,
+      "greedy_1bit_recover_rate": 1.0,
+      "greedy_enrichment_vs_random": 32.0,
+      "elapsed_sec": 23.98
+    },
+    {
+      "num_rounds": 4,
+      "mid_round": 0,
+      "funnel_mode": "endpoint_only",
+      "cipher_kind": "sha256_real",
+      "n_params": 1813633,
+      "rank_acc_true_vs_1flip": 0.47852,
+      "rank_acc_1flip_vs_4flip": 0.52002,
+      "rank_acc_true_vs_4flip": 0.50781,
+      "z_1flip_vs_4flip": 1.81,
+      "greedy_1bit_recover_rate": 0.03906,
+      "greedy_enrichment_vs_random": 1.25,
+      "elapsed_sec": 26.47
+    },
+    {
+      "num_rounds": 4,
+      "mid_round": 0,
+      "funnel_mode": "endpoint_only",
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_params": 1813633,
+      "rank_acc_true_vs_1flip": 0.47803,
+      "rank_acc_1flip_vs_4flip": 0.51904,
+      "rank_acc_true_vs_4flip": 0.51123,
+      "z_1flip_vs_4flip": 1.72,
+      "greedy_1bit_recover_rate": 0.03125,
+      "greedy_enrichment_vs_random": 1.0,
+      "elapsed_sec": 25.92
+    },
+    {
+      "num_rounds": 4,
+      "mid_round": 2,
+      "funnel_mode": "intermediate_traj",
+      "cipher_kind": "sha256_real",
+      "n_params": 1899649,
+      "rank_acc_true_vs_1flip": 0.86133,
+      "rank_acc_1flip_vs_4flip": 0.96924,
+      "rank_acc_true_vs_4flip": 0.99902,
+      "z_1flip_vs_4flip": 42.47,
+      "greedy_1bit_recover_rate": 0.02734,
+      "greedy_enrichment_vs_random": 0.875,
+      "elapsed_sec": 25.77
+    },
+    {
+      "num_rounds": 4,
+      "mid_round": 2,
+      "funnel_mode": "intermediate_traj",
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_params": 1899649,
+      "rank_acc_true_vs_1flip": 0.87598,
+      "rank_acc_1flip_vs_4flip": 0.97754,
+      "rank_acc_true_vs_4flip": 0.99756,
+      "z_1flip_vs_4flip": 43.22,
+      "greedy_1bit_recover_rate": 0.02734,
+      "greedy_enrichment_vs_random": 0.875,
+      "elapsed_sec": 25.82
+    },
+    {
+      "num_rounds": 5,
+      "mid_round": 0,
+      "funnel_mode": "endpoint_only",
+      "cipher_kind": "sha256_real",
+      "n_params": 1813633,
+      "rank_acc_true_vs_1flip": 0.49707,
+      "rank_acc_1flip_vs_4flip": 0.50879,
+      "rank_acc_true_vs_4flip": 0.50879,
+      "z_1flip_vs_4flip": 0.8,
+      "greedy_1bit_recover_rate": 0.02344,
+      "greedy_enrichment_vs_random": 0.75,
+      "elapsed_sec": 27.63
+    },
+    {
+      "num_rounds": 5,
+      "mid_round": 0,
+      "funnel_mode": "endpoint_only",
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_params": 1813633,
+      "rank_acc_true_vs_1flip": 0.49805,
+      "rank_acc_1flip_vs_4flip": 0.49902,
+      "rank_acc_true_vs_4flip": 0.50391,
+      "z_1flip_vs_4flip": -0.09,
+      "greedy_1bit_recover_rate": 0.02734,
+      "greedy_enrichment_vs_random": 0.875,
+      "elapsed_sec": 27.87
+    },
+    {
+      "num_rounds": 5,
+      "mid_round": 2,
+      "funnel_mode": "intermediate_traj",
+      "cipher_kind": "sha256_real",
+      "n_params": 1899649,
+      "rank_acc_true_vs_1flip": 0.85938,
+      "rank_acc_1flip_vs_4flip": 0.96729,
+      "rank_acc_true_vs_4flip": 0.99609,
+      "z_1flip_vs_4flip": 42.29,
+      "greedy_1bit_recover_rate": 0.04688,
+      "greedy_enrichment_vs_random": 1.5,
+      "elapsed_sec": 28.27
+    },
+    {
+      "num_rounds": 5,
+      "mid_round": 2,
+      "funnel_mode": "intermediate_traj",
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_params": 1899649,
+      "rank_acc_true_vs_1flip": 0.87158,
+      "rank_acc_1flip_vs_4flip": 0.97559,
+      "rank_acc_true_vs_4flip": 0.99805,
+      "z_1flip_vs_4flip": 43.05,
+      "greedy_1bit_recover_rate": 0.03125,
+      "greedy_enrichment_vs_random": 1.0,
+      "elapsed_sec": 27.57
+    },
+    {
+      "num_rounds": 6,
+      "mid_round": 0,
+      "funnel_mode": "endpoint_only",
+      "cipher_kind": "sha256_real",
+      "n_params": 1813633,
+      "rank_acc_true_vs_1flip": 0.50049,
+      "rank_acc_1flip_vs_4flip": 0.50049,
+      "rank_acc_true_vs_4flip": 0.50635,
+      "z_1flip_vs_4flip": 0.04,
+      "greedy_1bit_recover_rate": 0.00391,
+      "greedy_enrichment_vs_random": 0.125,
+      "elapsed_sec": 29.24
+    },
+    {
+      "num_rounds": 6,
+      "mid_round": 0,
+      "funnel_mode": "endpoint_only",
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_params": 1813633,
+      "rank_acc_true_vs_1flip": 0.50537,
+      "rank_acc_1flip_vs_4flip": 0.49512,
+      "rank_acc_true_vs_4flip": 0.51074,
+      "z_1flip_vs_4flip": -0.44,
+      "greedy_1bit_recover_rate": 0.01562,
+      "greedy_enrichment_vs_random": 0.5,
+      "elapsed_sec": 30.01
+    },
+    {
+      "num_rounds": 6,
+      "mid_round": 3,
+      "funnel_mode": "intermediate_traj",
+      "cipher_kind": "sha256_real",
+      "n_params": 1899649,
+      "rank_acc_true_vs_1flip": 0.73877,
+      "rank_acc_1flip_vs_4flip": 0.88135,
+      "rank_acc_true_vs_4flip": 0.96533,
+      "z_1flip_vs_4flip": 34.52,
+      "greedy_1bit_recover_rate": 0.03125,
+      "greedy_enrichment_vs_random": 1.0,
+      "elapsed_sec": 29.21
+    },
+    {
+      "num_rounds": 6,
+      "mid_round": 3,
+      "funnel_mode": "intermediate_traj",
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_params": 1899649,
+      "rank_acc_true_vs_1flip": 0.75537,
+      "rank_acc_1flip_vs_4flip": 0.88574,
+      "rank_acc_true_vs_4flip": 0.96338,
+      "z_1flip_vs_4flip": 34.91,
+      "greedy_1bit_recover_rate": 0.02734,
+      "greedy_enrichment_vs_random": 0.875,
+      "elapsed_sec": 29.1
+    },
+    {
+      "num_rounds": 8,
+      "mid_round": 0,
+      "funnel_mode": "endpoint_only",
+      "cipher_kind": "sha256_real",
+      "n_params": 1813633,
+      "rank_acc_true_vs_1flip": 0.50537,
+      "rank_acc_1flip_vs_4flip": 0.47412,
+      "rank_acc_true_vs_4flip": 0.4834,
+      "z_1flip_vs_4flip": -2.34,
+      "greedy_1bit_recover_rate": 0.03125,
+      "greedy_enrichment_vs_random": 1.0,
+      "elapsed_sec": 33.32
+    },
+    {
+      "num_rounds": 8,
+      "mid_round": 0,
+      "funnel_mode": "endpoint_only",
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_params": 1813633,
+      "rank_acc_true_vs_1flip": 0.50928,
+      "rank_acc_1flip_vs_4flip": 0.48828,
+      "rank_acc_true_vs_4flip": 0.47998,
+      "z_1flip_vs_4flip": -1.06,
+      "greedy_1bit_recover_rate": 0.03516,
+      "greedy_enrichment_vs_random": 1.125,
+      "elapsed_sec": 33.43
+    },
+    {
+      "num_rounds": 8,
+      "mid_round": 4,
+      "funnel_mode": "intermediate_traj",
+      "cipher_kind": "sha256_real",
+      "n_params": 1899649,
+      "rank_acc_true_vs_1flip": 0.62451,
+      "rank_acc_1flip_vs_4flip": 0.72949,
+      "rank_acc_true_vs_4flip": 0.82471,
+      "z_1flip_vs_4flip": 20.77,
+      "greedy_1bit_recover_rate": 0.01953,
+      "greedy_enrichment_vs_random": 0.625,
+      "elapsed_sec": 33.09
+    },
+    {
+      "num_rounds": 8,
+      "mid_round": 4,
+      "funnel_mode": "intermediate_traj",
+      "cipher_kind": "rand_cipher_ctrl",
+      "n_params": 1899649,
+      "rank_acc_true_vs_1flip": 0.63184,
+      "rank_acc_1flip_vs_4flip": 0.74756,
+      "rank_acc_true_vs_4flip": 0.83691,
+      "z_1flip_vs_4flip": 22.41,
+      "greedy_1bit_recover_rate": 0.01953,
+      "greedy_enrichment_vs_random": 0.625,
+      "elapsed_sec": 33.53
+    }
+  ]
+}

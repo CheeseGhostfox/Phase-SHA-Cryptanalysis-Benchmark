@@ -1,0 +1,2241 @@
+{
+  "fp32_lock": {
+    "default_dtype": "torch.float32",
+    "matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false
+  },
+  "search_budget": {
+    "device": "cuda",
+    "gpu_name": "Tesla T4",
+    "is_smoke": false,
+    "n_holdout": 262144,
+    "search_nonce_range": "[0, 2^30)",
+    "holdout_nonce_range": "[2^30, 2^32)",
+    "train_holdout_overlap": 0,
+    "total_elapsed_seconds": 1101.93
+  },
+  "tracks": {
+    "SHA256_MAIN": {
+      "noab_ge_per_hash": 513325.6875040616,
+      "classic_ab_ge_map": {
+        "4": 474179.4375039066,
+        "8": 467571.9531288854,
+        "16": 464268.0703163943
+      },
+      "A2-1": {
+        "best_single_bit_standard": {
+          "bit": 31,
+          "r_neutral_post_inj": 1,
+          "t3_active_rate": 0.03125,
+          "t4_active_rate": 0.2648582458496094,
+          "t5_active_rate": 0.4587287902832031,
+          "t6_active_rate": 0.4987049102783203,
+          "t7_active_rate": 0.5005340576171875
+        },
+        "best_single_bit_w16_w17_zero": {
+          "bit": 31,
+          "r_neutral_post_inj": 1,
+          "t3_active_rate": 0.03125,
+          "t4_active_rate": 0.26529693603515625,
+          "t5_active_rate": 0.4605903625488281,
+          "t6_active_rate": 0.4975738525390625,
+          "t7_active_rate": 0.49987220764160156
+        },
+        "best_2bit_pair_w3": {
+          "bits": [
+            30,
+            31
+          ],
+          "mean_active_t3_15": 0.44690880408653844,
+          "t4_active": 0.300933837890625
+        },
+        "neural_learned_bit": 31,
+        "holdout_candidates": [
+          {
+            "id": "A2-1_W3_bit31_noPhi",
+            "track": "A2-1",
+            "bit_pos": 31,
+            "use_phi": false,
+            "r_neutral": 1,
+            "p_phi": 1.0,
+            "holdout_tested": 262144,
+            "p_neutral_t4": 0.0,
+            "p_neutral_t5": 0.0,
+            "p_neutral_t6": 0.0,
+            "p_neutral_z": -9.823894271134566e-05,
+            "wilson_ci95_t5": [
+              0.0,
+              1.4653787722671592e-05
+            ],
+            "d_neutral": 1,
+            "batch_size": 2,
+            "active_ge_per_hash": 520340.10550098855,
+            "post_t16_active_rate_mean": 0.44257587652940017,
+            "round_active_rates_0_15": [
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.26501,
+              0.45898,
+              0.49806,
+              0.49991,
+              0.50012,
+              0.49974,
+              0.50009,
+              0.50005,
+              0.50012,
+              0.50002,
+              0.50003,
+              0.50012
+            ]
+          },
+          {
+            "id": "A2-1_W3_bit31_PhiCh",
+            "track": "A2-1",
+            "bit_pos": 31,
+            "use_phi": true,
+            "r_neutral": 1,
+            "p_phi": 0.0625457763671875,
+            "holdout_tested": 16396,
+            "p_neutral_t4": 0.0,
+            "p_neutral_t5": 0.0,
+            "p_neutral_t6": 0.0,
+            "p_neutral_z": -2.456872807540796e-05,
+            "wilson_ci95_t5": [
+              1.3552527156068805e-20,
+              0.0002342375583532234
+            ],
+            "d_neutral": 1,
+            "batch_size": 2,
+            "active_ge_per_hash": 520340.10550098855,
+            "post_t16_active_rate_mean": 0.4417617101732131,
+            "round_active_rates_0_15": [
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.25794,
+              0.45551,
+              0.49851,
+              0.50083,
+              0.50038,
+              0.49961,
+              0.4995,
+              0.49945,
+              0.50067,
+              0.49964,
+              0.50023,
+              0.49939
+            ]
+          },
+          {
+            "id": "A2-1_Neural_bit31",
+            "track": "A2-1",
+            "bit_pos": 31,
+            "use_phi": false,
+            "r_neutral": 1,
+            "p_phi": 1.0,
+            "holdout_tested": 262144,
+            "p_neutral_t4": 0.0,
+            "p_neutral_t5": 0.0,
+            "p_neutral_t6": 0.0,
+            "p_neutral_z": -9.823894271134566e-05,
+            "wilson_ci95_t5": [
+              0.0,
+              1.4653787722671592e-05
+            ],
+            "d_neutral": 1,
+            "batch_size": 2,
+            "active_ge_per_hash": 520340.10550098855,
+            "post_t16_active_rate_mean": 0.44257587652940017,
+            "round_active_rates_0_15": [
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.26501,
+              0.45898,
+              0.49806,
+              0.49991,
+              0.50012,
+              0.49974,
+              0.50009,
+              0.50005,
+              0.50012,
+              0.50002,
+              0.50003,
+              0.50012
+            ]
+          }
+        ],
+        "best_joint_w013_search": {
+          "dw_hex": [
+            "0x0",
+            "0x0",
+            "0x0",
+            "0x80000000"
+          ],
+          "mean_active_rate_t0_15": 0.3599567413330078,
+          "round_active_rates": [
+            0.0,
+            0.0,
+            0.0,
+            0.0312,
+            0.2657,
+            0.46,
+            0.5021,
+            0.5037,
+            0.4972,
+            0.4982,
+            0.5059,
+            0.5051,
+            0.4947,
+            0.5048,
+            0.4959,
+            0.4949
+          ]
+        }
+      },
+      "A2-2": {
+        "e2e_chunk2_to_hash2": [
+          {
+            "id": "E2E_W1_nonce_bit0",
+            "track": "A2-2",
+            "holdout_tested": 262144,
+            "zero_w2_word0_hits": 0,
+            "zero_w2_any_word_hits": 0,
+            "p_neutral_any_word": 0.0,
+            "p_neutral_z": -0.022097086932659125,
+            "wilson_ci95": [
+              0.0,
+              1.4653787722671592e-05
+            ],
+            "mean_hamming_hash1_diff_bits": 128.00451278686523,
+            "min_hamming_hash1_diff_bits": 92
+          },
+          {
+            "id": "E2E_W1_nonce_bit31",
+            "track": "A2-2",
+            "holdout_tested": 262144,
+            "zero_w2_word0_hits": 0,
+            "zero_w2_any_word_hits": 0,
+            "p_neutral_any_word": 0.0,
+            "p_neutral_z": -0.022097086932659125,
+            "wilson_ci95": [
+              0.0,
+              1.4653787722671592e-05
+            ],
+            "mean_hamming_hash1_diff_bits": 128.02095794677734,
+            "min_hamming_hash1_diff_bits": 93
+          },
+          {
+            "id": "E2E_W0_nVersion_bit13",
+            "track": "A2-2",
+            "holdout_tested": 262144,
+            "zero_w2_word0_hits": 0,
+            "zero_w2_any_word_hits": 0,
+            "p_neutral_any_word": 0.0,
+            "p_neutral_z": -0.022097086932659125,
+            "wilson_ci95": [
+              0.0,
+              1.4653787722671592e-05
+            ],
+            "mean_hamming_hash1_diff_bits": 128.02188873291016,
+            "min_hamming_hash1_diff_bits": 92
+          }
+        ],
+        "hash2_internal_word_probes": [
+          {
+            "w2_word": 0,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 0,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.26601
+          },
+          {
+            "w2_word": 1,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 1,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.26727
+          },
+          {
+            "w2_word": 2,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 2,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.26432
+          },
+          {
+            "w2_word": 3,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 3,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.26679
+          },
+          {
+            "w2_word": 4,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 4,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.26449
+          },
+          {
+            "w2_word": 5,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 5,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.2645
+          },
+          {
+            "w2_word": 6,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 6,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.26574
+          },
+          {
+            "w2_word": 7,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 7,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.26635
+          }
+        ]
+      },
+      "A2-3": {
+        "candidates_by_dim": [
+          {
+            "id": "A2-3_NonceOnly_d2_MSB_contiguous",
+            "track": "A2-3",
+            "family": "nonce_only",
+            "d_neutral": 2,
+            "batch_size": 4,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x80000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x40000000"
+              ]
+            ],
+            "active_ge_per_hash": 513538.9687662465,
+            "saving_pct_vs_noab": -0.04154891667742522,
+            "net_gain_pct_vs_classic_ab": -8.300556318833552
+          },
+          {
+            "id": "A2-3_OvertVersionSym1_d2",
+            "track": "A2-3",
+            "family": "overt_version_sym1",
+            "d_neutral": 2,
+            "batch_size": 4,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ]
+            ],
+            "active_ge_per_hash": 754774.71875,
+            "saving_pct_vs_noab": -47.036226147172485,
+            "net_gain_pct_vs_classic_ab": -59.174915454612396
+          },
+          {
+            "id": "A2-3_NonceOnly_d3_MSB_contiguous",
+            "track": "A2-3",
+            "family": "nonce_only",
+            "d_neutral": 3,
+            "batch_size": 8,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x80000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x40000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x20000000"
+              ]
+            ],
+            "active_ge_per_hash": 511980.2968831232,
+            "saving_pct_vs_noab": 0.26209298573778295,
+            "net_gain_pct_vs_classic_ab": -9.497649176146528
+          },
+          {
+            "id": "A2-3_OvertVersionSym1_d3",
+            "track": "A2-3",
+            "family": "overt_version_sym1",
+            "d_neutral": 3,
+            "batch_size": 8,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ]
+            ],
+            "active_ge_per_hash": 747031.359375,
+            "saving_pct_vs_noab": -45.5277570478273,
+            "net_gain_pct_vs_classic_ab": -59.76821414886751
+          },
+          {
+            "id": "A2-3_NonceOnly_d4_MSB_contiguous",
+            "track": "A2-3",
+            "family": "nonce_only",
+            "d_neutral": 4,
+            "batch_size": 16,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x80000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x40000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x20000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x10000000"
+              ]
+            ],
+            "active_ge_per_hash": 511130.0625040616,
+            "saving_pct_vs_noab": 0.4277255265902946,
+            "net_gain_pct_vs_classic_ab": -10.09373574963519,
+            "holdout_mean_ge_per_hash": 511117.6992228116,
+            "holdout_saving_pct_vs_noab": 0.4301339938754811,
+            "holdout_net_gain_pct_vs_classic_ab": -10.091072787859323,
+            "witness_headers_hex": [
+              "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bbc5f4a576",
+              "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bb45f4a576",
+              "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bb85f4a576",
+              "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bb05f4a576"
+            ]
+          },
+          {
+            "id": "A2-3_OvertVersionSym1_d4",
+            "track": "A2-3",
+            "family": "overt_version_sym1",
+            "d_neutral": 4,
+            "batch_size": 16,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ]
+            ],
+            "active_ge_per_hash": 742985.5625,
+            "saving_pct_vs_noab": -44.7396030603127,
+            "net_gain_pct_vs_classic_ab": -60.03374128090746
+          },
+          {
+            "id": "A2-3_Hybrid_4Ver_x_4NonceMSB_M16",
+            "track": "A2-3",
+            "family": "overt_plus_gnbc_hybrid",
+            "d_neutral": 4,
+            "batch_size": 16,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x80000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x40000000"
+              ]
+            ],
+            "active_ge_per_hash": 476399.6250156465,
+            "saving_pct_vs_noab": 7.1934959397727205,
+            "net_gain_pct_vs_classic_ab": -2.6130495450580105
+          }
+        ],
+        "best_nonce_cluster_holdout": {
+          "id": "A2-3_NonceOnly_d4_MSB_contiguous",
+          "track": "A2-3",
+          "family": "nonce_only",
+          "d_neutral": 4,
+          "batch_size": 16,
+          "basis_w1_hex": [
+            [
+              "0x0",
+              "0x0",
+              "0x0",
+              "0x80000000"
+            ],
+            [
+              "0x0",
+              "0x0",
+              "0x0",
+              "0x40000000"
+            ],
+            [
+              "0x0",
+              "0x0",
+              "0x0",
+              "0x20000000"
+            ],
+            [
+              "0x0",
+              "0x0",
+              "0x0",
+              "0x10000000"
+            ]
+          ],
+          "active_ge_per_hash": 511130.0625040616,
+          "saving_pct_vs_noab": 0.4277255265902946,
+          "net_gain_pct_vs_classic_ab": -10.09373574963519,
+          "holdout_mean_ge_per_hash": 511117.6992228116,
+          "holdout_saving_pct_vs_noab": 0.4301339938754811,
+          "holdout_net_gain_pct_vs_classic_ab": -10.091072787859323,
+          "witness_headers_hex": [
+            "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bbc5f4a576",
+            "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bb45f4a576",
+            "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bb85f4a576",
+            "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bb05f4a576"
+          ]
+        }
+      },
+      "elapsed_seconds": 284.66
+    },
+    "CTRL_RAND_ROTR_K_S0": {
+      "noab_ge_per_hash": 513271.3125040618,
+      "classic_ab_ge_map": {
+        "4": 474220.64062890573,
+        "8": 467627.3828163906,
+        "16": 464326.2539101442
+      },
+      "A2-1": {
+        "best_single_bit_standard": {
+          "bit": 31,
+          "r_neutral_post_inj": 1,
+          "t3_active_rate": 0.03125,
+          "t4_active_rate": 0.2486248016357422,
+          "t5_active_rate": 0.43917274475097656,
+          "t6_active_rate": 0.5008125305175781,
+          "t7_active_rate": 0.5009346008300781
+        },
+        "best_single_bit_w16_w17_zero": {
+          "bit": 31,
+          "r_neutral_post_inj": 1,
+          "t3_active_rate": 0.03125,
+          "t4_active_rate": 0.24836349487304688,
+          "t5_active_rate": 0.43869972229003906,
+          "t6_active_rate": 0.5005321502685547,
+          "t7_active_rate": 0.4989051818847656
+        },
+        "best_2bit_pair_w3": {
+          "bits": [
+            30,
+            31
+          ],
+          "mean_active_t3_15": 0.444793701171875,
+          "t4_active": 0.2783203125
+        },
+        "neural_learned_bit": 31,
+        "holdout_candidates": [
+          {
+            "id": "A2-1_W3_bit31_noPhi",
+            "track": "A2-1",
+            "bit_pos": 31,
+            "use_phi": false,
+            "r_neutral": 1,
+            "p_phi": 1.0,
+            "holdout_tested": 262144,
+            "p_neutral_t4": 0.0,
+            "p_neutral_t5": 0.0,
+            "p_neutral_t6": 0.0,
+            "p_neutral_z": -9.823894271134566e-05,
+            "wilson_ci95_t5": [
+              0.0,
+              1.4653787722671592e-05
+            ],
+            "d_neutral": 1,
+            "batch_size": 2,
+            "active_ge_per_hash": 520420.16409473796,
+            "post_t16_active_rate_mean": 0.43975711327332717,
+            "round_active_rates_0_15": [
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.24754,
+              0.43882,
+              0.50014,
+              0.49962,
+              0.50002,
+              0.49994,
+              0.49984,
+              0.49998,
+              0.49993,
+              0.49988,
+              0.49974,
+              0.50013
+            ]
+          },
+          {
+            "id": "A2-1_W3_bit31_PhiCh",
+            "track": "A2-1",
+            "bit_pos": 31,
+            "use_phi": true,
+            "r_neutral": 1,
+            "p_phi": 0.062152862548828125,
+            "holdout_tested": 16293,
+            "p_neutral_t4": 0.0,
+            "p_neutral_t5": 0.0,
+            "p_neutral_t6": 0.0,
+            "p_neutral_z": -2.4491435875748475e-05,
+            "wilson_ci95_t5": [
+              1.3552527156068805e-20,
+              0.00023571799666830098
+            ],
+            "d_neutral": 1,
+            "batch_size": 2,
+            "active_ge_per_hash": 520420.16409473796,
+            "post_t16_active_rate_mean": 0.43875164357982893,
+            "round_active_rates_0_15": [
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.23941,
+              0.43479,
+              0.49975,
+              0.49935,
+              0.50002,
+              0.50011,
+              0.49968,
+              0.50028,
+              0.50026,
+              0.49948,
+              0.49949,
+              0.4999
+            ]
+          },
+          {
+            "id": "A2-1_Neural_bit31",
+            "track": "A2-1",
+            "bit_pos": 31,
+            "use_phi": false,
+            "r_neutral": 1,
+            "p_phi": 1.0,
+            "holdout_tested": 262144,
+            "p_neutral_t4": 0.0,
+            "p_neutral_t5": 0.0,
+            "p_neutral_t6": 0.0,
+            "p_neutral_z": -9.823894271134566e-05,
+            "wilson_ci95_t5": [
+              0.0,
+              1.4653787722671592e-05
+            ],
+            "d_neutral": 1,
+            "batch_size": 2,
+            "active_ge_per_hash": 520420.16409473796,
+            "post_t16_active_rate_mean": 0.43975711327332717,
+            "round_active_rates_0_15": [
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.24754,
+              0.43882,
+              0.50014,
+              0.49962,
+              0.50002,
+              0.49994,
+              0.49984,
+              0.49998,
+              0.49993,
+              0.49988,
+              0.49974,
+              0.50013
+            ]
+          }
+        ],
+        "best_joint_w013_search": {
+          "dw_hex": [
+            "0x0",
+            "0x0",
+            "0x0",
+            "0x80000000"
+          ],
+          "mean_active_rate_t0_15": 0.35866737365722656,
+          "round_active_rates": [
+            0.0,
+            0.0,
+            0.0,
+            0.0312,
+            0.2519,
+            0.4471,
+            0.5075,
+            0.5024,
+            0.498,
+            0.4993,
+            0.4992,
+            0.5002,
+            0.498,
+            0.5007,
+            0.5043,
+            0.4988
+          ]
+        }
+      },
+      "A2-2": {
+        "e2e_chunk2_to_hash2": [
+          {
+            "id": "E2E_W1_nonce_bit0",
+            "track": "A2-2",
+            "holdout_tested": 262144,
+            "zero_w2_word0_hits": 0,
+            "zero_w2_any_word_hits": 0,
+            "p_neutral_any_word": 0.0,
+            "p_neutral_z": -0.022097086932659125,
+            "wilson_ci95": [
+              0.0,
+              1.4653787722671592e-05
+            ],
+            "mean_hamming_hash1_diff_bits": 128.0038299560547,
+            "min_hamming_hash1_diff_bits": 92
+          },
+          {
+            "id": "E2E_W1_nonce_bit31",
+            "track": "A2-2",
+            "holdout_tested": 262144,
+            "zero_w2_word0_hits": 0,
+            "zero_w2_any_word_hits": 0,
+            "p_neutral_any_word": 0.0,
+            "p_neutral_z": -0.022097086932659125,
+            "wilson_ci95": [
+              0.0,
+              1.4653787722671592e-05
+            ],
+            "mean_hamming_hash1_diff_bits": 127.9931869506836,
+            "min_hamming_hash1_diff_bits": 93
+          },
+          {
+            "id": "E2E_W0_nVersion_bit13",
+            "track": "A2-2",
+            "holdout_tested": 262144,
+            "zero_w2_word0_hits": 0,
+            "zero_w2_any_word_hits": 0,
+            "p_neutral_any_word": 0.0,
+            "p_neutral_z": -0.022097086932659125,
+            "wilson_ci95": [
+              0.0,
+              1.4653787722671592e-05
+            ],
+            "mean_hamming_hash1_diff_bits": 128.01405715942383,
+            "min_hamming_hash1_diff_bits": 93
+          }
+        ],
+        "hash2_internal_word_probes": [
+          {
+            "w2_word": 0,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 0,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.24197
+          },
+          {
+            "w2_word": 1,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 1,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.24796
+          },
+          {
+            "w2_word": 2,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 2,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.24624
+          },
+          {
+            "w2_word": 3,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 3,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.24563
+          },
+          {
+            "w2_word": 4,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 4,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.24849
+          },
+          {
+            "w2_word": 5,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 5,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.24928
+          },
+          {
+            "w2_word": 6,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 6,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.24982
+          },
+          {
+            "w2_word": 7,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 7,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.24624
+          }
+        ]
+      },
+      "A2-3": {
+        "candidates_by_dim": [
+          {
+            "id": "A2-3_NonceOnly_d2_MSB_contiguous",
+            "track": "A2-3",
+            "family": "nonce_only",
+            "d_neutral": 2,
+            "batch_size": 4,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x80000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x40000000"
+              ]
+            ],
+            "active_ge_per_hash": 513172.2187662471,
+            "saving_pct_vs_noab": 0.019306307483124563,
+            "net_gain_pct_vs_classic_ab": -8.213809100692938
+          },
+          {
+            "id": "A2-3_OvertVersionSym1_d2",
+            "track": "A2-3",
+            "family": "overt_version_sym1",
+            "d_neutral": 2,
+            "batch_size": 4,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ]
+            ],
+            "active_ge_per_hash": 755156.34375,
+            "saving_pct_vs_noab": -47.1261544047475,
+            "net_gain_pct_vs_classic_ab": -59.241559529867935
+          },
+          {
+            "id": "A2-3_NonceOnly_d3_MSB_contiguous",
+            "track": "A2-3",
+            "family": "nonce_only",
+            "d_neutral": 3,
+            "batch_size": 8,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x80000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x40000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x20000000"
+              ]
+            ],
+            "active_ge_per_hash": 511532.1250081236,
+            "saving_pct_vs_noab": 0.3388436979758991,
+            "net_gain_pct_vs_classic_ab": -9.388830467391983
+          },
+          {
+            "id": "A2-3_OvertVersionSym1_d3",
+            "track": "A2-3",
+            "family": "overt_version_sym1",
+            "d_neutral": 3,
+            "batch_size": 8,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ]
+            ],
+            "active_ge_per_hash": 747353.234375,
+            "saving_pct_vs_noab": -45.60588448416076,
+            "net_gain_pct_vs_classic_ab": -59.81810771514231
+          },
+          {
+            "id": "A2-3_NonceOnly_d4_MSB_contiguous",
+            "track": "A2-3",
+            "family": "nonce_only",
+            "d_neutral": 4,
+            "batch_size": 16,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x80000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x40000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x20000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x10000000"
+              ]
+            ],
+            "active_ge_per_hash": 510688.0312540618,
+            "saving_pct_vs_noab": 0.5032974154345671,
+            "net_gain_pct_vs_classic_ab": -9.984741752916149,
+            "holdout_mean_ge_per_hash": 510682.7578165618,
+            "holdout_saving_pct_vs_noab": 0.5043248325863781,
+            "holdout_net_gain_pct_vs_classic_ab": -9.983606034774951,
+            "witness_headers_hex": [
+              "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bbc5f4a576",
+              "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bb45f4a576",
+              "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bb85f4a576",
+              "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bb05f4a576"
+            ]
+          },
+          {
+            "id": "A2-3_OvertVersionSym1_d4",
+            "track": "A2-3",
+            "family": "overt_version_sym1",
+            "d_neutral": 4,
+            "batch_size": 16,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ]
+            ],
+            "active_ge_per_hash": 743247.3984375,
+            "saving_pct_vs_noab": -44.8059496665554,
+            "net_gain_pct_vs_classic_ab": -60.07007835084257
+          },
+          {
+            "id": "A2-3_Hybrid_4Ver_x_4NonceMSB_M16",
+            "track": "A2-3",
+            "family": "overt_plus_gnbc_hybrid",
+            "d_neutral": 4,
+            "batch_size": 16,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x80000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x40000000"
+              ]
+            ],
+            "active_ge_per_hash": 476450.226578163,
+            "saving_pct_vs_noab": 7.1738055544663615,
+            "net_gain_pct_vs_classic_ab": -2.611089199872163
+          }
+        ],
+        "best_nonce_cluster_holdout": {
+          "id": "A2-3_NonceOnly_d4_MSB_contiguous",
+          "track": "A2-3",
+          "family": "nonce_only",
+          "d_neutral": 4,
+          "batch_size": 16,
+          "basis_w1_hex": [
+            [
+              "0x0",
+              "0x0",
+              "0x0",
+              "0x80000000"
+            ],
+            [
+              "0x0",
+              "0x0",
+              "0x0",
+              "0x40000000"
+            ],
+            [
+              "0x0",
+              "0x0",
+              "0x0",
+              "0x20000000"
+            ],
+            [
+              "0x0",
+              "0x0",
+              "0x0",
+              "0x10000000"
+            ]
+          ],
+          "active_ge_per_hash": 510688.0312540618,
+          "saving_pct_vs_noab": 0.5032974154345671,
+          "net_gain_pct_vs_classic_ab": -9.984741752916149,
+          "holdout_mean_ge_per_hash": 510682.7578165618,
+          "holdout_saving_pct_vs_noab": 0.5043248325863781,
+          "holdout_net_gain_pct_vs_classic_ab": -9.983606034774951,
+          "witness_headers_hex": [
+            "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bbc5f4a576",
+            "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bb45f4a576",
+            "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bb85f4a576",
+            "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bb05f4a576"
+          ]
+        }
+      },
+      "elapsed_seconds": 275.6
+    },
+    "CTRL_RAND_ROTR_K_S1": {
+      "noab_ge_per_hash": 513308.50000406185,
+      "classic_ab_ge_map": {
+        "4": 474225.76562890393,
+        "8": 467629.2578163884,
+        "16": 464328.285160142
+      },
+      "A2-1": {
+        "best_single_bit_standard": {
+          "bit": 31,
+          "r_neutral_post_inj": 1,
+          "t3_active_rate": 0.03125,
+          "t4_active_rate": 0.24107933044433594,
+          "t5_active_rate": 0.43341636657714844,
+          "t6_active_rate": 0.4944133758544922,
+          "t7_active_rate": 0.49845314025878906
+        },
+        "best_single_bit_w16_w17_zero": {
+          "bit": 31,
+          "r_neutral_post_inj": 1,
+          "t3_active_rate": 0.03125,
+          "t4_active_rate": 0.24081039428710938,
+          "t5_active_rate": 0.4342193603515625,
+          "t6_active_rate": 0.4944725036621094,
+          "t7_active_rate": 0.49774169921875
+        },
+        "best_2bit_pair_w3": {
+          "bits": [
+            30,
+            31
+          ],
+          "mean_active_t3_15": 0.4431340144230769,
+          "t4_active": 0.28143310546875
+        },
+        "neural_learned_bit": 31,
+        "holdout_candidates": [
+          {
+            "id": "A2-1_W3_bit31_noPhi",
+            "track": "A2-1",
+            "bit_pos": 31,
+            "use_phi": false,
+            "r_neutral": 1,
+            "p_phi": 1.0,
+            "holdout_tested": 262144,
+            "p_neutral_t4": 0.0,
+            "p_neutral_t5": 0.0,
+            "p_neutral_t6": 0.0,
+            "p_neutral_z": -9.823894271134566e-05,
+            "wilson_ci95_t5": [
+              0.0,
+              1.4653787722671592e-05
+            ],
+            "d_neutral": 1,
+            "batch_size": 2,
+            "active_ge_per_hash": 520412.66409473855,
+            "post_t16_active_rate_mean": 0.43833827055417574,
+            "round_active_rates_0_15": [
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.24088,
+              0.43338,
+              0.49448,
+              0.49855,
+              0.49998,
+              0.50012,
+              0.50013,
+              0.49983,
+              0.49986,
+              0.49982,
+              0.50016,
+              0.49996
+            ]
+          },
+          {
+            "id": "A2-1_W3_bit31_PhiCh",
+            "track": "A2-1",
+            "bit_pos": 31,
+            "use_phi": true,
+            "r_neutral": 1,
+            "p_phi": 0.0623016357421875,
+            "holdout_tested": 16332,
+            "p_neutral_t4": 0.0,
+            "p_neutral_t5": 0.0,
+            "p_neutral_t6": 0.0,
+            "p_neutral_z": -2.4520730514401106e-05,
+            "wilson_ci95_t5": [
+              0.0,
+              0.00023515524623434034
+            ],
+            "d_neutral": 1,
+            "batch_size": 2,
+            "active_ge_per_hash": 520412.66409473855,
+            "post_t16_active_rate_mean": 0.43720717291678446,
+            "round_active_rates_0_15": [
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.23302,
+              0.43125,
+              0.49301,
+              0.49847,
+              0.49953,
+              0.4997,
+              0.49913,
+              0.49962,
+              0.49924,
+              0.5002,
+              0.49957,
+              0.49968
+            ]
+          },
+          {
+            "id": "A2-1_Neural_bit31",
+            "track": "A2-1",
+            "bit_pos": 31,
+            "use_phi": false,
+            "r_neutral": 1,
+            "p_phi": 1.0,
+            "holdout_tested": 262144,
+            "p_neutral_t4": 0.0,
+            "p_neutral_t5": 0.0,
+            "p_neutral_t6": 0.0,
+            "p_neutral_z": -9.823894271134566e-05,
+            "wilson_ci95_t5": [
+              0.0,
+              1.4653787722671592e-05
+            ],
+            "d_neutral": 1,
+            "batch_size": 2,
+            "active_ge_per_hash": 520412.66409473855,
+            "post_t16_active_rate_mean": 0.43833827055417574,
+            "round_active_rates_0_15": [
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.24088,
+              0.43338,
+              0.49448,
+              0.49855,
+              0.49998,
+              0.50012,
+              0.50013,
+              0.49983,
+              0.49986,
+              0.49982,
+              0.50016,
+              0.49996
+            ]
+          }
+        ],
+        "best_joint_w013_search": {
+          "dw_hex": [
+            "0x0",
+            "0x0",
+            "0x0",
+            "0x80000000"
+          ],
+          "mean_active_rate_t0_15": 0.3565502166748047,
+          "round_active_rates": [
+            0.0,
+            0.0,
+            0.0,
+            0.0312,
+            0.238,
+            0.4332,
+            0.4991,
+            0.5023,
+            0.5011,
+            0.5061,
+            0.5036,
+            0.4911,
+            0.4998,
+            0.5005,
+            0.4988,
+            0.5
+          ]
+        }
+      },
+      "A2-2": {
+        "e2e_chunk2_to_hash2": [
+          {
+            "id": "E2E_W1_nonce_bit0",
+            "track": "A2-2",
+            "holdout_tested": 262144,
+            "zero_w2_word0_hits": 0,
+            "zero_w2_any_word_hits": 0,
+            "p_neutral_any_word": 0.0,
+            "p_neutral_z": -0.022097086932659125,
+            "wilson_ci95": [
+              0.0,
+              1.4653787722671592e-05
+            ],
+            "mean_hamming_hash1_diff_bits": 127.99280166625977,
+            "min_hamming_hash1_diff_bits": 93
+          },
+          {
+            "id": "E2E_W1_nonce_bit31",
+            "track": "A2-2",
+            "holdout_tested": 262144,
+            "zero_w2_word0_hits": 0,
+            "zero_w2_any_word_hits": 0,
+            "p_neutral_any_word": 0.0,
+            "p_neutral_z": -0.022097086932659125,
+            "wilson_ci95": [
+              0.0,
+              1.4653787722671592e-05
+            ],
+            "mean_hamming_hash1_diff_bits": 128.00816345214844,
+            "min_hamming_hash1_diff_bits": 93
+          },
+          {
+            "id": "E2E_W0_nVersion_bit13",
+            "track": "A2-2",
+            "holdout_tested": 262144,
+            "zero_w2_word0_hits": 0,
+            "zero_w2_any_word_hits": 0,
+            "p_neutral_any_word": 0.0,
+            "p_neutral_z": -0.022097086932659125,
+            "wilson_ci95": [
+              0.0,
+              1.4653787722671592e-05
+            ],
+            "mean_hamming_hash1_diff_bits": 128.0105438232422,
+            "min_hamming_hash1_diff_bits": 93
+          }
+        ],
+        "hash2_internal_word_probes": [
+          {
+            "w2_word": 0,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 0,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.24111
+          },
+          {
+            "w2_word": 1,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 1,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.24044
+          },
+          {
+            "w2_word": 2,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 2,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.24219
+          },
+          {
+            "w2_word": 3,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 3,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.24023
+          },
+          {
+            "w2_word": 4,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 4,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.24149
+          },
+          {
+            "w2_word": 5,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 5,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.24215
+          },
+          {
+            "w2_word": 6,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 6,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.24052
+          },
+          {
+            "w2_word": 7,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 7,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.24174
+          }
+        ]
+      },
+      "A2-3": {
+        "candidates_by_dim": [
+          {
+            "id": "A2-3_NonceOnly_d2_MSB_contiguous",
+            "track": "A2-3",
+            "family": "nonce_only",
+            "d_neutral": 2,
+            "batch_size": 4,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x80000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x40000000"
+              ]
+            ],
+            "active_ge_per_hash": 513424.4687662474,
+            "saving_pct_vs_noab": -0.02259241025321934,
+            "net_gain_pct_vs_classic_ab": -8.265831588749585
+          },
+          {
+            "id": "A2-3_OvertVersionSym1_d2",
+            "track": "A2-3",
+            "family": "overt_version_sym1",
+            "d_neutral": 2,
+            "batch_size": 4,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ]
+            ],
+            "active_ge_per_hash": 754611.75,
+            "saving_pct_vs_noab": -47.00940077828999,
+            "net_gain_pct_vs_classic_ab": -59.125000093416816
+          },
+          {
+            "id": "A2-3_NonceOnly_d3_MSB_contiguous",
+            "track": "A2-3",
+            "family": "nonce_only",
+            "d_neutral": 3,
+            "batch_size": 8,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x80000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x40000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x20000000"
+              ]
+            ],
+            "active_ge_per_hash": 511951.8593831237,
+            "saving_pct_vs_noab": 0.264293426063944,
+            "net_gain_pct_vs_classic_ab": -9.47814980048538
+          },
+          {
+            "id": "A2-3_OvertVersionSym1_d3",
+            "track": "A2-3",
+            "family": "overt_version_sym1",
+            "d_neutral": 3,
+            "batch_size": 8,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ]
+            ],
+            "active_ge_per_hash": 746908.328125,
+            "saving_pct_vs_noab": -45.50866157858084,
+            "net_gain_pct_vs_classic_ab": -59.722326103528104
+          },
+          {
+            "id": "A2-3_NonceOnly_d4_MSB_contiguous",
+            "track": "A2-3",
+            "family": "nonce_only",
+            "d_neutral": 4,
+            "batch_size": 16,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x80000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x40000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x20000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x10000000"
+              ]
+            ],
+            "active_ge_per_hash": 511176.39062906185,
+            "saving_pct_vs_noab": 0.4153660761478051,
+            "net_gain_pct_vs_classic_ab": -10.089436066287117,
+            "holdout_mean_ge_per_hash": 511137.98242593685,
+            "holdout_saving_pct_vs_noab": 0.4228485556167172,
+            "holdout_net_gain_pct_vs_classic_ab": -10.081164288677936,
+            "witness_headers_hex": [
+              "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bbc5f4a576",
+              "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bb45f4a576",
+              "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bb85f4a576",
+              "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bb05f4a576"
+            ]
+          },
+          {
+            "id": "A2-3_OvertVersionSym1_d4",
+            "track": "A2-3",
+            "family": "overt_version_sym1",
+            "d_neutral": 4,
+            "batch_size": 16,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ]
+            ],
+            "active_ge_per_hash": 742885.875,
+            "saving_pct_vs_noab": -44.725028904473916,
+            "net_gain_pct_vs_classic_ab": -59.99151866093757
+          },
+          {
+            "id": "A2-3_Hybrid_4Ver_x_4NonceMSB_M16",
+            "track": "A2-3",
+            "family": "overt_plus_gnbc_hybrid",
+            "d_neutral": 4,
+            "batch_size": 16,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x80000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x40000000"
+              ]
+            ],
+            "active_ge_per_hash": 476388.25001563394,
+            "saving_pct_vs_noab": 7.192604445111616,
+            "net_gain_pct_vs_classic_ab": -2.5972927432867055
+          }
+        ],
+        "best_nonce_cluster_holdout": {
+          "id": "A2-3_NonceOnly_d4_MSB_contiguous",
+          "track": "A2-3",
+          "family": "nonce_only",
+          "d_neutral": 4,
+          "batch_size": 16,
+          "basis_w1_hex": [
+            [
+              "0x0",
+              "0x0",
+              "0x0",
+              "0x80000000"
+            ],
+            [
+              "0x0",
+              "0x0",
+              "0x0",
+              "0x40000000"
+            ],
+            [
+              "0x0",
+              "0x0",
+              "0x0",
+              "0x20000000"
+            ],
+            [
+              "0x0",
+              "0x0",
+              "0x0",
+              "0x10000000"
+            ]
+          ],
+          "active_ge_per_hash": 511176.39062906185,
+          "saving_pct_vs_noab": 0.4153660761478051,
+          "net_gain_pct_vs_classic_ab": -10.089436066287117,
+          "holdout_mean_ge_per_hash": 511137.98242593685,
+          "holdout_saving_pct_vs_noab": 0.4228485556167172,
+          "holdout_net_gain_pct_vs_classic_ab": -10.081164288677936,
+          "witness_headers_hex": [
+            "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bbc5f4a576",
+            "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bb45f4a576",
+            "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bb85f4a576",
+            "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bb05f4a576"
+          ]
+        }
+      },
+      "elapsed_seconds": 270.94
+    },
+    "CTRL_RAND_ROTR_K_S2": {
+      "noab_ge_per_hash": 512956.9375040612,
+      "classic_ab_ge_map": {
+        "4": 474001.93750390294,
+        "8": 467425.7031288914,
+        "16": 464137.44531639374
+      },
+      "A2-1": {
+        "best_single_bit_standard": {
+          "bit": 31,
+          "r_neutral_post_inj": 1,
+          "t3_active_rate": 0.03125,
+          "t4_active_rate": 0.2702045440673828,
+          "t5_active_rate": 0.4377765655517578,
+          "t6_active_rate": 0.4931144714355469,
+          "t7_active_rate": 0.4991035461425781
+        },
+        "best_single_bit_w16_w17_zero": {
+          "bit": 31,
+          "r_neutral_post_inj": 1,
+          "t3_active_rate": 0.03125,
+          "t4_active_rate": 0.27149391174316406,
+          "t5_active_rate": 0.4369163513183594,
+          "t6_active_rate": 0.4922447204589844,
+          "t7_active_rate": 0.5002536773681641
+        },
+        "best_2bit_pair_w3": {
+          "bits": [
+            30,
+            31
+          ],
+          "mean_active_t3_15": 0.4459651066706731,
+          "t4_active": 0.307098388671875
+        },
+        "neural_learned_bit": 31,
+        "holdout_candidates": [
+          {
+            "id": "A2-1_W3_bit31_noPhi",
+            "track": "A2-1",
+            "bit_pos": 31,
+            "use_phi": false,
+            "r_neutral": 1,
+            "p_phi": 1.0,
+            "holdout_tested": 262144,
+            "p_neutral_t4": 0.0,
+            "p_neutral_t5": 0.0,
+            "p_neutral_t6": 0.0,
+            "p_neutral_z": -9.823894271134566e-05,
+            "wilson_ci95_t5": [
+              0.0,
+              1.4653787722671592e-05
+            ],
+            "d_neutral": 1,
+            "batch_size": 2,
+            "active_ge_per_hash": 520142.6640947333,
+            "post_t16_active_rate_mean": 0.44095436884806705,
+            "round_active_rates_0_15": [
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.27126,
+              0.43748,
+              0.49279,
+              0.5001,
+              0.49998,
+              0.5,
+              0.49983,
+              0.49987,
+              0.49998,
+              0.49991,
+              0.49988,
+              0.50008
+            ]
+          },
+          {
+            "id": "A2-1_W3_bit31_PhiCh",
+            "track": "A2-1",
+            "bit_pos": 31,
+            "use_phi": true,
+            "r_neutral": 1,
+            "p_phi": 0.06229400634765625,
+            "holdout_tested": 16330,
+            "p_neutral_t4": 0.0,
+            "p_neutral_t5": 0.0,
+            "p_neutral_t6": 0.0,
+            "p_neutral_z": -2.4519229076655807e-05,
+            "wilson_ci95_t5": [
+              0.0,
+              0.0002351840398585257
+            ],
+            "d_neutral": 1,
+            "batch_size": 2,
+            "active_ge_per_hash": 520142.6640947333,
+            "post_t16_active_rate_mean": 0.4399714129257148,
+            "round_active_rates_0_15": [
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.264,
+              0.43344,
+              0.4914,
+              0.49952,
+              0.50094,
+              0.50016,
+              0.49906,
+              0.49959,
+              0.49986,
+              0.50004,
+              0.50063,
+              0.49975
+            ]
+          },
+          {
+            "id": "A2-1_Neural_bit31",
+            "track": "A2-1",
+            "bit_pos": 31,
+            "use_phi": false,
+            "r_neutral": 1,
+            "p_phi": 1.0,
+            "holdout_tested": 262144,
+            "p_neutral_t4": 0.0,
+            "p_neutral_t5": 0.0,
+            "p_neutral_t6": 0.0,
+            "p_neutral_z": -9.823894271134566e-05,
+            "wilson_ci95_t5": [
+              0.0,
+              1.4653787722671592e-05
+            ],
+            "d_neutral": 1,
+            "batch_size": 2,
+            "active_ge_per_hash": 520142.6640947333,
+            "post_t16_active_rate_mean": 0.44095436884806705,
+            "round_active_rates_0_15": [
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.27126,
+              0.43748,
+              0.49279,
+              0.5001,
+              0.49998,
+              0.5,
+              0.49983,
+              0.49987,
+              0.49998,
+              0.49991,
+              0.49988,
+              0.50008
+            ]
+          }
+        ],
+        "best_joint_w013_search": {
+          "dw_hex": [
+            "0x0",
+            "0x0",
+            "0x0",
+            "0x80000000"
+          ],
+          "mean_active_rate_t0_15": 0.3590717315673828,
+          "round_active_rates": [
+            0.0,
+            0.0,
+            0.0,
+            0.0312,
+            0.2701,
+            0.4453,
+            0.493,
+            0.4969,
+            0.4982,
+            0.5003,
+            0.5058,
+            0.5015,
+            0.5003,
+            0.4997,
+            0.5027,
+            0.5001
+          ]
+        }
+      },
+      "A2-2": {
+        "e2e_chunk2_to_hash2": [
+          {
+            "id": "E2E_W1_nonce_bit0",
+            "track": "A2-2",
+            "holdout_tested": 262144,
+            "zero_w2_word0_hits": 0,
+            "zero_w2_any_word_hits": 0,
+            "p_neutral_any_word": 0.0,
+            "p_neutral_z": -0.022097086932659125,
+            "wilson_ci95": [
+              0.0,
+              1.4653787722671592e-05
+            ],
+            "mean_hamming_hash1_diff_bits": 127.99885940551758,
+            "min_hamming_hash1_diff_bits": 90
+          },
+          {
+            "id": "E2E_W1_nonce_bit31",
+            "track": "A2-2",
+            "holdout_tested": 262144,
+            "zero_w2_word0_hits": 0,
+            "zero_w2_any_word_hits": 0,
+            "p_neutral_any_word": 0.0,
+            "p_neutral_z": -0.022097086932659125,
+            "wilson_ci95": [
+              0.0,
+              1.4653787722671592e-05
+            ],
+            "mean_hamming_hash1_diff_bits": 128.00975799560547,
+            "min_hamming_hash1_diff_bits": 92
+          },
+          {
+            "id": "E2E_W0_nVersion_bit13",
+            "track": "A2-2",
+            "holdout_tested": 262144,
+            "zero_w2_word0_hits": 0,
+            "zero_w2_any_word_hits": 0,
+            "p_neutral_any_word": 0.0,
+            "p_neutral_z": -0.022097086932659125,
+            "wilson_ci95": [
+              0.0,
+              1.4653787722671592e-05
+            ],
+            "mean_hamming_hash1_diff_bits": 127.99247741699219,
+            "min_hamming_hash1_diff_bits": 90
+          }
+        ],
+        "hash2_internal_word_probes": [
+          {
+            "w2_word": 0,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 0,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.25581
+          },
+          {
+            "w2_word": 1,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 1,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.26604
+          },
+          {
+            "w2_word": 2,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 2,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.27078
+          },
+          {
+            "w2_word": 3,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 3,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.27218
+          },
+          {
+            "w2_word": 4,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 4,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.27099
+          },
+          {
+            "w2_word": 5,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 5,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.27123
+          },
+          {
+            "w2_word": 6,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 6,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.27269
+          },
+          {
+            "w2_word": 7,
+            "best_bit": 31,
+            "trivial_pre_inj_zero_rounds": 7,
+            "post_inj_low_active_rounds": 1,
+            "next_round_active_rate": 0.2699
+          }
+        ]
+      },
+      "A2-3": {
+        "candidates_by_dim": [
+          {
+            "id": "A2-3_NonceOnly_d2_MSB_contiguous",
+            "track": "A2-3",
+            "family": "nonce_only",
+            "d_neutral": 2,
+            "batch_size": 4,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x80000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x40000000"
+              ]
+            ],
+            "active_ge_per_hash": 512926.00001624477,
+            "saving_pct_vs_noab": 0.006031205653822536,
+            "net_gain_pct_vs_classic_ab": -8.211793968040748
+          },
+          {
+            "id": "A2-3_OvertVersionSym1_d2",
+            "track": "A2-3",
+            "family": "overt_version_sym1",
+            "d_neutral": 2,
+            "batch_size": 4,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ]
+            ],
+            "active_ge_per_hash": 754284.65625,
+            "saving_pct_vs_noab": -47.04638949230082,
+            "net_gain_pct_vs_classic_ab": -59.131133560775616
+          },
+          {
+            "id": "A2-3_NonceOnly_d3_MSB_contiguous",
+            "track": "A2-3",
+            "family": "nonce_only",
+            "d_neutral": 3,
+            "batch_size": 8,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x80000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x40000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x20000000"
+              ]
+            ],
+            "active_ge_per_hash": 511481.7656331224,
+            "saving_pct_vs_noab": 0.2875820099279003,
+            "net_gain_pct_vs_classic_ab": -9.425254582562538
+          },
+          {
+            "id": "A2-3_OvertVersionSym1_d3",
+            "track": "A2-3",
+            "family": "overt_version_sym1",
+            "d_neutral": 3,
+            "batch_size": 8,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ]
+            ],
+            "active_ge_per_hash": 746502.828125,
+            "saving_pct_vs_noab": -45.52933658667786,
+            "net_gain_pct_vs_classic_ab": -59.705130275891946
+          },
+          {
+            "id": "A2-3_NonceOnly_d4_MSB_contiguous",
+            "track": "A2-3",
+            "family": "nonce_only",
+            "d_neutral": 4,
+            "batch_size": 16,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x80000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x40000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x20000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x10000000"
+              ]
+            ],
+            "active_ge_per_hash": 510700.1406290612,
+            "saving_pct_vs_noab": 0.43995834932676336,
+            "net_gain_pct_vs_classic_ab": -10.032091955202315,
+            "holdout_mean_ge_per_hash": 510746.1074259362,
+            "holdout_saving_pct_vs_noab": 0.4309972078518798,
+            "holdout_net_gain_pct_vs_classic_ab": -10.041995658801085,
+            "witness_headers_hex": [
+              "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bbc5f4a576",
+              "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bb45f4a576",
+              "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bb85f4a576",
+              "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bb05f4a576"
+            ]
+          },
+          {
+            "id": "A2-3_OvertVersionSym1_d4",
+            "track": "A2-3",
+            "family": "overt_version_sym1",
+            "d_neutral": 4,
+            "batch_size": 16,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x0"
+              ]
+            ],
+            "active_ge_per_hash": 742415.1328125,
+            "saving_pct_vs_noab": -44.7324479955244,
+            "net_gain_pct_vs_classic_ab": -59.95587951461439
+          },
+          {
+            "id": "A2-3_Hybrid_4Ver_x_4NonceMSB_M16",
+            "track": "A2-3",
+            "family": "overt_plus_gnbc_hybrid",
+            "d_neutral": 4,
+            "batch_size": 16,
+            "basis_w1_hex": [
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x80000000"
+              ],
+              [
+                "0x0",
+                "0x0",
+                "0x0",
+                "0x40000000"
+              ]
+            ],
+            "active_ge_per_hash": 476139.71876562596,
+            "saving_pct_vs_noab": 7.177448250837582,
+            "net_gain_pct_vs_classic_ab": -2.585930863873842
+          }
+        ],
+        "best_nonce_cluster_holdout": {
+          "id": "A2-3_NonceOnly_d4_MSB_contiguous",
+          "track": "A2-3",
+          "family": "nonce_only",
+          "d_neutral": 4,
+          "batch_size": 16,
+          "basis_w1_hex": [
+            [
+              "0x0",
+              "0x0",
+              "0x0",
+              "0x80000000"
+            ],
+            [
+              "0x0",
+              "0x0",
+              "0x0",
+              "0x40000000"
+            ],
+            [
+              "0x0",
+              "0x0",
+              "0x0",
+              "0x20000000"
+            ],
+            [
+              "0x0",
+              "0x0",
+              "0x0",
+              "0x10000000"
+            ]
+          ],
+          "active_ge_per_hash": 510700.1406290612,
+          "saving_pct_vs_noab": 0.43995834932676336,
+          "net_gain_pct_vs_classic_ab": -10.032091955202315,
+          "holdout_mean_ge_per_hash": 510746.1074259362,
+          "holdout_saving_pct_vs_noab": 0.4309972078518798,
+          "holdout_net_gain_pct_vs_classic_ab": -10.041995658801085,
+          "witness_headers_hex": [
+            "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bbc5f4a576",
+            "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bb45f4a576",
+            "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bb85f4a576",
+            "8357d91f31ae631c9ca7bc128a45a1ca6bfff93f09fce231266eba6b8a3407af2381724773cafd5753042329d636c3669f52a48e38932c9961388e4b4a9c04364844845693299ffe78bab3bb05f4a576"
+          ]
+        }
+      },
+      "elapsed_seconds": 270.73
+    }
+  },
+  "main_vs_ctrl_summary": {
+    "main_a2_1_p_neutral_t5": 0.0,
+    "ctrl_a2_1_p_neutral_t5_list": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "main_best_net_gain_vs_classic_pct": -10.091072787859323,
+    "ctrl_best_net_gain_vs_classic_pct_mean": -10.035588660751324
+  }
+}

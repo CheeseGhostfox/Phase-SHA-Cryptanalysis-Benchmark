@@ -1,0 +1,113 @@
+{
+  "line": "B1_P13_AlphaZero_LocalCollision_Truncated_CLZ",
+  "title": "AlphaZero 局部碰撞隧道 & 截断前导零定向差分",
+  "status": "PARTIAL_POSITIVE",
+  "deep_round_and_btc_breakthrough": "NULL",
+  "calibration_and_witness_gate": "PASS",
+  "colab_session": "v12-p13",
+  "colab_hardware": "Tesla T4 (pure FP32, allow_tf32=False)",
+  "colab_stopped": true,
+  "wall_time_seconds": 1884.04,
+  "b1_1_selftest": {
+    "mendel_n_soundness": 1000000,
+    "mendel_soundness_violations": 0,
+    "mendel_n_exactness": 100000,
+    "mendel_exactness_mismatches": 0,
+    "sat_parity_n_samples": 10000,
+    "sat_parity_rounds": 64,
+    "sat_parity_xor_mismatches": 0,
+    "status": "PASS"
+  },
+  "witness_verification": {
+    "total_witnesses": 50,
+    "sha256_ref_verified_count": 50,
+    "status": "PASS"
+  },
+  "track1_standard_ladder": {
+    "calibration_passed": [
+      "calib_R12_sfs",
+      "calib_R12_fs",
+      "calib_R16_sfs",
+      "calib_R16_fs"
+    ],
+    "ladder_sat_passed": [
+      "ladder_R16_free",
+      "ladder_R16_semi_free",
+      "ladder_R16_standard"
+    ],
+    "ladder_sat_failed_rounds": [20, 24, 28, 32],
+    "mendel_contradiction_rounds": [28, 32],
+    "g3_anti_hallucination": {
+      "rounds": [16, 20, 24, 28, 32],
+      "greedy_1bit_recover_rates": [0.03125, 0.11719, 0.04688, 0.07031, 0.00781],
+      "ratios_vs_random": [1.0, 3.75, 1.5, 2.25, 0.25],
+      "value_head_forward_manifold_artifact": true,
+      "example_r20_valid_vs_perturbed_value": [0.9999, 0.9999]
+    }
+  },
+  "track2_btc_truncated_lz": {
+    "sha256_evals_per_sec": 223264.1,
+    "trivial_last_round_baseline": {
+      "label": "S1_trivial_last_round_R8_k12",
+      "t_min": 7,
+      "g2_nontrivial": false,
+      "p_hit": 0.0625,
+      "binomial_z": 63.758,
+      "speedup_amortized": 2.396761
+    },
+    "non_last_round_injection_total_configs": 52,
+    "non_last_round_injection_sat_anchor_count": 38,
+    "strict_g2_nontrivial_sat_count": 31,
+    "effective_speedup_gt_1_count": 0,
+    "max_amortized_speedup": 0.015935,
+    "max_amortized_speedup_label": "S2a_btc_w0_3_R12_k4",
+    "s1_g2_nontrivial": {
+      "configs": 12,
+      "sat": 7,
+      "z_ge_5_count": 2,
+      "max_z": 9.018,
+      "max_speedup_amortized": 0.015698,
+      "effective_speedup_gt_1_count": 0
+    },
+    "s2a_btc_w0_3": {
+      "configs": 16,
+      "sat": 12,
+      "z_ge_5_count": 0,
+      "max_z": 4.131,
+      "max_speedup_amortized": 0.015935,
+      "effective_speedup_gt_1_count": 0
+    },
+    "s2b_btc_nonce_only": {
+      "configs": 16,
+      "sat": 11,
+      "z_ge_5_count": 0,
+      "max_z": 3.75,
+      "max_speedup_amortized": 0.009492,
+      "effective_speedup_gt_1_count": 0
+    },
+    "s3_double_sha256": {
+      "configs": 8,
+      "sat": 8,
+      "z_ge_5_count": 0,
+      "max_z": 0.258,
+      "max_speedup_amortized": 0.000628,
+      "effective_speedup_gt_1_count": 0
+    },
+    "g4_control_cipher": {
+      "configs": 2,
+      "sat": 2,
+      "max_speedup_amortized": 0.000638,
+      "effective_speedup_gt_1_count": 0
+    }
+  },
+  "artifacts": {
+    "spec": "v12_frontier/track_b1_p13_local_coll/SPEC.md",
+    "report": "v12_frontier/track_b1_p13_local_coll/REPORT.md",
+    "mendel_selftest": "v12_frontier/track_b1_p13_local_coll/results/mendel_selftest.json",
+    "sat_parity_10k": "v12_frontier/track_b1_p13_local_coll/results/sat_parity_10k.json",
+    "ladder_results": "v12_frontier/track_b1_p13_local_coll/results/p13_ladder_results.json",
+    "btc_truncated_lz": "v12_frontier/track_b1_p13_local_coll/results/p13_btc_truncated_lz.json",
+    "witnesses": "v12_frontier/track_b1_p13_local_coll/results/p13_witnesses.json",
+    "run_log": "v12_frontier/track_b1_p13_local_coll/results/run_log.txt"
+  }
+}

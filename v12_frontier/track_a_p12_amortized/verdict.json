@@ -1,0 +1,82 @@
+{
+  "line": "A_P12_Super_Generalized_AsicBoost",
+  "title": "超广义 AsicBoost —— Double-SHA256 广义中性比特团簇与多输入摊还复用",
+  "status": "NULL",
+  "calibration_and_sat_bounds_gate": "PASS",
+  "super_generalized_asicboost_breakthrough": "NULL",
+  "lean_verify_triggered": false,
+  "lean_verify_reason": "a3_sat_bounds.json new_identities == []; no breakthrough cross-round/cross-block neutral identity surpassing Classic AsicBoost was discovered.",
+  "colab_session": "v12-p12",
+  "colab_hardware": "Tesla T4 (pure FP32, allow_tf32=False)",
+  "colab_stopped": true,
+  "sessions_check_stdout": "[colab] No active sessions found on server.",
+  "wall_time_seconds": 3944.8,
+  "stage_seconds": {
+    "a1": 9.58,
+    "a2": 1101.93,
+    "a3": 2831.92
+  },
+  "bit_exact_check": {
+    "sha256_ref_xor_diff": 0,
+    "btc_genesis_xor_diff": 0,
+    "btc_genesis_hash_matched": true,
+    "random_headers_tested": 256,
+    "max_xor_diff": 0,
+    "witness_headers_verified": 4
+  },
+  "a1_classic_calibration_main": {
+    "ge_weights_reference": {
+      "ADD32": 346,
+      "CH32": 256,
+      "MAJ32": 384,
+      "SIGMA_UPPER": 192,
+      "SIGMA_LOWER": 192
+    },
+    "base_no_asicboost_2p32_ge_per_hash": 512590.8281260154,
+    "base_overt_k4_saving_pct": 7.612563968457453,
+    "base_overt_k8_saving_pct": 8.89686379666017,
+    "base_overt_k16_saving_pct": 9.53902056930117,
+    "base_covert_k16_saving_pct": 9.538968640377576,
+    "ctrl_s0_overt_k16_saving_pct": 9.533085566996103
+  },
+  "a2_gnbc_holdout": {
+    "n_holdout": 262144,
+    "search_nonce_range": "[0, 2^30)",
+    "holdout_nonce_range": "[2^30, 2^32)",
+    "train_holdout_overlap": 0,
+    "a2_1_best_bit": 31,
+    "a2_1_r_neutral_post_inj": 1,
+    "a2_1_t4_active_rate_main": 0.2648582458496094,
+    "a2_1_t4_active_rate_w16_w17_zero_main": 0.26529693603515625,
+    "a2_1_p_neutral_t4_to_t6_main": 0.0,
+    "a2_1_p_neutral_t5_ctrl": [0.0, 0.0, 0.0],
+    "a2_2_chunk2_to_hash2_zero_word_hits": 0,
+    "a2_2_hash1_diff_hw_mean_range": [128.00451278686523, 128.02188873291016],
+    "a2_2_hash1_diff_hw_min": 92,
+    "a2_3_best_nonce_d4_holdout_saving_vs_noab_pct": 0.4301339938754811,
+    "a2_3_best_nonce_d4_net_gain_vs_classic_k16_pct": -10.091072787859323,
+    "a2_3_best_nonce_d4_ctrl_mean_net_gain_pct": -10.035588660751324,
+    "a2_3_hybrid_4x4_saving_vs_noab_pct": 7.1934959397727205,
+    "a2_3_hybrid_4x4_net_gain_vs_classic_k16_pct": -2.6130495450580105
+  },
+  "a3_sat_bounds": {
+    "z3_version": "5.4.1",
+    "pysat_version": "1.9.dev25",
+    "sat_backend": "CaDiCaL195",
+    "z3_b1_same_midstate_only_w3_r4_to_r6": "UNSAT",
+    "z3_b1_same_midstate_w0123_r4": "UNSAT",
+    "z3_b2_hash2_expander_w16_to_w23": "UNSAT",
+    "pysat_chunk2_only_w3_r4_r6_min_active_words": 2,
+    "pysat_hash2_w0to7_r8_min_active_words": 2,
+    "new_identities_count": 0
+  },
+  "deliverables": {
+    "spec": "v12_frontier/track_a_p12_amortized/SPEC.md",
+    "report": "v12_frontier/track_a_p12_amortized/REPORT.md",
+    "a1_calibration": "v12_frontier/track_a_p12_amortized/results/a1_calibration.json",
+    "a2_gnbc_search": "v12_frontier/track_a_p12_amortized/results/a2_gnbc_search.json",
+    "a3_sat_bounds": "v12_frontier/track_a_p12_amortized/results/a3_sat_bounds.json",
+    "run_meta": "v12_frontier/track_a_p12_amortized/results/p12_run_meta.json",
+    "colab_log": "v12_frontier/track_a_p12_amortized/results/p12_colab.log"
+  }
+}

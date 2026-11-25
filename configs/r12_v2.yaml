@@ -1,0 +1,49 @@
+# Phase-SHA V2: 2D Bit-Grid Native Unrolled Solver (Stage 1: R=12)
+version: v2
+experiment_name: r12_v2
+rounds: 12
+domain_mode: int_range
+num_bits: 16
+msg_bytes_len: 4
+
+# 2D Bit-Grid Architecture (lightweight fast recursive grid)
+d_bit: 48
+n_heads: 3
+n_blocks: 2
+d_ff_mult: 2
+share_blocks: false
+grad_checkpointing: false
+grad_scale: 2.0
+
+# Unrolled Neural-Physics Loop & Long-Cycle LR
+K_unroll: 6
+K_infer: 32
+damp: 0.45
+infer_damp: 0.10
+sde_noise_min: 0.10
+sde_noise_max: 0.45
+anneal_K: 256
+anneal_chunk_size: 1024
+anneal_eval_samples: 64
+anneal_eta_max: 0.02
+anneal_beta_max: 0.25
+
+batch_size: 128
+steps: 5000
+lr_total_steps: 15000
+warmup_steps: 400
+lr: 8.0e-4
+min_lr_ratio: 0.1
+weight_decay: 0.02
+grad_clip: 1.0
+alpha_phys: 0.25
+
+holdout_size: 2048
+eval_batch_size: 256
+eval_every: 500
+checkpoint_every: 500
+log_every: 100
+
+cuda_memory_fraction: 0.80
+seed: 42
+holdout_seed: 20261122

@@ -1,0 +1,176 @@
+{
+  "probe1_bit_slice": {
+    "2": {
+      "slice_lsb": {
+        "best_init": "init_dft",
+        "z_entropy_vs_cl": 23.264962602541132,
+        "z_l1_l2_vs_cl": 12.042644947008618,
+        "basis_projection": {
+          "walsh": {
+            "matrix_spec_entropy": 0.7738876183437917,
+            "diag_energy_frac": 0.009742883034050465,
+            "avg_eff_modes": 15.181007385253906
+          },
+          "dft": {
+            "matrix_spec_entropy": 0.7325979375333233,
+            "diag_energy_frac": 0.341738760471344,
+            "avg_eff_modes": 7.744960784912109
+          },
+          "hybrid": {
+            "matrix_spec_entropy": 0.7642305345238688,
+            "diag_energy_frac": 0.00901867263019085,
+            "avg_eff_modes": 12.713277816772461
+          }
+        }
+      },
+      "slice_msb": {
+        "best_init": "init_dft",
+        "z_entropy_vs_cl": 10.85780918387773,
+        "z_l1_l2_vs_cl": 2.787981664022565,
+        "basis_projection": {
+          "walsh": {
+            "matrix_spec_entropy": 0.7591197260881787,
+            "diag_energy_frac": 0.009530466981232166,
+            "avg_eff_modes": 13.501640319824219
+          },
+          "dft": {
+            "matrix_spec_entropy": 0.7019931088643339,
+            "diag_energy_frac": 0.39949870109558105,
+            "avg_eff_modes": 5.701206684112549
+          },
+          "hybrid": {
+            "matrix_spec_entropy": 0.756516940650021,
+            "diag_energy_frac": 0.008083535358309746,
+            "avg_eff_modes": 11.998278617858887
+          }
+        }
+      },
+      "slice_strided": {
+        "best_init": "init_walsh",
+        "z_entropy_vs_cl": -30.67926698311518,
+        "z_l1_l2_vs_cl": -51.172707126549724,
+        "basis_projection": {
+          "walsh": {
+            "matrix_spec_entropy": 0.5168148311400999,
+            "diag_energy_frac": 0.9111820459365845,
+            "avg_eff_modes": 1.054158329963684
+          },
+          "dft": {
+            "matrix_spec_entropy": 0.7205528316105074,
+            "diag_energy_frac": 0.010463899932801723,
+            "avg_eff_modes": 8.371769905090332
+          },
+          "hybrid": {
+            "matrix_spec_entropy": 0.5947141148744328,
+            "diag_energy_frac": 0.1581132858991623,
+            "avg_eff_modes": 2.3047449588775635
+          }
+        }
+      }
+    }
+  },
+  "probe2_io_coupling": {
+    "2": {
+      "raw_quadrant_energy_frac": {
+        "f2_f2": 0.1181543769310344,
+        "f2_2adic": 0.22460288546705148,
+        "2adic_f2": 0.2262056437535569,
+        "2adic_2adic": 0.431037089989118
+      },
+      "raw_top5_sv_ratio": 0.1435118098127824,
+      "learned_train0_quadrant_energy_frac": {
+        "f2_f2": 0.13237786028141652,
+        "f2_2adic": 0.22096149287764524,
+        "2adic_f2": 0.23660301255017938,
+        "2adic_2adic": 0.41005767773111246
+      },
+      "learned_train0_top5_sv_ratio": 0.15961544855516768,
+      "uL_f2_subspace_retention": 0.4426316022872925,
+      "uR_f2_subspace_retention": 0.3381815552711487
+    },
+    "8": {
+      "raw_quadrant_energy_frac": {
+        "f2_f2": 0.11781030181154413,
+        "f2_2adic": 0.22358997140397935,
+        "2adic_f2": 0.22692365156441494,
+        "2adic_2adic": 0.4316760863011883
+      },
+      "raw_top5_sv_ratio": 0.1433544106714869,
+      "learned_train0_quadrant_energy_frac": {
+        "f2_f2": 0.11509768444530323,
+        "f2_2adic": 0.22487916495480734,
+        "2adic_f2": 0.21498645367818808,
+        "2adic_2adic": 0.44503677689285753
+      },
+      "learned_train0_top5_sv_ratio": 0.168022933481451,
+      "uL_f2_subspace_retention": 0.4427059292793274,
+      "uR_f2_subspace_retention": 0.35085269808769226
+    },
+    "12": {
+      "raw_quadrant_energy_frac": {
+        "f2_f2": 0.1184537021089177,
+        "f2_2adic": 0.22464252171938284,
+        "2adic_f2": 0.22623115717742187,
+        "2adic_2adic": 0.4306726185337161
+      },
+      "raw_top5_sv_ratio": 0.1439470059395024,
+      "learned_train0_quadrant_energy_frac": {
+        "f2_f2": 0.10797868132324712,
+        "f2_2adic": 0.22715833955642534,
+        "2adic_f2": 0.2605765987709697,
+        "2adic_2adic": 0.4042863803454311
+      },
+      "learned_train0_top5_sv_ratio": 0.1609441219413452,
+      "uL_f2_subspace_retention": 0.4550586938858032,
+      "uR_f2_subspace_retention": 0.34192758798599243
+    }
+  },
+  "probe3_operator_transfer": {
+    "2": {
+      "A_sub_E_low8": {
+        "best_init": "init_dft",
+        "z_entropy_vs_cl": 20.851868511489666,
+        "z_l1_l2_vs_cl": 15.718261043771214,
+        "basis_projection": {
+          "walsh": {
+            "matrix_spec_entropy": 0.7878021326858236,
+            "diag_energy_frac": 0.008349278941750526,
+            "avg_eff_modes": 17.037023544311523
+          },
+          "dft": {
+            "matrix_spec_entropy": 0.7111701891056987,
+            "diag_energy_frac": 0.3981946110725403,
+            "avg_eff_modes": 7.427236080169678
+          },
+          "hybrid": {
+            "matrix_spec_entropy": 0.7754630654170205,
+            "diag_energy_frac": 0.007849952206015587,
+            "avg_eff_modes": 14.746356010437012
+          }
+        }
+      },
+      "E_low8": {
+        "best_init": "init_dft",
+        "z_entropy_vs_cl": 9.153399107903642,
+        "z_l1_l2_vs_cl": 28.44405121526776,
+        "basis_projection": {
+          "walsh": {
+            "matrix_spec_entropy": 0.773263579295136,
+            "diag_energy_frac": 0.009022461250424385,
+            "avg_eff_modes": 12.624592781066895
+          },
+          "dft": {
+            "matrix_spec_entropy": 0.6729060270892088,
+            "diag_energy_frac": 0.54286789894104,
+            "avg_eff_modes": 4.510547161102295
+          },
+          "hybrid": {
+            "matrix_spec_entropy": 0.7435485888617108,
+            "diag_energy_frac": 0.006280606612563133,
+            "avg_eff_modes": 9.690980911254883
+          }
+        }
+      }
+    }
+  }
+}

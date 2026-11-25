@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this benchmark, empirical falsification dataset, SAT witness suite, or Lean 4 formal proof corpus in your research, please cite it using this metadata."
+type: software
+title: "Phase-SHA: A 14-Paradigm Reproducible Empirical & Formal Cryptanalysis Benchmark for SHA-256 and Bitcoin Double-SHA256"
+version: "1.0.0"
+date-released: "2026-11-26"
+license: MIT
+authors:
+  - alias: "CheeseGhostfox"
+    email: "cheese_ghostfox2025@outlook.com"
+repository-code: "https://github.com/CheeseGhostfox/Phase-SHA-Cryptanalysis-Benchmark"
+abstract: >-
+  Phase-SHA (V1-V12) is an open, fully reproducible empirical and formal cryptanalysis
+  benchmark evaluating 14 distinct paradigms (V11 P1-P11 and V12 P12, P13, P15) on
+  reduced-round and full SHA-256 and Bitcoin Double-SHA256. It combines strict pure
+  IEEE-754 FP32 GPU experiments (allow_tf32=False), isomorphic spectrum-aligned random
+  control ciphers, 50/50 bit-exact SAT message-pair witnesses, gate-equivalent hardware
+  amortization bounds, automated OR-Tools/Z3 Meet-in-the-Middle and Biclique bounds,
+  and 32 Lean 4.36.0 source files containing 483 machine-checked theorem/lemma
+  declarations (338 public + 145 private/protected) with zero sorry statements.
+keywords:
+  - SHA-256
+  - Double-SHA256
+  - Bitcoin mining
+  - AsicBoost
+  - Meet-in-the-Middle
+  - Lean 4
+  - formal verification
+  - SAT cryptanalysis
+  - tensor networks
+  - negative results
+  - reproducible benchmark

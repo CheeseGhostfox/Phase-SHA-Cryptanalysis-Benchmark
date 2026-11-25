@@ -1,0 +1,17 @@
+{
+  "colab_session": "v12-p12",
+  "gpu_name": "Tesla T4",
+  "fp32_lock": {
+    "default_dtype": "torch.float32",
+    "matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false
+  },
+  "stage_seconds": {
+    "a1": 9.58,
+    "a2": 1101.93,
+    "a3": 2831.92
+  },
+  "total_seconds": 3944.8,
+  "colab_stopped": true,
+  "sessions_check_stdout": "[colab] No active sessions found on server."
+}
